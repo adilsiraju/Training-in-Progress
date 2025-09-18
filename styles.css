@@ -1,1 +1,33 @@
-/* css styles */
+/* Minimal custom styles - Leveraging Pulse theme defaults */
+
+/* Essential navigation styling */
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-link {
+  color: white !important;
+}
+
+/* Banner text override for white text */
+.title-block-banner,
+.title-block-banner .title,
+.title-block-banner .subtitle,
+.title-block-banner * {
+  color: white !important;
+}
+
+/* Simple hover effects */
+.card:hover,
+.listing-item:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .title-block-banner {
+    padding: 2rem 1rem;
+  }
+  
+  .title-block-banner .title {
+    font-size: 2rem;
+  }
+}

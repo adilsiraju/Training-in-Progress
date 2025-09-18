@@ -1,19 +1,136 @@
 ---
-title: "About"
+title: "About Mohammed Adil Siraju"
 image: profile.jpg
 about:
-  template: jolla
+  template: trestles
+  image-width: 15em
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com
+    - icon: envelope
+      text: Email
+      href: mailto:mohdadilsiraju@gmail.com
+    - icon: globe
+      text: Portfolio
+      href: https://www.adilsiraju.vercel.app
     - icon: github
-      text: Github
-      href: https://github.com
+      text: GitHub
+      href: https://github.com/adilsiraju
+    - icon: phone
+      text: "+91-8113936995"
+      href: tel:+918113936995
+---
+
+## Professional Summary
+
+AI & ML Engineer with a **First Class with Distinction** in B.E. (AI & ML) and hands-on experience in computer vision, deep learning, and MLOps. Skilled in building and deploying scalable ML solutions using Python, PyTorch, and FastAI. Proven ability to deliver end-to-end AI systems from data preprocessing to real-world deployment. 
+
+Strong leadership background as **IEEE Robotics Chair**, with a track record of solving problems through technology and teamwork. Passionate about leveraging technology to solve customer problems and create inspirational experiences.
 
 ---
 
-About this blog
+## 🎓 Education
+
+### Bachelor of Engineering - Artificial Intelligence & Machine Learning
+**P A College of Engineering, Mangalore** | *Dec 2021 – Aug 2025*
+- **CGPA:** 7.33 / 10 (First Class with Distinction)
+- **Key Modules:** Artificial Intelligence, Machine Learning, Data Structures, Deep Learning, Cloud Computing, Data Science, Algorithms, Operating Systems
+
+### Cambridge International A Levels – Computer Science
+**Sadhbhavana World School, Calicut** | *2019 – 2021*
+
+### Cambridge International GCSE's – Computer Science
+**Global English School, Calicut** | *2018 – 2019*
+
+---
+
+## 💻 Technical Skills
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### AI/ML
+- Computer Vision
+- Deep Learning
+- Natural Language Processing
+- Model Deployment & Optimization
+- Data Preprocessing
+- Feature Engineering
+
+### Programming
+- **Python** (Advanced)
+- **SQL** (Intermediate)
+:::
+
+::: {.column width="50%"}
+### Frameworks & Libraries
+- PyTorch, FastAI
+- scikit-learn
+- NumPy, Pandas
+- Matplotlib, Seaborn
+
+### MLOps & Tools
+- Docker, Kubernetes
+- Git, Jenkins
+- Jupyter Notebooks
+
+### Web Technologies
+- Django, HTML/CSS
+- JavaScript
+:::
+
+::::
+
+---
+
+## 💼 Experience
+
+### AI DevOps Engineer - Intern
+**Rooman Technology, Mangalore** | *Sep 2024 – Feb 2025*
+
+- Automated ML deployment pipelines using **Docker, Kubernetes, Jenkins, and Git**, improving delivery speed and reliability
+- Implemented **CI/CD workflows** for AI models, reducing deployment cycle times by **30%** in simulated environments
+- Collaborated with team to design scalable infrastructure for ML systems
+
+---
+
+## 🚀 Featured Projects
+
+### [Architectural Style Classifier](https://github.com/adilsiraju/Architecture-Style-Classifier/)
+**Technologies:** FastAI, PyTorch, Gradio
+
+- Built and deployed a **CNN-based classifier** to identify 25 architectural styles with **73% accuracy**
+- Trained on **10k+ images** from Kaggle across 25 architectural styles
+- Fine-tuned pretrained model via **Transfer Learning**
+- Deployed via **Gradio web app** with API and GitHub Pages site
+- Enabled real-time inference for **500+ public users**
+
+### [EcoVest - Sustainable Investment Platform](https://github.com/adilsiraju/Ecovest)
+**Technologies:** Django, Python, Web Development
+
+- Developed a **full-stack platform** for eco-investing with carbon, energy, and water impact metrics
+- Designed user-friendly dashboards for assessing investment sustainability
+
+### [Netflix Userbase Analysis](https://github.com/adilsiraju/Netflix-Userbase-EDA)
+**Technologies:** Python, Pandas, Matplotlib, Seaborn
+
+- Conducted comprehensive **exploratory data analysis (EDA)** on Netflix userbase dataset
+- Analyzed user demographics, subscription patterns, and revenue metrics
+- Identified key trends in revenue by country and device preferences
+- Provided actionable business insights for market targeting and product development
+
+---
+
+## 🏆 Certifications
+
+- **CS50x - Computer Science Fundamentals** | Harvard University (2025)
+- **Python for Data Science** | IBM (2022)
+- **Problem Solving Using Computational Thinking** | University of Michigan (2022)
+
+---
+
+## 📚 Current Learning
+
+Currently pursuing the **FastAI course** to deepen my practical understanding of deep learning and modern AI techniques. This blog documents my learning journey, insights, and project implementations.
+
+---
+
+*"Continuous learning and practical application are the keys to mastering AI and machine learning."*

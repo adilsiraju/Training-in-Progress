@@ -6,8 +6,8 @@
       version="2.0">
 <channel>
 <title>TIP</title>
-<link>https://adilsiraju.github.io/Training-in-Progress/</link>
-<atom:link href="https://adilsiraju.github.io/Training-in-Progress/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://adilsiraju.github.io/Training-in-Progress/posts/</link>
+<atom:link href="https://adilsiraju.github.io/Training-in-Progress/posts/index.xml" rel="self" type="application/rss+xml"/>
 <description>Mohammed Adil Siraju&#39;s Data Science &amp; Machine Learning Journey - A blog documenting my learning progress in AI/ML, deep learning, and MLOps</description>
 <generator>quarto-1.8.24</generator>
 <lastBuildDate>Wed, 17 Sep 2025 18:30:00 GMT</lastBuildDate>
@@ -272,133 +272,6 @@ font-style: inherit;">1e-3</span>)</span></code></pre></div></div>
   <category>learning</category>
   <guid>https://adilsiraju.github.io/Training-in-Progress/posts/welcome/</guid>
   <pubDate>Sun, 14 Sep 2025 18:30:00 GMT</pubDate>
-</item>
-<item>
-  <title>Blog Posts</title>
-  <link>https://adilsiraju.github.io/Training-in-Progress/posts/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Welcome to my blog! Here you’ll find my learning journey through the world of <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong>, including:</p>
-<ul>
-<li>📚 <strong>Learning Progress</strong>: Updates from my FastAI course and other studies</li>
-<li>🚀 <strong>Project Walkthroughs</strong>: Detailed breakdowns of my ML/DL projects</li>
-<li>💡 <strong>Technical Insights</strong>: Deep dives into algorithms, techniques, and tools</li>
-<li>🔧 <strong>MLOps &amp; Deployment</strong>: Practical guides for model deployment and automation</li>
-<li>📊 <strong>Data Science</strong>: EDA, visualization, and analytical techniques</li>
-</ul>
-<p>Use the filters and search above to find content that interests you most!</p>
-<hr>
-<p><em>“Documentation is not just about remembering what you’ve learned—it’s about helping others learn too.”</em></p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZmFzdGFpJTJDY29tcHV0ZXItdmlzaW9uJTJDZGVlcC1sZWFybmluZyUyQ2xlYXJuaW5n" data-listing-date-sort="1758133800000" data-listing-file-modified-sort="1758170583166" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="362">
-<div class="thumbnail"><a href="../posts/post-with-code/index.html" class="no-external">
-
-<img loading="lazy" src="https://adilsiraju.github.io/Training-in-Progress/posts/post-with-code/image.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/post-with-code/index.html" class="no-external">FastAI Learning Progress: Computer Vision Fundamentals</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZmFzdGFp'); return false;">fastai</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29tcHV0ZXItdmlzaW9u'); return false;">computer-vision</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGVlcC1sZWFybmluZw=='); return false;">deep-learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGVhcm5pbmc='); return false;">learning</div>
-
-</div>
-<div class="delink listing-description"><a href="../posts/post-with-code/index.html" class="no-external">
-<p>Exploring computer vision concepts through the FastAI course and building my first image classifier</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../posts/post-with-code/index.html" class="no-external">
-<div class="listing-date">
-Sep 18, 2025
-</div>
-<div class="listing-author">
-Mohammed Adil Siraju
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="d2VsY29tZSUyQ2pvdXJuZXklMkNsZWFybmluZw==" data-listing-date-sort="1757874600000" data-listing-file-modified-sort="1758170583155" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="235">
-<div class="thumbnail"><a href="../posts/welcome/index.html" class="no-external">
-
-<p class="card-img-top"><img src="https://adilsiraju.github.io/Training-in-Progress/posts/welcome/thumbnail.jpg" class="thumbnail-image card-img"></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/welcome/index.html" class="no-external">Welcome to My AI/ML Learning Journey!</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('d2VsY29tZQ=='); return false;">welcome</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('am91cm5leQ=='); return false;">journey</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGVhcm5pbmc='); return false;">learning</div>
-
-</div>
-<div class="delink listing-description"><a href="../posts/welcome/index.html" class="no-external">
-<p>Starting my documentation journey as I dive deeper into the world of AI and Machine Learning</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Sep 15, 2025
-</div>
-<div class="listing-author">
-Mohammed Adil Siraju
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div> ]]></description>
-  <guid>https://adilsiraju.github.io/Training-in-Progress/posts/</guid>
-  <pubDate>Thu, 18 Sep 2025 06:05:47 GMT</pubDate>
 </item>
 </channel>
 </rss>

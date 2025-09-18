@@ -1,0 +1,29 @@
+---
+title: "Blog Posts"
+subtitle: "My AI/ML Learning Journey & Technical Insights"
+listing:
+  contents: "."
+  feed: true
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  page-size: 10
+page-layout: full
+title-block-banner: true
+---
+
+Welcome to my blog! Here you'll find my learning journey through the world of **Artificial Intelligence** and **Machine Learning**, including:
+
+- 📚 **Learning Progress**: Updates from my FastAI course and other studies
+- 🚀 **Project Walkthroughs**: Detailed breakdowns of my ML/DL projects
+- 💡 **Technical Insights**: Deep dives into algorithms, techniques, and tools
+- 🔧 **MLOps & Deployment**: Practical guides for model deployment and automation
+- 📊 **Data Science**: EDA, visualization, and analytical techniques
+
+Use the filters and search above to find content that interests you most!
+
+---
+
+*"Documentation is not just about remembering what you've learned—it's about helping others learn too."*

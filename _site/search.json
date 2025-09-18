@@ -2,29 +2,169 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Training in Progress",
+    "title": "Adil’s AI/ML Journey",
     "section": "",
-    "text": "Post With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nSep 18, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 15, 2025\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+    "text": "AI/ML Deep Learning Hero Image"
   },
   {
     "objectID": "posts/post-with-code/index.html",
     "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "title": "FastAI Learning Progress: Computer Vision Fundamentals",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "As part of my FastAI course journey, I’m diving deep into computer vision fundamentals. Today, I want to share my experience building an image classifier and the key insights I’ve gained."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Mohammed Adil Siraju",
     "section": "",
-    "text": "About this blog"
+    "text": "AI & ML Engineer with a First Class with Distinction in B.E. (AI & ML) and hands-on experience in computer vision, deep learning, and MLOps. Skilled in building and deploying scalable ML solutions using Python, PyTorch, and FastAI. Proven ability to deliver end-to-end AI systems from data preprocessing to real-world deployment.\nStrong leadership background as IEEE Robotics Chair, with a track record of solving problems through technology and teamwork. Passionate about leveraging technology to solve customer problems and create inspirational experiences."
   },
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "title": "Welcome to My AI/ML Learning Journey!",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "I’m excited to start this blog as a way to document my learning journey in Artificial Intelligence and Machine Learning. As someone who has just completed my B.E. in AI & ML with First Class with Distinction, I’m now diving deeper into practical applications and advanced concepts.\n\n\n\nLearning Journey"
+  },
+  {
+    "objectID": "index.html#welcome-to-my-learning-journey",
+    "href": "index.html#welcome-to-my-learning-journey",
+    "title": "Adil’s AI/ML Journey",
+    "section": "Welcome to My Learning Journey! 👋",
+    "text": "Welcome to My Learning Journey! 👋\nHi, I’m Mohammed Adil Siraju, a passionate AI & ML Engineer with a B.E. in Artificial Intelligence & Machine Learning (First Class with Distinction). This blog serves as both my learning documentation and portfolio, where I share my journey through the fascinating world of data science, machine learning, and deep learning.\n\n🎯 What You’ll Find Here\n\nLearning Progress: My journey through the FastAI course and other ML/DL learning adventures\nProject Showcases: From computer vision models to MLOps implementations\nTechnical Insights: Deep dives into algorithms, model optimization, and deployment strategies\nReal-world Applications: How I apply theoretical knowledge to solve practical problems\n\n\n\n🚀 Current Focus\nCurrently pursuing the FastAI course to deepen my understanding of practical deep learning approaches. I’m particularly interested in computer vision applications and model deployment pipelines.\n\n\n📊 Recent Highlights\n\nBuilt an Architectural Style Classifier achieving 73% accuracy across 25 architectural styles\nImplemented CI/CD workflows for ML models, reducing deployment cycle times by 30%\nDeveloping expertise in MLOps with Docker, Kubernetes, and automated deployment pipelines\n\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”\nReady to explore the latest posts? Check out my learning journey below! 👇"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#fastai-journey-building-my-first-image-classifier",
+    "href": "posts/post-with-code/index.html#fastai-journey-building-my-first-image-classifier",
+    "title": "FastAI Learning Progress: Computer Vision Fundamentals",
+    "section": "",
+    "text": "As part of my FastAI course journey, I’m diving deep into computer vision fundamentals. Today, I want to share my experience building an image classifier and the key insights I’ve gained."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#the-fastai-approach",
+    "href": "posts/post-with-code/index.html#the-fastai-approach",
+    "title": "FastAI Learning Progress: Computer Vision Fundamentals",
+    "section": "The FastAI Approach",
+    "text": "The FastAI Approach\nOne of the things I love about FastAI is how it makes complex deep learning concepts accessible. Here’s a simple example of building an image classifier:\nfrom fastai.vision.all import *\n\n# Create a DataBlock for image classification\ndls = ImageDataLoaders.from_folder(\n    path='data/images', \n    train='train', \n    valid='valid',\n    item_tfms=Resize(224),\n    batch_tfms=aug_transforms()\n)\n\n# Create a learner with a pre-trained model\nlearn = vision_learner(dls, resnet34, metrics=accuracy)\n\n# Fine-tune the model\nlearn.fine_tune(4)"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#key-learnings-so-far",
+    "href": "posts/post-with-code/index.html#key-learnings-so-far",
+    "title": "FastAI Learning Progress: Computer Vision Fundamentals",
+    "section": "Key Learnings So Far",
+    "text": "Key Learnings So Far\n\n1. Transfer Learning is Powerful\nStarting with pre-trained models like ResNet significantly reduces training time and improves accuracy, especially with limited data.\n\n\n2. Data Augmentation Matters\nSimple transformations can dramatically improve model generalization:\n# Example augmentations\naug_transforms(\n    mult=0.5,  # Probability multiplier\n    do_flip=True,  # Random horizontal flips\n    flip_vert=False,  # No vertical flips for natural images\n    max_rotate=10.0,  # Slight rotations\n    max_zoom=1.1,  # Minor zoom variations\n    max_lighting=0.2,  # Lighting changes\n    max_warp=0.2  # Perspective warping\n)\n\n\n3. Learning Rate is Critical\nFinding the optimal learning rate using FastAI’s learning rate finder has been a game-changer:\n# Find optimal learning rate\nlearn.lr_find()\n\n# Use the suggested learning rate\nlearn.fine_tune(4, lr=1e-3)"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#applying-to-my-architecture-classifier",
+    "href": "posts/post-with-code/index.html#applying-to-my-architecture-classifier",
+    "title": "FastAI Learning Progress: Computer Vision Fundamentals",
+    "section": "Applying to My Architecture Classifier",
+    "text": "Applying to My Architecture Classifier\nThese concepts directly applied to my Architectural Style Classifier project, where I achieved 73% accuracy across 25 architectural styles. The key was:\n\nQuality data curation from Kaggle datasets\nAppropriate data augmentation for architectural images\nFine-tuning strategy that preserved pre-trained features while adapting to architectural styles"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#next-steps",
+    "href": "posts/post-with-code/index.html#next-steps",
+    "title": "FastAI Learning Progress: Computer Vision Fundamentals",
+    "section": "Next Steps",
+    "text": "Next Steps\nI’m planning to explore: - Advanced augmentation techniques - Model interpretation with GradCAM - Deployment strategies for production use - Multi-label classification problems"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#resources-im-using",
+    "href": "posts/post-with-code/index.html#resources-im-using",
+    "title": "FastAI Learning Progress: Computer Vision Fundamentals",
+    "section": "Resources I’m Using",
+    "text": "Resources I’m Using\n\nFastAI Book - Comprehensive and practical\nPapers with Code - Latest research implementations\nKaggle Datasets - Quality training data\n\n\nThe FastAI course continues to amaze me with its practical approach to deep learning. Stay tuned for more updates as I progress through the course!\nWhat’s your experience with FastAI? I’d love to hear about your projects and learning journey!"
+  },
+  {
+    "objectID": "about.html#professional-summary",
+    "href": "about.html#professional-summary",
+    "title": "About Mohammed Adil Siraju",
+    "section": "",
+    "text": "AI & ML Engineer with a First Class with Distinction in B.E. (AI & ML) and hands-on experience in computer vision, deep learning, and MLOps. Skilled in building and deploying scalable ML solutions using Python, PyTorch, and FastAI. Proven ability to deliver end-to-end AI systems from data preprocessing to real-world deployment.\nStrong leadership background as IEEE Robotics Chair, with a track record of solving problems through technology and teamwork. Passionate about leveraging technology to solve customer problems and create inspirational experiences."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Mohammed Adil Siraju",
+    "section": "🎓 Education",
+    "text": "🎓 Education\n\nBachelor of Engineering - Artificial Intelligence & Machine Learning\nP A College of Engineering, Mangalore | Dec 2021 – Aug 2025 - CGPA: 7.33 / 10 (First Class with Distinction) - Key Modules: Artificial Intelligence, Machine Learning, Data Structures, Deep Learning, Cloud Computing, Data Science, Algorithms, Operating Systems\n\n\nCambridge International A Levels – Computer Science\nSadhbhavana World School, Calicut | 2019 – 2021\n\n\nCambridge International GCSE’s – Computer Science\nGlobal English School, Calicut | 2018 – 2019"
+  },
+  {
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "About Mohammed Adil Siraju",
+    "section": "💻 Technical Skills",
+    "text": "💻 Technical Skills\n\n\n\nAI/ML\n\nComputer Vision\nDeep Learning\nNatural Language Processing\nModel Deployment & Optimization\nData Preprocessing\nFeature Engineering\n\n\n\nProgramming\n\nPython (Advanced)\nSQL (Intermediate)\n\n\n\n\nFrameworks & Libraries\n\nPyTorch, FastAI\nscikit-learn\nNumPy, Pandas\nMatplotlib, Seaborn\n\n\n\nMLOps & Tools\n\nDocker, Kubernetes\nGit, Jenkins\nJupyter Notebooks\n\n\n\nWeb Technologies\n\nDjango, HTML/CSS\nJavaScript"
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "About Mohammed Adil Siraju",
+    "section": "💼 Experience",
+    "text": "💼 Experience\n\nAI DevOps Engineer - Intern\nRooman Technology, Mangalore | Sep 2024 – Feb 2025\n\nAutomated ML deployment pipelines using Docker, Kubernetes, Jenkins, and Git, improving delivery speed and reliability\nImplemented CI/CD workflows for AI models, reducing deployment cycle times by 30% in simulated environments\nCollaborated with team to design scalable infrastructure for ML systems"
+  },
+  {
+    "objectID": "about.html#featured-projects",
+    "href": "about.html#featured-projects",
+    "title": "About Mohammed Adil Siraju",
+    "section": "🚀 Featured Projects",
+    "text": "🚀 Featured Projects\n\nArchitectural Style Classifier\nTechnologies: FastAI, PyTorch, Gradio\n\nBuilt and deployed a CNN-based classifier to identify 25 architectural styles with 73% accuracy\nTrained on 10k+ images from Kaggle across 25 architectural styles\nFine-tuned pretrained model via Transfer Learning\nDeployed via Gradio web app with API and GitHub Pages site\nEnabled real-time inference for 500+ public users\n\n\n\nEcoVest - Sustainable Investment Platform\nTechnologies: Django, Python, Web Development\n\nDeveloped a full-stack platform for eco-investing with carbon, energy, and water impact metrics\nDesigned user-friendly dashboards for assessing investment sustainability\n\n\n\nNetflix Userbase Analysis\nTechnologies: Python, Pandas, Matplotlib, Seaborn\n\nConducted comprehensive exploratory data analysis (EDA) on Netflix userbase dataset\nAnalyzed user demographics, subscription patterns, and revenue metrics\nIdentified key trends in revenue by country and device preferences\nProvided actionable business insights for market targeting and product development"
+  },
+  {
+    "objectID": "about.html#certifications",
+    "href": "about.html#certifications",
+    "title": "About Mohammed Adil Siraju",
+    "section": "🏆 Certifications",
+    "text": "🏆 Certifications\n\nCS50x - Computer Science Fundamentals | Harvard University (2025)\nPython for Data Science | IBM (2022)\nProblem Solving Using Computational Thinking | University of Michigan (2022)"
+  },
+  {
+    "objectID": "about.html#current-learning",
+    "href": "about.html#current-learning",
+    "title": "About Mohammed Adil Siraju",
+    "section": "📚 Current Learning",
+    "text": "📚 Current Learning\nCurrently pursuing the FastAI course to deepen my practical understanding of deep learning and modern AI techniques. This blog documents my learning journey, insights, and project implementations.\n\n“Continuous learning and practical application are the keys to mastering AI and machine learning.”"
+  },
+  {
+    "objectID": "posts/welcome/index.html#hello-and-welcome",
+    "href": "posts/welcome/index.html#hello-and-welcome",
+    "title": "Welcome to My AI/ML Learning Journey!",
+    "section": "",
+    "text": "I’m excited to start this blog as a way to document my learning journey in Artificial Intelligence and Machine Learning. As someone who has just completed my B.E. in AI & ML with First Class with Distinction, I’m now diving deeper into practical applications and advanced concepts.\n\n\n\nLearning Journey"
+  },
+  {
+    "objectID": "posts/welcome/index.html#what-this-blog-represents",
+    "href": "posts/welcome/index.html#what-this-blog-represents",
+    "title": "Welcome to My AI/ML Learning Journey!",
+    "section": "What This Blog Represents",
+    "text": "What This Blog Represents\nThis space serves multiple purposes:\n\n📚 Learning Documentation: Recording my progress through courses like FastAI\n💡 Project Showcases: Sharing the ML/DL projects I’m building\n🔬 Technical Insights: Deep dives into algorithms, techniques, and best practices\n🚀 Career Growth: Tracking my evolution as an AI/ML engineer"
+  },
+  {
+    "objectID": "posts/welcome/index.html#my-current-focus",
+    "href": "posts/welcome/index.html#my-current-focus",
+    "title": "Welcome to My AI/ML Learning Journey!",
+    "section": "My Current Focus",
+    "text": "My Current Focus\nRight now, I’m particularly focused on:\n\nFastAI Course: Learning practical deep learning approaches\nComputer Vision: Building on my architectural style classifier project\nMLOps: Expanding my deployment and pipeline automation skills\nReal-world Applications: Bridging the gap between theory and practice"
+  },
+  {
+    "objectID": "posts/welcome/index.html#what-you-can-expect",
+    "href": "posts/welcome/index.html#what-you-can-expect",
+    "title": "Welcome to My AI/ML Learning Journey!",
+    "section": "What You Can Expect",
+    "text": "What You Can Expect\nIn upcoming posts, you’ll find:\n\nDetailed walkthroughs of my FastAI learning progress\nProject breakdowns with code examples and insights\nChallenges I face and how I overcome them\nResources and tools that I find valuable\nReflections on the AI/ML industry and trends"
+  },
+  {
+    "objectID": "posts/welcome/index.html#lets-connect",
+    "href": "posts/welcome/index.html#lets-connect",
+    "title": "Welcome to My AI/ML Learning Journey!",
+    "section": "Let’s Connect!",
+    "text": "Let’s Connect!\nI believe learning is better when shared. Feel free to reach out if you’re on a similar journey, have questions about my projects, or want to collaborate on something interesting!\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”\nLet’s embark on this learning adventure together! 🚀"
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Blog Posts",
+    "section": "",
+    "text": "Welcome to my blog! Here you’ll find my learning journey through the world of Artificial Intelligence and Machine Learning, including:\n\n📚 Learning Progress: Updates from my FastAI course and other studies\n🚀 Project Walkthroughs: Detailed breakdowns of my ML/DL projects\n💡 Technical Insights: Deep dives into algorithms, techniques, and tools\n🔧 MLOps & Deployment: Practical guides for model deployment and automation\n📊 Data Science: EDA, visualization, and analytical techniques\n\nUse the filters and search above to find content that interests you most!\n\n“Documentation is not just about remembering what you’ve learned—it’s about helping others learn too.”\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nFastAI Learning Progress: Computer Vision Fundamentals\n\n\n\nfastai\n\ncomputer-vision\n\ndeep-learning\n\nlearning\n\n\n\nExploring computer vision concepts through the FastAI course and building my first image classifier\n\n\n\n\n\nSep 18, 2025\n\n\nMohammed Adil Siraju\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to My AI/ML Learning Journey!\n\n\n\nwelcome\n\njourney\n\nlearning\n\n\n\nStarting my documentation journey as I dive deeper into the world of AI and Machine Learning\n\n\n\n\n\nSep 15, 2025\n\n\nMohammed Adil Siraju\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -1,15 +1,48 @@
 ---
-title: "Training in Progress"
+title: "Adil's AI/ML Journey"
+subtitle: "Documenting my learning path in Data Science, Machine Learning & Deep Learning"
+title-block-banner: true
+title-block-banner-color: "dark"
 listing:
   contents: posts
   feed: true
   sort: "date desc"
   type: default
-  categories: true
+  categories: false
   sort-ui: false
   filter-ui: false
 page-layout: full
-title-block-banner: true
 ---
+
+::: {.hero-container}
+![AI/ML Deep Learning Hero Image](hero.png){.hero-image}
+:::
+
+## Welcome to My Learning Journey! 👋
+
+Hi, I'm **Mohammed Adil Siraju**, a passionate AI & ML Engineer with a B.E. in Artificial Intelligence & Machine Learning (First Class with Distinction). This blog serves as both my learning documentation and portfolio, where I share my journey through the fascinating world of data science, machine learning, and deep learning.
+
+### 🎯 What You'll Find Here
+
+- **Learning Progress**: My journey through the FastAI course and other ML/DL learning adventures
+- **Project Showcases**: From computer vision models to MLOps implementations
+- **Technical Insights**: Deep dives into algorithms, model optimization, and deployment strategies
+- **Real-world Applications**: How I apply theoretical knowledge to solve practical problems
+
+### 🚀 Current Focus
+
+Currently pursuing the **FastAI course** to deepen my understanding of practical deep learning approaches. I'm particularly interested in computer vision applications and model deployment pipelines.
+
+### 📊 Recent Highlights
+
+- Built an **Architectural Style Classifier** achieving 73% accuracy across 25 architectural styles
+- Implemented **CI/CD workflows for ML models**, reducing deployment cycle times by 30%
+- Developing expertise in **MLOps** with Docker, Kubernetes, and automated deployment pipelines
+
+---
+
+*"The best way to learn is by doing, and the best way to remember is by documenting."*
+
+Ready to explore the latest posts? Check out my learning journey below! 👇
 
 

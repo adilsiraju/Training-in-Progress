@@ -1,0 +1,29 @@
+/*-- scss:defaults --*/
+
+/*-- scss:rules --*/
+/* Banner with gradient background */
+.title-block-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.title-block-banner .title,
+.title-block-banner .subtitle,
+.title-block-banner * {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .hero-container {
+    height: 35vh;
+    margin: 0 0 2rem 0;
+  }
+  
+  .title-block-banner {
+    padding: 2rem 1rem;
+  }
+}

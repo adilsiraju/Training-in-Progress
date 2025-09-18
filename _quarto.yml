@@ -2,9 +2,9 @@ project:
   type: website
 
 website:
-  description: "The Training in progress Blog"
+  description: "Mohammed Adil Siraju's Data Science & Machine Learning Journey - A blog documenting my learning progress in AI/ML, deep learning, and MLOps"
   site-url: https://adilsiraju.github.io/Training-in-Progress/
-  title: "Training in Progress"
+  title: "TIP"
   navbar:
     left:
       - href: about.qmd
@@ -12,7 +12,10 @@ website:
       - href: posts/index.qmd
         text: Blog
     right:
-      
+      - text: "✉️ Contact"
+        href: "mailto:mohdadilsiraju@gmail.com"
+      - text: "🌐 Portfolio"
+        href: "https://www.adilsiraju.vercel.app"
       - icon: github
         href: https://github.com/adilsiraju
       - icon: twitter
@@ -20,8 +23,8 @@ website:
 format:
   html:
     theme:
-      - darkly
-      - brand
+      - Pulse
+      - hero-theme.scss
     css: styles.css
 
 
