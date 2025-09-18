@@ -1,33 +1,31 @@
 ---
-title: "Welcome to My AI/ML Learning Journey!"
+title: "Welcome to My AI/ML Learning Journey"
 author: "Mohammed Adil Siraju"
 date: "2025-09-15"
-categories: [welcome, journey, learning]
-description: "Starting my documentation journey as I dive deeper into the world of AI and Machine Learning"
+categories: [welcome, learning]
+description: "Starting my documentation journey in AI and Machine Learning"
 ---
 
-## Hello and Welcome! 👋
+## Hello! 👋
 
-I'm excited to start this blog as a way to document my learning journey in **Artificial Intelligence** and **Machine Learning**. As someone who has just completed my B.E. in AI & ML with First Class with Distinction, I'm now diving deeper into practical applications and advanced concepts.
+Welcome to my blog where I document my journey in **Artificial Intelligence** and **Machine Learning**. Having completed my B.E. in AI & ML with distinction, I'm now diving deeper into practical applications.
 
 ![Learning Journey](thumbnail.jpg)
 
-## What This Blog Represents
+## Purpose
 
-This space serves multiple purposes:
+This blog serves as:
 
-- **📚 Learning Documentation**: Recording my progress through courses like FastAI
-- **💡 Project Showcases**: Sharing the ML/DL projects I'm building
-- **🔬 Technical Insights**: Deep dives into algorithms, techniques, and best practices
-- **🚀 Career Growth**: Tracking my evolution as an AI/ML engineer
+- **Learning Documentation** - Recording progress through courses like FastAI
+- **Project Showcases** - Sharing ML/DL projects and implementations  
+- **Technical Insights** - Deep dives into algorithms and best practices
+- **Career Growth** - Tracking my evolution as an AI/ML engineer
 
-## My Current Focus
+## Current Focus
 
-Right now, I'm particularly focused on:
-
-- **FastAI Course**: Learning practical deep learning approaches
-- **Computer Vision**: Building on my architectural style classifier project
-- **MLOps**: Expanding my deployment and pipeline automation skills
+- **FastAI Course** - Practical deep learning approaches
+- **Computer Vision** - Extending my architectural classifier project
+- **MLOps** - Deployment and automation skills
 - **Real-world Applications**: Bridging the gap between theory and practice
 
 ## What You Can Expect

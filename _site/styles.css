@@ -14,11 +14,49 @@
   color: white !important;
 }
 
+/* Content spacing for minimal design */
+.content-block {
+  padding: 2rem 0;
+}
+
+/* Clean sections with subtle separation */
+hr {
+  border: none;
+  height: 1px;
+  background: rgba(0,0,0,0.1);
+  margin: 3rem 0;
+}
+
+/* Columns spacing */
+.columns {
+  margin: 2rem 0;
+}
+
 /* Simple hover effects */
 .card:hover,
 .listing-item:hover {
   transform: translateY(-2px);
   transition: transform 0.2s ease;
+}
+
+/* Clean lists */
+.column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.column li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.column li:last-child {
+  border-bottom: none;
+}
+
+/* Text center utility */
+.text-center {
+  text-align: center;
 }
 
 /* Mobile responsive adjustments */
@@ -29,5 +67,13 @@
   
   .title-block-banner .title {
     font-size: 2rem;
+  }
+  
+  .content-block {
+    padding: 1rem 0;
+  }
+  
+  .columns {
+    margin: 1rem 0;
   }
 }

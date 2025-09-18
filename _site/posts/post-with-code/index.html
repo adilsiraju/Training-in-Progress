@@ -8,9 +8,9 @@
 
 <meta name="author" content="Mohammed Adil Siraju">
 <meta name="dcterms.date" content="2025-09-18">
-<meta name="description" content="Exploring computer vision concepts through the FastAI course and building my first image classifier">
+<meta name="description" content="Building my first image classifier with FastAI">
 
-<title>FastAI Learning Progress: Computer Vision Fundamentals – Adil’s AI/ML Journey</title>
+<title>FastAI Progress: Computer Vision Fundamentals – TIP</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,10 +75,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-0774fc528949661fb60d8774007a227f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-2ca2a494cc58b3d2da8d83093ee6a265.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -121,7 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Adil’s AI/ML Journey</span>
+    <span class="navbar-title">TIP</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -131,26 +131,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts/index.qmd"> 
+    <a class="nav-link" href="../../posts/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="mailto:mohdadilsiraju@gmail.com"> 
-<span class="menu-text">{{&lt; fa envelope &gt;}} Contact</span></a>
+<span class="menu-text">✉️ Contact</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://www.adilsiraju.vercel.app"> 
-<span class="menu-text">{{&lt; fa globe &gt;}} Portfolio</span></a>
+<span class="menu-text">🌐 Portfolio</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/adilsiraju"> <i class="bi bi-github" role="img">
@@ -173,16 +169,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">FastAI Learning Progress: Computer Vision Fundamentals</h1>
+      <h1 class="title">FastAI Progress: Computer Vision Fundamentals</h1>
                   <div>
         <div class="description">
-          Exploring computer vision concepts through the FastAI course and building my first image classifier
+          Building my first image classifier with FastAI
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">fastai</div>
                 <div class="quarto-category">computer-vision</div>
-                <div class="quarto-category">deep-learning</div>
                 <div class="quarto-category">learning</div>
               </div>
                   </div>
@@ -220,16 +215,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="fastai-journey-building-my-first-image-classifier" class="level2">
-<h2 class="anchored" data-anchor-id="fastai-journey-building-my-first-image-classifier">FastAI Journey: Building My First Image Classifier</h2>
-<p>As part of my FastAI course journey, I’m diving deep into computer vision fundamentals. Today, I want to share my experience building an image classifier and the key insights I’ve gained.</p>
+<section id="building-my-first-image-classifier" class="level2">
+<h2 class="anchored" data-anchor-id="building-my-first-image-classifier">Building My First Image Classifier</h2>
+<p>Diving into computer vision with FastAI has been an incredible learning experience. Here’s what I’ve discovered while building my first image classifier.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image.jpg" class="img-fluid figure-img"></p>
+<figcaption>Computer Vision</figcaption>
+</figure>
+</div>
 </section>
 <section id="the-fastai-approach" class="level2">
 <h2 class="anchored" data-anchor-id="the-fastai-approach">The FastAI Approach</h2>
-<p>One of the things I love about FastAI is how it makes complex deep learning concepts accessible. Here’s a simple example of building an image classifier:</p>
+<p>FastAI makes complex deep learning surprisingly accessible:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fastai.vision.<span class="bu">all</span> <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a DataBlock for image classification</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create DataLoaders</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>dls <span class="op">=</span> ImageDataLoaders.from_folder(</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    path<span class="op">=</span><span class="st">'data/images'</span>, </span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    train<span class="op">=</span><span class="st">'train'</span>, </span>
@@ -238,65 +239,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    batch_tfms<span class="op">=</span>aug_transforms()</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a learner with a pre-trained model</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Create learner with pre-trained model</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>learn <span class="op">=</span> vision_learner(dls, resnet34, metrics<span class="op">=</span>accuracy)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Fine-tune the model</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>learn.fine_tune(<span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>learn.fine_tune(<span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="key-learnings-so-far" class="level2">
-<h2 class="anchored" data-anchor-id="key-learnings-so-far">Key Learnings So Far</h2>
-<section id="transfer-learning-is-powerful" class="level3">
-<h3 class="anchored" data-anchor-id="transfer-learning-is-powerful">1. Transfer Learning is Powerful</h3>
-<p>Starting with pre-trained models like ResNet significantly reduces training time and improves accuracy, especially with limited data.</p>
+<section id="key-insights" class="level2">
+<h2 class="anchored" data-anchor-id="key-insights">Key Insights</h2>
+<p><strong>Transfer Learning</strong> - Pre-trained models like ResNet dramatically improve results with limited data.</p>
+<p><strong>Data Augmentation</strong> - Simple transformations boost model generalization significantly.</p>
+<p><strong>Learning Rate</strong> - FastAI’s learning rate finder is a game-changer for optimization.</p>
 </section>
-<section id="data-augmentation-matters" class="level3">
-<h3 class="anchored" data-anchor-id="data-augmentation-matters">2. Data Augmentation Matters</h3>
-<p>Simple transformations can dramatically improve model generalization:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example augmentations</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>aug_transforms(</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    mult<span class="op">=</span><span class="fl">0.5</span>,  <span class="co"># Probability multiplier</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    do_flip<span class="op">=</span><span class="va">True</span>,  <span class="co"># Random horizontal flips</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    flip_vert<span class="op">=</span><span class="va">False</span>,  <span class="co"># No vertical flips for natural images</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    max_rotate<span class="op">=</span><span class="fl">10.0</span>,  <span class="co"># Slight rotations</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    max_zoom<span class="op">=</span><span class="fl">1.1</span>,  <span class="co"># Minor zoom variations</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    max_lighting<span class="op">=</span><span class="fl">0.2</span>,  <span class="co"># Lighting changes</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    max_warp<span class="op">=</span><span class="fl">0.2</span>  <span class="co"># Perspective warping</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="learning-rate-is-critical" class="level3">
-<h3 class="anchored" data-anchor-id="learning-rate-is-critical">3. Learning Rate is Critical</h3>
-<p>Finding the optimal learning rate using FastAI’s learning rate finder has been a game-changer:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Find optimal learning rate</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>learn.lr_find()</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the suggested learning rate</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>learn.fine_tune(<span class="dv">4</span>, lr<span class="op">=</span><span class="fl">1e-3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</section>
-<section id="applying-to-my-architecture-classifier" class="level2">
-<h2 class="anchored" data-anchor-id="applying-to-my-architecture-classifier">Applying to My Architecture Classifier</h2>
-<p>These concepts directly applied to my <a href="https://github.com/adilsiraju/Architecture-Style-Classifier/">Architectural Style Classifier project</a>, where I achieved 73% accuracy across 25 architectural styles. The key was:</p>
+<section id="real-application" class="level2">
+<h2 class="anchored" data-anchor-id="real-application">Real Application</h2>
+<p>I applied these concepts to my <a href="https://github.com/adilsiraju/Architecture-Style-Classifier/">Architectural Style Classifier</a>, achieving <strong>73% accuracy</strong> across 25 architectural styles through:</p>
 <ul>
-<li><strong>Quality data curation</strong> from Kaggle datasets</li>
-<li><strong>Appropriate data augmentation</strong> for architectural images</li>
-<li><strong>Fine-tuning strategy</strong> that preserved pre-trained features while adapting to architectural styles</li>
+<li>Quality data curation</li>
+<li>Appropriate augmentation for architectural images<br>
+</li>
+<li>Smart fine-tuning strategy</li>
 </ul>
 </section>
 <section id="next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
-<p>I’m planning to explore: - Advanced augmentation techniques - Model interpretation with GradCAM - Deployment strategies for production use - Multi-label classification problems</p>
-</section>
-<section id="resources-im-using" class="level2">
-<h2 class="anchored" data-anchor-id="resources-im-using">Resources I’m Using</h2>
 <ul>
-<li><a href="https://course.fast.ai/">FastAI Book</a> - Comprehensive and practical</li>
-<li><a href="https://paperswithcode.com/">Papers with Code</a> - Latest research implementations</li>
-<li><a href="https://www.kaggle.com/datasets">Kaggle Datasets</a> - Quality training data</li>
+<li>Advanced augmentation techniques</li>
+<li>Model interpretation with GradCAM</li>
+<li>Production deployment strategies</li>
+<li>Multi-label classification</li>
+</ul>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://course.fast.ai/">FastAI Course</a> - Practical deep learning</li>
+<li><a href="https://paperswithcode.com/">Papers with Code</a> - Latest research</li>
+<li><a href="https://www.kaggle.com/datasets">Kaggle</a> - Quality datasets</li>
 </ul>
 <hr>
-<p>The FastAI course continues to amaze me with its practical approach to deep learning. Stay tuned for more updates as I progress through the course!</p>
-<p><em>What’s your experience with FastAI? I’d love to hear about your projects and learning journey!</em></p>
+<p>The FastAI course continues to amaze with its practical approach. More updates coming as I progress!</p>
 
 
 </section>

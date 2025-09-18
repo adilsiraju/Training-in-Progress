@@ -1,24 +1,26 @@
 ---
-title: "FastAI Learning Progress: Computer Vision Fundamentals"
+title: "FastAI Progress: Computer Vision Fundamentals"
 author: "Mohammed Adil Siraju"
 date: "2025-09-18"
-categories: [fastai, computer-vision, deep-learning, learning]
+categories: [fastai, computer-vision, learning]
 image: "image.jpg"
-description: "Exploring computer vision concepts through the FastAI course and building my first image classifier"
+description: "Building my first image classifier with FastAI"
 ---
 
-## FastAI Journey: Building My First Image Classifier
+## Building My First Image Classifier
 
-As part of my FastAI course journey, I'm diving deep into computer vision fundamentals. Today, I want to share my experience building an image classifier and the key insights I've gained.
+Diving into computer vision with FastAI has been an incredible learning experience. Here's what I've discovered while building my first image classifier.
+
+![Computer Vision](image.jpg)
 
 ## The FastAI Approach
 
-One of the things I love about FastAI is how it makes complex deep learning concepts accessible. Here's a simple example of building an image classifier:
+FastAI makes complex deep learning surprisingly accessible:
 
 ```python
 from fastai.vision.all import *
 
-# Create a DataBlock for image classification
+# Create DataLoaders
 dls = ImageDataLoaders.from_folder(
     path='data/images', 
     train='train', 
@@ -27,69 +29,40 @@ dls = ImageDataLoaders.from_folder(
     batch_tfms=aug_transforms()
 )
 
-# Create a learner with a pre-trained model
+# Create learner with pre-trained model
 learn = vision_learner(dls, resnet34, metrics=accuracy)
-
-# Fine-tune the model
 learn.fine_tune(4)
 ```
 
-## Key Learnings So Far
+## Key Insights
 
-### 1. Transfer Learning is Powerful
-Starting with pre-trained models like ResNet significantly reduces training time and improves accuracy, especially with limited data.
+**Transfer Learning** - Pre-trained models like ResNet dramatically improve results with limited data.
 
-### 2. Data Augmentation Matters
-Simple transformations can dramatically improve model generalization:
+**Data Augmentation** - Simple transformations boost model generalization significantly.
 
-```python
-# Example augmentations
-aug_transforms(
-    mult=0.5,  # Probability multiplier
-    do_flip=True,  # Random horizontal flips
-    flip_vert=False,  # No vertical flips for natural images
-    max_rotate=10.0,  # Slight rotations
-    max_zoom=1.1,  # Minor zoom variations
-    max_lighting=0.2,  # Lighting changes
-    max_warp=0.2  # Perspective warping
-)
-```
+**Learning Rate** - FastAI's learning rate finder is a game-changer for optimization.
 
-### 3. Learning Rate is Critical
-Finding the optimal learning rate using FastAI's learning rate finder has been a game-changer:
+## Real Application
 
-```python
-# Find optimal learning rate
-learn.lr_find()
+I applied these concepts to my [Architectural Style Classifier](https://github.com/adilsiraju/Architecture-Style-Classifier/), achieving **73% accuracy** across 25 architectural styles through:
 
-# Use the suggested learning rate
-learn.fine_tune(4, lr=1e-3)
-```
-
-## Applying to My Architecture Classifier
-
-These concepts directly applied to my [Architectural Style Classifier project](https://github.com/adilsiraju/Architecture-Style-Classifier/), where I achieved 73% accuracy across 25 architectural styles. The key was:
-
-- **Quality data curation** from Kaggle datasets
-- **Appropriate data augmentation** for architectural images
-- **Fine-tuning strategy** that preserved pre-trained features while adapting to architectural styles
+- Quality data curation
+- Appropriate augmentation for architectural images  
+- Smart fine-tuning strategy
 
 ## Next Steps
 
-I'm planning to explore:
 - Advanced augmentation techniques
 - Model interpretation with GradCAM
-- Deployment strategies for production use
-- Multi-label classification problems
+- Production deployment strategies
+- Multi-label classification
 
-## Resources I'm Using
+## Resources
 
-- [FastAI Book](https://course.fast.ai/) - Comprehensive and practical
-- [Papers with Code](https://paperswithcode.com/) - Latest research implementations
-- [Kaggle Datasets](https://www.kaggle.com/datasets) - Quality training data
+- [FastAI Course](https://course.fast.ai/) - Practical deep learning
+- [Papers with Code](https://paperswithcode.com/) - Latest research
+- [Kaggle](https://www.kaggle.com/datasets) - Quality datasets
 
 ---
 
-The FastAI course continues to amaze me with its practical approach to deep learning. Stay tuned for more updates as I progress through the course!
-
-*What's your experience with FastAI? I'd love to hear about your projects and learning journey!*
+The FastAI course continues to amaze with its practical approach. More updates coming as I progress!
