@@ -10,7 +10,20 @@
       "python/*.ipynb",
       "fastai/*.ipynb",
       "computer-vision/*.ipynb",
-      "mlops/*.ipynb"
+      "mlops/*.ipynb",
+      "pandas/*.ipynb"
+    ],
+    "chapters\\computer-vision\\index.qmd": [
+      "*.ipynb"
+    ],
+    "chapters\\fastai\\index.qmd": [
+      "*.ipynb"
+    ],
+    "chapters\\pandas\\index.qmd": [
+      "*.ipynb"
+    ],
+    "chapters\\python\\index.qmd": [
+      "*.ipynb"
     ]
   }
 }

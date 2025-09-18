@@ -1,11 +1,14 @@
 ---
 title: "Computer Vision"
 description: "Image processing, CNN architectures, and vision applications"
+page-layout: full
+listing:
+  contents: "*.ipynb"
+  sort: "title"
+  type: grid
+  categories: true
+  fields: [title, description, date, categories]
 ---
-
-# Computer Vision 👁️
-
-Deep dive into computer vision concepts and implementations.
 
 ## Topics
 
@@ -22,5 +25,9 @@ Deep dive into computer vision concepts and implementations.
 - Object detection systems
 - Image segmentation tasks
 - Real-time vision applications
+
+---
+
+## Available Notebooks
 
 Add your computer vision notebooks and experiments here!

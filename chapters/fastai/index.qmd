@@ -1,11 +1,14 @@
 ---
 title: "FastAI Course"
 description: "Practical deep learning with FastAI framework"
+page-layout: full
+listing:
+  contents: "*.ipynb"
+  sort: "title"
+  type: grid
+  categories: true
+  fields: [title, description, date, categories]
 ---
-
-# FastAI Course 🤖
-
-Learning practical deep learning through the FastAI course and framework.
 
 ## Course Progress
 
@@ -23,5 +26,9 @@ Learning practical deep learning through the FastAI course and framework.
 - Text generation and sentiment analysis
 - Recommendation systems
 - Computer vision applications
+
+---
+
+## Available Notebooks
 
 Place your FastAI notebooks here as you progress through the course!

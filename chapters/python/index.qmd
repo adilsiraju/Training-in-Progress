@@ -1,11 +1,14 @@
 ---
 title: "Python Fundamentals"
 description: "Core Python concepts, syntax, and best practices"
+page-layout: full
+listing:
+  contents: "*.ipynb"
+  sort: "title"
+  type: grid
+  categories: true
+  fields: [title, description, date, categories]
 ---
-
-# Python Fundamentals 🐍
-
-Essential Python concepts for data science and machine learning.
 
 ## Topics Covered
 
@@ -19,3 +22,7 @@ Essential Python concepts for data science and machine learning.
 ## Learning Path
 
 Start with modules and packages, then progress through each topic systematically.
+
+---
+
+## Available Notebooks

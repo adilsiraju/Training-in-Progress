@@ -1,11 +1,7 @@
 [
   {
     "listing": "/index.html",
-    "items": [
-      "/posts/index.html",
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
-    ]
+    "items": []
   },
   {
     "listing": "/posts/index.html",
@@ -16,6 +12,37 @@
   },
   {
     "listing": "/chapters/index.html",
+    "items": [
+      "/chapters/pandas/data manipulation with loc and iloc.html",
+      "/chapters/pandas/loadsata.html",
+      "/chapters/pandas/learn pandas df operations.html",
+      "/chapters/pandas/learn pandas dfmissing data.html",
+      "/chapters/pandas/learn pandas Df.html",
+      "/chapters/pandas/learn pandas Series.html",
+      "/chapters/python/modules.html"
+    ]
+  },
+  {
+    "listing": "/chapters/pandas/index.html",
+    "items": [
+      "/chapters/pandas/data manipulation with loc and iloc.html",
+      "/chapters/pandas/loadsata.html",
+      "/chapters/pandas/learn pandas df operations.html",
+      "/chapters/pandas/learn pandas dfmissing data.html",
+      "/chapters/pandas/learn pandas Df.html",
+      "/chapters/pandas/learn pandas Series.html"
+    ]
+  },
+  {
+    "listing": "/chapters/computer-vision/index.html",
+    "items": []
+  },
+  {
+    "listing": "/chapters/fastai/index.html",
+    "items": []
+  },
+  {
+    "listing": "/chapters/python/index.html",
     "items": [
       "/chapters/python/modules.html"
     ]

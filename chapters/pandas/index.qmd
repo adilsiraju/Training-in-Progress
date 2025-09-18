@@ -1,11 +1,14 @@
 ---
 title: "Pandas for Data Science"
 description: "Data manipulation and analysis with Python's Pandas library"
+page-layout: full
+listing:
+  contents: "*.ipynb"
+  sort: "title"
+  type: grid
+  categories: true
+  fields: [title, description, date, categories]
 ---
-
-# Pandas for Data Science �
-
-Master data manipulation and analysis using Python's most powerful data library.
 
 ## Topics Covered
 
@@ -25,3 +28,7 @@ Master data manipulation and analysis using Python's most powerful data library.
 3. Master data cleaning and preprocessing
 4. Explore advanced transformations and analysis
 5. Practice with real-world datasets
+
+---
+
+## Available Notebooks

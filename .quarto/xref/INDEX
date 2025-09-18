@@ -37,5 +37,26 @@
   },
   "CONTRIBUTING.md": {
     "CONTRIBUTING.html": "f797fb42"
+  },
+  "chapters/pandas/data manipulation with loc and iloc.ipynb": {
+    "data manipulation with loc and iloc.html": "325e3ed0"
+  },
+  "chapters/pandas/index.qmd": {
+    "index.html": "1098e2aa"
+  },
+  "chapters/pandas/learn pandas df operations.ipynb": {
+    "learn pandas df operations.html": "e8a7d11e"
+  },
+  "chapters/pandas/learn pandas Df.ipynb": {
+    "learn pandas Df.html": "2df5a52b"
+  },
+  "chapters/pandas/learn pandas dfmissing data.ipynb": {
+    "learn pandas dfmissing data.html": "f43cf114"
+  },
+  "chapters/pandas/learn pandas Series.ipynb": {
+    "learn pandas Series.html": "98c59430"
+  },
+  "chapters/pandas/loadsata.ipynb": {
+    "loadsata.html": "a0fcc0f0"
   }
 }
