@@ -4,7 +4,7 @@ subtitle: "Documenting my learning path in Data Science, Machine Learning & Deep
 title-block-banner: true
 title-block-banner-color: "dark"
 listing:
-  contents: posts
+  contents: chapters
   feed: true
   sort: "date desc"
   type: default
