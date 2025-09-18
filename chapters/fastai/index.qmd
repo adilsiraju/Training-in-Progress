@@ -1,0 +1,27 @@
+---
+title: "FastAI Course"
+description: "Practical deep learning with FastAI framework"
+---
+
+# FastAI Course 🤖
+
+Learning practical deep learning through the FastAI course and framework.
+
+## Course Progress
+
+- **Lesson 1** - Image Classification
+- **Lesson 2** - Production and Deployment  
+- **Lesson 3** - Data Ethics and Validation
+- **Lesson 4** - Natural Language Processing
+- **Lesson 5** - Tabular Data and Collaborative Filtering
+- **Lesson 6** - Advanced Architectures
+- **Lesson 7** - Practical Deep Learning
+
+## Key Projects
+
+- Image classifiers with transfer learning
+- Text generation and sentiment analysis
+- Recommendation systems
+- Computer vision applications
+
+Place your FastAI notebooks here as you progress through the course!

@@ -31,6 +31,11 @@ Visit the live blog: [https://adilsiraju.github.io/Training-in-Progress/](https:
 ├── posts/                 # Blog posts directory
 │   ├── welcome/           # Welcome post
 │   └── post-with-code/    # FastAI learning post
+├── chapters/              # Learning chapters (Jupyter notebooks)
+│   ├── python/            # Python fundamentals
+│   ├── fastai/            # FastAI course content
+│   ├── computer-vision/   # Computer vision projects
+│   └── mlops/             # MLOps and deployment
 └── _site/                 # Generated site (auto-built)
 ```
 
@@ -60,6 +65,12 @@ Visit the live blog: [https://adilsiraju.github.io/Training-in-Progress/](https:
 - **FastAI Learning Progress** - Computer vision fundamentals
 - **Welcome Post** - Journey introduction and goals
 - *More posts coming as I continue learning...*
+
+### 📖 Learning Chapters
+- **Python Fundamentals** - Core concepts and best practices
+- **FastAI Course** - Practical deep learning notebooks
+- **Computer Vision** - Image processing and CNN implementations
+- **MLOps** - Deployment and production workflows
 
 ## 🚀 Quick Start
 
@@ -102,6 +113,22 @@ Visit the live blog: [https://adilsiraju.github.io/Training-in-Progress/](https:
    ```
 3. Write your content in Markdown/Quarto format
 4. Preview with `quarto preview`
+
+### Adding Learning Chapters
+
+1. Choose the appropriate chapter folder (`python/`, `fastai/`, `computer-vision/`, `mlops/`)
+2. Create a new Jupyter notebook (`.ipynb`) or Quarto document (`.qmd`)
+3. Add frontmatter at the top:
+   ```yaml
+   ---
+   title: "Chapter Title"
+   author: "Mohammed Adil Siraju"
+   date: "2025-XX-XX"
+   categories: [topic, subtopic]
+   description: "Learning objective"
+   ---
+   ```
+4. The chapter will automatically appear in the Chapters section
 
 ### Customizing Styles
 

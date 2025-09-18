@@ -1,0 +1,46 @@
+---
+title: "Chapter Organization"
+page-layout: full
+listing:
+  contents: 
+    - "python/*.ipynb"
+    - "fastai/*.ipynb" 
+    - "computer-vision/*.ipynb"
+    - "mlops/*.ipynb"
+  sort: "title"
+  type: grid
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [title, description, author, date, categories]
+---
+
+<!-- Welcome to my organized learning content! Here you'll find Jupyter notebooks and tutorials organized by topic areas. -->
+
+<!-- ## Chapter Organization -->
+
+:::: {.columns}
+::: {.column width="50%"}
+### 🐍 **Python Fundamentals**
+Core Python concepts, modules, and best practices
+
+### 🤖 **FastAI Course**  
+Practical deep learning with FastAI framework
+:::
+
+::: {.column width="50%"}
+### 👁️ **Computer Vision**
+Image processing, CNN architectures, and applications
+
+### 🔧 **MLOps**
+Model deployment, automation, and production workflows
+:::
+::::
+
+<br>
+
+---
+
+## Browse Chapters
+
+Use the filters below to find specific topics or browse all available content:

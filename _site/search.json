@@ -243,5 +243,229 @@
     "title": "Welcome to My AI/ML Learning Journey",
     "section": "Current Focus",
     "text": "Current Focus\n\nFastAI Course - Practical deep learning approaches\nComputer Vision - Extending my architectural classifier project\nMLOps - Deployment and automation skills\nReal-world Applications: Bridging the gap between theory and practice"
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing to TIP - Training in Progress",
+    "section": "",
+    "text": "Thank you for your interest in contributing to my learning journey blog! While this is primarily a personal documentation project, I welcome feedback, suggestions, and discussions.\n\n\n\n\n\nIssues: Report bugs or suggest improvements via GitHub Issues\nDiscussions: Share thoughts on learning approaches or technical content\nCode Review: Suggest improvements to code examples or implementations\n\n\n\n\nIf you find any issues: 1. Check existing issues first 2. Provide clear description and steps to reproduce 3. Include browser/device information if relevant\n\n\n\n\nLearning resource recommendations\nTechnical topic suggestions\nProject ideas or improvements\n\n\n\n\n\n\n\n\nQuarto CLI\nBasic knowledge of Markdown and web development\n\n\n\n\ngit clone https://github.com/adilsiraju/Training-in-Progress.git\ncd Training-in-Progress\nquarto preview\n\n\n\n\nFork the repository\nCreate a feature branch (git checkout -b feature/improvement)\nMake your changes\nTest with quarto preview\nCommit with clear messages\nPush and create a Pull Request\n\n\n\n\n\n\n\n\nFocus on learning journey and technical insights\nInclude practical examples and code snippets\nUse clear, concise language\nAdd relevant categories and descriptions\n\n\n\n\n\nEnsure code is functional and tested\nInclude comments for clarity\nFollow Python/web development best practices\n\n\n\n\n\n\nBe respectful and constructive\nFocus on learning and knowledge sharing\nProvide specific, actionable feedback\nRespect that this is a personal learning blog\n\n\n\n\nFor questions or collaboration ideas: - Email: mohdadilsiraju@gmail.com - GitHub: @adilsiraju - Portfolio: adilsiraju.vercel.app\n\nThank you for being part of this learning journey! 🚀"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#ways-to-contribute",
+    "href": "CONTRIBUTING.html#ways-to-contribute",
+    "title": "Contributing to TIP - Training in Progress",
+    "section": "",
+    "text": "Issues: Report bugs or suggest improvements via GitHub Issues\nDiscussions: Share thoughts on learning approaches or technical content\nCode Review: Suggest improvements to code examples or implementations\n\n\n\n\nIf you find any issues: 1. Check existing issues first 2. Provide clear description and steps to reproduce 3. Include browser/device information if relevant\n\n\n\n\nLearning resource recommendations\nTechnical topic suggestions\nProject ideas or improvements"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#technical-contributions",
+    "href": "CONTRIBUTING.html#technical-contributions",
+    "title": "Contributing to TIP - Training in Progress",
+    "section": "",
+    "text": "Quarto CLI\nBasic knowledge of Markdown and web development\n\n\n\n\ngit clone https://github.com/adilsiraju/Training-in-Progress.git\ncd Training-in-Progress\nquarto preview\n\n\n\n\nFork the repository\nCreate a feature branch (git checkout -b feature/improvement)\nMake your changes\nTest with quarto preview\nCommit with clear messages\nPush and create a Pull Request"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#content-guidelines",
+    "href": "CONTRIBUTING.html#content-guidelines",
+    "title": "Contributing to TIP - Training in Progress",
+    "section": "",
+    "text": "Focus on learning journey and technical insights\nInclude practical examples and code snippets\nUse clear, concise language\nAdd relevant categories and descriptions\n\n\n\n\n\nEnsure code is functional and tested\nInclude comments for clarity\nFollow Python/web development best practices"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#community-guidelines",
+    "href": "CONTRIBUTING.html#community-guidelines",
+    "title": "Contributing to TIP - Training in Progress",
+    "section": "",
+    "text": "Be respectful and constructive\nFocus on learning and knowledge sharing\nProvide specific, actionable feedback\nRespect that this is a personal learning blog"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#contact",
+    "href": "CONTRIBUTING.html#contact",
+    "title": "Contributing to TIP - Training in Progress",
+    "section": "",
+    "text": "For questions or collaboration ideas: - Email: mohdadilsiraju@gmail.com - GitHub: @adilsiraju - Portfolio: adilsiraju.vercel.app\n\nThank you for being part of this learning journey! 🚀"
+  },
+  {
+    "objectID": "chapters/python/index.html",
+    "href": "chapters/python/index.html",
+    "title": "Python Fundamentals",
+    "section": "",
+    "text": "Essential Python concepts for data science and machine learning.\n\n\n\nModules and Packages - Code organization and imports\nFunctions and Classes - Object-oriented programming\nData Structures - Lists, dictionaries, sets, tuples\nFile Handling - Reading and writing data\nError Handling - Try/except and debugging\nLibraries - NumPy, Pandas, Matplotlib basics\n\n\n\n\nStart with modules and packages, then progress through each topic systematically."
+  },
+  {
+    "objectID": "chapters/python/index.html#topics-covered",
+    "href": "chapters/python/index.html#topics-covered",
+    "title": "Python Fundamentals",
+    "section": "",
+    "text": "Modules and Packages - Code organization and imports\nFunctions and Classes - Object-oriented programming\nData Structures - Lists, dictionaries, sets, tuples\nFile Handling - Reading and writing data\nError Handling - Try/except and debugging\nLibraries - NumPy, Pandas, Matplotlib basics"
+  },
+  {
+    "objectID": "chapters/python/index.html#learning-path",
+    "href": "chapters/python/index.html#learning-path",
+    "title": "Python Fundamentals",
+    "section": "",
+    "text": "Start with modules and packages, then progress through each topic systematically."
+  },
+  {
+    "objectID": "chapters/index.html",
+    "href": "chapters/index.html",
+    "title": "Chapter Organization",
+    "section": "",
+    "text": "Core Python concepts, modules, and best practices\n\n\n\nPractical deep learning with FastAI framework\n\n\n\n\nImage processing, CNN architectures, and applications\n\n\n\nModel deployment, automation, and production workflows"
+  },
+  {
+    "objectID": "chapters/index.html#chapter-organization",
+    "href": "chapters/index.html#chapter-organization",
+    "title": "Learning Chapters",
+    "section": "",
+    "text": "Core Python concepts, modules, and best practices\n\n\n\nPractical deep learning with FastAI framework\n\n\n\n\nImage processing, CNN architectures, and applications\n\n\n\nModel deployment, automation, and production workflows"
+  },
+  {
+    "objectID": "chapters/index.html#browse-chapters",
+    "href": "chapters/index.html#browse-chapters",
+    "title": "Chapter Organization",
+    "section": "Browse Chapters",
+    "text": "Browse Chapters\nUse the filters below to find specific topics or browse all available content:"
+  },
+  {
+    "objectID": "chapters/computer-vision/index.html",
+    "href": "chapters/computer-vision/index.html",
+    "title": "Computer Vision",
+    "section": "",
+    "text": "Deep dive into computer vision concepts and implementations.\n\n\n\nImage Processing - OpenCV, PIL, preprocessing\nCNN Architectures - ResNet, VGG, Inception\nObject Detection - YOLO, R-CNN, SSD\nImage Segmentation - U-Net, Mask R-CNN\nTransfer Learning - Pre-trained models and fine-tuning\nProduction - Model optimization and deployment\n\n\n\n\n\nArchitectural style classifier\nObject detection systems\nImage segmentation tasks\nReal-time vision applications\n\nAdd your computer vision notebooks and experiments here!"
+  },
+  {
+    "objectID": "chapters/computer-vision/index.html#topics",
+    "href": "chapters/computer-vision/index.html#topics",
+    "title": "Computer Vision",
+    "section": "",
+    "text": "Image Processing - OpenCV, PIL, preprocessing\nCNN Architectures - ResNet, VGG, Inception\nObject Detection - YOLO, R-CNN, SSD\nImage Segmentation - U-Net, Mask R-CNN\nTransfer Learning - Pre-trained models and fine-tuning\nProduction - Model optimization and deployment"
+  },
+  {
+    "objectID": "chapters/computer-vision/index.html#projects",
+    "href": "chapters/computer-vision/index.html#projects",
+    "title": "Computer Vision",
+    "section": "",
+    "text": "Architectural style classifier\nObject detection systems\nImage segmentation tasks\nReal-time vision applications\n\nAdd your computer vision notebooks and experiments here!"
+  },
+  {
+    "objectID": "CHANGELOG.html",
+    "href": "CHANGELOG.html",
+    "title": "Changelog",
+    "section": "",
+    "text": "All notable changes to this project will be documented in this file.\n\n\n\n\n\nBlog Launch: Complete Quarto-based blog setup\nHomepage: Clean, minimal design with hero image\nAbout Page: Professional profile and background\nBlog Posts: Welcome post and FastAI learning progress\n\n\n\n\n\nPulse Theme: Bootstrap-based theme with custom SCSS\nHero Section: Responsive hero image with proper scaling\nMinimal CSS: Streamlined styling leveraging theme defaults\nMobile-First: Responsive design across all devices\n\n\n\n\n\nWelcome Post: Introduction to learning journey\nFastAI Progress: Computer vision fundamentals and classifier project\nAbout Section: Education, skills, experience, and projects\nProject Highlights: Architectural classifier and MLOps work\n\n\n\n\n\nQuarto Setup: Complete configuration with proper metadata\nGitHub Pages: Automated deployment and hosting\nSEO Optimization: Meta descriptions and structured content\nRepository Structure: Clean organization with documentation\n\n\n\n\n\nComprehensive README with setup instructions\nEnhanced .gitignore for Quarto projects\nMIT License for open source sharing\nContributing guidelines for community engagement\nPosts documentation and structure guidelines\n\n\n\n\n\n\n\n\n\nSearch functionality\nTags system for better content organization\nRSS feed optimization\nComment system integration\nDark/light theme toggle\nReading time estimates\nRelated posts suggestions\n\n\n\n\n\nFastAI course completion posts\nComputer vision project deep dives\nMLOps tutorials and best practices\nTechnical interview preparation content\nOpen source contribution experiences\n\n\nKeep building, keep learning! 🚀"
+  },
+  {
+    "objectID": "CHANGELOG.html#section",
+    "href": "CHANGELOG.html#section",
+    "title": "Changelog",
+    "section": "",
+    "text": "Blog Launch: Complete Quarto-based blog setup\nHomepage: Clean, minimal design with hero image\nAbout Page: Professional profile and background\nBlog Posts: Welcome post and FastAI learning progress\n\n\n\n\n\nPulse Theme: Bootstrap-based theme with custom SCSS\nHero Section: Responsive hero image with proper scaling\nMinimal CSS: Streamlined styling leveraging theme defaults\nMobile-First: Responsive design across all devices\n\n\n\n\n\nWelcome Post: Introduction to learning journey\nFastAI Progress: Computer vision fundamentals and classifier project\nAbout Section: Education, skills, experience, and projects\nProject Highlights: Architectural classifier and MLOps work\n\n\n\n\n\nQuarto Setup: Complete configuration with proper metadata\nGitHub Pages: Automated deployment and hosting\nSEO Optimization: Meta descriptions and structured content\nRepository Structure: Clean organization with documentation\n\n\n\n\n\nComprehensive README with setup instructions\nEnhanced .gitignore for Quarto projects\nMIT License for open source sharing\nContributing guidelines for community engagement\nPosts documentation and structure guidelines"
+  },
+  {
+    "objectID": "CHANGELOG.html#upcoming-features",
+    "href": "CHANGELOG.html#upcoming-features",
+    "title": "Changelog",
+    "section": "",
+    "text": "Search functionality\nTags system for better content organization\nRSS feed optimization\nComment system integration\nDark/light theme toggle\nReading time estimates\nRelated posts suggestions\n\n\n\n\n\nFastAI course completion posts\nComputer vision project deep dives\nMLOps tutorials and best practices\nTechnical interview preparation content\nOpen source contribution experiences\n\n\nKeep building, keep learning! 🚀"
+  },
+  {
+    "objectID": "chapters/fastai/index.html",
+    "href": "chapters/fastai/index.html",
+    "title": "FastAI Course",
+    "section": "",
+    "text": "Learning practical deep learning through the FastAI course and framework.\n\n\n\nLesson 1 - Image Classification\nLesson 2 - Production and Deployment\n\nLesson 3 - Data Ethics and Validation\nLesson 4 - Natural Language Processing\nLesson 5 - Tabular Data and Collaborative Filtering\nLesson 6 - Advanced Architectures\nLesson 7 - Practical Deep Learning\n\n\n\n\n\nImage classifiers with transfer learning\nText generation and sentiment analysis\nRecommendation systems\nComputer vision applications\n\nPlace your FastAI notebooks here as you progress through the course!"
+  },
+  {
+    "objectID": "chapters/fastai/index.html#course-progress",
+    "href": "chapters/fastai/index.html#course-progress",
+    "title": "FastAI Course",
+    "section": "",
+    "text": "Lesson 1 - Image Classification\nLesson 2 - Production and Deployment\n\nLesson 3 - Data Ethics and Validation\nLesson 4 - Natural Language Processing\nLesson 5 - Tabular Data and Collaborative Filtering\nLesson 6 - Advanced Architectures\nLesson 7 - Practical Deep Learning"
+  },
+  {
+    "objectID": "chapters/fastai/index.html#key-projects",
+    "href": "chapters/fastai/index.html#key-projects",
+    "title": "FastAI Course",
+    "section": "",
+    "text": "Image classifiers with transfer learning\nText generation and sentiment analysis\nRecommendation systems\nComputer vision applications\n\nPlace your FastAI notebooks here as you progress through the course!"
+  },
+  {
+    "objectID": "chapters/mlops/index.html",
+    "href": "chapters/mlops/index.html",
+    "title": "MLOps",
+    "section": "",
+    "text": "Machine Learning Operations - from development to production.\n\n\n\nModel Deployment - Docker, Kubernetes, cloud platforms\nCI/CD Pipelines - Automated testing and deployment\nModel Monitoring - Performance tracking and drift detection\nVersion Control - Model and data versioning\nInfrastructure - Scalable ML systems\nBest Practices - Production-ready ML workflows\n\n\n\n\n\nDocker and containerization\nKubernetes for orchestration\nGitHub Actions for CI/CD\nMLflow for experiment tracking\nFastAPI for model serving\nCloud platforms (AWS, GCP, Azure)\n\nDocument your MLOps learning and implementations here!"
+  },
+  {
+    "objectID": "chapters/mlops/index.html#key-areas",
+    "href": "chapters/mlops/index.html#key-areas",
+    "title": "MLOps",
+    "section": "",
+    "text": "Model Deployment - Docker, Kubernetes, cloud platforms\nCI/CD Pipelines - Automated testing and deployment\nModel Monitoring - Performance tracking and drift detection\nVersion Control - Model and data versioning\nInfrastructure - Scalable ML systems\nBest Practices - Production-ready ML workflows"
+  },
+  {
+    "objectID": "chapters/mlops/index.html#tools-technologies",
+    "href": "chapters/mlops/index.html#tools-technologies",
+    "title": "MLOps",
+    "section": "",
+    "text": "Docker and containerization\nKubernetes for orchestration\nGitHub Actions for CI/CD\nMLflow for experiment tracking\nFastAPI for model serving\nCloud platforms (AWS, GCP, Azure)\n\nDocument your MLOps learning and implementations here!"
+  },
+  {
+    "objectID": "chapters/python/modules.html",
+    "href": "chapters/python/modules.html",
+    "title": "Python Modules and Packages",
+    "section": "",
+    "text": "In this chapter, we’ll explore Python modules and packages - essential concepts for organizing and reusing code.\n\n\nA module is a file containing Python definitions and statements. The file name is the module name with the suffix .py added.\n\n# Example: Using built-in modules\nimport math\nimport datetime\n\n# Using math module\nprint(f\"Pi value: {math.pi}\")\nprint(f\"Square root of 16: {math.sqrt(16)}\")\n\n# Using datetime module\nnow = datetime.datetime.now()\nprint(f\"Current time: {now}\")\n\nPi value: 3.141592653589793\nSquare root of 16: 4.0\nCurrent time: 2025-09-18 11:56:02.592034\n\n\n\n\n\nThere are several ways to import modules in Python:\n\n# 1. Import entire module\nimport numpy\n\n# 2. Import with alias\nimport numpy as np\n\n# 3. Import specific functions\nfrom math import sqrt, pi\n\n# 4. Import all (not recommended)\n# from math import *\n\n# Examples\narr = np.array([1, 2, 3, 4, 5])\nprint(f\"Array: {arr}\")\nprint(f\"Mean: {np.mean(arr)}\")\n\nprint(f\"Using imported sqrt: {sqrt(25)}\")\nprint(f\"Using imported pi: {pi}\")\n\nArray: [1 2 3 4 5]\nMean: 3.0\nUsing imported sqrt: 5.0\nUsing imported pi: 3.141592653589793\n\n\n\n\n\nYou can create your own modules by saving Python code in a .py file.\n\n# Example: Creating a simple utility module (conceptually)\n# This would be saved as utils.py\n\ndef greet(name):\n    \"\"\"Greet a person by name\"\"\"\n    return f\"Hello, {name}!\"\n\ndef calculate_area(radius):\n    \"\"\"Calculate area of a circle\"\"\"\n    import math\n    return math.pi * radius ** 2\n\n# Constants\nVERSION = \"1.0.0\"\nAUTHOR = \"Mohammed Adil Siraju\"\n\n# Test the functions\nprint(greet(\"Adil\"))\nprint(f\"Area of circle with radius 5: {calculate_area(5):.2f}\")\nprint(f\"Module version: {VERSION}\")\n\nHello, Adil!\nArea of circle with radius 5: 78.54\nModule version: 1.0.0\n\n\n\n\n\nA package is a collection of modules organized in directories. Packages help organize related modules together.\n\n# Example package structure:\n# mypackage/\n#     __init__.py\n#     module1.py\n#     module2.py\n#     subpackage/\n#         __init__.py\n#         submodule.py\n\n# Importing from packages\n# import mypackage.module1\n# from mypackage import module2\n# from mypackage.subpackage import submodule\n\nprint(\"Package structure example shown above\")\n\nPackage structure example shown above\n\n\n\n\n\nLet’s explore some essential packages for AI/ML work:\n\n# Data manipulation and analysis\nimport pandas as pd\nimport numpy as np\n\n# Visualization\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Machine Learning\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# Create sample data\ndata = {\n    'x': [1, 2, 3, 4, 5],\n    'y': [2, 4, 6, 8, 10]\n}\n\ndf = pd.DataFrame(data)\nprint(\"Sample DataFrame:\")\nprint(df)\n\n# Simple linear regression example\nX = df[['x']]\ny = df['y']\n\nmodel = LinearRegression()\nmodel.fit(X, y)\n\npredictions = model.predict(X)\nmse = mean_squared_error(y, predictions)\n\nprint(f\"\\nLinear Regression Results:\")\nprint(f\"Slope: {model.coef_[0]:.2f}\")\nprint(f\"Intercept: {model.intercept_:.2f}\")\nprint(f\"MSE: {mse:.2f}\")\n\nSample DataFrame:\n   x   y\n0  1   2\n1  2   4\n2  3   6\n3  4   8\n4  5  10\n\nLinear Regression Results:\nSlope: 2.00\nIntercept: -0.00\nMSE: 0.00\n\n\n\n\n\n\nUse descriptive names for modules and packages\nKeep modules focused on a single responsibility\nUse __init__.py to control package imports\nDocument your modules with docstrings\nFollow PEP 8 naming conventions\nAvoid circular imports\n\n\n\n\n\nModules help organize and reuse code\nPackages group related modules together\nImport statements control what code is available\nPython’s standard library provides many useful modules\nThird-party packages extend Python’s capabilities\n\n\nNext: We’ll explore Python functions and classes in detail."
+  },
+  {
+    "objectID": "chapters/python/modules.html#what-are-modules",
+    "href": "chapters/python/modules.html#what-are-modules",
+    "title": "Python Modules and Packages",
+    "section": "",
+    "text": "A module is a file containing Python definitions and statements. The file name is the module name with the suffix .py added.\n\n# Example: Using built-in modules\nimport math\nimport datetime\n\n# Using math module\nprint(f\"Pi value: {math.pi}\")\nprint(f\"Square root of 16: {math.sqrt(16)}\")\n\n# Using datetime module\nnow = datetime.datetime.now()\nprint(f\"Current time: {now}\")\n\nPi value: 3.141592653589793\nSquare root of 16: 4.0\nCurrent time: 2025-09-18 11:56:02.592034"
+  },
+  {
+    "objectID": "chapters/python/modules.html#import-statements",
+    "href": "chapters/python/modules.html#import-statements",
+    "title": "Python Modules and Packages",
+    "section": "",
+    "text": "There are several ways to import modules in Python:\n\n# 1. Import entire module\nimport numpy\n\n# 2. Import with alias\nimport numpy as np\n\n# 3. Import specific functions\nfrom math import sqrt, pi\n\n# 4. Import all (not recommended)\n# from math import *\n\n# Examples\narr = np.array([1, 2, 3, 4, 5])\nprint(f\"Array: {arr}\")\nprint(f\"Mean: {np.mean(arr)}\")\n\nprint(f\"Using imported sqrt: {sqrt(25)}\")\nprint(f\"Using imported pi: {pi}\")\n\nArray: [1 2 3 4 5]\nMean: 3.0\nUsing imported sqrt: 5.0\nUsing imported pi: 3.141592653589793"
+  },
+  {
+    "objectID": "chapters/python/modules.html#creating-custom-modules",
+    "href": "chapters/python/modules.html#creating-custom-modules",
+    "title": "Python Modules and Packages",
+    "section": "",
+    "text": "You can create your own modules by saving Python code in a .py file.\n\n# Example: Creating a simple utility module (conceptually)\n# This would be saved as utils.py\n\ndef greet(name):\n    \"\"\"Greet a person by name\"\"\"\n    return f\"Hello, {name}!\"\n\ndef calculate_area(radius):\n    \"\"\"Calculate area of a circle\"\"\"\n    import math\n    return math.pi * radius ** 2\n\n# Constants\nVERSION = \"1.0.0\"\nAUTHOR = \"Mohammed Adil Siraju\"\n\n# Test the functions\nprint(greet(\"Adil\"))\nprint(f\"Area of circle with radius 5: {calculate_area(5):.2f}\")\nprint(f\"Module version: {VERSION}\")\n\nHello, Adil!\nArea of circle with radius 5: 78.54\nModule version: 1.0.0"
+  },
+  {
+    "objectID": "chapters/python/modules.html#packages",
+    "href": "chapters/python/modules.html#packages",
+    "title": "Python Modules and Packages",
+    "section": "",
+    "text": "A package is a collection of modules organized in directories. Packages help organize related modules together.\n\n# Example package structure:\n# mypackage/\n#     __init__.py\n#     module1.py\n#     module2.py\n#     subpackage/\n#         __init__.py\n#         submodule.py\n\n# Importing from packages\n# import mypackage.module1\n# from mypackage import module2\n# from mypackage.subpackage import submodule\n\nprint(\"Package structure example shown above\")\n\nPackage structure example shown above"
+  },
+  {
+    "objectID": "chapters/python/modules.html#popular-python-packages-for-data-science",
+    "href": "chapters/python/modules.html#popular-python-packages-for-data-science",
+    "title": "Python Modules and Packages",
+    "section": "",
+    "text": "Let’s explore some essential packages for AI/ML work:\n\n# Data manipulation and analysis\nimport pandas as pd\nimport numpy as np\n\n# Visualization\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Machine Learning\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# Create sample data\ndata = {\n    'x': [1, 2, 3, 4, 5],\n    'y': [2, 4, 6, 8, 10]\n}\n\ndf = pd.DataFrame(data)\nprint(\"Sample DataFrame:\")\nprint(df)\n\n# Simple linear regression example\nX = df[['x']]\ny = df['y']\n\nmodel = LinearRegression()\nmodel.fit(X, y)\n\npredictions = model.predict(X)\nmse = mean_squared_error(y, predictions)\n\nprint(f\"\\nLinear Regression Results:\")\nprint(f\"Slope: {model.coef_[0]:.2f}\")\nprint(f\"Intercept: {model.intercept_:.2f}\")\nprint(f\"MSE: {mse:.2f}\")\n\nSample DataFrame:\n   x   y\n0  1   2\n1  2   4\n2  3   6\n3  4   8\n4  5  10\n\nLinear Regression Results:\nSlope: 2.00\nIntercept: -0.00\nMSE: 0.00"
+  },
+  {
+    "objectID": "chapters/python/modules.html#best-practices",
+    "href": "chapters/python/modules.html#best-practices",
+    "title": "Python Modules and Packages",
+    "section": "",
+    "text": "Use descriptive names for modules and packages\nKeep modules focused on a single responsibility\nUse __init__.py to control package imports\nDocument your modules with docstrings\nFollow PEP 8 naming conventions\nAvoid circular imports"
+  },
+  {
+    "objectID": "chapters/python/modules.html#key-takeaways",
+    "href": "chapters/python/modules.html#key-takeaways",
+    "title": "Python Modules and Packages",
+    "section": "",
+    "text": "Modules help organize and reuse code\nPackages group related modules together\nImport statements control what code is available\nPython’s standard library provides many useful modules\nThird-party packages extend Python’s capabilities\n\n\nNext: We’ll explore Python functions and classes in detail."
   }
 ]

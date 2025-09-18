@@ -1,0 +1,21 @@
+---
+title: "Python Fundamentals"
+description: "Core Python concepts, syntax, and best practices"
+---
+
+# Python Fundamentals 🐍
+
+Essential Python concepts for data science and machine learning.
+
+## Topics Covered
+
+- **Modules and Packages** - Code organization and imports
+- **Functions and Classes** - Object-oriented programming
+- **Data Structures** - Lists, dictionaries, sets, tuples
+- **File Handling** - Reading and writing data
+- **Error Handling** - Try/except and debugging
+- **Libraries** - NumPy, Pandas, Matplotlib basics
+
+## Learning Path
+
+Start with modules and packages, then progress through each topic systematically.

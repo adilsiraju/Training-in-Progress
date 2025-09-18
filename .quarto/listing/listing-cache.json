@@ -5,6 +5,12 @@
     ],
     "posts\\index.qmd": [
       "."
+    ],
+    "chapters\\index.qmd": [
+      "python/*.ipynb",
+      "fastai/*.ipynb",
+      "computer-vision/*.ipynb",
+      "mlops/*.ipynb"
     ]
   }
 }

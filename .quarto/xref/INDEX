@@ -13,5 +13,29 @@
   },
   "posts/index.qmd": {
     "index.html": "2e1c9710"
+  },
+  "CHANGELOG.md": {
+    "CHANGELOG.html": "27ff3fb7"
+  },
+  "chapters/computer-vision/index.qmd": {
+    "index.html": "10305b7b"
+  },
+  "chapters/fastai/index.qmd": {
+    "index.html": "ff2e107e"
+  },
+  "chapters/index.qmd": {
+    "index.html": "e9c0cc02"
+  },
+  "chapters/mlops/index.qmd": {
+    "index.html": "cf94ac7e"
+  },
+  "chapters/python/index.qmd": {
+    "index.html": "fc83bef8"
+  },
+  "chapters/python/modules.ipynb": {
+    "modules.html": "7fff317f"
+  },
+  "CONTRIBUTING.md": {
+    "CONTRIBUTING.html": "f797fb42"
   }
 }

@@ -12,7 +12,7 @@
 <generator>quarto-1.8.24</generator>
 <lastBuildDate>Wed, 17 Sep 2025 18:30:00 GMT</lastBuildDate>
 <item>
-  <title>FastAI Learning Progress: Computer Vision Fundamentals</title>
+  <title>FastAI Progress: Computer Vision Fundamentals</title>
   <dc:creator>Mohammed Adil Siraju</dc:creator>
   <link>https://adilsiraju.github.io/Training-in-Progress/posts/post-with-code/</link>
   <description><![CDATA[ 
@@ -21,13 +21,19 @@
 
 
 
-<section id="fastai-journey-building-my-first-image-classifier" class="level2">
-<h2 class="anchored" data-anchor-id="fastai-journey-building-my-first-image-classifier">FastAI Journey: Building My First Image Classifier</h2>
-<p>As part of my FastAI course journey, I’m diving deep into computer vision fundamentals. Today, I want to share my experience building an image classifier and the key insights I’ve gained.</p>
+<section id="building-my-first-image-classifier" class="level2">
+<h2 class="anchored" data-anchor-id="building-my-first-image-classifier">Building My First Image Classifier</h2>
+<p>Diving into computer vision with FastAI has been an incredible learning experience. Here’s what I’ve discovered while building my first image classifier.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://adilsiraju.github.io/Training-in-Progress/posts/post-with-code/image.jpg" class="img-fluid figure-img"></p>
+<figcaption>Computer Vision</figcaption>
+</figure>
+</div>
 </section>
 <section id="the-fastai-approach" class="level2">
 <h2 class="anchored" data-anchor-id="the-fastai-approach">The FastAI Approach</h2>
-<p>One of the things I love about FastAI is how it makes complex deep learning concepts accessible. Here’s a simple example of building an image classifier:</p>
+<p>FastAI makes complex deep learning surprisingly accessible:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> fastai.vision.<span class="bu" style="color: null;
@@ -40,7 +46,7 @@ font-style: inherit;">*</span></span>
 <span id="cb1-2"></span>
 <span id="cb1-3"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># Create a DataBlock for image classification</span></span>
+font-style: inherit;"># Create DataLoaders</span></span>
 <span id="cb1-4">dls <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> ImageDataLoaders.from_folder(</span>
@@ -71,127 +77,50 @@ font-style: inherit;">=</span>aug_transforms()</span>
 <span id="cb1-11"></span>
 <span id="cb1-12"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># Create a learner with a pre-trained model</span></span>
+font-style: inherit;"># Create learner with pre-trained model</span></span>
 <span id="cb1-13">learn <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> vision_learner(dls, resnet34, metrics<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span>accuracy)</span>
-<span id="cb1-14"></span>
-<span id="cb1-15"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Fine-tune the model</span></span>
-<span id="cb1-16">learn.fine_tune(<span class="dv" style="color: #AD0000;
+<span id="cb1-14">learn.fine_tune(<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>)</span></code></pre></div></div>
 </section>
-<section id="key-learnings-so-far" class="level2">
-<h2 class="anchored" data-anchor-id="key-learnings-so-far">Key Learnings So Far</h2>
-<section id="transfer-learning-is-powerful" class="level3">
-<h3 class="anchored" data-anchor-id="transfer-learning-is-powerful">1. Transfer Learning is Powerful</h3>
-<p>Starting with pre-trained models like ResNet significantly reduces training time and improves accuracy, especially with limited data.</p>
+<section id="key-insights" class="level2">
+<h2 class="anchored" data-anchor-id="key-insights">Key Insights</h2>
+<p><strong>Transfer Learning</strong> - Pre-trained models like ResNet dramatically improve results with limited data.</p>
+<p><strong>Data Augmentation</strong> - Simple transformations boost model generalization significantly.</p>
+<p><strong>Learning Rate</strong> - FastAI’s learning rate finder is a game-changer for optimization.</p>
 </section>
-<section id="data-augmentation-matters" class="level3">
-<h3 class="anchored" data-anchor-id="data-augmentation-matters">2. Data Augmentation Matters</h3>
-<p>Simple transformations can dramatically improve model generalization:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Example augmentations</span></span>
-<span id="cb2-2">aug_transforms(</span>
-<span id="cb2-3">    mult<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.5</span>,  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Probability multiplier</span></span>
-<span id="cb2-4">    do_flip<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">True</span>,  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Random horizontal flips</span></span>
-<span id="cb2-5">    flip_vert<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">False</span>,  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># No vertical flips for natural images</span></span>
-<span id="cb2-6">    max_rotate<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10.0</span>,  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Slight rotations</span></span>
-<span id="cb2-7">    max_zoom<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1.1</span>,  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Minor zoom variations</span></span>
-<span id="cb2-8">    max_lighting<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.2</span>,  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Lighting changes</span></span>
-<span id="cb2-9">    max_warp<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.2</span>  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Perspective warping</span></span>
-<span id="cb2-10">)</span></code></pre></div></div>
-</section>
-<section id="learning-rate-is-critical" class="level3">
-<h3 class="anchored" data-anchor-id="learning-rate-is-critical">3. Learning Rate is Critical</h3>
-<p>Finding the optimal learning rate using FastAI’s learning rate finder has been a game-changer:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Find optimal learning rate</span></span>
-<span id="cb3-2">learn.lr_find()</span>
-<span id="cb3-3"></span>
-<span id="cb3-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Use the suggested learning rate</span></span>
-<span id="cb3-5">learn.fine_tune(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>, lr<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1e-3</span>)</span></code></pre></div></div>
-</section>
-</section>
-<section id="applying-to-my-architecture-classifier" class="level2">
-<h2 class="anchored" data-anchor-id="applying-to-my-architecture-classifier">Applying to My Architecture Classifier</h2>
-<p>These concepts directly applied to my <a href="https://github.com/adilsiraju/Architecture-Style-Classifier/">Architectural Style Classifier project</a>, where I achieved 73% accuracy across 25 architectural styles. The key was:</p>
+<section id="real-application" class="level2">
+<h2 class="anchored" data-anchor-id="real-application">Real Application</h2>
+<p>I applied these concepts to my <a href="https://github.com/adilsiraju/Architecture-Style-Classifier/">Architectural Style Classifier</a>, achieving <strong>73% accuracy</strong> across 25 architectural styles through:</p>
 <ul>
-<li><strong>Quality data curation</strong> from Kaggle datasets</li>
-<li><strong>Appropriate data augmentation</strong> for architectural images</li>
-<li><strong>Fine-tuning strategy</strong> that preserved pre-trained features while adapting to architectural styles</li>
+<li>Quality data curation</li>
+<li>Appropriate augmentation for architectural images<br>
+</li>
+<li>Smart fine-tuning strategy</li>
 </ul>
 </section>
 <section id="next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
-<p>I’m planning to explore: - Advanced augmentation techniques - Model interpretation with GradCAM - Deployment strategies for production use - Multi-label classification problems</p>
-</section>
-<section id="resources-im-using" class="level2">
-<h2 class="anchored" data-anchor-id="resources-im-using">Resources I’m Using</h2>
 <ul>
-<li><a href="https://course.fast.ai/">FastAI Book</a> - Comprehensive and practical</li>
-<li><a href="https://paperswithcode.com/">Papers with Code</a> - Latest research implementations</li>
-<li><a href="https://www.kaggle.com/datasets">Kaggle Datasets</a> - Quality training data</li>
+<li>Advanced augmentation techniques</li>
+<li>Model interpretation with GradCAM</li>
+<li>Production deployment strategies</li>
+<li>Multi-label classification</li>
+</ul>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://course.fast.ai/">FastAI Course</a> - Practical deep learning</li>
+<li><a href="https://paperswithcode.com/">Papers with Code</a> - Latest research</li>
+<li><a href="https://www.kaggle.com/datasets">Kaggle</a> - Quality datasets</li>
 </ul>
 <hr>
-<p>The FastAI course continues to amaze me with its practical approach to deep learning. Stay tuned for more updates as I progress through the course!</p>
-<p><em>What’s your experience with FastAI? I’d love to hear about your projects and learning journey!</em></p>
+<p>The FastAI course continues to amaze with its practical approach. More updates coming as I progress!</p>
 
 
 </section>
@@ -205,7 +134,7 @@ font-style: inherit;">1e-3</span>)</span></code></pre></div></div>
   <media:content url="https://adilsiraju.github.io/Training-in-Progress/posts/post-with-code/image.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Welcome to My AI/ML Learning Journey!</title>
+  <title>Welcome to My AI/ML Learning Journey</title>
   <dc:creator>Mohammed Adil Siraju</dc:creator>
   <link>https://adilsiraju.github.io/Training-in-Progress/posts/welcome/</link>
   <description><![CDATA[ 
@@ -214,9 +143,9 @@ font-style: inherit;">1e-3</span>)</span></code></pre></div></div>
 
 
 
-<section id="hello-and-welcome" class="level2">
-<h2 class="anchored" data-anchor-id="hello-and-welcome">Hello and Welcome! 👋</h2>
-<p>I’m excited to start this blog as a way to document my learning journey in <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong>. As someone who has just completed my B.E. in AI &amp; ML with First Class with Distinction, I’m now diving deeper into practical applications and advanced concepts.</p>
+<section id="hello" class="level2">
+<h2 class="anchored" data-anchor-id="hello">Hello! 👋</h2>
+<p>Welcome to my blog where I document my journey in <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong>. Having completed my B.E. in AI &amp; ML with distinction, I’m now diving deeper into practical applications.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://adilsiraju.github.io/Training-in-Progress/posts/welcome/thumbnail.jpg" class="img-fluid figure-img"></p>
@@ -224,23 +153,23 @@ font-style: inherit;">1e-3</span>)</span></code></pre></div></div>
 </figure>
 </div>
 </section>
-<section id="what-this-blog-represents" class="level2">
-<h2 class="anchored" data-anchor-id="what-this-blog-represents">What This Blog Represents</h2>
-<p>This space serves multiple purposes:</p>
+<section id="purpose" class="level2">
+<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
+<p>This blog serves as:</p>
 <ul>
-<li><strong>📚 Learning Documentation</strong>: Recording my progress through courses like FastAI</li>
-<li><strong>💡 Project Showcases</strong>: Sharing the ML/DL projects I’m building</li>
-<li><strong>🔬 Technical Insights</strong>: Deep dives into algorithms, techniques, and best practices</li>
-<li><strong>🚀 Career Growth</strong>: Tracking my evolution as an AI/ML engineer</li>
+<li><strong>Learning Documentation</strong> - Recording progress through courses like FastAI</li>
+<li><strong>Project Showcases</strong> - Sharing ML/DL projects and implementations<br>
+</li>
+<li><strong>Technical Insights</strong> - Deep dives into algorithms and best practices</li>
+<li><strong>Career Growth</strong> - Tracking my evolution as an AI/ML engineer</li>
 </ul>
 </section>
-<section id="my-current-focus" class="level2">
-<h2 class="anchored" data-anchor-id="my-current-focus">My Current Focus</h2>
-<p>Right now, I’m particularly focused on:</p>
+<section id="current-focus" class="level2">
+<h2 class="anchored" data-anchor-id="current-focus">Current Focus</h2>
 <ul>
-<li><strong>FastAI Course</strong>: Learning practical deep learning approaches</li>
-<li><strong>Computer Vision</strong>: Building on my architectural style classifier project</li>
-<li><strong>MLOps</strong>: Expanding my deployment and pipeline automation skills</li>
+<li><strong>FastAI Course</strong> - Practical deep learning approaches</li>
+<li><strong>Computer Vision</strong> - Extending my architectural classifier project</li>
+<li><strong>MLOps</strong> - Deployment and automation skills</li>
 <li><strong>Real-world Applications</strong>: Bridging the gap between theory and practice</li>
 </ul>
 </section>
@@ -322,7 +251,7 @@ font-style: inherit;">1e-3</span>)</span></code></pre></div></div>
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZmFzdGFpJTJDY29tcHV0ZXItdmlzaW9uJTJDZGVlcC1sZWFybmluZyUyQ2xlYXJuaW5n" data-listing-date-sort="1758133800000" data-listing-file-modified-sort="1758170583166" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="362">
+<div class="quarto-post image-right" data-index="0" data-categories="ZmFzdGFpJTJDY29tcHV0ZXItdmlzaW9uJTJDbGVhcm5pbmc=" data-listing-date-sort="1758133800000" data-listing-file-modified-sort="1758176104613" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="180">
 <div class="thumbnail"><a href="../posts/post-with-code/index.html" class="no-external">
 
 <img loading="lazy" src="https://adilsiraju.github.io/Training-in-Progress/posts/post-with-code/image.jpg" class="thumbnail-image">
@@ -330,7 +259,7 @@ font-style: inherit;">1e-3</span>)</span></code></pre></div></div>
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/post-with-code/index.html" class="no-external">FastAI Learning Progress: Computer Vision Fundamentals</a>
+<a href="../posts/post-with-code/index.html" class="no-external">FastAI Progress: Computer Vision Fundamentals</a>
 </h3>
 <div class="listing-categories">
 
@@ -338,13 +267,11 @@ font-style: inherit;">1e-3</span>)</span></code></pre></div></div>
 
 <div class="listing-category" onclick="window.quartoListingCategory('Y29tcHV0ZXItdmlzaW9u'); return false;">computer-vision</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('ZGVlcC1sZWFybmluZw=='); return false;">deep-learning</div>
-
 <div class="listing-category" onclick="window.quartoListingCategory('bGVhcm5pbmc='); return false;">learning</div>
 
 </div>
 <div class="delink listing-description"><a href="../posts/post-with-code/index.html" class="no-external">
-<p>Exploring computer vision concepts through the FastAI course and building my first image classifier</p>
+<p>Building my first image classifier with FastAI</p>
 </a></div>
 </div>
 <div class="metadata">
@@ -358,7 +285,7 @@ Mohammed Adil Siraju
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="d2VsY29tZSUyQ2pvdXJuZXklMkNsZWFybmluZw==" data-listing-date-sort="1757874600000" data-listing-file-modified-sort="1758170583155" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="235">
+<div class="quarto-post image-right" data-index="1" data-categories="d2VsY29tZSUyQ2xlYXJuaW5n" data-listing-date-sort="1757874600000" data-listing-file-modified-sort="1758176104613" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="206">
 <div class="thumbnail"><a href="../posts/welcome/index.html" class="no-external">
 
 <p class="card-img-top"><img src="https://adilsiraju.github.io/Training-in-Progress/posts/welcome/thumbnail.jpg" class="thumbnail-image card-img"></p>
@@ -366,19 +293,17 @@ Mohammed Adil Siraju
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/welcome/index.html" class="no-external">Welcome to My AI/ML Learning Journey!</a>
+<a href="../posts/welcome/index.html" class="no-external">Welcome to My AI/ML Learning Journey</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('d2VsY29tZQ=='); return false;">welcome</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('am91cm5leQ=='); return false;">journey</div>
-
 <div class="listing-category" onclick="window.quartoListingCategory('bGVhcm5pbmc='); return false;">learning</div>
 
 </div>
 <div class="delink listing-description"><a href="../posts/welcome/index.html" class="no-external">
-<p>Starting my documentation journey as I dive deeper into the world of AI and Machine Learning</p>
+<p>Starting my documentation journey in AI and Machine Learning</p>
 </a></div>
 </div>
 <div class="metadata">
@@ -396,7 +321,7 @@ Mohammed Adil Siraju
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://adilsiraju.github.io/Training-in-Progress/posts/</guid>
-  <pubDate>Thu, 18 Sep 2025 06:15:06 GMT</pubDate>
+  <pubDate>Thu, 18 Sep 2025 06:29:31 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -7,10 +7,14 @@ website:
   title: "TIP"
   navbar:
     left:
+      - href: index.qmd
+        text: Home
       - href: about.qmd
         text: About
       - href: posts/index.qmd
         text: Blog
+      - href: chapters/index.qmd
+        text: Chapters
     right:
       - text: "✉️ Contact"
         href: "mailto:mohdadilsiraju@gmail.com"

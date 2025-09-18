@@ -1,0 +1,26 @@
+---
+title: "Computer Vision"
+description: "Image processing, CNN architectures, and vision applications"
+---
+
+# Computer Vision 👁️
+
+Deep dive into computer vision concepts and implementations.
+
+## Topics
+
+- **Image Processing** - OpenCV, PIL, preprocessing
+- **CNN Architectures** - ResNet, VGG, Inception
+- **Object Detection** - YOLO, R-CNN, SSD
+- **Image Segmentation** - U-Net, Mask R-CNN
+- **Transfer Learning** - Pre-trained models and fine-tuning
+- **Production** - Model optimization and deployment
+
+## Projects
+
+- Architectural style classifier
+- Object detection systems
+- Image segmentation tasks
+- Real-time vision applications
+
+Add your computer vision notebooks and experiments here!
