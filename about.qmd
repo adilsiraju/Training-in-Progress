@@ -1,6 +1,6 @@
 ---
 title: "About"
-image: profile.jpg
+image: assets/images/profile.jpg
 about:
   template: trestles
   image-width: 15em

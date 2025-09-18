@@ -1,5 +1,306 @@
 [
   {
+    "objectID": "posts/python/modules.html",
+    "href": "posts/python/modules.html",
+    "title": "Python Modules and Packages",
+    "section": "",
+    "text": "A module is a file containing Python definitions and statements. The file name is the module name with the suffix .py added.\n\n# Example: Using built-in modules\nimport math\nimport datetime\n\n# Using math module\nprint(f\"Pi value: {math.pi}\")\nprint(f\"Square root of 16: {math.sqrt(16)}\")\n\n# Using datetime module\nnow = datetime.datetime.now()\nprint(f\"Current time: {now}\")\n\nPi value: 3.141592653589793\nSquare root of 16: 4.0\nCurrent time: 2025-09-18 11:56:02.592034"
+  },
+  {
+    "objectID": "posts/python/modules.html#what-are-modules",
+    "href": "posts/python/modules.html#what-are-modules",
+    "title": "Python Modules and Packages",
+    "section": "",
+    "text": "A module is a file containing Python definitions and statements. The file name is the module name with the suffix .py added.\n\n# Example: Using built-in modules\nimport math\nimport datetime\n\n# Using math module\nprint(f\"Pi value: {math.pi}\")\nprint(f\"Square root of 16: {math.sqrt(16)}\")\n\n# Using datetime module\nnow = datetime.datetime.now()\nprint(f\"Current time: {now}\")\n\nPi value: 3.141592653589793\nSquare root of 16: 4.0\nCurrent time: 2025-09-18 11:56:02.592034"
+  },
+  {
+    "objectID": "posts/python/modules.html#import-statements",
+    "href": "posts/python/modules.html#import-statements",
+    "title": "Python Modules and Packages",
+    "section": "Import Statements",
+    "text": "Import Statements\nThere are several ways to import modules in Python:\n\n# 1. Import entire module\nimport numpy\n\n# 2. Import with alias\nimport numpy as np\n\n# 3. Import specific functions\nfrom math import sqrt, pi\n\n# 4. Import all (not recommended)\n# from math import *\n\n# Examples\narr = np.array([1, 2, 3, 4, 5])\nprint(f\"Array: {arr}\")\nprint(f\"Mean: {np.mean(arr)}\")\n\nprint(f\"Using imported sqrt: {sqrt(25)}\")\nprint(f\"Using imported pi: {pi}\")\n\nArray: [1 2 3 4 5]\nMean: 3.0\nUsing imported sqrt: 5.0\nUsing imported pi: 3.141592653589793"
+  },
+  {
+    "objectID": "posts/python/modules.html#creating-custom-modules",
+    "href": "posts/python/modules.html#creating-custom-modules",
+    "title": "Python Modules and Packages",
+    "section": "Creating Custom Modules",
+    "text": "Creating Custom Modules\nYou can create your own modules by saving Python code in a .py file.\n\n# Example: Creating a simple utility module (conceptually)\n# This would be saved as utils.py\n\ndef greet(name):\n    \"\"\"Greet a person by name\"\"\"\n    return f\"Hello, {name}!\"\n\ndef calculate_area(radius):\n    \"\"\"Calculate area of a circle\"\"\"\n    import math\n    return math.pi * radius ** 2\n\n# Constants\nVERSION = \"1.0.0\"\nAUTHOR = \"Mohammed Adil Siraju\"\n\n# Test the functions\nprint(greet(\"Adil\"))\nprint(f\"Area of circle with radius 5: {calculate_area(5):.2f}\")\nprint(f\"Module version: {VERSION}\")\n\nHello, Adil!\nArea of circle with radius 5: 78.54\nModule version: 1.0.0"
+  },
+  {
+    "objectID": "posts/python/modules.html#packages",
+    "href": "posts/python/modules.html#packages",
+    "title": "Python Modules and Packages",
+    "section": "Packages",
+    "text": "Packages\nA package is a collection of modules organized in directories. Packages help organize related modules together.\n\n# Example package structure:\n# mypackage/\n#     __init__.py\n#     module1.py\n#     module2.py\n#     subpackage/\n#         __init__.py\n#         submodule.py\n\n# Importing from packages\n# import mypackage.module1\n# from mypackage import module2\n# from mypackage.subpackage import submodule\n\nprint(\"Package structure example shown above\")\n\nPackage structure example shown above"
+  },
+  {
+    "objectID": "posts/python/modules.html#popular-python-packages-for-data-science",
+    "href": "posts/python/modules.html#popular-python-packages-for-data-science",
+    "title": "Python Modules and Packages",
+    "section": "Popular Python Packages for Data Science",
+    "text": "Popular Python Packages for Data Science\nLet’s explore some essential packages for AI/ML work:\n\n# Data manipulation and analysis\nimport pandas as pd\nimport numpy as np\n\n# Visualization\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Machine Learning\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# Create sample data\ndata = {\n    'x': [1, 2, 3, 4, 5],\n    'y': [2, 4, 6, 8, 10]\n}\n\ndf = pd.DataFrame(data)\nprint(\"Sample DataFrame:\")\nprint(df)\n\n# Simple linear regression example\nX = df[['x']]\ny = df['y']\n\nmodel = LinearRegression()\nmodel.fit(X, y)\n\npredictions = model.predict(X)\nmse = mean_squared_error(y, predictions)\n\nprint(f\"\\nLinear Regression Results:\")\nprint(f\"Slope: {model.coef_[0]:.2f}\")\nprint(f\"Intercept: {model.intercept_:.2f}\")\nprint(f\"MSE: {mse:.2f}\")\n\nSample DataFrame:\n   x   y\n0  1   2\n1  2   4\n2  3   6\n3  4   8\n4  5  10\n\nLinear Regression Results:\nSlope: 2.00\nIntercept: -0.00\nMSE: 0.00"
+  },
+  {
+    "objectID": "posts/python/modules.html#best-practices",
+    "href": "posts/python/modules.html#best-practices",
+    "title": "Python Modules and Packages",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nUse descriptive names for modules and packages\nKeep modules focused on a single responsibility\nUse __init__.py to control package imports\nDocument your modules with docstrings\nFollow PEP 8 naming conventions\nAvoid circular imports"
+  },
+  {
+    "objectID": "posts/python/modules.html#key-takeaways",
+    "href": "posts/python/modules.html#key-takeaways",
+    "title": "Python Modules and Packages",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nModules help organize and reuse code\nPackages group related modules together\nImport statements control what code is available\nPython’s standard library provides many useful modules\nThird-party packages extend Python’s capabilities\n\n\nNext: We’ll explore Python functions and classes in detail."
+  },
+  {
+    "objectID": "posts/pandas/loadsata.html",
+    "href": "posts/pandas/loadsata.html",
+    "title": "Learning Pandas: Data Loading",
+    "section": "",
+    "text": "This notebook demonstrates how to use the Pandas library to load data from CSV and Excel files.\nPandas is a powerful Python library for data analysis and manipulation. It provides easy-to-use data structures and functions for working with structured data.\nIn this notebook, you will learn how to:\n\nImport the Pandas library\nLoad data from a CSV file\nLoad data from an Excel file\nView the loaded data\n\n\nimport pandas as pd\n\n\ndf_csv = pd.read_csv('example.csv')\ndf_csv\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf_xl = pd.read_excel('example.xlsx')\ndf_xl\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html",
+    "href": "posts/pandas/learn pandas dfmissing data.html",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "",
+    "text": "This notebook demonstrates how to handle missing data in Pandas DataFrames. Each section below explains a different operation or concept.\nimport pandas as pd\nimport numpy as np"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#import-libraries",
+    "href": "posts/pandas/learn pandas dfmissing data.html#import-libraries",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "Import Libraries",
+    "text": "Import Libraries\nImport Pandas and NumPy, which are essential for data manipulation and handling missing values.\n\nnp.nan\n\nnan"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#what-is-np.nan",
+    "href": "posts/pandas/learn pandas dfmissing data.html#what-is-np.nan",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "What is np.nan?",
+    "text": "What is np.nan?\nnp.nan represents a missing value (“Not a Number”) in NumPy and Pandas.\n\ndata = {'A': [1,2,np.nan,4,5],\n        'B': [6,np.nan,7,8,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n1\n2.0\nNaN\n12.0\n\n\n2\nNaN\n7.0\n13.0\n\n\n3\n4.0\n8.0\nNaN\n\n\n4\n5.0\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-with-missing-values",
+    "href": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-with-missing-values",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "Create DataFrame with Missing Values",
+    "text": "Create DataFrame with Missing Values\nThis section creates a DataFrame containing missing values using np.nan.\n\ndf.isnull()\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\nFalse\nFalse\nFalse\n\n\n1\nFalse\nTrue\nFalse\n\n\n2\nTrue\nFalse\nFalse\n\n\n3\nFalse\nFalse\nTrue\n\n\n4\nFalse\nFalse\nFalse"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#detect-missing-values",
+    "href": "posts/pandas/learn pandas dfmissing data.html#detect-missing-values",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "Detect Missing Values",
+    "text": "Detect Missing Values\nUse isnull() to check which values are missing in the DataFrame.\n\ndf.isnull().sum()\n\nA    1\nB    1\nC    1\ndtype: int64"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#count-missing-values",
+    "href": "posts/pandas/learn pandas dfmissing data.html#count-missing-values",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "Count Missing Values",
+    "text": "Count Missing Values\nUse isnull().sum() to count the number of missing values in each column.\n\n# Drops rows with na values\ndf.dropna(inplace=True)\n# or\ndf = df.dropna()"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#drop-rows-with-missing-values",
+    "href": "posts/pandas/learn pandas dfmissing data.html#drop-rows-with-missing-values",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "Drop Rows with Missing Values",
+    "text": "Drop Rows with Missing Values\nUse dropna() to remove rows containing missing values from the DataFrame.\n\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n4\n5.0\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#view-dataframe-after-dropping-rows",
+    "href": "posts/pandas/learn pandas dfmissing data.html#view-dataframe-after-dropping-rows",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "View DataFrame After Dropping Rows",
+    "text": "View DataFrame After Dropping Rows\nDisplay the DataFrame after removing rows with missing values.\n\ndf.reset_index(drop=True)\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n1\n5.0\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#reset-index-after-dropping-rows",
+    "href": "posts/pandas/learn pandas dfmissing data.html#reset-index-after-dropping-rows",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "Reset Index After Dropping Rows",
+    "text": "Reset Index After Dropping Rows\nUse reset_index(drop=True) to reset the DataFrame index after dropping rows.\n\ndata1 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,8,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf1 = pd.DataFrame(data1)\ndf1\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n8.0\nNaN\n\n\n4\n5\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#create-another-dataframe-with-missing-values",
+    "href": "posts/pandas/learn pandas dfmissing data.html#create-another-dataframe-with-missing-values",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "Create Another DataFrame with Missing Values",
+    "text": "Create Another DataFrame with Missing Values\nThis section creates a new DataFrame with missing values for further operations.\n\ndf1 = df1.dropna(axis=1)\ndf1\n\n\n\n\n\n\n\n\nA\n\n\n\n\n0\n1\n\n\n1\n2\n\n\n2\n3\n\n\n3\n4\n\n\n4\n5"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#drop-columns-with-missing-values",
+    "href": "posts/pandas/learn pandas dfmissing data.html#drop-columns-with-missing-values",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "Drop Columns with Missing Values",
+    "text": "Drop Columns with Missing Values\nUse dropna(axis=1) to remove columns containing missing values from the DataFrame.\n\ndata2 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,np.nan,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf2 = pd.DataFrame(data2)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\nNaN\nNaN\n\n\n4\n5\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-for-threshold-example",
+    "href": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-for-threshold-example",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "Create DataFrame for Threshold Example",
+    "text": "Create DataFrame for Threshold Example\nThis section creates a DataFrame to demonstrate dropping rows based on a threshold of non-missing values.\n\ndf2 = df2.dropna(thresh=2)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n4\n5\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#drop-rows-based-on-threshold",
+    "href": "posts/pandas/learn pandas dfmissing data.html#drop-rows-based-on-threshold",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "Drop Rows Based on Threshold",
+    "text": "Drop Rows Based on Threshold\nUse dropna(thresh=2) to keep only rows with at least 2 non-missing values.\n\ndf2 = df2.fillna(0)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n0.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n4\n5\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-zero",
+    "href": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-zero",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "Fill Missing Values with Zero",
+    "text": "Fill Missing Values with Zero\nUse fillna(0) to replace all missing values in the DataFrame with zero.\n\ndata3 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,np.nan,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf3 = pd.DataFrame(data2)\ndf3\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\nNaN\nNaN\n\n\n4\n5\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-for-fill-methods",
+    "href": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-for-fill-methods",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "Create DataFrame for Fill Methods",
+    "text": "Create DataFrame for Fill Methods\nThis section creates a DataFrame to demonstrate different methods for filling missing values."
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-mean-or-median",
+    "href": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-mean-or-median",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "Fill Missing Values with Mean or Median",
+    "text": "Fill Missing Values with Mean or Median\nUse fillna(df.mean()) or fillna(df.median()) to replace missing values with the mean or median of each column.\n\ndf3.fillna(df3.mean())\ndf3.fillna(df3.median())\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n7.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n7.0\n12.5\n\n\n4\n5\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-forwardbackward-fill",
+    "href": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-forwardbackward-fill",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "Fill Missing Values with Forward/Backward Fill",
+    "text": "Fill Missing Values with Forward/Backward Fill\nUse fillna(method='ffill') for forward fill and fillna(method='bfill') for backward fill to propagate non-missing values.\n\ndf3.fillna(method='ffill')\ndf3.fillna(method='bfill')\n\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_14088\\3709391602.py:1: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df3.fillna(method='ffill')\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_14088\\3709391602.py:2: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df3.fillna(method='bfill')\n\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n7.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n9.0\n15.0\n\n\n4\n5\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas df operations.html",
+    "href": "posts/pandas/learn pandas df operations.html",
+    "title": "Learning Pandas: DataFrame Operation",
+    "section": "",
+    "text": "import pandas as pd\n\ndf = pd.read_csv('example.csv')\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf.head(2)\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n\n\n\n\n\n\ndf.tail(2)\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf[['Name', 'City']]\n\n\n\n\n\n\n\n\nName\nCity\n\n\n\n\n0\nAdil\nMatannur\n\n\n1\nAman\nVellore\n\n\n2\nZiya\nTly\n\n\n3\nZahra\nKnr\n\n\n\n\n\n\n\n\ndf[['Name', 'City']].values\n\narray([['Adil', 'Matannur'],\n       ['Aman', 'Vellore'],\n       ['Ziya', 'Tly'],\n       ['Zahra', 'Knr']], dtype=object)\n\n\n\nagegt20 = df[df['Age']&gt;=20]\nagegt20\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n\n\n\n\n\n\nagelt20 = df[df['Age']&lt;20]\nagelt20\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf_ziya = df[df['Name']=='Ziya']\ndf_ziya\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n\n\n\n\n\n\ndf_mult_cond = df[(df['City']=='Matannur') | (df['Age']&lt;=15 )]\ndf_mult_cond\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\nselected_cities = ['Tly', 'Knr']\ndf_tlyorknr = df[df['City'].isin(selected_cities)]\n\ndf_tlyorknr\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf[df['Name'].str.startswith('Z')]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf.iloc[0:2]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n\n\n\n\n\n\ndf.loc[df['Age']&gt;20, ['Name', 'City']]\n\n\n\n\n\n\n\n\nName\nCity\n\n\n\n\n0\nAdil\nMatannur"
+  },
+  {
+    "objectID": "posts/pandas/data manipulation with loc and iloc.html",
+    "href": "posts/pandas/data manipulation with loc and iloc.html",
+    "title": "Data Manipulation with loc and iloc",
+    "section": "",
+    "text": "This notebook demonstrates how to select rows and columns in a Pandas DataFrame using .loc and .iloc. Each section explains a different selection technique."
+  },
+  {
+    "objectID": "posts/pandas/data manipulation with loc and iloc.html#import-libraries",
+    "href": "posts/pandas/data manipulation with loc and iloc.html#import-libraries",
+    "title": "Data Manipulation with loc and iloc",
+    "section": "Import Libraries",
+    "text": "Import Libraries\nImport Pandas and NumPy for data manipulation.\n\nimport pandas as pd\nimport numpy as np"
+  },
+  {
+    "objectID": "posts/pandas/data manipulation with loc and iloc.html#create-dataframe-with-custom-index",
+    "href": "posts/pandas/data manipulation with loc and iloc.html#create-dataframe-with-custom-index",
+    "title": "Data Manipulation with loc and iloc",
+    "section": "Create DataFrame with Custom Index",
+    "text": "Create DataFrame with Custom Index\nCreate a DataFrame with columns A, B, C and custom row labels (‘a’, ‘b’, ‘c’, ‘d’, ‘e’).\n\ndata = {'A': [1,2,3,4,5],\n        'B': [6,7,8,9,10],\n        'C': [11,12,13,14,15]\n        }\ndf = pd.DataFrame(data, index=['a','b','c','d','e'])\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\na\n1\n6\n11\n\n\nb\n2\n7\n12\n\n\nc\n3\n8\n13\n\n\nd\n4\n9\n14\n\n\ne\n5\n10\n15"
+  },
+  {
+    "objectID": "posts/pandas/data manipulation with loc and iloc.html#select-rows-by-label-range-with-loc",
+    "href": "posts/pandas/data manipulation with loc and iloc.html#select-rows-by-label-range-with-loc",
+    "title": "Data Manipulation with loc and iloc",
+    "section": "Select Rows by Label Range with loc",
+    "text": "Select Rows by Label Range with loc\nUse df.loc[\"a\":'c'] to select rows from label ‘a’ to ‘c’ (inclusive).\n\ndf.loc[\"a\":'c']\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\na\n1\n6\n11\n\n\nb\n2\n7\n12\n\n\nc\n3\n8\n13"
+  },
+  {
+    "objectID": "posts/pandas/data manipulation with loc and iloc.html#select-specific-rows-by-label-with-loc",
+    "href": "posts/pandas/data manipulation with loc and iloc.html#select-specific-rows-by-label-with-loc",
+    "title": "Data Manipulation with loc and iloc",
+    "section": "Select Specific Rows by Label with loc",
+    "text": "Select Specific Rows by Label with loc\nUse df.loc[['a','c']] to select rows with labels ‘a’ and ‘c’.\n\ndf.loc[['a','c']]\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\na\n1\n6\n11\n\n\nc\n3\n8\n13"
+  },
+  {
+    "objectID": "posts/pandas/data manipulation with loc and iloc.html#select-specific-rows-and-columns-by-label-with-loc",
+    "href": "posts/pandas/data manipulation with loc and iloc.html#select-specific-rows-and-columns-by-label-with-loc",
+    "title": "Data Manipulation with loc and iloc",
+    "section": "Select Specific Rows and Columns by Label with loc",
+    "text": "Select Specific Rows and Columns by Label with loc\nUse df.loc[['a','c'],['A','C']] to select rows ‘a’ and ‘c’ and columns ‘A’ and ‘C’.\n\ndf.loc[['a','c'],['A','C']]\n\n\n\n\n\n\n\n\nA\nC\n\n\n\n\na\n1\n11\n\n\nc\n3\n13"
+  },
+  {
+    "objectID": "posts/pandas/data manipulation with loc and iloc.html#display-the-dataframe",
+    "href": "posts/pandas/data manipulation with loc and iloc.html#display-the-dataframe",
+    "title": "Data Manipulation with loc and iloc",
+    "section": "Display the DataFrame",
+    "text": "Display the DataFrame\nShow the entire DataFrame for reference.\n\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\na\n1\n6\n11\n\n\nb\n2\n7\n12\n\n\nc\n3\n8\n13\n\n\nd\n4\n9\n14\n\n\ne\n5\n10\n15"
+  },
+  {
+    "objectID": "posts/pandas/data manipulation with loc and iloc.html#select-row-by-integer-position-with-iloc",
+    "href": "posts/pandas/data manipulation with loc and iloc.html#select-row-by-integer-position-with-iloc",
+    "title": "Data Manipulation with loc and iloc",
+    "section": "Select Row by Integer Position with iloc",
+    "text": "Select Row by Integer Position with iloc\nUse df.iloc[0] to select the first row by its integer position.\n\ndf.iloc[0]\n\nA     1\nB     6\nC    11\nName: a, dtype: int64"
+  },
+  {
+    "objectID": "posts/pandas/data manipulation with loc and iloc.html#select-multiple-rows-by-integer-range-with-iloc",
+    "href": "posts/pandas/data manipulation with loc and iloc.html#select-multiple-rows-by-integer-range-with-iloc",
+    "title": "Data Manipulation with loc and iloc",
+    "section": "Select Multiple Rows by Integer Range with iloc",
+    "text": "Select Multiple Rows by Integer Range with iloc\nUse df.iloc[0:3] to select rows from position 0 to 2 (Python slicing is exclusive of the end).\n\ndf.iloc[0:3]\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\na\n1\n6\n11\n\n\nb\n2\n7\n12\n\n\nc\n3\n8\n13"
+  },
+  {
+    "objectID": "posts/pandas/data manipulation with loc and iloc.html#select-rows-from-a-position-to-end-with-iloc",
+    "href": "posts/pandas/data manipulation with loc and iloc.html#select-rows-from-a-position-to-end-with-iloc",
+    "title": "Data Manipulation with loc and iloc",
+    "section": "Select Rows from a Position to End with iloc",
+    "text": "Select Rows from a Position to End with iloc\nUse df.iloc[3:] to select all rows from position 3 to the end.\n\ndf.iloc[3:]\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\nd\n4\n9\n14\n\n\ne\n5\n10\n15"
+  },
+  {
+    "objectID": "posts/pandas/data manipulation with loc and iloc.html#select-specific-rows-by-integer-position-with-iloc",
+    "href": "posts/pandas/data manipulation with loc and iloc.html#select-specific-rows-by-integer-position-with-iloc",
+    "title": "Data Manipulation with loc and iloc",
+    "section": "Select Specific Rows by Integer Position with iloc",
+    "text": "Select Specific Rows by Integer Position with iloc\nUse df.iloc[[0,3]] to select rows at positions 0 and 3.\n\ndf.iloc[[0,3]]\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\na\n1\n6\n11\n\n\nd\n4\n9\n14"
+  },
+  {
+    "objectID": "posts/pandas/data manipulation with loc and iloc.html#select-specific-rows-and-columns-by-integer-position-with-iloc",
+    "href": "posts/pandas/data manipulation with loc and iloc.html#select-specific-rows-and-columns-by-integer-position-with-iloc",
+    "title": "Data Manipulation with loc and iloc",
+    "section": "Select Specific Rows and Columns by Integer Position with iloc",
+    "text": "Select Specific Rows and Columns by Integer Position with iloc\nUse df.iloc[[0,3],[0,2]] to select rows at positions 0 and 3, and columns at positions 0 and 2.\n\ndf.iloc[[0,3],[0,2]]\n\n\n\n\n\n\n\n\nA\nC\n\n\n\n\na\n1\n11\n\n\nd\n4\n14"
+  },
+  {
+    "objectID": "posts/fastai/index.html",
+    "href": "posts/fastai/index.html",
+    "title": "FastAI Course",
+    "section": "",
+    "text": "Lesson 1 - Image Classification\nLesson 2 - Production and Deployment\n\nLesson 3 - Data Ethics and Validation\nLesson 4 - Natural Language Processing\nLesson 5 - Tabular Data and Collaborative Filtering\nLesson 6 - Advanced Architectures\nLesson 7 - Practical Deep Learning"
+  },
+  {
+    "objectID": "posts/fastai/index.html#course-progress",
+    "href": "posts/fastai/index.html#course-progress",
+    "title": "FastAI Course",
+    "section": "",
+    "text": "Lesson 1 - Image Classification\nLesson 2 - Production and Deployment\n\nLesson 3 - Data Ethics and Validation\nLesson 4 - Natural Language Processing\nLesson 5 - Tabular Data and Collaborative Filtering\nLesson 6 - Advanced Architectures\nLesson 7 - Practical Deep Learning"
+  },
+  {
+    "objectID": "posts/fastai/index.html#key-projects",
+    "href": "posts/fastai/index.html#key-projects",
+    "title": "FastAI Course",
+    "section": "Key Projects",
+    "text": "Key Projects\n\nImage classifiers with transfer learning\nText generation and sentiment analysis\nRecommendation systems\nComputer vision applications"
+  },
+  {
+    "objectID": "posts/fastai/index.html#available-notebooks",
+    "href": "posts/fastai/index.html#available-notebooks",
+    "title": "FastAI Course",
+    "section": "Available Notebooks",
+    "text": "Available Notebooks\nPlace your FastAI notebooks here as you progress through the course!"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Adil’s AI/ML Journey",
@@ -7,11 +308,46 @@
     "text": "AI/ML Deep Learning Hero Image"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "FastAI Progress: Computer Vision Fundamentals",
+    "objectID": "index.html#what-i-share",
+    "href": "index.html#what-i-share",
+    "title": "Adil’s AI/ML Journey",
+    "section": "What I Share",
+    "text": "What I Share\n\n\n📚 Learning\nFastAI course progress and ML/DL discoveries\n🔬 Projects\nComputer vision models and MLOps implementations\n\n💡 Insights\nAlgorithm deep dives and optimization strategies\n🚀 Applications\nReal-world problem solving with AI"
+  },
+  {
+    "objectID": "index.html#recent-achievements",
+    "href": "index.html#recent-achievements",
+    "title": "Adil’s AI/ML Journey",
+    "section": "Recent Achievements",
+    "text": "Recent Achievements\n\nArchitectural Style Classifier - 73% accuracy across 25 styles\nCI/CD for ML Models - 30% faster deployment cycles\n\nMLOps Expertise - Docker, Kubernetes, automation\n\n\n\n\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”"
+  },
+  {
+    "objectID": "index.html#latest-posts",
+    "href": "index.html#latest-posts",
+    "title": "Adil’s AI/ML Journey",
+    "section": "Latest Posts 📝",
+    "text": "Latest Posts 📝\n\n\nRecent Blog Posts - Follow my AI/ML learning journey, technical insights, and project updates.\n\n\nView All Posts →\n\n\n\n\n\n  \n    \n      \n        \n          FastAI Progress: Computer Vision Fundamentals\n        \n        Building my first image classifier with FastAI and exploring transfer learning concepts.\n        \n          Sep 18, 2025\n          \n            fastai\n            computer-vision\n          \n        \n      \n    \n  \n  \n  \n    \n      \n        \n          Welcome to My AI/ML Learning Journey\n        \n        Starting my documentation journey in AI and Machine Learning with goals and focus areas.\n        \n          Sep 15, 2025\n          \n            welcome\n            learning\n          \n        \n      \n    \n  \n\n\n\n\n\n\n\n\nReady to explore? Check out my learning chapters or dive into the complete blog! �"
+  },
+  {
+    "objectID": "CHANGELOG.html",
+    "href": "CHANGELOG.html",
+    "title": "Changelog",
     "section": "",
-    "text": "Diving into computer vision with FastAI has been an incredible learning experience. Here’s what I’ve discovered while building my first image classifier.\n\n\n\nComputer Vision"
+    "text": "All notable changes to this project will be documented in this file.\n\n\n\n\n\nBlog Launch: Complete Quarto-based blog setup\nHomepage: Clean, minimal design with hero image\nAbout Page: Professional profile and background\nBlog Posts: Welcome post and FastAI learning progress\n\n\n\n\n\nPulse Theme: Bootstrap-based theme with custom SCSS\nHero Section: Responsive hero image with proper scaling\nMinimal CSS: Streamlined styling leveraging theme defaults\nMobile-First: Responsive design across all devices\n\n\n\n\n\nWelcome Post: Introduction to learning journey\nFastAI Progress: Computer vision fundamentals and classifier project\nAbout Section: Education, skills, experience, and projects\nProject Highlights: Architectural classifier and MLOps work\n\n\n\n\n\nQuarto Setup: Complete configuration with proper metadata\nGitHub Pages: Automated deployment and hosting\nSEO Optimization: Meta descriptions and structured content\nRepository Structure: Clean organization with documentation\n\n\n\n\n\nComprehensive README with setup instructions\nEnhanced .gitignore for Quarto projects\nMIT License for open source sharing\nContributing guidelines for community engagement\nPosts documentation and structure guidelines\n\n\n\n\n\n\n\n\n\nSearch functionality\nTags system for better content organization\nRSS feed optimization\nComment system integration\nDark/light theme toggle\nReading time estimates\nRelated posts suggestions\n\n\n\n\n\nFastAI course completion posts\nComputer vision project deep dives\nMLOps tutorials and best practices\nTechnical interview preparation content\nOpen source contribution experiences\n\n\nKeep building, keep learning! 🚀"
+  },
+  {
+    "objectID": "CHANGELOG.html#section",
+    "href": "CHANGELOG.html#section",
+    "title": "Changelog",
+    "section": "",
+    "text": "Blog Launch: Complete Quarto-based blog setup\nHomepage: Clean, minimal design with hero image\nAbout Page: Professional profile and background\nBlog Posts: Welcome post and FastAI learning progress\n\n\n\n\n\nPulse Theme: Bootstrap-based theme with custom SCSS\nHero Section: Responsive hero image with proper scaling\nMinimal CSS: Streamlined styling leveraging theme defaults\nMobile-First: Responsive design across all devices\n\n\n\n\n\nWelcome Post: Introduction to learning journey\nFastAI Progress: Computer vision fundamentals and classifier project\nAbout Section: Education, skills, experience, and projects\nProject Highlights: Architectural classifier and MLOps work\n\n\n\n\n\nQuarto Setup: Complete configuration with proper metadata\nGitHub Pages: Automated deployment and hosting\nSEO Optimization: Meta descriptions and structured content\nRepository Structure: Clean organization with documentation\n\n\n\n\n\nComprehensive README with setup instructions\nEnhanced .gitignore for Quarto projects\nMIT License for open source sharing\nContributing guidelines for community engagement\nPosts documentation and structure guidelines"
+  },
+  {
+    "objectID": "CHANGELOG.html#upcoming-features",
+    "href": "CHANGELOG.html#upcoming-features",
+    "title": "Changelog",
+    "section": "",
+    "text": "Search functionality\nTags system for better content organization\nRSS feed optimization\nComment system integration\nDark/light theme toggle\nReading time estimates\nRelated posts suggestions\n\n\n\n\n\nFastAI course completion posts\nComputer vision project deep dives\nMLOps tutorials and best practices\nTechnical interview preparation content\nOpen source contribution experiences\n\n\nKeep building, keep learning! 🚀"
   },
   {
     "objectID": "about.html",
@@ -21,67 +357,11 @@
     "text": "AI & ML Engineer with First Class with Distinction in B.E. (AI & ML). Experienced in computer vision, deep learning, and MLOps. Currently pursuing FastAI course and documenting my learning journey."
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome to My AI/ML Learning Journey",
+    "objectID": "about.html#mohammed-adil-siraju",
+    "href": "about.html#mohammed-adil-siraju",
+    "title": "About",
     "section": "",
-    "text": "Welcome to my blog where I document my journey in Artificial Intelligence and Machine Learning. Having completed my B.E. in AI & ML with distinction, I’m now diving deeper into practical applications.\n\n\n\nLearning Journey"
-  },
-  {
-    "objectID": "index.html#welcome-to-my-learning-journey",
-    "href": "index.html#welcome-to-my-learning-journey",
-    "title": "Adil’s AI/ML Journey",
-    "section": "Welcome to My Learning Journey! 👋",
-    "text": "Welcome to My Learning Journey! 👋\nHi, I’m Mohammed Adil Siraju, a passionate AI & ML Engineer with a B.E. in Artificial Intelligence & Machine Learning (First Class with Distinction). This blog serves as both my learning documentation and portfolio, where I share my journey through the fascinating world of data science, machine learning, and deep learning.\n\n🎯 What You’ll Find Here\n\nLearning Progress: My journey through the FastAI course and other ML/DL learning adventures\nProject Showcases: From computer vision models to MLOps implementations\nTechnical Insights: Deep dives into algorithms, model optimization, and deployment strategies\nReal-world Applications: How I apply theoretical knowledge to solve practical problems\n\n\n\n🚀 Current Focus\nCurrently pursuing the FastAI course to deepen my understanding of practical deep learning approaches. I’m particularly interested in computer vision applications and model deployment pipelines.\n\n\n📊 Recent Highlights\n\nBuilt an Architectural Style Classifier achieving 73% accuracy across 25 architectural styles\nImplemented CI/CD workflows for ML models, reducing deployment cycle times by 30%\nDeveloping expertise in MLOps with Docker, Kubernetes, and automated deployment pipelines\n\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”\nReady to explore the latest posts? Check out my learning journey below! 👇"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#fastai-journey-building-my-first-image-classifier",
-    "href": "posts/post-with-code/index.html#fastai-journey-building-my-first-image-classifier",
-    "title": "FastAI Learning Progress: Computer Vision Fundamentals",
-    "section": "",
-    "text": "As part of my FastAI course journey, I’m diving deep into computer vision fundamentals. Today, I want to share my experience building an image classifier and the key insights I’ve gained."
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#the-fastai-approach",
-    "href": "posts/post-with-code/index.html#the-fastai-approach",
-    "title": "FastAI Progress: Computer Vision Fundamentals",
-    "section": "The FastAI Approach",
-    "text": "The FastAI Approach\nFastAI makes complex deep learning surprisingly accessible:\nfrom fastai.vision.all import *\n\n# Create DataLoaders\ndls = ImageDataLoaders.from_folder(\n    path='data/images', \n    train='train', \n    valid='valid',\n    item_tfms=Resize(224),\n    batch_tfms=aug_transforms()\n)\n\n# Create learner with pre-trained model\nlearn = vision_learner(dls, resnet34, metrics=accuracy)\nlearn.fine_tune(4)"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#key-learnings-so-far",
-    "href": "posts/post-with-code/index.html#key-learnings-so-far",
-    "title": "FastAI Learning Progress: Computer Vision Fundamentals",
-    "section": "Key Learnings So Far",
-    "text": "Key Learnings So Far\n\n1. Transfer Learning is Powerful\nStarting with pre-trained models like ResNet significantly reduces training time and improves accuracy, especially with limited data.\n\n\n2. Data Augmentation Matters\nSimple transformations can dramatically improve model generalization:\n# Example augmentations\naug_transforms(\n    mult=0.5,  # Probability multiplier\n    do_flip=True,  # Random horizontal flips\n    flip_vert=False,  # No vertical flips for natural images\n    max_rotate=10.0,  # Slight rotations\n    max_zoom=1.1,  # Minor zoom variations\n    max_lighting=0.2,  # Lighting changes\n    max_warp=0.2  # Perspective warping\n)\n\n\n3. Learning Rate is Critical\nFinding the optimal learning rate using FastAI’s learning rate finder has been a game-changer:\n# Find optimal learning rate\nlearn.lr_find()\n\n# Use the suggested learning rate\nlearn.fine_tune(4, lr=1e-3)"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#applying-to-my-architecture-classifier",
-    "href": "posts/post-with-code/index.html#applying-to-my-architecture-classifier",
-    "title": "FastAI Learning Progress: Computer Vision Fundamentals",
-    "section": "Applying to My Architecture Classifier",
-    "text": "Applying to My Architecture Classifier\nThese concepts directly applied to my Architectural Style Classifier project, where I achieved 73% accuracy across 25 architectural styles. The key was:\n\nQuality data curation from Kaggle datasets\nAppropriate data augmentation for architectural images\nFine-tuning strategy that preserved pre-trained features while adapting to architectural styles"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#next-steps",
-    "href": "posts/post-with-code/index.html#next-steps",
-    "title": "FastAI Progress: Computer Vision Fundamentals",
-    "section": "Next Steps",
-    "text": "Next Steps\n\nAdvanced augmentation techniques\nModel interpretation with GradCAM\nProduction deployment strategies\nMulti-label classification"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#resources-im-using",
-    "href": "posts/post-with-code/index.html#resources-im-using",
-    "title": "FastAI Learning Progress: Computer Vision Fundamentals",
-    "section": "Resources I’m Using",
-    "text": "Resources I’m Using\n\nFastAI Book - Comprehensive and practical\nPapers with Code - Latest research implementations\nKaggle Datasets - Quality training data\n\n\nThe FastAI course continues to amaze me with its practical approach to deep learning. Stay tuned for more updates as I progress through the course!\nWhat’s your experience with FastAI? I’d love to hear about your projects and learning journey!"
-  },
-  {
-    "objectID": "about.html#professional-summary",
-    "href": "about.html#professional-summary",
-    "title": "About Mohammed Adil Siraju",
-    "section": "",
-    "text": "AI & ML Engineer with a First Class with Distinction in B.E. (AI & ML) and hands-on experience in computer vision, deep learning, and MLOps. Skilled in building and deploying scalable ML solutions using Python, PyTorch, and FastAI. Proven ability to deliver end-to-end AI systems from data preprocessing to real-world deployment.\nStrong leadership background as IEEE Robotics Chair, with a track record of solving problems through technology and teamwork. Passionate about leveraging technology to solve customer problems and create inspirational experiences."
+    "text": "AI & ML Engineer with First Class with Distinction in B.E. (AI & ML). Experienced in computer vision, deep learning, and MLOps. Currently pursuing FastAI course and documenting my learning journey."
   },
   {
     "objectID": "about.html#education",
@@ -91,11 +371,11 @@
     "text": "Education\nB.E. Artificial Intelligence & Machine Learning\nP A College of Engineering, Mangalore | 2021 – 2025\nCGPA: 7.33/10 (First Class with Distinction)"
   },
   {
-    "objectID": "about.html#technical-skills",
-    "href": "about.html#technical-skills",
-    "title": "About Mohammed Adil Siraju",
-    "section": "💻 Technical Skills",
-    "text": "💻 Technical Skills\n\n\n\nAI/ML\n\nComputer Vision\nDeep Learning\nNatural Language Processing\nModel Deployment & Optimization\nData Preprocessing\nFeature Engineering\n\n\n\nProgramming\n\nPython (Advanced)\nSQL (Intermediate)\n\n\n\n\nFrameworks & Libraries\n\nPyTorch, FastAI\nscikit-learn\nNumPy, Pandas\nMatplotlib, Seaborn\n\n\n\nMLOps & Tools\n\nDocker, Kubernetes\nGit, Jenkins\nJupyter Notebooks\n\n\n\nWeb Technologies\n\nDjango, HTML/CSS\nJavaScript"
+    "objectID": "about.html#skills",
+    "href": "about.html#skills",
+    "title": "About",
+    "section": "Skills",
+    "text": "Skills\n\n\nAI/ML - Computer Vision - Deep Learning\n- Model Deployment - Data Science\nProgramming - Python (Advanced) - SQL - Web Development\n\nTools & Frameworks - PyTorch, FastAI - Docker, Kubernetes - Git, Jenkins - scikit-learn\nCurrent Focus - FastAI Course - MLOps - Real-world Applications"
   },
   {
     "objectID": "about.html#experience",
@@ -117,132 +397,6 @@
     "title": "About",
     "section": "Certifications",
     "text": "Certifications\n\nCS50x - Harvard University (2025)\nPython for Data Science - IBM (2022)\nComputational Thinking - University of Michigan (2022)\n\n\n\n“Continuous learning and practical application are the keys to mastering AI.”"
-  },
-  {
-    "objectID": "about.html#current-learning",
-    "href": "about.html#current-learning",
-    "title": "About Mohammed Adil Siraju",
-    "section": "📚 Current Learning",
-    "text": "📚 Current Learning\nCurrently pursuing the FastAI course to deepen my practical understanding of deep learning and modern AI techniques. This blog documents my learning journey, insights, and project implementations.\n\n“Continuous learning and practical application are the keys to mastering AI and machine learning.”"
-  },
-  {
-    "objectID": "posts/welcome/index.html#hello-and-welcome",
-    "href": "posts/welcome/index.html#hello-and-welcome",
-    "title": "Welcome to My AI/ML Learning Journey!",
-    "section": "",
-    "text": "I’m excited to start this blog as a way to document my learning journey in Artificial Intelligence and Machine Learning. As someone who has just completed my B.E. in AI & ML with First Class with Distinction, I’m now diving deeper into practical applications and advanced concepts.\n\n\n\nLearning Journey"
-  },
-  {
-    "objectID": "posts/welcome/index.html#what-this-blog-represents",
-    "href": "posts/welcome/index.html#what-this-blog-represents",
-    "title": "Welcome to My AI/ML Learning Journey!",
-    "section": "What This Blog Represents",
-    "text": "What This Blog Represents\nThis space serves multiple purposes:\n\n📚 Learning Documentation: Recording my progress through courses like FastAI\n💡 Project Showcases: Sharing the ML/DL projects I’m building\n🔬 Technical Insights: Deep dives into algorithms, techniques, and best practices\n🚀 Career Growth: Tracking my evolution as an AI/ML engineer"
-  },
-  {
-    "objectID": "posts/welcome/index.html#my-current-focus",
-    "href": "posts/welcome/index.html#my-current-focus",
-    "title": "Welcome to My AI/ML Learning Journey!",
-    "section": "My Current Focus",
-    "text": "My Current Focus\nRight now, I’m particularly focused on:\n\nFastAI Course: Learning practical deep learning approaches\nComputer Vision: Building on my architectural style classifier project\nMLOps: Expanding my deployment and pipeline automation skills\nReal-world Applications: Bridging the gap between theory and practice"
-  },
-  {
-    "objectID": "posts/welcome/index.html#what-you-can-expect",
-    "href": "posts/welcome/index.html#what-you-can-expect",
-    "title": "Welcome to My AI/ML Learning Journey",
-    "section": "What You Can Expect",
-    "text": "What You Can Expect\nIn upcoming posts, you’ll find:\n\nDetailed walkthroughs of my FastAI learning progress\nProject breakdowns with code examples and insights\nChallenges I face and how I overcome them\nResources and tools that I find valuable\nReflections on the AI/ML industry and trends"
-  },
-  {
-    "objectID": "posts/welcome/index.html#lets-connect",
-    "href": "posts/welcome/index.html#lets-connect",
-    "title": "Welcome to My AI/ML Learning Journey",
-    "section": "Let’s Connect!",
-    "text": "Let’s Connect!\nI believe learning is better when shared. Feel free to reach out if you’re on a similar journey, have questions about my projects, or want to collaborate on something interesting!\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”\nLet’s embark on this learning adventure together! 🚀"
-  },
-  {
-    "objectID": "posts/index.html",
-    "href": "posts/index.html",
-    "title": "Blog Posts",
-    "section": "",
-    "text": "Welcome to my blog! Here you’ll find my learning journey through the world of Artificial Intelligence and Machine Learning, including:\n\n📚 Learning Progress: Updates from my FastAI course and other studies\n🚀 Project Walkthroughs: Detailed breakdowns of my ML/DL projects\n💡 Technical Insights: Deep dives into algorithms, techniques, and tools\n🔧 MLOps & Deployment: Practical guides for model deployment and automation\n📊 Data Science: EDA, visualization, and analytical techniques\n\nUse the filters and search above to find content that interests you most!\n\n“Documentation is not just about remembering what you’ve learned—it’s about helping others learn too.”\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nFastAI Progress: Computer Vision Fundamentals\n\n\n\nfastai\n\ncomputer-vision\n\nlearning\n\n\n\nBuilding my first image classifier with FastAI\n\n\n\n\n\nSep 18, 2025\n\n\nMohammed Adil Siraju\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to My AI/ML Learning Journey\n\n\n\nwelcome\n\nlearning\n\n\n\nStarting my documentation journey in AI and Machine Learning\n\n\n\n\n\nSep 15, 2025\n\n\nMohammed Adil Siraju\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#what-i-share",
-    "href": "index.html#what-i-share",
-    "title": "Adil’s AI/ML Journey",
-    "section": "What I Share",
-    "text": "What I Share\n\n\n📚 Learning\nFastAI course progress and ML/DL discoveries\n🔬 Projects\nComputer vision models and MLOps implementations\n\n💡 Insights\nAlgorithm deep dives and optimization strategies\n🚀 Applications\nReal-world problem solving with AI"
-  },
-  {
-    "objectID": "index.html#recent-achievements",
-    "href": "index.html#recent-achievements",
-    "title": "Adil’s AI/ML Journey",
-    "section": "Recent Achievements",
-    "text": "Recent Achievements\n\nArchitectural Style Classifier - 73% accuracy across 25 styles\nCI/CD for ML Models - 30% faster deployment cycles\n\nMLOps Expertise - Docker, Kubernetes, automation\n\n\n\n\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”"
-  },
-  {
-    "objectID": "about.html#mohammed-adil-siraju",
-    "href": "about.html#mohammed-adil-siraju",
-    "title": "About",
-    "section": "",
-    "text": "AI & ML Engineer with First Class with Distinction in B.E. (AI & ML). Experienced in computer vision, deep learning, and MLOps. Currently pursuing FastAI course and documenting my learning journey."
-  },
-  {
-    "objectID": "about.html#skills",
-    "href": "about.html#skills",
-    "title": "About",
-    "section": "Skills",
-    "text": "Skills\n\n\nAI/ML - Computer Vision - Deep Learning\n- Model Deployment - Data Science\nProgramming - Python (Advanced) - SQL - Web Development\n\nTools & Frameworks - PyTorch, FastAI - Docker, Kubernetes - Git, Jenkins - scikit-learn\nCurrent Focus - FastAI Course - MLOps - Real-world Applications"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#building-my-first-image-classifier",
-    "href": "posts/post-with-code/index.html#building-my-first-image-classifier",
-    "title": "FastAI Progress: Computer Vision Fundamentals",
-    "section": "",
-    "text": "Diving into computer vision with FastAI has been an incredible learning experience. Here’s what I’ve discovered while building my first image classifier.\n\n\n\nComputer Vision"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#key-insights",
-    "href": "posts/post-with-code/index.html#key-insights",
-    "title": "FastAI Progress: Computer Vision Fundamentals",
-    "section": "Key Insights",
-    "text": "Key Insights\nTransfer Learning - Pre-trained models like ResNet dramatically improve results with limited data.\nData Augmentation - Simple transformations boost model generalization significantly.\nLearning Rate - FastAI’s learning rate finder is a game-changer for optimization."
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#real-application",
-    "href": "posts/post-with-code/index.html#real-application",
-    "title": "FastAI Progress: Computer Vision Fundamentals",
-    "section": "Real Application",
-    "text": "Real Application\nI applied these concepts to my Architectural Style Classifier, achieving 73% accuracy across 25 architectural styles through:\n\nQuality data curation\nAppropriate augmentation for architectural images\n\nSmart fine-tuning strategy"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#resources",
-    "href": "posts/post-with-code/index.html#resources",
-    "title": "FastAI Progress: Computer Vision Fundamentals",
-    "section": "Resources",
-    "text": "Resources\n\nFastAI Course - Practical deep learning\nPapers with Code - Latest research\nKaggle - Quality datasets\n\n\nThe FastAI course continues to amaze with its practical approach. More updates coming as I progress!"
-  },
-  {
-    "objectID": "posts/welcome/index.html#hello",
-    "href": "posts/welcome/index.html#hello",
-    "title": "Welcome to My AI/ML Learning Journey",
-    "section": "",
-    "text": "Welcome to my blog where I document my journey in Artificial Intelligence and Machine Learning. Having completed my B.E. in AI & ML with distinction, I’m now diving deeper into practical applications.\n\n\n\nLearning Journey"
-  },
-  {
-    "objectID": "posts/welcome/index.html#purpose",
-    "href": "posts/welcome/index.html#purpose",
-    "title": "Welcome to My AI/ML Learning Journey",
-    "section": "Purpose",
-    "text": "Purpose\nThis blog serves as:\n\nLearning Documentation - Recording progress through courses like FastAI\nProject Showcases - Sharing ML/DL projects and implementations\n\nTechnical Insights - Deep dives into algorithms and best practices\nCareer Growth - Tracking my evolution as an AI/ML engineer"
-  },
-  {
-    "objectID": "posts/welcome/index.html#current-focus",
-    "href": "posts/welcome/index.html#current-focus",
-    "title": "Welcome to My AI/ML Learning Journey",
-    "section": "Current Focus",
-    "text": "Current Focus\n\nFastAI Course - Practical deep learning approaches\nComputer Vision - Extending my architectural classifier project\nMLOps - Deployment and automation skills\nReal-world Applications: Bridging the gap between theory and practice"
   },
   {
     "objectID": "CONTRIBUTING.html",
@@ -287,471 +441,114 @@
     "text": "For questions or collaboration ideas: - Email: mohdadilsiraju@gmail.com - GitHub: @adilsiraju - Portfolio: adilsiraju.vercel.app\n\nThank you for being part of this learning journey! 🚀"
   },
   {
-    "objectID": "chapters/python/index.html",
-    "href": "chapters/python/index.html",
-    "title": "Python Fundamentals",
-    "section": "",
-    "text": "Modules and Packages - Code organization and imports\nFunctions and Classes - Object-oriented programming\nData Structures - Lists, dictionaries, sets, tuples\nFile Handling - Reading and writing data\nError Handling - Try/except and debugging\nLibraries - NumPy, Pandas, Matplotlib basics"
-  },
-  {
-    "objectID": "chapters/python/index.html#topics-covered",
-    "href": "chapters/python/index.html#topics-covered",
-    "title": "Python Fundamentals",
-    "section": "",
-    "text": "Modules and Packages - Code organization and imports\nFunctions and Classes - Object-oriented programming\nData Structures - Lists, dictionaries, sets, tuples\nFile Handling - Reading and writing data\nError Handling - Try/except and debugging\nLibraries - NumPy, Pandas, Matplotlib basics"
-  },
-  {
-    "objectID": "chapters/python/index.html#learning-path",
-    "href": "chapters/python/index.html#learning-path",
-    "title": "Python Fundamentals",
-    "section": "Learning Path",
-    "text": "Learning Path\nStart with modules and packages, then progress through each topic systematically."
-  },
-  {
-    "objectID": "chapters/index.html",
-    "href": "chapters/index.html",
-    "title": "Chapter Organization",
-    "section": "",
-    "text": "Core Python concepts, modules, and best practices\n\n\n\nPractical deep learning with FastAI framework\n\n\n\n\nImage processing, CNN architectures, and applications\n\n\n\nData manipulation and analysis with Python’s powerful data library"
-  },
-  {
-    "objectID": "chapters/index.html#chapter-organization",
-    "href": "chapters/index.html#chapter-organization",
-    "title": "Learning Chapters",
-    "section": "",
-    "text": "Core Python concepts, modules, and best practices\n\n\n\nPractical deep learning with FastAI framework\n\n\n\n\nImage processing, CNN architectures, and applications\n\n\n\nModel deployment, automation, and production workflows"
-  },
-  {
-    "objectID": "chapters/index.html#browse-chapters",
-    "href": "chapters/index.html#browse-chapters",
-    "title": "Chapter Organization",
-    "section": "Browse Chapters",
-    "text": "Browse Chapters\nUse the filters below to find specific topics or browse all available content:"
-  },
-  {
-    "objectID": "chapters/computer-vision/index.html",
-    "href": "chapters/computer-vision/index.html",
+    "objectID": "posts/computer-vision/index.html",
+    "href": "posts/computer-vision/index.html",
     "title": "Computer Vision",
     "section": "",
     "text": "Image Processing - OpenCV, PIL, preprocessing\nCNN Architectures - ResNet, VGG, Inception\nObject Detection - YOLO, R-CNN, SSD\nImage Segmentation - U-Net, Mask R-CNN\nTransfer Learning - Pre-trained models and fine-tuning\nProduction - Model optimization and deployment"
   },
   {
-    "objectID": "chapters/computer-vision/index.html#topics",
-    "href": "chapters/computer-vision/index.html#topics",
+    "objectID": "posts/computer-vision/index.html#topics",
+    "href": "posts/computer-vision/index.html#topics",
     "title": "Computer Vision",
     "section": "",
     "text": "Image Processing - OpenCV, PIL, preprocessing\nCNN Architectures - ResNet, VGG, Inception\nObject Detection - YOLO, R-CNN, SSD\nImage Segmentation - U-Net, Mask R-CNN\nTransfer Learning - Pre-trained models and fine-tuning\nProduction - Model optimization and deployment"
   },
   {
-    "objectID": "chapters/computer-vision/index.html#projects",
-    "href": "chapters/computer-vision/index.html#projects",
+    "objectID": "posts/computer-vision/index.html#projects",
+    "href": "posts/computer-vision/index.html#projects",
     "title": "Computer Vision",
     "section": "Projects",
     "text": "Projects\n\nArchitectural style classifier\nObject detection systems\nImage segmentation tasks\nReal-time vision applications"
   },
   {
-    "objectID": "CHANGELOG.html",
-    "href": "CHANGELOG.html",
-    "title": "Changelog",
-    "section": "",
-    "text": "All notable changes to this project will be documented in this file.\n\n\n\n\n\nBlog Launch: Complete Quarto-based blog setup\nHomepage: Clean, minimal design with hero image\nAbout Page: Professional profile and background\nBlog Posts: Welcome post and FastAI learning progress\n\n\n\n\n\nPulse Theme: Bootstrap-based theme with custom SCSS\nHero Section: Responsive hero image with proper scaling\nMinimal CSS: Streamlined styling leveraging theme defaults\nMobile-First: Responsive design across all devices\n\n\n\n\n\nWelcome Post: Introduction to learning journey\nFastAI Progress: Computer vision fundamentals and classifier project\nAbout Section: Education, skills, experience, and projects\nProject Highlights: Architectural classifier and MLOps work\n\n\n\n\n\nQuarto Setup: Complete configuration with proper metadata\nGitHub Pages: Automated deployment and hosting\nSEO Optimization: Meta descriptions and structured content\nRepository Structure: Clean organization with documentation\n\n\n\n\n\nComprehensive README with setup instructions\nEnhanced .gitignore for Quarto projects\nMIT License for open source sharing\nContributing guidelines for community engagement\nPosts documentation and structure guidelines\n\n\n\n\n\n\n\n\n\nSearch functionality\nTags system for better content organization\nRSS feed optimization\nComment system integration\nDark/light theme toggle\nReading time estimates\nRelated posts suggestions\n\n\n\n\n\nFastAI course completion posts\nComputer vision project deep dives\nMLOps tutorials and best practices\nTechnical interview preparation content\nOpen source contribution experiences\n\n\nKeep building, keep learning! 🚀"
-  },
-  {
-    "objectID": "CHANGELOG.html#section",
-    "href": "CHANGELOG.html#section",
-    "title": "Changelog",
-    "section": "",
-    "text": "Blog Launch: Complete Quarto-based blog setup\nHomepage: Clean, minimal design with hero image\nAbout Page: Professional profile and background\nBlog Posts: Welcome post and FastAI learning progress\n\n\n\n\n\nPulse Theme: Bootstrap-based theme with custom SCSS\nHero Section: Responsive hero image with proper scaling\nMinimal CSS: Streamlined styling leveraging theme defaults\nMobile-First: Responsive design across all devices\n\n\n\n\n\nWelcome Post: Introduction to learning journey\nFastAI Progress: Computer vision fundamentals and classifier project\nAbout Section: Education, skills, experience, and projects\nProject Highlights: Architectural classifier and MLOps work\n\n\n\n\n\nQuarto Setup: Complete configuration with proper metadata\nGitHub Pages: Automated deployment and hosting\nSEO Optimization: Meta descriptions and structured content\nRepository Structure: Clean organization with documentation\n\n\n\n\n\nComprehensive README with setup instructions\nEnhanced .gitignore for Quarto projects\nMIT License for open source sharing\nContributing guidelines for community engagement\nPosts documentation and structure guidelines"
-  },
-  {
-    "objectID": "CHANGELOG.html#upcoming-features",
-    "href": "CHANGELOG.html#upcoming-features",
-    "title": "Changelog",
-    "section": "",
-    "text": "Search functionality\nTags system for better content organization\nRSS feed optimization\nComment system integration\nDark/light theme toggle\nReading time estimates\nRelated posts suggestions\n\n\n\n\n\nFastAI course completion posts\nComputer vision project deep dives\nMLOps tutorials and best practices\nTechnical interview preparation content\nOpen source contribution experiences\n\n\nKeep building, keep learning! 🚀"
-  },
-  {
-    "objectID": "chapters/fastai/index.html",
-    "href": "chapters/fastai/index.html",
-    "title": "FastAI Course",
-    "section": "",
-    "text": "Lesson 1 - Image Classification\nLesson 2 - Production and Deployment\n\nLesson 3 - Data Ethics and Validation\nLesson 4 - Natural Language Processing\nLesson 5 - Tabular Data and Collaborative Filtering\nLesson 6 - Advanced Architectures\nLesson 7 - Practical Deep Learning"
-  },
-  {
-    "objectID": "chapters/fastai/index.html#course-progress",
-    "href": "chapters/fastai/index.html#course-progress",
-    "title": "FastAI Course",
-    "section": "",
-    "text": "Lesson 1 - Image Classification\nLesson 2 - Production and Deployment\n\nLesson 3 - Data Ethics and Validation\nLesson 4 - Natural Language Processing\nLesson 5 - Tabular Data and Collaborative Filtering\nLesson 6 - Advanced Architectures\nLesson 7 - Practical Deep Learning"
-  },
-  {
-    "objectID": "chapters/fastai/index.html#key-projects",
-    "href": "chapters/fastai/index.html#key-projects",
-    "title": "FastAI Course",
-    "section": "Key Projects",
-    "text": "Key Projects\n\nImage classifiers with transfer learning\nText generation and sentiment analysis\nRecommendation systems\nComputer vision applications"
-  },
-  {
-    "objectID": "chapters/mlops/index.html",
-    "href": "chapters/mlops/index.html",
-    "title": "MLOps",
-    "section": "",
-    "text": "Machine Learning Operations - from development to production.\n\n\n\nModel Deployment - Docker, Kubernetes, cloud platforms\nCI/CD Pipelines - Automated testing and deployment\nModel Monitoring - Performance tracking and drift detection\nVersion Control - Model and data versioning\nInfrastructure - Scalable ML systems\nBest Practices - Production-ready ML workflows\n\n\n\n\n\nDocker and containerization\nKubernetes for orchestration\nGitHub Actions for CI/CD\nMLflow for experiment tracking\nFastAPI for model serving\nCloud platforms (AWS, GCP, Azure)\n\nDocument your MLOps learning and implementations here!"
-  },
-  {
-    "objectID": "chapters/mlops/index.html#key-areas",
-    "href": "chapters/mlops/index.html#key-areas",
-    "title": "MLOps",
-    "section": "",
-    "text": "Model Deployment - Docker, Kubernetes, cloud platforms\nCI/CD Pipelines - Automated testing and deployment\nModel Monitoring - Performance tracking and drift detection\nVersion Control - Model and data versioning\nInfrastructure - Scalable ML systems\nBest Practices - Production-ready ML workflows"
-  },
-  {
-    "objectID": "chapters/mlops/index.html#tools-technologies",
-    "href": "chapters/mlops/index.html#tools-technologies",
-    "title": "MLOps",
-    "section": "",
-    "text": "Docker and containerization\nKubernetes for orchestration\nGitHub Actions for CI/CD\nMLflow for experiment tracking\nFastAPI for model serving\nCloud platforms (AWS, GCP, Azure)\n\nDocument your MLOps learning and implementations here!"
-  },
-  {
-    "objectID": "chapters/python/modules.html",
-    "href": "chapters/python/modules.html",
-    "title": "Python Modules and Packages",
-    "section": "",
-    "text": "A module is a file containing Python definitions and statements. The file name is the module name with the suffix .py added.\n\n# Example: Using built-in modules\nimport math\nimport datetime\n\n# Using math module\nprint(f\"Pi value: {math.pi}\")\nprint(f\"Square root of 16: {math.sqrt(16)}\")\n\n# Using datetime module\nnow = datetime.datetime.now()\nprint(f\"Current time: {now}\")\n\nPi value: 3.141592653589793\nSquare root of 16: 4.0\nCurrent time: 2025-09-18 11:56:02.592034"
-  },
-  {
-    "objectID": "chapters/python/modules.html#what-are-modules",
-    "href": "chapters/python/modules.html#what-are-modules",
-    "title": "Python Modules and Packages",
-    "section": "",
-    "text": "A module is a file containing Python definitions and statements. The file name is the module name with the suffix .py added.\n\n# Example: Using built-in modules\nimport math\nimport datetime\n\n# Using math module\nprint(f\"Pi value: {math.pi}\")\nprint(f\"Square root of 16: {math.sqrt(16)}\")\n\n# Using datetime module\nnow = datetime.datetime.now()\nprint(f\"Current time: {now}\")\n\nPi value: 3.141592653589793\nSquare root of 16: 4.0\nCurrent time: 2025-09-18 11:56:02.592034"
-  },
-  {
-    "objectID": "chapters/python/modules.html#import-statements",
-    "href": "chapters/python/modules.html#import-statements",
-    "title": "Python Modules and Packages",
-    "section": "Import Statements",
-    "text": "Import Statements\nThere are several ways to import modules in Python:\n\n# 1. Import entire module\nimport numpy\n\n# 2. Import with alias\nimport numpy as np\n\n# 3. Import specific functions\nfrom math import sqrt, pi\n\n# 4. Import all (not recommended)\n# from math import *\n\n# Examples\narr = np.array([1, 2, 3, 4, 5])\nprint(f\"Array: {arr}\")\nprint(f\"Mean: {np.mean(arr)}\")\n\nprint(f\"Using imported sqrt: {sqrt(25)}\")\nprint(f\"Using imported pi: {pi}\")\n\nArray: [1 2 3 4 5]\nMean: 3.0\nUsing imported sqrt: 5.0\nUsing imported pi: 3.141592653589793"
-  },
-  {
-    "objectID": "chapters/python/modules.html#creating-custom-modules",
-    "href": "chapters/python/modules.html#creating-custom-modules",
-    "title": "Python Modules and Packages",
-    "section": "Creating Custom Modules",
-    "text": "Creating Custom Modules\nYou can create your own modules by saving Python code in a .py file.\n\n# Example: Creating a simple utility module (conceptually)\n# This would be saved as utils.py\n\ndef greet(name):\n    \"\"\"Greet a person by name\"\"\"\n    return f\"Hello, {name}!\"\n\ndef calculate_area(radius):\n    \"\"\"Calculate area of a circle\"\"\"\n    import math\n    return math.pi * radius ** 2\n\n# Constants\nVERSION = \"1.0.0\"\nAUTHOR = \"Mohammed Adil Siraju\"\n\n# Test the functions\nprint(greet(\"Adil\"))\nprint(f\"Area of circle with radius 5: {calculate_area(5):.2f}\")\nprint(f\"Module version: {VERSION}\")\n\nHello, Adil!\nArea of circle with radius 5: 78.54\nModule version: 1.0.0"
-  },
-  {
-    "objectID": "chapters/python/modules.html#packages",
-    "href": "chapters/python/modules.html#packages",
-    "title": "Python Modules and Packages",
-    "section": "Packages",
-    "text": "Packages\nA package is a collection of modules organized in directories. Packages help organize related modules together.\n\n# Example package structure:\n# mypackage/\n#     __init__.py\n#     module1.py\n#     module2.py\n#     subpackage/\n#         __init__.py\n#         submodule.py\n\n# Importing from packages\n# import mypackage.module1\n# from mypackage import module2\n# from mypackage.subpackage import submodule\n\nprint(\"Package structure example shown above\")\n\nPackage structure example shown above"
-  },
-  {
-    "objectID": "chapters/python/modules.html#popular-python-packages-for-data-science",
-    "href": "chapters/python/modules.html#popular-python-packages-for-data-science",
-    "title": "Python Modules and Packages",
-    "section": "Popular Python Packages for Data Science",
-    "text": "Popular Python Packages for Data Science\nLet’s explore some essential packages for AI/ML work:\n\n# Data manipulation and analysis\nimport pandas as pd\nimport numpy as np\n\n# Visualization\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Machine Learning\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# Create sample data\ndata = {\n    'x': [1, 2, 3, 4, 5],\n    'y': [2, 4, 6, 8, 10]\n}\n\ndf = pd.DataFrame(data)\nprint(\"Sample DataFrame:\")\nprint(df)\n\n# Simple linear regression example\nX = df[['x']]\ny = df['y']\n\nmodel = LinearRegression()\nmodel.fit(X, y)\n\npredictions = model.predict(X)\nmse = mean_squared_error(y, predictions)\n\nprint(f\"\\nLinear Regression Results:\")\nprint(f\"Slope: {model.coef_[0]:.2f}\")\nprint(f\"Intercept: {model.intercept_:.2f}\")\nprint(f\"MSE: {mse:.2f}\")\n\nSample DataFrame:\n   x   y\n0  1   2\n1  2   4\n2  3   6\n3  4   8\n4  5  10\n\nLinear Regression Results:\nSlope: 2.00\nIntercept: -0.00\nMSE: 0.00"
-  },
-  {
-    "objectID": "chapters/python/modules.html#best-practices",
-    "href": "chapters/python/modules.html#best-practices",
-    "title": "Python Modules and Packages",
-    "section": "Best Practices",
-    "text": "Best Practices\n\nUse descriptive names for modules and packages\nKeep modules focused on a single responsibility\nUse __init__.py to control package imports\nDocument your modules with docstrings\nFollow PEP 8 naming conventions\nAvoid circular imports"
-  },
-  {
-    "objectID": "chapters/python/modules.html#key-takeaways",
-    "href": "chapters/python/modules.html#key-takeaways",
-    "title": "Python Modules and Packages",
-    "section": "Key Takeaways",
-    "text": "Key Takeaways\n\nModules help organize and reuse code\nPackages group related modules together\nImport statements control what code is available\nPython’s standard library provides many useful modules\nThird-party packages extend Python’s capabilities\n\n\nNext: We’ll explore Python functions and classes in detail."
-  },
-  {
-    "objectID": "chapters/pandas/loadsata.html",
-    "href": "chapters/pandas/loadsata.html",
-    "title": "Learning Pandas: Data Loading",
-    "section": "",
-    "text": "This notebook demonstrates how to use the Pandas library to load data from CSV and Excel files.\nPandas is a powerful Python library for data analysis and manipulation. It provides easy-to-use data structures and functions for working with structured data.\nIn this notebook, you will learn how to:\n\nImport the Pandas library\nLoad data from a CSV file\nLoad data from an Excel file\nView the loaded data\n\n\nimport pandas as pd\n\n\ndf_csv = pd.read_csv('example.csv')\ndf_csv\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf_xl = pd.read_excel('example.xlsx')\ndf_xl\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html",
-    "href": "chapters/pandas/learn pandas dfmissing data.html",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "",
-    "text": "This notebook demonstrates how to handle missing data in Pandas DataFrames. Each section below explains a different operation or concept.\nimport pandas as pd\nimport numpy as np"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#import-libraries",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#import-libraries",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "Import Libraries",
-    "text": "Import Libraries\nImport Pandas and NumPy, which are essential for data manipulation and handling missing values.\n\nnp.nan\n\nnan"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#what-is-np.nan",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#what-is-np.nan",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "What is np.nan?",
-    "text": "What is np.nan?\nnp.nan represents a missing value (“Not a Number”) in NumPy and Pandas.\n\ndata = {'A': [1,2,np.nan,4,5],\n        'B': [6,np.nan,7,8,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n1\n2.0\nNaN\n12.0\n\n\n2\nNaN\n7.0\n13.0\n\n\n3\n4.0\n8.0\nNaN\n\n\n4\n5.0\n9.0\n15.0"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#create-dataframe-with-missing-values",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#create-dataframe-with-missing-values",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "Create DataFrame with Missing Values",
-    "text": "Create DataFrame with Missing Values\nThis section creates a DataFrame containing missing values using np.nan.\n\ndf.isnull()\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\nFalse\nFalse\nFalse\n\n\n1\nFalse\nTrue\nFalse\n\n\n2\nTrue\nFalse\nFalse\n\n\n3\nFalse\nFalse\nTrue\n\n\n4\nFalse\nFalse\nFalse"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#detect-missing-values",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#detect-missing-values",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "Detect Missing Values",
-    "text": "Detect Missing Values\nUse isnull() to check which values are missing in the DataFrame.\n\ndf.isnull().sum()\n\nA    1\nB    1\nC    1\ndtype: int64"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#count-missing-values",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#count-missing-values",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "Count Missing Values",
-    "text": "Count Missing Values\nUse isnull().sum() to count the number of missing values in each column.\n\n# Drops rows with na values\ndf.dropna(inplace=True)\n# or\ndf = df.dropna()"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#drop-rows-with-missing-values",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#drop-rows-with-missing-values",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "Drop Rows with Missing Values",
-    "text": "Drop Rows with Missing Values\nUse dropna() to remove rows containing missing values from the DataFrame.\n\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n4\n5.0\n9.0\n15.0"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#view-dataframe-after-dropping-rows",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#view-dataframe-after-dropping-rows",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "View DataFrame After Dropping Rows",
-    "text": "View DataFrame After Dropping Rows\nDisplay the DataFrame after removing rows with missing values.\n\ndf.reset_index(drop=True)\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n1\n5.0\n9.0\n15.0"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#reset-index-after-dropping-rows",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#reset-index-after-dropping-rows",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "Reset Index After Dropping Rows",
-    "text": "Reset Index After Dropping Rows\nUse reset_index(drop=True) to reset the DataFrame index after dropping rows.\n\ndata1 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,8,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf1 = pd.DataFrame(data1)\ndf1\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n8.0\nNaN\n\n\n4\n5\n9.0\n15.0"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#create-another-dataframe-with-missing-values",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#create-another-dataframe-with-missing-values",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "Create Another DataFrame with Missing Values",
-    "text": "Create Another DataFrame with Missing Values\nThis section creates a new DataFrame with missing values for further operations.\n\ndf1 = df1.dropna(axis=1)\ndf1\n\n\n\n\n\n\n\n\nA\n\n\n\n\n0\n1\n\n\n1\n2\n\n\n2\n3\n\n\n3\n4\n\n\n4\n5"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#drop-columns-with-missing-values",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#drop-columns-with-missing-values",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "Drop Columns with Missing Values",
-    "text": "Drop Columns with Missing Values\nUse dropna(axis=1) to remove columns containing missing values from the DataFrame.\n\ndata2 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,np.nan,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf2 = pd.DataFrame(data2)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\nNaN\nNaN\n\n\n4\n5\n9.0\n15.0"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#create-dataframe-for-threshold-example",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#create-dataframe-for-threshold-example",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "Create DataFrame for Threshold Example",
-    "text": "Create DataFrame for Threshold Example\nThis section creates a DataFrame to demonstrate dropping rows based on a threshold of non-missing values.\n\ndf2 = df2.dropna(thresh=2)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n4\n5\n9.0\n15.0"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#drop-rows-based-on-threshold",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#drop-rows-based-on-threshold",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "Drop Rows Based on Threshold",
-    "text": "Drop Rows Based on Threshold\nUse dropna(thresh=2) to keep only rows with at least 2 non-missing values.\n\ndf2 = df2.fillna(0)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n0.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n4\n5\n9.0\n15.0"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#fill-missing-values-with-zero",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#fill-missing-values-with-zero",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "Fill Missing Values with Zero",
-    "text": "Fill Missing Values with Zero\nUse fillna(0) to replace all missing values in the DataFrame with zero.\n\ndata3 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,np.nan,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf3 = pd.DataFrame(data2)\ndf3\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\nNaN\nNaN\n\n\n4\n5\n9.0\n15.0"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#create-dataframe-for-fill-methods",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#create-dataframe-for-fill-methods",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "Create DataFrame for Fill Methods",
-    "text": "Create DataFrame for Fill Methods\nThis section creates a DataFrame to demonstrate different methods for filling missing values."
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#fill-missing-values-with-mean-or-median",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#fill-missing-values-with-mean-or-median",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "Fill Missing Values with Mean or Median",
-    "text": "Fill Missing Values with Mean or Median\nUse fillna(df.mean()) or fillna(df.median()) to replace missing values with the mean or median of each column.\n\ndf3.fillna(df3.mean())\ndf3.fillna(df3.median())\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n7.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n7.0\n12.5\n\n\n4\n5\n9.0\n15.0"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas dfmissing data.html#fill-missing-values-with-forwardbackward-fill",
-    "href": "chapters/pandas/learn pandas dfmissing data.html#fill-missing-values-with-forwardbackward-fill",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "Fill Missing Values with Forward/Backward Fill",
-    "text": "Fill Missing Values with Forward/Backward Fill\nUse fillna(method='ffill') for forward fill and fillna(method='bfill') for backward fill to propagate non-missing values.\n\ndf3.fillna(method='ffill')\ndf3.fillna(method='bfill')\n\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_14088\\3709391602.py:1: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df3.fillna(method='ffill')\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_14088\\3709391602.py:2: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df3.fillna(method='bfill')\n\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n7.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n9.0\n15.0\n\n\n4\n5\n9.0\n15.0"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas df operations.html",
-    "href": "chapters/pandas/learn pandas df operations.html",
-    "title": "Learning Pandas: DataFrame Operation",
-    "section": "",
-    "text": "import pandas as pd\n\ndf = pd.read_csv('example.csv')\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf.head(2)\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n\n\n\n\n\n\ndf.tail(2)\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf[['Name', 'City']]\n\n\n\n\n\n\n\n\nName\nCity\n\n\n\n\n0\nAdil\nMatannur\n\n\n1\nAman\nVellore\n\n\n2\nZiya\nTly\n\n\n3\nZahra\nKnr\n\n\n\n\n\n\n\n\ndf[['Name', 'City']].values\n\narray([['Adil', 'Matannur'],\n       ['Aman', 'Vellore'],\n       ['Ziya', 'Tly'],\n       ['Zahra', 'Knr']], dtype=object)\n\n\n\nagegt20 = df[df['Age']&gt;=20]\nagegt20\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n\n\n\n\n\n\nagelt20 = df[df['Age']&lt;20]\nagelt20\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf_ziya = df[df['Name']=='Ziya']\ndf_ziya\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n\n\n\n\n\n\ndf_mult_cond = df[(df['City']=='Matannur') | (df['Age']&lt;=15 )]\ndf_mult_cond\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\nselected_cities = ['Tly', 'Knr']\ndf_tlyorknr = df[df['City'].isin(selected_cities)]\n\ndf_tlyorknr\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf[df['Name'].str.startswith('Z')]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf.iloc[0:2]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n\n\n\n\n\n\ndf.loc[df['Age']&gt;20, ['Name', 'City']]\n\n\n\n\n\n\n\n\nName\nCity\n\n\n\n\n0\nAdil\nMatannur"
-  },
-  {
-    "objectID": "chapters/pandas/data manipulation with loc and iloc.html",
-    "href": "chapters/pandas/data manipulation with loc and iloc.html",
-    "title": "Data Manipulation with loc and iloc",
-    "section": "",
-    "text": "This notebook demonstrates how to select rows and columns in a Pandas DataFrame using .loc and .iloc. Each section explains a different selection technique."
-  },
-  {
-    "objectID": "chapters/pandas/data manipulation with loc and iloc.html#import-libraries",
-    "href": "chapters/pandas/data manipulation with loc and iloc.html#import-libraries",
-    "title": "Data Manipulation with loc and iloc",
-    "section": "Import Libraries",
-    "text": "Import Libraries\nImport Pandas and NumPy for data manipulation.\n\nimport pandas as pd\nimport numpy as np"
-  },
-  {
-    "objectID": "chapters/pandas/data manipulation with loc and iloc.html#create-dataframe-with-custom-index",
-    "href": "chapters/pandas/data manipulation with loc and iloc.html#create-dataframe-with-custom-index",
-    "title": "Data Manipulation with loc and iloc",
-    "section": "Create DataFrame with Custom Index",
-    "text": "Create DataFrame with Custom Index\nCreate a DataFrame with columns A, B, C and custom row labels (‘a’, ‘b’, ‘c’, ‘d’, ‘e’).\n\ndata = {'A': [1,2,3,4,5],\n        'B': [6,7,8,9,10],\n        'C': [11,12,13,14,15]\n        }\ndf = pd.DataFrame(data, index=['a','b','c','d','e'])\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\na\n1\n6\n11\n\n\nb\n2\n7\n12\n\n\nc\n3\n8\n13\n\n\nd\n4\n9\n14\n\n\ne\n5\n10\n15"
-  },
-  {
-    "objectID": "chapters/pandas/data manipulation with loc and iloc.html#select-rows-by-label-range-with-loc",
-    "href": "chapters/pandas/data manipulation with loc and iloc.html#select-rows-by-label-range-with-loc",
-    "title": "Data Manipulation with loc and iloc",
-    "section": "Select Rows by Label Range with loc",
-    "text": "Select Rows by Label Range with loc\nUse df.loc[\"a\":'c'] to select rows from label ‘a’ to ‘c’ (inclusive).\n\ndf.loc[\"a\":'c']\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\na\n1\n6\n11\n\n\nb\n2\n7\n12\n\n\nc\n3\n8\n13"
-  },
-  {
-    "objectID": "chapters/pandas/data manipulation with loc and iloc.html#select-specific-rows-by-label-with-loc",
-    "href": "chapters/pandas/data manipulation with loc and iloc.html#select-specific-rows-by-label-with-loc",
-    "title": "Data Manipulation with loc and iloc",
-    "section": "Select Specific Rows by Label with loc",
-    "text": "Select Specific Rows by Label with loc\nUse df.loc[['a','c']] to select rows with labels ‘a’ and ‘c’.\n\ndf.loc[['a','c']]\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\na\n1\n6\n11\n\n\nc\n3\n8\n13"
-  },
-  {
-    "objectID": "chapters/pandas/data manipulation with loc and iloc.html#select-specific-rows-and-columns-by-label-with-loc",
-    "href": "chapters/pandas/data manipulation with loc and iloc.html#select-specific-rows-and-columns-by-label-with-loc",
-    "title": "Data Manipulation with loc and iloc",
-    "section": "Select Specific Rows and Columns by Label with loc",
-    "text": "Select Specific Rows and Columns by Label with loc\nUse df.loc[['a','c'],['A','C']] to select rows ‘a’ and ‘c’ and columns ‘A’ and ‘C’.\n\ndf.loc[['a','c'],['A','C']]\n\n\n\n\n\n\n\n\nA\nC\n\n\n\n\na\n1\n11\n\n\nc\n3\n13"
-  },
-  {
-    "objectID": "chapters/pandas/data manipulation with loc and iloc.html#display-the-dataframe",
-    "href": "chapters/pandas/data manipulation with loc and iloc.html#display-the-dataframe",
-    "title": "Data Manipulation with loc and iloc",
-    "section": "Display the DataFrame",
-    "text": "Display the DataFrame\nShow the entire DataFrame for reference.\n\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\na\n1\n6\n11\n\n\nb\n2\n7\n12\n\n\nc\n3\n8\n13\n\n\nd\n4\n9\n14\n\n\ne\n5\n10\n15"
-  },
-  {
-    "objectID": "chapters/pandas/data manipulation with loc and iloc.html#select-row-by-integer-position-with-iloc",
-    "href": "chapters/pandas/data manipulation with loc and iloc.html#select-row-by-integer-position-with-iloc",
-    "title": "Data Manipulation with loc and iloc",
-    "section": "Select Row by Integer Position with iloc",
-    "text": "Select Row by Integer Position with iloc\nUse df.iloc[0] to select the first row by its integer position.\n\ndf.iloc[0]\n\nA     1\nB     6\nC    11\nName: a, dtype: int64"
-  },
-  {
-    "objectID": "chapters/pandas/data manipulation with loc and iloc.html#select-multiple-rows-by-integer-range-with-iloc",
-    "href": "chapters/pandas/data manipulation with loc and iloc.html#select-multiple-rows-by-integer-range-with-iloc",
-    "title": "Data Manipulation with loc and iloc",
-    "section": "Select Multiple Rows by Integer Range with iloc",
-    "text": "Select Multiple Rows by Integer Range with iloc\nUse df.iloc[0:3] to select rows from position 0 to 2 (Python slicing is exclusive of the end).\n\ndf.iloc[0:3]\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\na\n1\n6\n11\n\n\nb\n2\n7\n12\n\n\nc\n3\n8\n13"
-  },
-  {
-    "objectID": "chapters/pandas/data manipulation with loc and iloc.html#select-rows-from-a-position-to-end-with-iloc",
-    "href": "chapters/pandas/data manipulation with loc and iloc.html#select-rows-from-a-position-to-end-with-iloc",
-    "title": "Data Manipulation with loc and iloc",
-    "section": "Select Rows from a Position to End with iloc",
-    "text": "Select Rows from a Position to End with iloc\nUse df.iloc[3:] to select all rows from position 3 to the end.\n\ndf.iloc[3:]\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\nd\n4\n9\n14\n\n\ne\n5\n10\n15"
-  },
-  {
-    "objectID": "chapters/pandas/data manipulation with loc and iloc.html#select-specific-rows-by-integer-position-with-iloc",
-    "href": "chapters/pandas/data manipulation with loc and iloc.html#select-specific-rows-by-integer-position-with-iloc",
-    "title": "Data Manipulation with loc and iloc",
-    "section": "Select Specific Rows by Integer Position with iloc",
-    "text": "Select Specific Rows by Integer Position with iloc\nUse df.iloc[[0,3]] to select rows at positions 0 and 3.\n\ndf.iloc[[0,3]]\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\na\n1\n6\n11\n\n\nd\n4\n9\n14"
-  },
-  {
-    "objectID": "chapters/pandas/data manipulation with loc and iloc.html#select-specific-rows-and-columns-by-integer-position-with-iloc",
-    "href": "chapters/pandas/data manipulation with loc and iloc.html#select-specific-rows-and-columns-by-integer-position-with-iloc",
-    "title": "Data Manipulation with loc and iloc",
-    "section": "Select Specific Rows and Columns by Integer Position with iloc",
-    "text": "Select Specific Rows and Columns by Integer Position with iloc\nUse df.iloc[[0,3],[0,2]] to select rows at positions 0 and 3, and columns at positions 0 and 2.\n\ndf.iloc[[0,3],[0,2]]\n\n\n\n\n\n\n\n\nA\nC\n\n\n\n\na\n1\n11\n\n\nd\n4\n14"
-  },
-  {
-    "objectID": "chapters/pandas/index.html",
-    "href": "chapters/pandas/index.html",
-    "title": "Pandas for Data Science",
-    "section": "",
-    "text": "DataFrames and Series - Core data structures and creation\nData Loading - Reading CSV, Excel, JSON, and databases\nData Cleaning - Handling missing values and duplicates\nData Selection - Indexing, filtering, and querying data\nData Transformation - Grouping, aggregation, and pivot tables\nTime Series - Working with dates and time-based data\nData Visualization - Basic plotting with Pandas\nPerformance Tips - Optimizing operations for large datasets"
-  },
-  {
-    "objectID": "chapters/pandas/index.html#topics-covered",
-    "href": "chapters/pandas/index.html#topics-covered",
-    "title": "Pandas for Data Science",
-    "section": "",
-    "text": "DataFrames and Series - Core data structures and creation\nData Loading - Reading CSV, Excel, JSON, and databases\nData Cleaning - Handling missing values and duplicates\nData Selection - Indexing, filtering, and querying data\nData Transformation - Grouping, aggregation, and pivot tables\nTime Series - Working with dates and time-based data\nData Visualization - Basic plotting with Pandas\nPerformance Tips - Optimizing operations for large datasets"
-  },
-  {
-    "objectID": "chapters/pandas/index.html#learning-path",
-    "href": "chapters/pandas/index.html#learning-path",
-    "title": "Pandas for Data Science",
-    "section": "Learning Path",
-    "text": "Learning Path\n\nStart with basic DataFrame operations\nLearn data loading and inspection techniques\nMaster data cleaning and preprocessing\nExplore advanced transformations and analysis\nPractice with real-world datasets"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas Df.html",
-    "href": "chapters/pandas/learn pandas Df.html",
-    "title": "Learning Pandas: DataFrames",
-    "section": "",
-    "text": "This notebook introduces the basics of Pandas DataFrames, a core data structure for data analysis in Python.\nYou will learn how to: - Import essential libraries (Pandas, Seaborn, Matplotlib, NumPy) - Create DataFrames from dictionaries, lists, and NumPy arrays - View and manipulate DataFrames - Export DataFrames to CSV and Excel files\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\ndata = {'Name': ['Adil', 'Aman', 'Ziya', 'Zahra'],\n        'Age': [23,19,15,9],\n        'City': ['Matannur','Vellore', 'Tly', 'Knr' ]\n        }\ndata\n\n{'Name': ['Adil', 'Aman', 'Ziya', 'Zahra'],\n 'Age': [23, 19, 15, 9],\n 'City': ['Matannur', 'Vellore', 'Tly', 'Knr']}\n\n\n\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndata_list = [ \n    ['Adil', 23, 'Mattanur'],\n    ['Aman', 19, 'Vellore'],\n    ['Siraj', 55, 'Tly'],\n    ['Faritha', 40, 'Chokli']\n    ]\n\ndata_list\n\n[['Adil', 23, 'Mattanur'],\n ['Aman', 19, 'Vellore'],\n ['Siraj', 55, 'Tly'],\n ['Faritha', 40, 'Chokli']]\n\n\n\ndf_list = pd.DataFrame(data_list, columns=['Name', 'Age', 'City'])\ndf_list\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMattanur\n\n\n1\nAman\n19\nVellore\n\n\n2\nSiraj\n55\nTly\n\n\n3\nFaritha\n40\nChokli\n\n\n\n\n\n\n\n\nimport numpy as np\n\n\ndata_array = np.array([[1,2,3],\n                       [4,5,6],\n                       [7,8,9]])\n\ndata_array\n\narray([[1, 2, 3],\n       [4, 5, 6],\n       [7, 8, 9]])\n\n\n\ndf_array = pd.DataFrame(data_array, columns=['A', 'B', 'C'])\ndf_array\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n2\n3\n\n\n1\n4\n5\n6\n\n\n2\n7\n8\n9\n\n\n\n\n\n\n\n\ndf.to_csv('example.csv', index=False)\n\n\ndf.to_excel('example.xlsx', index=False)"
-  },
-  {
-    "objectID": "chapters/pandas/learn pandas Series.html",
-    "href": "chapters/pandas/learn pandas Series.html",
-    "title": "Learning Pandas: Series",
-    "section": "",
-    "text": "This notebook covers the Pandas Series object, which is a one-dimensional labeled array.\nYou will learn how to: - Create a Pandas Series - Access elements and slices - Perform arithmetic operations - View Series properties and methods - Sort and describe Series data\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\nmy_series = pd.Series([10,20,30,40,50], index=['A', 'B', 'C', 'D', 'E'])\nmy_series\n\nA    10\nB    20\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\ntype(my_series)\n\npandas.core.series.Series\n\n\n\nmy_series['C':'E']\n\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series + 15\n\nA    25\nB    35\nC    45\nD    55\nE    65\ndtype: int64\n\n\n\nmy_series * 25\n\nA     250\nB     500\nC     750\nD    1000\nE    1250\ndtype: int64\n\n\n\nmy_series.dtype\n\ndtype('int64')\n\n\n\nmy_series.size\n\n5\n\n\n\nmy_series.shape\n\n(5,)\n\n\n\nmy_series.head(3)\n\nA    10\nB    20\nC    30\ndtype: int64\n\n\n\nmy_series.tail(2)\n\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series.describe()\n\ncount     5.000000\nmean     30.000000\nstd      15.811388\nmin      10.000000\n25%      20.000000\n50%      30.000000\n75%      40.000000\nmax      50.000000\ndtype: float64\n\n\n\nmy_series.sort_values(ascending=False)\n\nE    50\nD    40\nC    30\nB    20\nA    10\ndtype: int64"
-  },
-  {
-    "objectID": "chapters/computer-vision/index.html#available-notebooks",
-    "href": "chapters/computer-vision/index.html#available-notebooks",
+    "objectID": "posts/computer-vision/index.html#available-notebooks",
+    "href": "posts/computer-vision/index.html#available-notebooks",
     "title": "Computer Vision",
     "section": "Available Notebooks",
     "text": "Available Notebooks\nAdd your computer vision notebooks and experiments here!"
   },
   {
-    "objectID": "chapters/fastai/index.html#available-notebooks",
-    "href": "chapters/fastai/index.html#available-notebooks",
-    "title": "FastAI Course",
-    "section": "Available Notebooks",
-    "text": "Available Notebooks\nPlace your FastAI notebooks here as you progress through the course!"
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Learning Content & Posts",
+    "section": "",
+    "text": "Welcome to my learning content hub! Here you’ll find all my Jupyter notebooks, tutorials, and learning materials organized by topic areas."
   },
   {
-    "objectID": "index.html#latest-posts",
-    "href": "index.html#latest-posts",
-    "title": "Adil’s AI/ML Journey",
-    "section": "Latest Posts 📝",
-    "text": "Latest Posts 📝\n\n\nRecent Blog Posts - Follow my AI/ML learning journey, technical insights, and project updates.\n\n\nView All Posts →\n\n\n\n\n\n  \n    \n      \n        \n          FastAI Progress: Computer Vision Fundamentals\n        \n        Building my first image classifier with FastAI and exploring transfer learning concepts.\n        \n          Sep 18, 2025\n          \n            fastai\n            computer-vision\n          \n        \n      \n    \n  \n  \n  \n    \n      \n        \n          Welcome to My AI/ML Learning Journey\n        \n        Starting my documentation journey in AI and Machine Learning with goals and focus areas.\n        \n          Sep 15, 2025\n          \n            welcome\n            learning\n          \n        \n      \n    \n  \n\n\n\n\n\n\n\n\nReady to explore? Check out my learning chapters or dive into the complete blog! �"
+    "objectID": "posts/index.html#browse-chapters",
+    "href": "posts/index.html#browse-chapters",
+    "title": "Learning Content & Posts",
+    "section": "Browse Chapters",
+    "text": "Browse Chapters\nUse the filters below to find specific topics or browse all available content:"
   },
   {
-    "objectID": "chapters/python/index.html#available-notebooks",
-    "href": "chapters/python/index.html#available-notebooks",
-    "title": "Python Fundamentals",
+    "objectID": "posts/pandas/index.html",
+    "href": "posts/pandas/index.html",
+    "title": "Pandas for Data Science",
+    "section": "",
+    "text": "DataFrames and Series - Core data structures and creation\nData Loading - Reading CSV, Excel, JSON, and databases\nData Cleaning - Handling missing values and duplicates\nData Selection - Indexing, filtering, and querying data\nData Transformation - Grouping, aggregation, and pivot tables\nTime Series - Working with dates and time-based data\nData Visualization - Basic plotting with Pandas\nPerformance Tips - Optimizing operations for large datasets"
+  },
+  {
+    "objectID": "posts/pandas/index.html#topics-covered",
+    "href": "posts/pandas/index.html#topics-covered",
+    "title": "Pandas for Data Science",
+    "section": "",
+    "text": "DataFrames and Series - Core data structures and creation\nData Loading - Reading CSV, Excel, JSON, and databases\nData Cleaning - Handling missing values and duplicates\nData Selection - Indexing, filtering, and querying data\nData Transformation - Grouping, aggregation, and pivot tables\nTime Series - Working with dates and time-based data\nData Visualization - Basic plotting with Pandas\nPerformance Tips - Optimizing operations for large datasets"
+  },
+  {
+    "objectID": "posts/pandas/index.html#learning-path",
+    "href": "posts/pandas/index.html#learning-path",
+    "title": "Pandas for Data Science",
+    "section": "Learning Path",
+    "text": "Learning Path\n\nStart with basic DataFrame operations\nLearn data loading and inspection techniques\nMaster data cleaning and preprocessing\nExplore advanced transformations and analysis\nPractice with real-world datasets"
+  },
+  {
+    "objectID": "posts/pandas/index.html#available-notebooks",
+    "href": "posts/pandas/index.html#available-notebooks",
+    "title": "Pandas for Data Science",
     "section": "Available Notebooks",
     "text": "Available Notebooks"
   },
   {
-    "objectID": "chapters/pandas/index.html#available-notebooks",
-    "href": "chapters/pandas/index.html#available-notebooks",
-    "title": "Pandas for Data Science",
+    "objectID": "posts/pandas/learn pandas Df.html",
+    "href": "posts/pandas/learn pandas Df.html",
+    "title": "Learning Pandas: DataFrames",
+    "section": "",
+    "text": "This notebook introduces the basics of Pandas DataFrames, a core data structure for data analysis in Python.\nYou will learn how to: - Import essential libraries (Pandas, Seaborn, Matplotlib, NumPy) - Create DataFrames from dictionaries, lists, and NumPy arrays - View and manipulate DataFrames - Export DataFrames to CSV and Excel files\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\ndata = {'Name': ['Adil', 'Aman', 'Ziya', 'Zahra'],\n        'Age': [23,19,15,9],\n        'City': ['Matannur','Vellore', 'Tly', 'Knr' ]\n        }\ndata\n\n{'Name': ['Adil', 'Aman', 'Ziya', 'Zahra'],\n 'Age': [23, 19, 15, 9],\n 'City': ['Matannur', 'Vellore', 'Tly', 'Knr']}\n\n\n\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndata_list = [ \n    ['Adil', 23, 'Mattanur'],\n    ['Aman', 19, 'Vellore'],\n    ['Siraj', 55, 'Tly'],\n    ['Faritha', 40, 'Chokli']\n    ]\n\ndata_list\n\n[['Adil', 23, 'Mattanur'],\n ['Aman', 19, 'Vellore'],\n ['Siraj', 55, 'Tly'],\n ['Faritha', 40, 'Chokli']]\n\n\n\ndf_list = pd.DataFrame(data_list, columns=['Name', 'Age', 'City'])\ndf_list\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMattanur\n\n\n1\nAman\n19\nVellore\n\n\n2\nSiraj\n55\nTly\n\n\n3\nFaritha\n40\nChokli\n\n\n\n\n\n\n\n\nimport numpy as np\n\n\ndata_array = np.array([[1,2,3],\n                       [4,5,6],\n                       [7,8,9]])\n\ndata_array\n\narray([[1, 2, 3],\n       [4, 5, 6],\n       [7, 8, 9]])\n\n\n\ndf_array = pd.DataFrame(data_array, columns=['A', 'B', 'C'])\ndf_array\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n2\n3\n\n\n1\n4\n5\n6\n\n\n2\n7\n8\n9\n\n\n\n\n\n\n\n\ndf.to_csv('example.csv', index=False)\n\n\ndf.to_excel('example.xlsx', index=False)"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Series.html",
+    "href": "posts/pandas/learn pandas Series.html",
+    "title": "Learning Pandas: Series",
+    "section": "",
+    "text": "This notebook covers the Pandas Series object, which is a one-dimensional labeled array.\nYou will learn how to: - Create a Pandas Series - Access elements and slices - Perform arithmetic operations - View Series properties and methods - Sort and describe Series data\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\nmy_series = pd.Series([10,20,30,40,50], index=['A', 'B', 'C', 'D', 'E'])\nmy_series\n\nA    10\nB    20\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\ntype(my_series)\n\npandas.core.series.Series\n\n\n\nmy_series['C':'E']\n\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series + 15\n\nA    25\nB    35\nC    45\nD    55\nE    65\ndtype: int64\n\n\n\nmy_series * 25\n\nA     250\nB     500\nC     750\nD    1000\nE    1250\ndtype: int64\n\n\n\nmy_series.dtype\n\ndtype('int64')\n\n\n\nmy_series.size\n\n5\n\n\n\nmy_series.shape\n\n(5,)\n\n\n\nmy_series.head(3)\n\nA    10\nB    20\nC    30\ndtype: int64\n\n\n\nmy_series.tail(2)\n\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series.describe()\n\ncount     5.000000\nmean     30.000000\nstd      15.811388\nmin      10.000000\n25%      20.000000\n50%      30.000000\n75%      40.000000\nmax      50.000000\ndtype: float64\n\n\n\nmy_series.sort_values(ascending=False)\n\nE    50\nD    40\nC    30\nB    20\nA    10\ndtype: int64"
+  },
+  {
+    "objectID": "posts/python/index.html",
+    "href": "posts/python/index.html",
+    "title": "Python Fundamentals",
+    "section": "",
+    "text": "Modules and Packages - Code organization and imports\nFunctions and Classes - Object-oriented programming\nData Structures - Lists, dictionaries, sets, tuples\nFile Handling - Reading and writing data\nError Handling - Try/except and debugging\nLibraries - NumPy, Pandas, Matplotlib basics"
+  },
+  {
+    "objectID": "posts/python/index.html#topics-covered",
+    "href": "posts/python/index.html#topics-covered",
+    "title": "Python Fundamentals",
+    "section": "",
+    "text": "Modules and Packages - Code organization and imports\nFunctions and Classes - Object-oriented programming\nData Structures - Lists, dictionaries, sets, tuples\nFile Handling - Reading and writing data\nError Handling - Try/except and debugging\nLibraries - NumPy, Pandas, Matplotlib basics"
+  },
+  {
+    "objectID": "posts/python/index.html#learning-path",
+    "href": "posts/python/index.html#learning-path",
+    "title": "Python Fundamentals",
+    "section": "Learning Path",
+    "text": "Learning Path\nStart with modules and packages, then progress through each topic systematically."
+  },
+  {
+    "objectID": "posts/python/index.html#available-notebooks",
+    "href": "posts/python/index.html#available-notebooks",
+    "title": "Python Fundamentals",
     "section": "Available Notebooks",
     "text": "Available Notebooks"
   }

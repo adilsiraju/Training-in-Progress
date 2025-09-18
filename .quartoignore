@@ -1,0 +1,32 @@
+# Quarto ignore file - exclude from processing
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Development files
+node_modules/
+.vscode/
+.idea/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Log files
+*.log
+
+# OS generated files
+desktop.ini
+
+# GitHub specific
+.github/
+README.md
+LICENSE
+CONTRIBUTING.md
+CHANGELOG.md
+
+# Keep _site clean
+drafts/

@@ -1,28 +1,21 @@
 {
   "listingMap": {
-    "index.qmd": [
-      "posts"
+    "posts\\computer-vision\\index.qmd": [
+      "*.ipynb"
+    ],
+    "posts\\fastai\\index.qmd": [
+      "*.ipynb"
     ],
     "posts\\index.qmd": [
-      "."
-    ],
-    "chapters\\index.qmd": [
       "python/*.ipynb",
       "fastai/*.ipynb",
       "computer-vision/*.ipynb",
-      "mlops/*.ipynb",
       "pandas/*.ipynb"
     ],
-    "chapters\\computer-vision\\index.qmd": [
+    "posts\\pandas\\index.qmd": [
       "*.ipynb"
     ],
-    "chapters\\fastai\\index.qmd": [
-      "*.ipynb"
-    ],
-    "chapters\\pandas\\index.qmd": [
-      "*.ipynb"
-    ],
-    "chapters\\python\\index.qmd": [
+    "posts\\python\\index.qmd": [
       "*.ipynb"
     ]
   }

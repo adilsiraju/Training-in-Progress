@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Blog Posts – TIP</title>
+<title>Learning Content &amp; Posts – TIP</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,9 +80,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-description','listing-author','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -130,13 +130,13 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../styles.css">
-<link rel="alternate" type="application/rss+xml" title="TIP" href="index.xml" data-external="1"></head>
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -153,12 +153,16 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../posts/index.html" aria-current="page"> 
-<span class="menu-text">Blog</span></a>
+<span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -188,52 +192,68 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Blog Posts</h1>
-            <p class="subtitle lead">My AI/ML Learning Journey &amp; Technical Insights</p>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29tcHV0ZXItdmlzaW9u">computer-vision <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZmFzdGFp">fastai <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGVhcm5pbmc=">learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="d2VsY29tZQ==">welcome <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="ZnVuZGFtZW50YWxz">fundamentals <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bW9kdWxlcw==">modules <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHl0aG9u">python <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Learning Content &amp; Posts</h1>
+<p class="subtitle lead">Jupyter notebooks, tutorials, and blog posts organized by topic</p>
+</div>
 
 
 
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
 
 
-<p>Welcome to my blog! Here you’ll find my learning journey through the world of <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong>, including:</p>
-<ul>
-<li>📚 <strong>Learning Progress</strong>: Updates from my FastAI course and other studies</li>
-<li>🚀 <strong>Project Walkthroughs</strong>: Detailed breakdowns of my ML/DL projects</li>
-<li>💡 <strong>Technical Insights</strong>: Deep dives into algorithms, techniques, and tools</li>
-<li>🔧 <strong>MLOps &amp; Deployment</strong>: Practical guides for model deployment and automation</li>
-<li>📊 <strong>Data Science</strong>: EDA, visualization, and analytical techniques</li>
-</ul>
-<p>Use the filters and search above to find content that interests you most!</p>
+</header>
+
+
+<p>Welcome to my learning content hub! Here you’ll find all my Jupyter notebooks, tutorials, and learning materials organized by topic areas.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="python-fundamentals" class="level3">
+<h3 class="anchored" data-anchor-id="python-fundamentals"><a href="../posts/python/index.html"><strong>Python Fundamentals</strong></a></h3>
+<p>Core Python concepts, modules, and best practices</p>
+</section>
+<section id="fastai-course" class="level3">
+<h3 class="anchored" data-anchor-id="fastai-course"><a href="../posts/fastai/index.html"><strong>FastAI Course</strong></a></h3>
+<p>Practical deep learning with FastAI framework</p>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="computer-vision" class="level3">
+<h3 class="anchored" data-anchor-id="computer-vision"><a href="../posts/computer-vision/index.html"><strong>Computer Vision</strong></a></h3>
+<p>Image processing, CNN architectures, and applications</p>
+</section>
+<section id="pandas" class="level3">
+<h3 class="anchored" data-anchor-id="pandas"><a href="../posts/pandas/index.html"><strong>Pandas</strong></a></h3>
+<p>Data manipulation and analysis with Python’s powerful data library</p>
+</section>
+</div>
+</div>
+<p><br></p>
 <hr>
-<p><em>“Documentation is not just about remembering what you’ve learned—it’s about helping others learn too.”</em></p>
+<section id="browse-chapters" class="level2">
+<h2 class="anchored" data-anchor-id="browse-chapters">Browse Chapters</h2>
+<p>Use the filters below to find specific topics or browse all available content:</p>
 
 
 
+</section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
@@ -259,72 +279,192 @@ window.Quarto = {
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZmFzdGFpJTJDY29tcHV0ZXItdmlzaW9uJTJDbGVhcm5pbmc=" data-listing-date-sort="1758133800000" data-listing-file-modified-sort="1758176104613" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="180">
-<div class="thumbnail"><a href="../posts/post-with-code/index.html" class="no-external">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1758178306821" data-listing-reading-time-sort="2" data-listing-word-count-sort="217">
+<a href="../posts/pandas/data manipulation with loc and iloc.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Data Manipulation with loc and iloc
+</h5>
+<div class="card-text listing-description delink">
+This notebook demonstrates how to select rows and columns in a Pandas DataFrame using <code>.loc</code> and <code>.iloc</code>. Each section explains a different selection technique.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
-<img loading="lazy" src="../posts/post-with-code/image.jpg" class="thumbnail-image">
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1758178324582" data-listing-reading-time-sort="1" data-listing-word-count-sort="66">
+<a href="../posts/pandas/loadsata.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Learning Pandas: Data Loading
+</h5>
+<div class="card-text listing-description delink">
+This notebook demonstrates how to use the Pandas library to load data from CSV and Excel files.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/post-with-code/index.html" class="no-external">FastAI Progress: Computer Vision Fundamentals</a>
-</h3>
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1758084341009" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="../posts/pandas/learn pandas df operations.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Learning Pandas: DataFrame Operation
+</h5>
+<div class="card-text listing-description delink">
+
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"></span>
+<span id="cb1-3">df <span class="op">=</span> pd.read_csv(<span class="st">'example.csv'</span>)</span>
+<span id="cb1-4">df</span></code></pre></div></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Name</th>
+<th data-quarto-table-cell-role="th">Age</th>
+<th data-quarto-table-cell-role="th">City</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Adil</td>
+<td>23</td>
+<td>Matannur</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Aman</td>
+<td>19</td>
+<td>Vellore</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Ziya</td>
+<td>15</td>
+<td>Tly</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Zahra</td>
+<td>9</td>
+<td>Knr</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1758178308847" data-listing-reading-time-sort="2" data-listing-word-count-sort="272">
+<a href="../posts/pandas/learn pandas dfmissing data.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Learning Pandas: DataFrame Operation
+</h5>
+<div class="card-text listing-description delink">
+This notebook demonstrates how to handle missing data in Pandas DataFrames. Each section below explains a different operation or concept.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1758178307944" data-listing-reading-time-sort="1" data-listing-word-count-sort="47">
+<a href="../posts/pandas/learn pandas Df.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Learning Pandas: DataFrames
+</h5>
+<div class="card-text listing-description delink">
+This notebook introduces the basics of Pandas DataFrames, a core data structure for data analysis in Python.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1758178309617" data-listing-reading-time-sort="1" data-listing-word-count-sort="38">
+<a href="../posts/pandas/learn pandas Series.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Learning Pandas: Series
+</h5>
+<div class="card-text listing-description delink">
+This notebook covers the Pandas Series object, which is a one-dimensional labeled array.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="cHl0aG9uJTJDZnVuZGFtZW50YWxzJTJDbW9kdWxlcw==" data-listing-date-sort="1758133800000" data-listing-file-modified-sort="1758178514344" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
+<a href="../posts/python/modules.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Python Modules and Packages
+</h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('ZmFzdGFp'); return false;">fastai</div>
+<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">python</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('Y29tcHV0ZXItdmlzaW9u'); return false;">computer-vision</div>
+<div class="listing-category" onclick="window.quartoListingCategory('ZnVuZGFtZW50YWxz'); return false;">fundamentals</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('bGVhcm5pbmc='); return false;">learning</div>
+<div class="listing-category" onclick="window.quartoListingCategory('bW9kdWxlcw=='); return false;">modules</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/post-with-code/index.html" class="no-external">
-<p>Building my first image classifier with FastAI</p>
-</a></div>
+<div class="card-text listing-description delink">
+<p>Understanding Python modules, packages, and imports</p>
 </div>
-<div class="metadata">
-<a href="../posts/post-with-code/index.html" class="no-external">
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Mohammed Adil Siraju
+</div>
 <div class="listing-date">
 Sep 18, 2025
 </div>
-<div class="listing-author">
-Mohammed Adil Siraju
-</div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="d2VsY29tZSUyQ2xlYXJuaW5n" data-listing-date-sort="1757874600000" data-listing-file-modified-sort="1758176104613" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="206">
-<div class="thumbnail"><a href="../posts/welcome/index.html" class="no-external">
-
-<p class="card-img-top"><img src="welcome\thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/welcome/index.html" class="no-external">Welcome to My AI/ML Learning Journey</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('d2VsY29tZQ=='); return false;">welcome</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGVhcm5pbmc='); return false;">learning</div>
-
-</div>
-<div class="delink listing-description"><a href="../posts/welcome/index.html" class="no-external">
-<p>Starting my documentation journey in AI and Machine Learning</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Sep 15, 2025
-</div>
-<div class="listing-author">
-Mohammed Adil Siraju
-</div>
-</a>
-</div>
+</div></a>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>

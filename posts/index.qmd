@@ -1,5 +1,6 @@
 ---
-title: "Chapter Organization"
+title: "Learning Content & Posts"
+subtitle: "Jupyter notebooks, tutorials, and blog posts organized by topic"
 page-layout: full
 listing:
   contents: 
@@ -15,9 +16,7 @@ listing:
   fields: [title, description, author, date, categories]
 ---
 
-<!-- Welcome to my organized learning content! Here you'll find Jupyter notebooks and tutorials organized by topic areas. -->
-
-<!-- ## Chapter Organization -->
+Welcome to my learning content hub! Here you'll find all my Jupyter notebooks, tutorials, and learning materials organized by topic areas.
 
 :::: {.columns}
 ::: {.column width="50%"}

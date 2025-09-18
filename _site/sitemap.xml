@@ -1,99 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://your-website-url.example.com/index.html</loc>
-    <lastmod>2025-09-18T04:15:53.264Z</lastmod>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/python/modules.html</loc>
+    <lastmod>2025-09-18T06:55:14.344Z</lastmod>
   </url>
   <url>
-    <loc>https://your-website-url.example.com/posts/post-with-code/index.html</loc>
-    <lastmod>2025-09-18T04:15:35.814Z</lastmod>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/loadsata.html</loc>
+    <lastmod>2025-09-18T06:52:04.582Z</lastmod>
   </url>
   <url>
-    <loc>https://your-website-url.example.com/about.html</loc>
-    <lastmod>2025-09-18T04:15:35.816Z</lastmod>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/learn pandas dfmissing data.html</loc>
+    <lastmod>2025-09-18T06:51:48.847Z</lastmod>
   </url>
   <url>
-    <loc>https://your-website-url.example.com/posts/welcome/index.html</loc>
-    <lastmod>2025-09-18T04:15:35.810Z</lastmod>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/learn pandas df operations.html</loc>
+    <lastmod>2025-09-17T04:45:41.009Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/data manipulation with loc and iloc.html</loc>
+    <lastmod>2025-09-18T06:51:46.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/fastai/index.html</loc>
+    <lastmod>2025-09-18T06:47:03.185Z</lastmod>
   </url>
   <url>
     <loc>https://adilsiraju.github.io/Training-in-Progress/index.html</loc>
-    <lastmod>2025-09-18T07:00:51.545Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/post-with-code/index.html</loc>
-    <lastmod>2025-09-18T06:15:04.613Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/about.html</loc>
-    <lastmod>2025-09-18T06:15:04.613Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/welcome/index.html</loc>
-    <lastmod>2025-09-18T06:15:04.613Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/index.html</loc>
-    <lastmod>2025-09-18T04:46:22.996Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/CONTRIBUTING.html</loc>
-    <lastmod>2025-09-18T06:20:46.624Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/chapters/python/index.html</loc>
-    <lastmod>2025-09-18T06:46:46.067Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/chapters/index.html</loc>
-    <lastmod>2025-09-18T06:42:42.165Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/chapters/computer-vision/index.html</loc>
-    <lastmod>2025-09-18T06:47:12.785Z</lastmod>
+    <lastmod>2025-09-18T10:50:28.338Z</lastmod>
   </url>
   <url>
     <loc>https://adilsiraju.github.io/Training-in-Progress/CHANGELOG.html</loc>
     <lastmod>2025-09-18T06:20:46.625Z</lastmod>
   </url>
   <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/chapters/fastai/index.html</loc>
-    <lastmod>2025-09-18T06:47:03.185Z</lastmod>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/about.html</loc>
+    <lastmod>2025-09-18T10:43:37.837Z</lastmod>
   </url>
   <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/chapters/mlops/index.html</loc>
-    <lastmod>2025-09-18T06:27:23.995Z</lastmod>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/CONTRIBUTING.html</loc>
+    <lastmod>2025-09-18T06:20:46.624Z</lastmod>
   </url>
   <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/chapters/python/modules.html</loc>
-    <lastmod>2025-09-18T06:55:14.344Z</lastmod>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/computer-vision/index.html</loc>
+    <lastmod>2025-09-18T06:47:12.785Z</lastmod>
   </url>
   <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/chapters/pandas/loadsata.html</loc>
-    <lastmod>2025-09-18T06:52:04.582Z</lastmod>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/index.html</loc>
+    <lastmod>2025-09-18T10:47:51.716Z</lastmod>
   </url>
   <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/chapters/pandas/learn pandas dfmissing data.html</loc>
-    <lastmod>2025-09-18T06:51:48.847Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/chapters/pandas/learn pandas df operations.html</loc>
-    <lastmod>2025-09-17T04:45:41.009Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/chapters/pandas/data manipulation with loc and iloc.html</loc>
-    <lastmod>2025-09-18T06:51:46.821Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/chapters/pandas/index.html</loc>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/index.html</loc>
     <lastmod>2025-09-18T06:46:56.219Z</lastmod>
   </url>
   <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/chapters/pandas/learn pandas Df.html</loc>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/learn pandas Df.html</loc>
     <lastmod>2025-09-18T06:51:47.944Z</lastmod>
   </url>
   <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/chapters/pandas/learn pandas Series.html</loc>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/learn pandas Series.html</loc>
     <lastmod>2025-09-18T06:51:49.617Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/python/index.html</loc>
+    <lastmod>2025-09-18T06:46:46.067Z</lastmod>
   </url>
 </urlset>

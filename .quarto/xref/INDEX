@@ -58,5 +58,38 @@
   },
   "chapters/pandas/loadsata.ipynb": {
     "loadsata.html": "a0fcc0f0"
+  },
+  "posts/computer-vision/index.qmd": {
+    "index.html": "bc3ed728"
+  },
+  "posts/fastai/index.qmd": {
+    "index.html": "a65b2812"
+  },
+  "posts/pandas/data manipulation with loc and iloc.ipynb": {
+    "data manipulation with loc and iloc.html": "399c7297"
+  },
+  "posts/pandas/index.qmd": {
+    "index.html": "a6847780"
+  },
+  "posts/pandas/learn pandas df operations.ipynb": {
+    "learn pandas df operations.html": "fcab6ff1"
+  },
+  "posts/pandas/learn pandas Df.ipynb": {
+    "learn pandas Df.html": "93839b2c"
+  },
+  "posts/pandas/learn pandas dfmissing data.ipynb": {
+    "learn pandas dfmissing data.html": "18bb6b10"
+  },
+  "posts/pandas/learn pandas Series.ipynb": {
+    "learn pandas Series.html": "18515152"
+  },
+  "posts/pandas/loadsata.ipynb": {
+    "loadsata.html": "50519bf8"
+  },
+  "posts/python/index.qmd": {
+    "index.html": "eeb06db9"
+  },
+  "posts/python/modules.ipynb": {
+    "modules.html": "8fb0d16f"
   }
 }

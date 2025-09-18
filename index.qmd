@@ -7,7 +7,7 @@ page-layout: full
 ---
 
 ::: {.hero-container}
-![AI/ML Deep Learning Hero Image](hero.png){.hero-image}
+![AI/ML Deep Learning Hero Image](assets/images/hero.png){.hero-image}
 :::
 
 <br>
@@ -73,7 +73,7 @@ Real-world problem solving with AI
 
 ::: {.column width="30%"}
 ::: {.text-center}
-[**View All Posts →**](chapters/index.qmd){.btn .btn-primary}
+[**View All Posts →**](posts/index.qmd){.btn .btn-primary}
 :::
 :::
 ::::

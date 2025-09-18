@@ -1,50 +1,39 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/posts/fastai/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/computer-vision/index.html",
     "items": []
   },
   {
     "listing": "/posts/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/posts/pandas/data manipulation with loc and iloc.html",
+      "/posts/pandas/loadsata.html",
+      "/posts/pandas/learn pandas df operations.html",
+      "/posts/pandas/learn pandas dfmissing data.html",
+      "/posts/pandas/learn pandas Df.html",
+      "/posts/pandas/learn pandas Series.html",
+      "/posts/python/modules.html"
     ]
   },
   {
-    "listing": "/chapters/index.html",
+    "listing": "/posts/pandas/index.html",
     "items": [
-      "/chapters/pandas/data manipulation with loc and iloc.html",
-      "/chapters/pandas/loadsata.html",
-      "/chapters/pandas/learn pandas df operations.html",
-      "/chapters/pandas/learn pandas dfmissing data.html",
-      "/chapters/pandas/learn pandas Df.html",
-      "/chapters/pandas/learn pandas Series.html",
-      "/chapters/python/modules.html"
+      "/posts/pandas/data manipulation with loc and iloc.html",
+      "/posts/pandas/loadsata.html",
+      "/posts/pandas/learn pandas df operations.html",
+      "/posts/pandas/learn pandas dfmissing data.html",
+      "/posts/pandas/learn pandas Df.html",
+      "/posts/pandas/learn pandas Series.html"
     ]
   },
   {
-    "listing": "/chapters/pandas/index.html",
+    "listing": "/posts/python/index.html",
     "items": [
-      "/chapters/pandas/data manipulation with loc and iloc.html",
-      "/chapters/pandas/loadsata.html",
-      "/chapters/pandas/learn pandas df operations.html",
-      "/chapters/pandas/learn pandas dfmissing data.html",
-      "/chapters/pandas/learn pandas Df.html",
-      "/chapters/pandas/learn pandas Series.html"
-    ]
-  },
-  {
-    "listing": "/chapters/computer-vision/index.html",
-    "items": []
-  },
-  {
-    "listing": "/chapters/fastai/index.html",
-    "items": []
-  },
-  {
-    "listing": "/chapters/python/index.html",
-    "items": [
-      "/chapters/python/modules.html"
+      "/posts/python/modules.html"
     ]
   }
 ]

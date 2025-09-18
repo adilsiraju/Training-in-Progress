@@ -9,10 +9,10 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: posts/index.qmd
+        text: Posts
       - href: about.qmd
         text: About
-      - href: chapters/index.qmd
-        text: Docs
     right:
       - text: "✉️ Contact"
         href: "mailto:mohdadilsiraju@gmail.com"
@@ -26,8 +26,8 @@ format:
   html:
     theme:
       - Pulse
-      - hero-theme.scss
-    css: styles.css
+      - assets/css/hero-theme.scss
+    css: assets/css/styles.css
 
 
 
