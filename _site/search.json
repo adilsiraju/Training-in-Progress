@@ -179,7 +179,7 @@
     "href": "index.html#recent-achievements",
     "title": "Adil’s AI/ML Journey",
     "section": "Recent Achievements",
-    "text": "Recent Achievements\n\nArchitectural Style Classifier - 73% accuracy across 25 styles\nCI/CD for ML Models - 30% faster deployment cycles\n\nMLOps Expertise - Docker, Kubernetes, automation\n\n\n\n\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”\nLatest Posts 👇"
+    "text": "Recent Achievements\n\nArchitectural Style Classifier - 73% accuracy across 25 styles\nCI/CD for ML Models - 30% faster deployment cycles\n\nMLOps Expertise - Docker, Kubernetes, automation\n\n\n\n\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”"
   },
   {
     "objectID": "about.html#mohammed-adil-siraju",
@@ -291,7 +291,7 @@
     "href": "chapters/python/index.html",
     "title": "Python Fundamentals",
     "section": "",
-    "text": "Essential Python concepts for data science and machine learning.\n\n\n\nModules and Packages - Code organization and imports\nFunctions and Classes - Object-oriented programming\nData Structures - Lists, dictionaries, sets, tuples\nFile Handling - Reading and writing data\nError Handling - Try/except and debugging\nLibraries - NumPy, Pandas, Matplotlib basics\n\n\n\n\nStart with modules and packages, then progress through each topic systematically."
+    "text": "Modules and Packages - Code organization and imports\nFunctions and Classes - Object-oriented programming\nData Structures - Lists, dictionaries, sets, tuples\nFile Handling - Reading and writing data\nError Handling - Try/except and debugging\nLibraries - NumPy, Pandas, Matplotlib basics"
   },
   {
     "objectID": "chapters/python/index.html#topics-covered",
@@ -304,8 +304,8 @@
     "objectID": "chapters/python/index.html#learning-path",
     "href": "chapters/python/index.html#learning-path",
     "title": "Python Fundamentals",
-    "section": "",
-    "text": "Start with modules and packages, then progress through each topic systematically."
+    "section": "Learning Path",
+    "text": "Learning Path\nStart with modules and packages, then progress through each topic systematically."
   },
   {
     "objectID": "chapters/index.html",
@@ -333,7 +333,7 @@
     "href": "chapters/computer-vision/index.html",
     "title": "Computer Vision",
     "section": "",
-    "text": "Deep dive into computer vision concepts and implementations.\n\n\n\nImage Processing - OpenCV, PIL, preprocessing\nCNN Architectures - ResNet, VGG, Inception\nObject Detection - YOLO, R-CNN, SSD\nImage Segmentation - U-Net, Mask R-CNN\nTransfer Learning - Pre-trained models and fine-tuning\nProduction - Model optimization and deployment\n\n\n\n\n\nArchitectural style classifier\nObject detection systems\nImage segmentation tasks\nReal-time vision applications\n\n\n\n\n\nAdd your computer vision notebooks and experiments here!"
+    "text": "Image Processing - OpenCV, PIL, preprocessing\nCNN Architectures - ResNet, VGG, Inception\nObject Detection - YOLO, R-CNN, SSD\nImage Segmentation - U-Net, Mask R-CNN\nTransfer Learning - Pre-trained models and fine-tuning\nProduction - Model optimization and deployment"
   },
   {
     "objectID": "chapters/computer-vision/index.html#topics",
@@ -346,8 +346,8 @@
     "objectID": "chapters/computer-vision/index.html#projects",
     "href": "chapters/computer-vision/index.html#projects",
     "title": "Computer Vision",
-    "section": "",
-    "text": "Architectural style classifier\nObject detection systems\nImage segmentation tasks\nReal-time vision applications"
+    "section": "Projects",
+    "text": "Projects\n\nArchitectural style classifier\nObject detection systems\nImage segmentation tasks\nReal-time vision applications"
   },
   {
     "objectID": "CHANGELOG.html",
@@ -375,7 +375,7 @@
     "href": "chapters/fastai/index.html",
     "title": "FastAI Course",
     "section": "",
-    "text": "Learning practical deep learning through the FastAI course and framework.\n\n\n\nLesson 1 - Image Classification\nLesson 2 - Production and Deployment\n\nLesson 3 - Data Ethics and Validation\nLesson 4 - Natural Language Processing\nLesson 5 - Tabular Data and Collaborative Filtering\nLesson 6 - Advanced Architectures\nLesson 7 - Practical Deep Learning\n\n\n\n\n\nImage classifiers with transfer learning\nText generation and sentiment analysis\nRecommendation systems\nComputer vision applications\n\n\n\n\n\nPlace your FastAI notebooks here as you progress through the course!"
+    "text": "Lesson 1 - Image Classification\nLesson 2 - Production and Deployment\n\nLesson 3 - Data Ethics and Validation\nLesson 4 - Natural Language Processing\nLesson 5 - Tabular Data and Collaborative Filtering\nLesson 6 - Advanced Architectures\nLesson 7 - Practical Deep Learning"
   },
   {
     "objectID": "chapters/fastai/index.html#course-progress",
@@ -388,8 +388,8 @@
     "objectID": "chapters/fastai/index.html#key-projects",
     "href": "chapters/fastai/index.html#key-projects",
     "title": "FastAI Course",
-    "section": "",
-    "text": "Image classifiers with transfer learning\nText generation and sentiment analysis\nRecommendation systems\nComputer vision applications"
+    "section": "Key Projects",
+    "text": "Key Projects\n\nImage classifiers with transfer learning\nText generation and sentiment analysis\nRecommendation systems\nComputer vision applications"
   },
   {
     "objectID": "chapters/mlops/index.html",
@@ -417,7 +417,7 @@
     "href": "chapters/python/modules.html",
     "title": "Python Modules and Packages",
     "section": "",
-    "text": "In this chapter, we’ll explore Python modules and packages - essential concepts for organizing and reusing code.\n\n\nA module is a file containing Python definitions and statements. The file name is the module name with the suffix .py added.\n\n# Example: Using built-in modules\nimport math\nimport datetime\n\n# Using math module\nprint(f\"Pi value: {math.pi}\")\nprint(f\"Square root of 16: {math.sqrt(16)}\")\n\n# Using datetime module\nnow = datetime.datetime.now()\nprint(f\"Current time: {now}\")\n\nPi value: 3.141592653589793\nSquare root of 16: 4.0\nCurrent time: 2025-09-18 11:56:02.592034\n\n\n\n\n\nThere are several ways to import modules in Python:\n\n# 1. Import entire module\nimport numpy\n\n# 2. Import with alias\nimport numpy as np\n\n# 3. Import specific functions\nfrom math import sqrt, pi\n\n# 4. Import all (not recommended)\n# from math import *\n\n# Examples\narr = np.array([1, 2, 3, 4, 5])\nprint(f\"Array: {arr}\")\nprint(f\"Mean: {np.mean(arr)}\")\n\nprint(f\"Using imported sqrt: {sqrt(25)}\")\nprint(f\"Using imported pi: {pi}\")\n\nArray: [1 2 3 4 5]\nMean: 3.0\nUsing imported sqrt: 5.0\nUsing imported pi: 3.141592653589793\n\n\n\n\n\nYou can create your own modules by saving Python code in a .py file.\n\n# Example: Creating a simple utility module (conceptually)\n# This would be saved as utils.py\n\ndef greet(name):\n    \"\"\"Greet a person by name\"\"\"\n    return f\"Hello, {name}!\"\n\ndef calculate_area(radius):\n    \"\"\"Calculate area of a circle\"\"\"\n    import math\n    return math.pi * radius ** 2\n\n# Constants\nVERSION = \"1.0.0\"\nAUTHOR = \"Mohammed Adil Siraju\"\n\n# Test the functions\nprint(greet(\"Adil\"))\nprint(f\"Area of circle with radius 5: {calculate_area(5):.2f}\")\nprint(f\"Module version: {VERSION}\")\n\nHello, Adil!\nArea of circle with radius 5: 78.54\nModule version: 1.0.0\n\n\n\n\n\nA package is a collection of modules organized in directories. Packages help organize related modules together.\n\n# Example package structure:\n# mypackage/\n#     __init__.py\n#     module1.py\n#     module2.py\n#     subpackage/\n#         __init__.py\n#         submodule.py\n\n# Importing from packages\n# import mypackage.module1\n# from mypackage import module2\n# from mypackage.subpackage import submodule\n\nprint(\"Package structure example shown above\")\n\nPackage structure example shown above\n\n\n\n\n\nLet’s explore some essential packages for AI/ML work:\n\n# Data manipulation and analysis\nimport pandas as pd\nimport numpy as np\n\n# Visualization\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Machine Learning\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# Create sample data\ndata = {\n    'x': [1, 2, 3, 4, 5],\n    'y': [2, 4, 6, 8, 10]\n}\n\ndf = pd.DataFrame(data)\nprint(\"Sample DataFrame:\")\nprint(df)\n\n# Simple linear regression example\nX = df[['x']]\ny = df['y']\n\nmodel = LinearRegression()\nmodel.fit(X, y)\n\npredictions = model.predict(X)\nmse = mean_squared_error(y, predictions)\n\nprint(f\"\\nLinear Regression Results:\")\nprint(f\"Slope: {model.coef_[0]:.2f}\")\nprint(f\"Intercept: {model.intercept_:.2f}\")\nprint(f\"MSE: {mse:.2f}\")\n\nSample DataFrame:\n   x   y\n0  1   2\n1  2   4\n2  3   6\n3  4   8\n4  5  10\n\nLinear Regression Results:\nSlope: 2.00\nIntercept: -0.00\nMSE: 0.00\n\n\n\n\n\n\nUse descriptive names for modules and packages\nKeep modules focused on a single responsibility\nUse __init__.py to control package imports\nDocument your modules with docstrings\nFollow PEP 8 naming conventions\nAvoid circular imports\n\n\n\n\n\nModules help organize and reuse code\nPackages group related modules together\nImport statements control what code is available\nPython’s standard library provides many useful modules\nThird-party packages extend Python’s capabilities\n\n\nNext: We’ll explore Python functions and classes in detail."
+    "text": "A module is a file containing Python definitions and statements. The file name is the module name with the suffix .py added.\n\n# Example: Using built-in modules\nimport math\nimport datetime\n\n# Using math module\nprint(f\"Pi value: {math.pi}\")\nprint(f\"Square root of 16: {math.sqrt(16)}\")\n\n# Using datetime module\nnow = datetime.datetime.now()\nprint(f\"Current time: {now}\")\n\nPi value: 3.141592653589793\nSquare root of 16: 4.0\nCurrent time: 2025-09-18 11:56:02.592034"
   },
   {
     "objectID": "chapters/python/modules.html#what-are-modules",
@@ -430,43 +430,43 @@
     "objectID": "chapters/python/modules.html#import-statements",
     "href": "chapters/python/modules.html#import-statements",
     "title": "Python Modules and Packages",
-    "section": "",
-    "text": "There are several ways to import modules in Python:\n\n# 1. Import entire module\nimport numpy\n\n# 2. Import with alias\nimport numpy as np\n\n# 3. Import specific functions\nfrom math import sqrt, pi\n\n# 4. Import all (not recommended)\n# from math import *\n\n# Examples\narr = np.array([1, 2, 3, 4, 5])\nprint(f\"Array: {arr}\")\nprint(f\"Mean: {np.mean(arr)}\")\n\nprint(f\"Using imported sqrt: {sqrt(25)}\")\nprint(f\"Using imported pi: {pi}\")\n\nArray: [1 2 3 4 5]\nMean: 3.0\nUsing imported sqrt: 5.0\nUsing imported pi: 3.141592653589793"
+    "section": "Import Statements",
+    "text": "Import Statements\nThere are several ways to import modules in Python:\n\n# 1. Import entire module\nimport numpy\n\n# 2. Import with alias\nimport numpy as np\n\n# 3. Import specific functions\nfrom math import sqrt, pi\n\n# 4. Import all (not recommended)\n# from math import *\n\n# Examples\narr = np.array([1, 2, 3, 4, 5])\nprint(f\"Array: {arr}\")\nprint(f\"Mean: {np.mean(arr)}\")\n\nprint(f\"Using imported sqrt: {sqrt(25)}\")\nprint(f\"Using imported pi: {pi}\")\n\nArray: [1 2 3 4 5]\nMean: 3.0\nUsing imported sqrt: 5.0\nUsing imported pi: 3.141592653589793"
   },
   {
     "objectID": "chapters/python/modules.html#creating-custom-modules",
     "href": "chapters/python/modules.html#creating-custom-modules",
     "title": "Python Modules and Packages",
-    "section": "",
-    "text": "You can create your own modules by saving Python code in a .py file.\n\n# Example: Creating a simple utility module (conceptually)\n# This would be saved as utils.py\n\ndef greet(name):\n    \"\"\"Greet a person by name\"\"\"\n    return f\"Hello, {name}!\"\n\ndef calculate_area(radius):\n    \"\"\"Calculate area of a circle\"\"\"\n    import math\n    return math.pi * radius ** 2\n\n# Constants\nVERSION = \"1.0.0\"\nAUTHOR = \"Mohammed Adil Siraju\"\n\n# Test the functions\nprint(greet(\"Adil\"))\nprint(f\"Area of circle with radius 5: {calculate_area(5):.2f}\")\nprint(f\"Module version: {VERSION}\")\n\nHello, Adil!\nArea of circle with radius 5: 78.54\nModule version: 1.0.0"
+    "section": "Creating Custom Modules",
+    "text": "Creating Custom Modules\nYou can create your own modules by saving Python code in a .py file.\n\n# Example: Creating a simple utility module (conceptually)\n# This would be saved as utils.py\n\ndef greet(name):\n    \"\"\"Greet a person by name\"\"\"\n    return f\"Hello, {name}!\"\n\ndef calculate_area(radius):\n    \"\"\"Calculate area of a circle\"\"\"\n    import math\n    return math.pi * radius ** 2\n\n# Constants\nVERSION = \"1.0.0\"\nAUTHOR = \"Mohammed Adil Siraju\"\n\n# Test the functions\nprint(greet(\"Adil\"))\nprint(f\"Area of circle with radius 5: {calculate_area(5):.2f}\")\nprint(f\"Module version: {VERSION}\")\n\nHello, Adil!\nArea of circle with radius 5: 78.54\nModule version: 1.0.0"
   },
   {
     "objectID": "chapters/python/modules.html#packages",
     "href": "chapters/python/modules.html#packages",
     "title": "Python Modules and Packages",
-    "section": "",
-    "text": "A package is a collection of modules organized in directories. Packages help organize related modules together.\n\n# Example package structure:\n# mypackage/\n#     __init__.py\n#     module1.py\n#     module2.py\n#     subpackage/\n#         __init__.py\n#         submodule.py\n\n# Importing from packages\n# import mypackage.module1\n# from mypackage import module2\n# from mypackage.subpackage import submodule\n\nprint(\"Package structure example shown above\")\n\nPackage structure example shown above"
+    "section": "Packages",
+    "text": "Packages\nA package is a collection of modules organized in directories. Packages help organize related modules together.\n\n# Example package structure:\n# mypackage/\n#     __init__.py\n#     module1.py\n#     module2.py\n#     subpackage/\n#         __init__.py\n#         submodule.py\n\n# Importing from packages\n# import mypackage.module1\n# from mypackage import module2\n# from mypackage.subpackage import submodule\n\nprint(\"Package structure example shown above\")\n\nPackage structure example shown above"
   },
   {
     "objectID": "chapters/python/modules.html#popular-python-packages-for-data-science",
     "href": "chapters/python/modules.html#popular-python-packages-for-data-science",
     "title": "Python Modules and Packages",
-    "section": "",
-    "text": "Let’s explore some essential packages for AI/ML work:\n\n# Data manipulation and analysis\nimport pandas as pd\nimport numpy as np\n\n# Visualization\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Machine Learning\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# Create sample data\ndata = {\n    'x': [1, 2, 3, 4, 5],\n    'y': [2, 4, 6, 8, 10]\n}\n\ndf = pd.DataFrame(data)\nprint(\"Sample DataFrame:\")\nprint(df)\n\n# Simple linear regression example\nX = df[['x']]\ny = df['y']\n\nmodel = LinearRegression()\nmodel.fit(X, y)\n\npredictions = model.predict(X)\nmse = mean_squared_error(y, predictions)\n\nprint(f\"\\nLinear Regression Results:\")\nprint(f\"Slope: {model.coef_[0]:.2f}\")\nprint(f\"Intercept: {model.intercept_:.2f}\")\nprint(f\"MSE: {mse:.2f}\")\n\nSample DataFrame:\n   x   y\n0  1   2\n1  2   4\n2  3   6\n3  4   8\n4  5  10\n\nLinear Regression Results:\nSlope: 2.00\nIntercept: -0.00\nMSE: 0.00"
+    "section": "Popular Python Packages for Data Science",
+    "text": "Popular Python Packages for Data Science\nLet’s explore some essential packages for AI/ML work:\n\n# Data manipulation and analysis\nimport pandas as pd\nimport numpy as np\n\n# Visualization\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Machine Learning\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# Create sample data\ndata = {\n    'x': [1, 2, 3, 4, 5],\n    'y': [2, 4, 6, 8, 10]\n}\n\ndf = pd.DataFrame(data)\nprint(\"Sample DataFrame:\")\nprint(df)\n\n# Simple linear regression example\nX = df[['x']]\ny = df['y']\n\nmodel = LinearRegression()\nmodel.fit(X, y)\n\npredictions = model.predict(X)\nmse = mean_squared_error(y, predictions)\n\nprint(f\"\\nLinear Regression Results:\")\nprint(f\"Slope: {model.coef_[0]:.2f}\")\nprint(f\"Intercept: {model.intercept_:.2f}\")\nprint(f\"MSE: {mse:.2f}\")\n\nSample DataFrame:\n   x   y\n0  1   2\n1  2   4\n2  3   6\n3  4   8\n4  5  10\n\nLinear Regression Results:\nSlope: 2.00\nIntercept: -0.00\nMSE: 0.00"
   },
   {
     "objectID": "chapters/python/modules.html#best-practices",
     "href": "chapters/python/modules.html#best-practices",
     "title": "Python Modules and Packages",
-    "section": "",
-    "text": "Use descriptive names for modules and packages\nKeep modules focused on a single responsibility\nUse __init__.py to control package imports\nDocument your modules with docstrings\nFollow PEP 8 naming conventions\nAvoid circular imports"
+    "section": "Best Practices",
+    "text": "Best Practices\n\nUse descriptive names for modules and packages\nKeep modules focused on a single responsibility\nUse __init__.py to control package imports\nDocument your modules with docstrings\nFollow PEP 8 naming conventions\nAvoid circular imports"
   },
   {
     "objectID": "chapters/python/modules.html#key-takeaways",
     "href": "chapters/python/modules.html#key-takeaways",
     "title": "Python Modules and Packages",
-    "section": "",
-    "text": "Modules help organize and reuse code\nPackages group related modules together\nImport statements control what code is available\nPython’s standard library provides many useful modules\nThird-party packages extend Python’s capabilities\n\n\nNext: We’ll explore Python functions and classes in detail."
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nModules help organize and reuse code\nPackages group related modules together\nImport statements control what code is available\nPython’s standard library provides many useful modules\nThird-party packages extend Python’s capabilities\n\n\nNext: We’ll explore Python functions and classes in detail."
   },
   {
     "objectID": "chapters/pandas/loadsata.html",
@@ -592,7 +592,7 @@
     "href": "chapters/pandas/learn pandas dfmissing data.html#fill-missing-values-with-forwardbackward-fill",
     "title": "Learning Pandas: DataFrame Operation",
     "section": "Fill Missing Values with Forward/Backward Fill",
-    "text": "Fill Missing Values with Forward/Backward Fill\nUse fillna(method='ffill') for forward fill and fillna(method='bfill') for backward fill to propagate non-missing values.\n\ndf3.fillna(method='ffill')\ndf3.fillna(method='bfill')\n\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_9628\\3709391602.py:1: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df3.fillna(method='ffill')\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_9628\\3709391602.py:2: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df3.fillna(method='bfill')\n\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n7.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n9.0\n15.0\n\n\n4\n5\n9.0\n15.0"
+    "text": "Fill Missing Values with Forward/Backward Fill\nUse fillna(method='ffill') for forward fill and fillna(method='bfill') for backward fill to propagate non-missing values.\n\ndf3.fillna(method='ffill')\ndf3.fillna(method='bfill')\n\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_14088\\3709391602.py:1: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df3.fillna(method='ffill')\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_14088\\3709391602.py:2: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df3.fillna(method='bfill')\n\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n7.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n9.0\n15.0\n\n\n4\n5\n9.0\n15.0"
   },
   {
     "objectID": "chapters/pandas/learn pandas df operations.html",
@@ -690,7 +690,7 @@
     "href": "chapters/pandas/index.html",
     "title": "Pandas for Data Science",
     "section": "",
-    "text": "Master data manipulation and analysis using Python’s most powerful data library.\n\n\n\nDataFrames and Series - Core data structures and creation\nData Loading - Reading CSV, Excel, JSON, and databases\nData Cleaning - Handling missing values and duplicates\nData Selection - Indexing, filtering, and querying data\nData Transformation - Grouping, aggregation, and pivot tables\nTime Series - Working with dates and time-based data\nData Visualization - Basic plotting with Pandas\nPerformance Tips - Optimizing operations for large datasets\n\n\n\n\n\nStart with basic DataFrame operations\nLearn data loading and inspection techniques\nMaster data cleaning and preprocessing\nExplore advanced transformations and analysis\nPractice with real-world datasets"
+    "text": "DataFrames and Series - Core data structures and creation\nData Loading - Reading CSV, Excel, JSON, and databases\nData Cleaning - Handling missing values and duplicates\nData Selection - Indexing, filtering, and querying data\nData Transformation - Grouping, aggregation, and pivot tables\nTime Series - Working with dates and time-based data\nData Visualization - Basic plotting with Pandas\nPerformance Tips - Optimizing operations for large datasets"
   },
   {
     "objectID": "chapters/pandas/index.html#topics-covered",
@@ -703,8 +703,8 @@
     "objectID": "chapters/pandas/index.html#learning-path",
     "href": "chapters/pandas/index.html#learning-path",
     "title": "Pandas for Data Science",
-    "section": "",
-    "text": "Start with basic DataFrame operations\nLearn data loading and inspection techniques\nMaster data cleaning and preprocessing\nExplore advanced transformations and analysis\nPractice with real-world datasets"
+    "section": "Learning Path",
+    "text": "Learning Path\n\nStart with basic DataFrame operations\nLearn data loading and inspection techniques\nMaster data cleaning and preprocessing\nExplore advanced transformations and analysis\nPractice with real-world datasets"
   },
   {
     "objectID": "chapters/pandas/learn pandas Df.html",
@@ -724,14 +724,35 @@
     "objectID": "chapters/computer-vision/index.html#available-notebooks",
     "href": "chapters/computer-vision/index.html#available-notebooks",
     "title": "Computer Vision",
-    "section": "",
-    "text": "Add your computer vision notebooks and experiments here!"
+    "section": "Available Notebooks",
+    "text": "Available Notebooks\nAdd your computer vision notebooks and experiments here!"
   },
   {
     "objectID": "chapters/fastai/index.html#available-notebooks",
     "href": "chapters/fastai/index.html#available-notebooks",
     "title": "FastAI Course",
-    "section": "",
-    "text": "Place your FastAI notebooks here as you progress through the course!"
+    "section": "Available Notebooks",
+    "text": "Available Notebooks\nPlace your FastAI notebooks here as you progress through the course!"
+  },
+  {
+    "objectID": "index.html#latest-posts",
+    "href": "index.html#latest-posts",
+    "title": "Adil’s AI/ML Journey",
+    "section": "Latest Posts 📝",
+    "text": "Latest Posts 📝\n\n\nRecent Blog Posts - Follow my AI/ML learning journey, technical insights, and project updates.\n\n\nView All Posts →\n\n\n\n\n\n  \n    \n      \n        \n          FastAI Progress: Computer Vision Fundamentals\n        \n        Building my first image classifier with FastAI and exploring transfer learning concepts.\n        \n          Sep 18, 2025\n          \n            fastai\n            computer-vision\n          \n        \n      \n    \n  \n  \n  \n    \n      \n        \n          Welcome to My AI/ML Learning Journey\n        \n        Starting my documentation journey in AI and Machine Learning with goals and focus areas.\n        \n          Sep 15, 2025\n          \n            welcome\n            learning\n          \n        \n      \n    \n  \n\n\n\n\n\n\n\n\nReady to explore? Check out my learning chapters or dive into the complete blog! �"
+  },
+  {
+    "objectID": "chapters/python/index.html#available-notebooks",
+    "href": "chapters/python/index.html#available-notebooks",
+    "title": "Python Fundamentals",
+    "section": "Available Notebooks",
+    "text": "Available Notebooks"
+  },
+  {
+    "objectID": "chapters/pandas/index.html#available-notebooks",
+    "href": "chapters/pandas/index.html#available-notebooks",
+    "title": "Pandas for Data Science",
+    "section": "Available Notebooks",
+    "text": "Available Notebooks"
   }
 ]

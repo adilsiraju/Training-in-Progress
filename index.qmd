@@ -3,14 +3,6 @@ title: "Adil's AI/ML Journey"
 subtitle: "Documenting my learning path in Data Science, Machine Learning & Deep Learning"
 title-block-banner: true
 title-block-banner-color: "dark"
-listing:
-  contents: chapters
-  feed: true
-  sort: "date desc"
-  type: default
-  categories: false
-  sort-ui: false
-  filter-ui: false
 page-layout: full
 ---
 
@@ -66,8 +58,101 @@ Real-world problem solving with AI
 
 ::: {.text-center}
 *"The best way to learn is by doing, and the best way to remember is by documenting."*
+:::
 
-**Latest Posts** 👇
+<br>
+
+---
+
+## Latest Posts 📝
+
+:::: {.columns}
+::: {.column width="70%"}
+**Recent Blog Posts** - Follow my AI/ML learning journey, technical insights, and project updates.
+:::
+
+::: {.column width="30%"}
+::: {.text-center}
+[**View All Posts →**](chapters/index.qmd){.btn .btn-primary}
+:::
+:::
+::::
+
+::: {.latest-posts-grid}
+```{=html}
+<div class="row">
+  <div class="col-md-6 mb-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">
+          <a href="posts/post-with-code/" class="text-decoration-none">FastAI Progress: Computer Vision Fundamentals</a>
+        </h5>
+        <p class="card-text text-muted">Building my first image classifier with FastAI and exploring transfer learning concepts.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <small class="text-muted">Sep 18, 2025</small>
+          <div>
+            <span class="badge bg-secondary me-1">fastai</span>
+            <span class="badge bg-secondary">computer-vision</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6 mb-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">
+          <a href="posts/welcome/" class="text-decoration-none">Welcome to My AI/ML Learning Journey</a>
+        </h5>
+        <p class="card-text text-muted">Starting my documentation journey in AI and Machine Learning with goals and focus areas.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <small class="text-muted">Sep 15, 2025</small>
+          <div>
+            <span class="badge bg-secondary me-1">welcome</span>
+            <span class="badge bg-secondary">learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.latest-posts-grid .card {
+  border: 1px solid #dee2e6;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.latest-posts-grid .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15) !important;
+}
+
+.latest-posts-grid .card-title a {
+  color: inherit;
+  font-weight: 600;
+}
+
+.latest-posts-grid .card-title a:hover {
+  color: #0d6efd;
+}
+
+.latest-posts-grid .badge {
+  font-size: 0.75rem;
+}
+</style>
+```
+:::
+
+<br>
+
+---
+
+<br>
+
+::: {.text-center}
+**Ready to explore?** Check out my [**learning chapters**](chapters/index.qmd) or dive into the [**complete blog**](chapters/index.qmd)! �
 :::
 
 
