@@ -14,14 +14,16 @@ website:
       - href: about.qmd
         text: About
     right:
-      - text: "✉️ Contact"
+      - icon: envelope
         href: "mailto:mohdadilsiraju@gmail.com"
-      - text: "🌐 Portfolio"
+      - icon: globe
         href: "https://www.adilsiraju.vercel.app"
       - icon: github
         href: https://github.com/adilsiraju
       - icon: twitter
         href: https://twitter.com/mohd3dil
+      - icon: linkedin
+        href: "https://linkedin.com/in/adilsiraju"
 format:
   html:
     theme:
