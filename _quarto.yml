@@ -11,10 +11,8 @@ website:
         text: Home
       - href: about.qmd
         text: About
-      - href: posts/index.qmd
-        text: Blog
       - href: chapters/index.qmd
-        text: Chapters
+        text: Docs
     right:
       - text: "✉️ Contact"
         href: "mailto:mohdadilsiraju@gmail.com"
