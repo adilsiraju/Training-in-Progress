@@ -6,7 +6,7 @@ listing:
     - "python/*.ipynb"
     - "fastai/*.ipynb" 
     - "computer-vision/*.ipynb"
-    - "mlops/*.ipynb"
+    - "pandas/*.ipynb"
   sort: "title"
   type: grid
   categories: true
@@ -32,8 +32,8 @@ Practical deep learning with FastAI framework
 ### 👁️ **Computer Vision**
 Image processing, CNN architectures, and applications
 
-### 🔧 **MLOps**
-Model deployment, automation, and production workflows
+### � **Pandas**
+Data manipulation and analysis with Python's powerful data library
 :::
 ::::
 

@@ -1,0 +1,27 @@
+---
+title: "Pandas for Data Science"
+description: "Data manipulation and analysis with Python's Pandas library"
+---
+
+# Pandas for Data Science �
+
+Master data manipulation and analysis using Python's most powerful data library.
+
+## Topics Covered
+
+- **DataFrames and Series** - Core data structures and creation
+- **Data Loading** - Reading CSV, Excel, JSON, and databases
+- **Data Cleaning** - Handling missing values and duplicates
+- **Data Selection** - Indexing, filtering, and querying data
+- **Data Transformation** - Grouping, aggregation, and pivot tables
+- **Time Series** - Working with dates and time-based data
+- **Data Visualization** - Basic plotting with Pandas
+- **Performance Tips** - Optimizing operations for large datasets
+
+## Learning Path
+
+1. Start with basic DataFrame operations
+2. Learn data loading and inspection techniques
+3. Master data cleaning and preprocessing
+4. Explore advanced transformations and analysis
+5. Practice with real-world datasets
