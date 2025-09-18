@@ -21,18 +21,18 @@ listing:
 
 :::: {.columns}
 ::: {.column width="50%"}
-### [🐍 **Python Fundamentals**](python/index.qmd)
+### [**Python Fundamentals**](python/index.qmd)
 Core Python concepts, modules, and best practices
 
-### [🤖 **FastAI Course**](fastai/index.qmd)
+### [**FastAI Course**](fastai/index.qmd)
 Practical deep learning with FastAI framework
 :::
 
 ::: {.column width="50%"}
-### [👁️ **Computer Vision**](computer-vision/index.qmd)
+### [**Computer Vision**](computer-vision/index.qmd)
 Image processing, CNN architectures, and applications
 
-### [🐼 **Pandas**](pandas/index.qmd)
+### [**Pandas**](pandas/index.qmd)
 Data manipulation and analysis with Python's powerful data library
 :::
 ::::
