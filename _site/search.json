@@ -58,133 +58,133 @@
   {
     "objectID": "posts/pandas/loadsata.html",
     "href": "posts/pandas/loadsata.html",
-    "title": "Learning Pandas: Data Loading",
+    "title": "Pandas: Data Loading",
     "section": "",
-    "text": "This notebook demonstrates how to use the Pandas library to load data from CSV and Excel files.\nPandas is a powerful Python library for data analysis and manipulation. It provides easy-to-use data structures and functions for working with structured data.\nIn this notebook, you will learn how to:\n\nImport the Pandas library\nLoad data from a CSV file\nLoad data from an Excel file\nView the loaded data\n\n\nimport pandas as pd\n\n\ndf_csv = pd.read_csv('example.csv')\ndf_csv\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf_xl = pd.read_excel('example.xlsx')\ndf_xl\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr"
+    "text": "Pandas is a powerful Python library for data analysis and manipulation. It provides easy-to-use data structures and functions for working with structured data.\nIn this notebook, you will learn how to:\n\nImport the Pandas library\nLoad data from a CSV file\nLoad data from an Excel file\nView the loaded data\n\n\nimport pandas as pd\n\n\ndf_csv = pd.read_csv('example.csv')\ndf_csv\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf_xl = pd.read_excel('example.xlsx')\ndf_xl\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html",
     "href": "posts/pandas/learn pandas dfmissing data.html",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "",
-    "text": "This notebook demonstrates how to handle missing data in Pandas DataFrames. Each section below explains a different operation or concept.\nimport pandas as pd\nimport numpy as np"
+    "text": "import pandas as pd\nimport numpy as np"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#import-libraries",
     "href": "posts/pandas/learn pandas dfmissing data.html#import-libraries",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "Import Libraries",
     "text": "Import Libraries\nImport Pandas and NumPy, which are essential for data manipulation and handling missing values.\n\nnp.nan\n\nnan"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#what-is-np.nan",
     "href": "posts/pandas/learn pandas dfmissing data.html#what-is-np.nan",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "What is np.nan?",
     "text": "What is np.nan?\nnp.nan represents a missing value (“Not a Number”) in NumPy and Pandas.\n\ndata = {'A': [1,2,np.nan,4,5],\n        'B': [6,np.nan,7,8,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n1\n2.0\nNaN\n12.0\n\n\n2\nNaN\n7.0\n13.0\n\n\n3\n4.0\n8.0\nNaN\n\n\n4\n5.0\n9.0\n15.0"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-with-missing-values",
     "href": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-with-missing-values",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "Create DataFrame with Missing Values",
     "text": "Create DataFrame with Missing Values\nThis section creates a DataFrame containing missing values using np.nan.\n\ndf.isnull()\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\nFalse\nFalse\nFalse\n\n\n1\nFalse\nTrue\nFalse\n\n\n2\nTrue\nFalse\nFalse\n\n\n3\nFalse\nFalse\nTrue\n\n\n4\nFalse\nFalse\nFalse"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#detect-missing-values",
     "href": "posts/pandas/learn pandas dfmissing data.html#detect-missing-values",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "Detect Missing Values",
     "text": "Detect Missing Values\nUse isnull() to check which values are missing in the DataFrame.\n\ndf.isnull().sum()\n\nA    1\nB    1\nC    1\ndtype: int64"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#count-missing-values",
     "href": "posts/pandas/learn pandas dfmissing data.html#count-missing-values",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "Count Missing Values",
     "text": "Count Missing Values\nUse isnull().sum() to count the number of missing values in each column.\n\n# Drops rows with na values\ndf.dropna(inplace=True)\n# or\ndf = df.dropna()"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#drop-rows-with-missing-values",
     "href": "posts/pandas/learn pandas dfmissing data.html#drop-rows-with-missing-values",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "Drop Rows with Missing Values",
     "text": "Drop Rows with Missing Values\nUse dropna() to remove rows containing missing values from the DataFrame.\n\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n4\n5.0\n9.0\n15.0"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#view-dataframe-after-dropping-rows",
     "href": "posts/pandas/learn pandas dfmissing data.html#view-dataframe-after-dropping-rows",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "View DataFrame After Dropping Rows",
     "text": "View DataFrame After Dropping Rows\nDisplay the DataFrame after removing rows with missing values.\n\ndf.reset_index(drop=True)\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n1\n5.0\n9.0\n15.0"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#reset-index-after-dropping-rows",
     "href": "posts/pandas/learn pandas dfmissing data.html#reset-index-after-dropping-rows",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "Reset Index After Dropping Rows",
     "text": "Reset Index After Dropping Rows\nUse reset_index(drop=True) to reset the DataFrame index after dropping rows.\n\ndata1 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,8,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf1 = pd.DataFrame(data1)\ndf1\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n8.0\nNaN\n\n\n4\n5\n9.0\n15.0"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#create-another-dataframe-with-missing-values",
     "href": "posts/pandas/learn pandas dfmissing data.html#create-another-dataframe-with-missing-values",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "Create Another DataFrame with Missing Values",
     "text": "Create Another DataFrame with Missing Values\nThis section creates a new DataFrame with missing values for further operations.\n\ndf1 = df1.dropna(axis=1)\ndf1\n\n\n\n\n\n\n\n\nA\n\n\n\n\n0\n1\n\n\n1\n2\n\n\n2\n3\n\n\n3\n4\n\n\n4\n5"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#drop-columns-with-missing-values",
     "href": "posts/pandas/learn pandas dfmissing data.html#drop-columns-with-missing-values",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "Drop Columns with Missing Values",
     "text": "Drop Columns with Missing Values\nUse dropna(axis=1) to remove columns containing missing values from the DataFrame.\n\ndata2 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,np.nan,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf2 = pd.DataFrame(data2)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\nNaN\nNaN\n\n\n4\n5\n9.0\n15.0"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-for-threshold-example",
     "href": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-for-threshold-example",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "Create DataFrame for Threshold Example",
     "text": "Create DataFrame for Threshold Example\nThis section creates a DataFrame to demonstrate dropping rows based on a threshold of non-missing values.\n\ndf2 = df2.dropna(thresh=2)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n4\n5\n9.0\n15.0"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#drop-rows-based-on-threshold",
     "href": "posts/pandas/learn pandas dfmissing data.html#drop-rows-based-on-threshold",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "Drop Rows Based on Threshold",
     "text": "Drop Rows Based on Threshold\nUse dropna(thresh=2) to keep only rows with at least 2 non-missing values.\n\ndf2 = df2.fillna(0)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n0.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n4\n5\n9.0\n15.0"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-zero",
     "href": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-zero",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "Fill Missing Values with Zero",
     "text": "Fill Missing Values with Zero\nUse fillna(0) to replace all missing values in the DataFrame with zero.\n\ndata3 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,np.nan,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf3 = pd.DataFrame(data2)\ndf3\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\nNaN\nNaN\n\n\n4\n5\n9.0\n15.0"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-for-fill-methods",
     "href": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-for-fill-methods",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "Create DataFrame for Fill Methods",
     "text": "Create DataFrame for Fill Methods\nThis section creates a DataFrame to demonstrate different methods for filling missing values."
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-mean-or-median",
     "href": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-mean-or-median",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "Fill Missing Values with Mean or Median",
     "text": "Fill Missing Values with Mean or Median\nUse fillna(df.mean()) or fillna(df.median()) to replace missing values with the mean or median of each column.\n\ndf3.fillna(df3.mean())\ndf3.fillna(df3.median())\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n7.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n7.0\n12.5\n\n\n4\n5\n9.0\n15.0"
   },
   {
     "objectID": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-forwardbackward-fill",
     "href": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-forwardbackward-fill",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: Dealing with missing Datas",
     "section": "Fill Missing Values with Forward/Backward Fill",
     "text": "Fill Missing Values with Forward/Backward Fill\nUse fillna(method='ffill') for forward fill and fillna(method='bfill') for backward fill to propagate non-missing values.\n\ndf3.fillna(method='ffill')\ndf3.fillna(method='bfill')\n\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_14088\\3709391602.py:1: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df3.fillna(method='ffill')\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_14088\\3709391602.py:2: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df3.fillna(method='bfill')\n\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n7.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n9.0\n15.0\n\n\n4\n5\n9.0\n15.0"
   },
   {
     "objectID": "posts/pandas/learn pandas df operations.html",
     "href": "posts/pandas/learn pandas df operations.html",
-    "title": "Learning Pandas: DataFrame Operation",
+    "title": "Pandas: DataFrame Operation",
     "section": "",
     "text": "import pandas as pd\n\ndf = pd.read_csv('example.csv')\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf.head(2)\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n\n\n\n\n\n\ndf.tail(2)\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf[['Name', 'City']]\n\n\n\n\n\n\n\n\nName\nCity\n\n\n\n\n0\nAdil\nMatannur\n\n\n1\nAman\nVellore\n\n\n2\nZiya\nTly\n\n\n3\nZahra\nKnr\n\n\n\n\n\n\n\n\ndf[['Name', 'City']].values\n\narray([['Adil', 'Matannur'],\n       ['Aman', 'Vellore'],\n       ['Ziya', 'Tly'],\n       ['Zahra', 'Knr']], dtype=object)\n\n\n\nagegt20 = df[df['Age']&gt;=20]\nagegt20\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n\n\n\n\n\n\nagelt20 = df[df['Age']&lt;20]\nagelt20\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf_ziya = df[df['Name']=='Ziya']\ndf_ziya\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n\n\n\n\n\n\ndf_mult_cond = df[(df['City']=='Matannur') | (df['Age']&lt;=15 )]\ndf_mult_cond\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\nselected_cities = ['Tly', 'Knr']\ndf_tlyorknr = df[df['City'].isin(selected_cities)]\n\ndf_tlyorknr\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf[df['Name'].str.startswith('Z')]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf.iloc[0:2]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n\n\n\n\n\n\ndf.loc[df['Age']&gt;20, ['Name', 'City']]\n\n\n\n\n\n\n\n\nName\nCity\n\n\n\n\n0\nAdil\nMatannur"
   },
@@ -193,14 +193,14 @@
     "href": "posts/pandas/data manipulation with loc and iloc.html",
     "title": "Data Manipulation with loc and iloc",
     "section": "",
-    "text": "This notebook demonstrates how to select rows and columns in a Pandas DataFrame using .loc and .iloc. Each section explains a different selection technique."
+    "text": "Import Pandas and NumPy for data manipulation.\n\nimport pandas as pd\nimport numpy as np"
   },
   {
     "objectID": "posts/pandas/data manipulation with loc and iloc.html#import-libraries",
     "href": "posts/pandas/data manipulation with loc and iloc.html#import-libraries",
     "title": "Data Manipulation with loc and iloc",
-    "section": "Import Libraries",
-    "text": "Import Libraries\nImport Pandas and NumPy for data manipulation.\n\nimport pandas as pd\nimport numpy as np"
+    "section": "",
+    "text": "Import Pandas and NumPy for data manipulation.\n\nimport pandas as pd\nimport numpy as np"
   },
   {
     "objectID": "posts/pandas/data manipulation with loc and iloc.html#create-dataframe-with-custom-index",
@@ -513,16 +513,16 @@
   {
     "objectID": "posts/pandas/learn pandas Df.html",
     "href": "posts/pandas/learn pandas Df.html",
-    "title": "Learning Pandas: DataFrames",
+    "title": "Pandas: Intro to DataFrames",
     "section": "",
-    "text": "This notebook introduces the basics of Pandas DataFrames, a core data structure for data analysis in Python.\nYou will learn how to: - Import essential libraries (Pandas, Seaborn, Matplotlib, NumPy) - Create DataFrames from dictionaries, lists, and NumPy arrays - View and manipulate DataFrames - Export DataFrames to CSV and Excel files\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\ndata = {'Name': ['Adil', 'Aman', 'Ziya', 'Zahra'],\n        'Age': [23,19,15,9],\n        'City': ['Matannur','Vellore', 'Tly', 'Knr' ]\n        }\ndata\n\n{'Name': ['Adil', 'Aman', 'Ziya', 'Zahra'],\n 'Age': [23, 19, 15, 9],\n 'City': ['Matannur', 'Vellore', 'Tly', 'Knr']}\n\n\n\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndata_list = [ \n    ['Adil', 23, 'Mattanur'],\n    ['Aman', 19, 'Vellore'],\n    ['Siraj', 55, 'Tly'],\n    ['Faritha', 40, 'Chokli']\n    ]\n\ndata_list\n\n[['Adil', 23, 'Mattanur'],\n ['Aman', 19, 'Vellore'],\n ['Siraj', 55, 'Tly'],\n ['Faritha', 40, 'Chokli']]\n\n\n\ndf_list = pd.DataFrame(data_list, columns=['Name', 'Age', 'City'])\ndf_list\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMattanur\n\n\n1\nAman\n19\nVellore\n\n\n2\nSiraj\n55\nTly\n\n\n3\nFaritha\n40\nChokli\n\n\n\n\n\n\n\n\nimport numpy as np\n\n\ndata_array = np.array([[1,2,3],\n                       [4,5,6],\n                       [7,8,9]])\n\ndata_array\n\narray([[1, 2, 3],\n       [4, 5, 6],\n       [7, 8, 9]])\n\n\n\ndf_array = pd.DataFrame(data_array, columns=['A', 'B', 'C'])\ndf_array\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n2\n3\n\n\n1\n4\n5\n6\n\n\n2\n7\n8\n9\n\n\n\n\n\n\n\n\ndf.to_csv('example.csv', index=False)\n\n\ndf.to_excel('example.xlsx', index=False)"
+    "text": "You will learn how to: - Import essential libraries (Pandas, Seaborn, Matplotlib, NumPy) - Create DataFrames from dictionaries, lists, and NumPy arrays - View and manipulate DataFrames - Export DataFrames to CSV and Excel files\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\ndata = {'Name': ['Adil', 'Aman', 'Ziya', 'Zahra'],\n        'Age': [23,19,15,9],\n        'City': ['Matannur','Vellore', 'Tly', 'Knr' ]\n        }\ndata\n\n{'Name': ['Adil', 'Aman', 'Ziya', 'Zahra'],\n 'Age': [23, 19, 15, 9],\n 'City': ['Matannur', 'Vellore', 'Tly', 'Knr']}\n\n\n\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndata_list = [ \n    ['Adil', 23, 'Mattanur'],\n    ['Aman', 19, 'Vellore'],\n    ['Siraj', 55, 'Tly'],\n    ['Faritha', 40, 'Chokli']\n    ]\n\ndata_list\n\n[['Adil', 23, 'Mattanur'],\n ['Aman', 19, 'Vellore'],\n ['Siraj', 55, 'Tly'],\n ['Faritha', 40, 'Chokli']]\n\n\n\ndf_list = pd.DataFrame(data_list, columns=['Name', 'Age', 'City'])\ndf_list\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMattanur\n\n\n1\nAman\n19\nVellore\n\n\n2\nSiraj\n55\nTly\n\n\n3\nFaritha\n40\nChokli\n\n\n\n\n\n\n\n\nimport numpy as np\n\n\ndata_array = np.array([[1,2,3],\n                       [4,5,6],\n                       [7,8,9]])\n\ndata_array\n\narray([[1, 2, 3],\n       [4, 5, 6],\n       [7, 8, 9]])\n\n\n\ndf_array = pd.DataFrame(data_array, columns=['A', 'B', 'C'])\ndf_array\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n2\n3\n\n\n1\n4\n5\n6\n\n\n2\n7\n8\n9\n\n\n\n\n\n\n\n\ndf.to_csv('example.csv', index=False)\n\n\ndf.to_excel('example.xlsx', index=False)"
   },
   {
     "objectID": "posts/pandas/learn pandas Series.html",
     "href": "posts/pandas/learn pandas Series.html",
-    "title": "Learning Pandas: Series",
+    "title": "Pandas: Intro to Series",
     "section": "",
-    "text": "This notebook covers the Pandas Series object, which is a one-dimensional labeled array.\nYou will learn how to: - Create a Pandas Series - Access elements and slices - Perform arithmetic operations - View Series properties and methods - Sort and describe Series data\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\nmy_series = pd.Series([10,20,30,40,50], index=['A', 'B', 'C', 'D', 'E'])\nmy_series\n\nA    10\nB    20\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\ntype(my_series)\n\npandas.core.series.Series\n\n\n\nmy_series['C':'E']\n\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series + 15\n\nA    25\nB    35\nC    45\nD    55\nE    65\ndtype: int64\n\n\n\nmy_series * 25\n\nA     250\nB     500\nC     750\nD    1000\nE    1250\ndtype: int64\n\n\n\nmy_series.dtype\n\ndtype('int64')\n\n\n\nmy_series.size\n\n5\n\n\n\nmy_series.shape\n\n(5,)\n\n\n\nmy_series.head(3)\n\nA    10\nB    20\nC    30\ndtype: int64\n\n\n\nmy_series.tail(2)\n\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series.describe()\n\ncount     5.000000\nmean     30.000000\nstd      15.811388\nmin      10.000000\n25%      20.000000\n50%      30.000000\n75%      40.000000\nmax      50.000000\ndtype: float64\n\n\n\nmy_series.sort_values(ascending=False)\n\nE    50\nD    40\nC    30\nB    20\nA    10\ndtype: int64"
+    "text": "You will learn how to: - Create a Pandas Series - Access elements and slices - Perform arithmetic operations - View Series properties and methods - Sort and describe Series data\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\nmy_series = pd.Series([10,20,30,40,50], index=['A', 'B', 'C', 'D', 'E'])\nmy_series\n\nA    10\nB    20\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\ntype(my_series)\n\npandas.core.series.Series\n\n\n\nmy_series['C':'E']\n\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series + 15\n\nA    25\nB    35\nC    45\nD    55\nE    65\ndtype: int64\n\n\n\nmy_series * 25\n\nA     250\nB     500\nC     750\nD    1000\nE    1250\ndtype: int64\n\n\n\nmy_series.dtype\n\ndtype('int64')\n\n\n\nmy_series.size\n\n5\n\n\n\nmy_series.shape\n\n(5,)\n\n\n\nmy_series.head(3)\n\nA    10\nB    20\nC    30\ndtype: int64\n\n\n\nmy_series.tail(2)\n\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series.describe()\n\ncount     5.000000\nmean     30.000000\nstd      15.811388\nmin      10.000000\n25%      20.000000\n50%      30.000000\n75%      40.000000\nmax      50.000000\ndtype: float64\n\n\n\nmy_series.sort_values(ascending=False)\n\nE    50\nD    40\nC    30\nB    20\nA    10\ndtype: int64"
   },
   {
     "objectID": "posts/python/index.html",

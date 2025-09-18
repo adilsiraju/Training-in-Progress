@@ -25,7 +25,7 @@ website:
 format:
   html:
     theme:
-      - Pulse
+      - pulse
       - assets/css/hero-theme.scss
     css: assets/css/styles.css
 
