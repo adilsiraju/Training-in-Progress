@@ -2,18 +2,18 @@
 title: "Learning Content & Posts"
 subtitle: "Jupyter notebooks, tutorials, and blog posts organized by topic"
 page-layout: full
-listing:
-  contents: 
-    - "python/*.ipynb"
-    - "fastai/*.ipynb" 
-    - "computer-vision/*.ipynb"
-    - "pandas/*.ipynb"
-  sort: "title"
-  type: grid
-  categories: true
-  sort-ui: true
-  filter-ui: true
-  fields: [title, description, author, date, categories]
+# listing:
+#   contents: 
+#     - "python/*.ipynb"
+#     - "fastai/*.ipynb" 
+#     - "computer-vision/*.ipynb"
+#     - "pandas/*.ipynb"
+#   sort: "title"
+#   type: grid
+#   categories: true
+#   sort-ui: true
+#   filter-ui: true
+#   fields: [title, description, author, date, categories]
 ---
 
 Welcome to my learning content hub! Here you'll find all my Jupyter notebooks, tutorials, and learning materials organized by topic areas.
