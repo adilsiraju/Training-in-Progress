@@ -38,6 +38,6 @@ Data manipulation and analysis with Python's powerful data library
 
 ---
 
-## Browse Chapters
+<!-- ## Browse Chapters
 
-Use the filters below to find specific topics or browse all available content:
+Use the filters below to find specific topics or browse all available content: -->
