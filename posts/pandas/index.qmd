@@ -4,7 +4,7 @@ description: "Data manipulation and analysis with Python's Pandas library"
 page-layout: full
 listing:
   contents: "*.ipynb"
-  sort: "title"
+  sort: "date desc"
   type: grid
   categories: true
   fields: [title, description, date, categories]
