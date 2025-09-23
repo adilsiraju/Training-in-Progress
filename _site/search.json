@@ -242,14 +242,119 @@
     "href": "posts/pandas/learn pandas Series.html",
     "title": "Pandas: Intro to Series",
     "section": "",
-    "text": "You will learn how to: - Create a Pandas Series - Access elements and slices - Perform arithmetic operations - View Series properties and methods - Sort and describe Series data\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\nmy_series = pd.Series([10,20,30,40,50], index=['A', 'B', 'C', 'D', 'E'])\nmy_series\n\nA    10\nB    20\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\ntype(my_series)\n\npandas.core.series.Series\n\n\n\nmy_series['C':'E']\n\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series + 15\n\nA    25\nB    35\nC    45\nD    55\nE    65\ndtype: int64\n\n\n\nmy_series * 25\n\nA     250\nB     500\nC     750\nD    1000\nE    1250\ndtype: int64\n\n\n\nmy_series.dtype\n\ndtype('int64')\n\n\n\nmy_series.size\n\n5\n\n\n\nmy_series.shape\n\n(5,)\n\n\n\nmy_series.head(3)\n\nA    10\nB    20\nC    30\ndtype: int64\n\n\n\nmy_series.tail(2)\n\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series.describe()\n\ncount     5.000000\nmean     30.000000\nstd      15.811388\nmin      10.000000\n25%      20.000000\n50%      30.000000\n75%      40.000000\nmax      50.000000\ndtype: float64\n\n\n\nmy_series.sort_values(ascending=False)\n\nE    50\nD    40\nC    30\nB    20\nA    10\ndtype: int64"
+    "text": "Series is pandas’ one-dimensional labeled array. This notebook covers creating, accessing, and operating on Series.\nYou will learn how to: - Create a Pandas Series - Access elements and slices - Perform arithmetic operations - View Series properties and methods - Sort and describe Series data"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Series.html#importing-libraries",
+    "href": "posts/pandas/learn pandas Series.html#importing-libraries",
+    "title": "Pandas: Intro to Series",
+    "section": "Importing Libraries",
+    "text": "Importing Libraries\nImport pandas and visualization libraries.\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Series.html#creating-a-series",
+    "href": "posts/pandas/learn pandas Series.html#creating-a-series",
+    "title": "Pandas: Intro to Series",
+    "section": "Creating a Series",
+    "text": "Creating a Series\nCreate a Series from a list with custom index labels.\n\nmy_series = pd.Series([10,20,30,40,50], index=['A', 'B', 'C', 'D', 'E'])\nmy_series\n\nA    10\nB    20\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\ntype(my_series)\n\npandas.core.series.Series"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Series.html#accessing-elements",
+    "href": "posts/pandas/learn pandas Series.html#accessing-elements",
+    "title": "Pandas: Intro to Series",
+    "section": "Accessing Elements",
+    "text": "Accessing Elements\nAccess elements by label or slice ranges.\n\nmy_series['C':'E']\n\nC    30\nD    40\nE    50\ndtype: int64"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Series.html#arithmetic-operations",
+    "href": "posts/pandas/learn pandas Series.html#arithmetic-operations",
+    "title": "Pandas: Intro to Series",
+    "section": "Arithmetic Operations",
+    "text": "Arithmetic Operations\nPerform element-wise operations on Series.\n\nmy_series + 15\n\nA    25\nB    35\nC    45\nD    55\nE    65\ndtype: int64\n\n\n\nmy_series * 25\n\nA     250\nB     500\nC     750\nD    1000\nE    1250\ndtype: int64"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Series.html#series-properties",
+    "href": "posts/pandas/learn pandas Series.html#series-properties",
+    "title": "Pandas: Intro to Series",
+    "section": "Series Properties",
+    "text": "Series Properties\nCheck data type, size, and shape of the Series.\n\nmy_series.dtype\n\ndtype('int64')\n\n\n\nmy_series.size\n\n5\n\n\n\nmy_series.shape\n\n(5,)"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Series.html#series-methods",
+    "href": "posts/pandas/learn pandas Series.html#series-methods",
+    "title": "Pandas: Intro to Series",
+    "section": "Series Methods",
+    "text": "Series Methods\nUse methods like head(), tail(), describe(), and sort_values() for data exploration.\n\nmy_series.head(3)\n\nA    10\nB    20\nC    30\ndtype: int64\n\n\n\nmy_series.tail(2)\n\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series.describe()\n\ncount     5.000000\nmean     30.000000\nstd      15.811388\nmin      10.000000\n25%      20.000000\n50%      30.000000\n75%      40.000000\nmax      50.000000\ndtype: float64\n\n\n\nmy_series.sort_values(ascending=False)\n\nE    50\nD    40\nC    30\nB    20\nA    10\ndtype: int64"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Series.html#best-practices",
+    "href": "posts/pandas/learn pandas Series.html#best-practices",
+    "title": "Pandas: Intro to Series",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nUse meaningful index labels for clarity.\nSeries operations are vectorized for performance.\nCheck for NaN values with isna()."
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Series.html#summary",
+    "href": "posts/pandas/learn pandas Series.html#summary",
+    "title": "Pandas: Intro to Series",
+    "section": "Summary",
+    "text": "Summary\nThis notebook introduced pandas Series: creation, access, operations, properties, and methods. Series are building blocks for DataFrames!"
   },
   {
     "objectID": "posts/pandas/learn pandas df operations.html",
     "href": "posts/pandas/learn pandas df operations.html",
     "title": "Pandas: DataFrame Operation",
     "section": "",
-    "text": "import pandas as pd\n\ndf = pd.read_csv('example.csv')\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf.head(2)\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n\n\n\n\n\n\ndf.tail(2)\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf[['Name', 'City']]\n\n\n\n\n\n\n\n\nName\nCity\n\n\n\n\n0\nAdil\nMatannur\n\n\n1\nAman\nVellore\n\n\n2\nZiya\nTly\n\n\n3\nZahra\nKnr\n\n\n\n\n\n\n\n\ndf[['Name', 'City']].values\n\narray([['Adil', 'Matannur'],\n       ['Aman', 'Vellore'],\n       ['Ziya', 'Tly'],\n       ['Zahra', 'Knr']], dtype=object)\n\n\n\nagegt20 = df[df['Age']&gt;=20]\nagegt20\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n\n\n\n\n\n\nagelt20 = df[df['Age']&lt;20]\nagelt20\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf_ziya = df[df['Name']=='Ziya']\ndf_ziya\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n\n\n\n\n\n\ndf_mult_cond = df[(df['City']=='Matannur') | (df['Age']&lt;=15 )]\ndf_mult_cond\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\nselected_cities = ['Tly', 'Knr']\ndf_tlyorknr = df[df['City'].isin(selected_cities)]\n\ndf_tlyorknr\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf[df['Name'].str.startswith('Z')]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf.iloc[0:2]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n\n\n\n\n\n\ndf.loc[df['Age']&gt;20, ['Name', 'City']]\n\n\n\n\n\n\n\n\nName\nCity\n\n\n\n\n0\nAdil\nMatannur"
+    "text": "This notebook covers essential operations on pandas DataFrames: reading, viewing, selecting, filtering, and indexing."
+  },
+  {
+    "objectID": "posts/pandas/learn pandas df operations.html#reading-data",
+    "href": "posts/pandas/learn pandas df operations.html#reading-data",
+    "title": "Pandas: DataFrame Operation",
+    "section": "Reading Data",
+    "text": "Reading Data\nLoad data from files like CSV into DataFrames using pd.read_csv().\n\nimport pandas as pd\n\ndf = pd.read_csv('example.csv')\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas df operations.html#viewing-data",
+    "href": "posts/pandas/learn pandas df operations.html#viewing-data",
+    "title": "Pandas: DataFrame Operation",
+    "section": "Viewing Data",
+    "text": "Viewing Data\nUse head() and tail() to preview the first/last rows of your DataFrame.\n\ndf.head(2)\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n\n\n\n\n\n\ndf.tail(2)\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas df operations.html#selecting-columns",
+    "href": "posts/pandas/learn pandas df operations.html#selecting-columns",
+    "title": "Pandas: DataFrame Operation",
+    "section": "Selecting Columns",
+    "text": "Selecting Columns\nSelect specific columns using bracket notation or .loc.\n\ndf[['Name', 'City']]\n\n\n\n\n\n\n\n\nName\nCity\n\n\n\n\n0\nAdil\nMatannur\n\n\n1\nAman\nVellore\n\n\n2\nZiya\nTly\n\n\n3\nZahra\nKnr\n\n\n\n\n\n\n\n\ndf[['Name', 'City']].values\n\narray([['Adil', 'Matannur'],\n       ['Aman', 'Vellore'],\n       ['Ziya', 'Tly'],\n       ['Zahra', 'Knr']], dtype=object)"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas df operations.html#filtering-data",
+    "href": "posts/pandas/learn pandas df operations.html#filtering-data",
+    "title": "Pandas: DataFrame Operation",
+    "section": "Filtering Data",
+    "text": "Filtering Data\nFilter rows based on conditions using boolean indexing.\n\nagegt20 = df[df['Age']&gt;=20]\nagegt20\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n\n\n\n\n\n\nagelt20 = df[df['Age']&lt;20]\nagelt20\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf_ziya = df[df['Name']=='Ziya']\ndf_ziya\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n\n\n\n\n\n\ndf_mult_cond = df[(df['City']=='Matannur') | (df['Age']&lt;=15 )]\ndf_mult_cond\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\nselected_cities = ['Tly', 'Knr']\ndf_tlyorknr = df[df['City'].isin(selected_cities)]\n\ndf_tlyorknr\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf[df['Name'].str.startswith('Z')]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas df operations.html#indexing-and-slicing",
+    "href": "posts/pandas/learn pandas df operations.html#indexing-and-slicing",
+    "title": "Pandas: DataFrame Operation",
+    "section": "Indexing and Slicing",
+    "text": "Indexing and Slicing\nUse .iloc for position-based and .loc for label-based indexing.\n\ndf.iloc[0:2]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n\n\n\n\n\n\ndf.loc[df['Age']&gt;20, ['Name', 'City']]\n\n\n\n\n\n\n\n\nName\nCity\n\n\n\n\n0\nAdil\nMatannur"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas df operations.html#best-practices",
+    "href": "posts/pandas/learn pandas df operations.html#best-practices",
+    "title": "Pandas: DataFrame Operation",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nUse .copy() when assigning filtered DataFrames to avoid modifying originals.\nCombine conditions with & and | for complex filters.\nPrefer .loc for clarity in production code."
+  },
+  {
+    "objectID": "posts/pandas/learn pandas df operations.html#summary",
+    "href": "posts/pandas/learn pandas df operations.html#summary",
+    "title": "Pandas: DataFrame Operation",
+    "section": "Summary",
+    "text": "Summary\nThis notebook covered key DataFrame operations: reading, viewing, selecting, filtering, and indexing. These form the foundation for data manipulation!"
   },
   {
     "objectID": "posts/pandas/Handling Temporal Datas.html",
@@ -865,7 +970,56 @@
     "href": "posts/pandas/learn pandas Df.html",
     "title": "Pandas: Intro to DataFrames",
     "section": "",
-    "text": "You will learn how to: - Import essential libraries (Pandas, Seaborn, Matplotlib, NumPy) - Create DataFrames from dictionaries, lists, and NumPy arrays - View and manipulate DataFrames - Export DataFrames to CSV and Excel files\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\ndata = {'Name': ['Adil', 'Aman', 'Ziya', 'Zahra'],\n        'Age': [23,19,15,9],\n        'City': ['Matannur','Vellore', 'Tly', 'Knr' ]\n        }\ndata\n\n{'Name': ['Adil', 'Aman', 'Ziya', 'Zahra'],\n 'Age': [23, 19, 15, 9],\n 'City': ['Matannur', 'Vellore', 'Tly', 'Knr']}\n\n\n\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndata_list = [ \n    ['Adil', 23, 'Mattanur'],\n    ['Aman', 19, 'Vellore'],\n    ['Siraj', 55, 'Tly'],\n    ['Faritha', 40, 'Chokli']\n    ]\n\ndata_list\n\n[['Adil', 23, 'Mattanur'],\n ['Aman', 19, 'Vellore'],\n ['Siraj', 55, 'Tly'],\n ['Faritha', 40, 'Chokli']]\n\n\n\ndf_list = pd.DataFrame(data_list, columns=['Name', 'Age', 'City'])\ndf_list\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMattanur\n\n\n1\nAman\n19\nVellore\n\n\n2\nSiraj\n55\nTly\n\n\n3\nFaritha\n40\nChokli\n\n\n\n\n\n\n\n\nimport numpy as np\n\n\ndata_array = np.array([[1,2,3],\n                       [4,5,6],\n                       [7,8,9]])\n\ndata_array\n\narray([[1, 2, 3],\n       [4, 5, 6],\n       [7, 8, 9]])\n\n\n\ndf_array = pd.DataFrame(data_array, columns=['A', 'B', 'C'])\ndf_array\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n2\n3\n\n\n1\n4\n5\n6\n\n\n2\n7\n8\n9\n\n\n\n\n\n\n\n\ndf.to_csv('example.csv', index=False)\n\n\ndf.to_excel('example.xlsx', index=False)"
+    "text": "DataFrames are the core data structure in pandas for tabular data. This notebook covers creating DataFrames from various sources and basic operations.\nYou will learn how to: - Import essential libraries (Pandas, Seaborn, Matplotlib, NumPy) - Create DataFrames from dictionaries, lists, and NumPy arrays - View and manipulate DataFrames - Export DataFrames to CSV and Excel files"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Df.html#importing-libraries",
+    "href": "posts/pandas/learn pandas Df.html#importing-libraries",
+    "title": "Pandas: Intro to DataFrames",
+    "section": "Importing Libraries",
+    "text": "Importing Libraries\nStart by importing pandas and other useful libraries for data analysis and visualization.\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Df.html#creating-dataframes-from-dictionaries",
+    "href": "posts/pandas/learn pandas Df.html#creating-dataframes-from-dictionaries",
+    "title": "Pandas: Intro to DataFrames",
+    "section": "Creating DataFrames from Dictionaries",
+    "text": "Creating DataFrames from Dictionaries\nDataFrames can be created from Python dictionaries where keys become column names.\n\ndata = {'Name': ['Adil', 'Aman', 'Ziya', 'Zahra'],\n        'Age': [23,19,15,9],\n        'City': ['Matannur','Vellore', 'Tly', 'Knr' ]\n        }\ndata\n\n{'Name': ['Adil', 'Aman', 'Ziya', 'Zahra'],\n 'Age': [23, 19, 15, 9],\n 'City': ['Matannur', 'Vellore', 'Tly', 'Knr']}\n\n\n\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Df.html#creating-dataframes-from-lists",
+    "href": "posts/pandas/learn pandas Df.html#creating-dataframes-from-lists",
+    "title": "Pandas: Intro to DataFrames",
+    "section": "Creating DataFrames from Lists",
+    "text": "Creating DataFrames from Lists\nYou can also create DataFrames from lists of lists, specifying column names.\n\ndata_list = [ \n    ['Adil', 23, 'Mattanur'],\n    ['Aman', 19, 'Vellore'],\n    ['Siraj', 55, 'Tly'],\n    ['Faritha', 40, 'Chokli']\n    ]\n\ndata_list\n\n[['Adil', 23, 'Mattanur'],\n ['Aman', 19, 'Vellore'],\n ['Siraj', 55, 'Tly'],\n ['Faritha', 40, 'Chokli']]\n\n\n\ndf_list = pd.DataFrame(data_list, columns=['Name', 'Age', 'City'])\ndf_list\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMattanur\n\n\n1\nAman\n19\nVellore\n\n\n2\nSiraj\n55\nTly\n\n\n3\nFaritha\n40\nChokli"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Df.html#creating-dataframes-from-numpy-arrays",
+    "href": "posts/pandas/learn pandas Df.html#creating-dataframes-from-numpy-arrays",
+    "title": "Pandas: Intro to DataFrames",
+    "section": "Creating DataFrames from NumPy Arrays",
+    "text": "Creating DataFrames from NumPy Arrays\nPandas integrates with NumPy; create DataFrames from arrays with column names.\n\nimport numpy as np\n\n\ndata_array = np.array([[1,2,3],\n                       [4,5,6],\n                       [7,8,9]])\n\ndata_array\n\narray([[1, 2, 3],\n       [4, 5, 6],\n       [7, 8, 9]])\n\n\n\ndf_array = pd.DataFrame(data_array, columns=['A', 'B', 'C'])\ndf_array\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n2\n3\n\n\n1\n4\n5\n6\n\n\n2\n7\n8\n9"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Df.html#exporting-dataframes",
+    "href": "posts/pandas/learn pandas Df.html#exporting-dataframes",
+    "title": "Pandas: Intro to DataFrames",
+    "section": "Exporting DataFrames",
+    "text": "Exporting DataFrames\nSave DataFrames to files like CSV or Excel for sharing or further analysis.\n\ndf.to_csv('example.csv', index=False)\n\n\ndf.to_excel('example.xlsx', index=False)"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Df.html#best-practices",
+    "href": "posts/pandas/learn pandas Df.html#best-practices",
+    "title": "Pandas: Intro to DataFrames",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nUse descriptive column names.\nCheck data types with df.dtypes after creation.\nHandle missing data appropriately."
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Df.html#summary",
+    "href": "posts/pandas/learn pandas Df.html#summary",
+    "title": "Pandas: Intro to DataFrames",
+    "section": "Summary",
+    "text": "Summary\nThis notebook introduced creating and exporting DataFrames. DataFrames are versatile for data manipulation—explore more operations next!"
   },
   {
     "objectID": "posts/pandas/loadsata.html",
