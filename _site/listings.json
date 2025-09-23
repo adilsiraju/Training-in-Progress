@@ -4,30 +4,26 @@
     "items": []
   },
   {
-    "listing": "/posts/computer-vision/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/index.html",
-    "items": [
-      "/posts/pandas/data manipulation with loc and iloc.html",
-      "/posts/pandas/loadsata.html",
-      "/posts/pandas/learn pandas df operations.html",
-      "/posts/pandas/learn pandas dfmissing data.html",
-      "/posts/pandas/learn pandas Df.html",
-      "/posts/pandas/learn pandas Series.html",
-      "/posts/python/modules.html"
-    ]
-  },
-  {
     "listing": "/posts/pandas/index.html",
     "items": [
+      "/posts/pandas/Data Viz with panda tools.html",
+      "/posts/pandas/Working with multi index df.html",
+      "/posts/pandas/text manipulation methods.html",
+      "/posts/pandas/Advanced Data Manipulation.html",
+      "/posts/pandas/Agg Data using Functions.html",
+      "/posts/pandas/Group By Operations.html",
+      "/posts/pandas/Handling Categorical Datas.html",
+      "/posts/pandas/Handling Temporal Datas.html",
+      "/posts/pandas/Time Series Visualisation.html",
+      "/posts/pandas/Combine and Merge DF.html",
+      "/posts/pandas/Data Cleaning.html",
+      "/posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html",
       "/posts/pandas/data manipulation with loc and iloc.html",
-      "/posts/pandas/loadsata.html",
-      "/posts/pandas/learn pandas df operations.html",
-      "/posts/pandas/learn pandas dfmissing data.html",
+      "/posts/pandas/Pandas-Dealing with missing Datas.html",
       "/posts/pandas/learn pandas Df.html",
-      "/posts/pandas/learn pandas Series.html"
+      "/posts/pandas/learn pandas Series.html",
+      "/posts/pandas/learn pandas df operations.html",
+      "/posts/pandas/loadsata.html"
     ]
   },
   {

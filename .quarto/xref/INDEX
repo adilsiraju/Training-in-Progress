@@ -91,5 +91,44 @@
   },
   "posts/python/modules.ipynb": {
     "modules.html": "8fb0d16f"
+  },
+  "posts/pandas/Advanced Data Manipulation.ipynb": {
+    "Advanced Data Manipulation.html": "a7e25876"
+  },
+  "posts/pandas/Agg Data using Functions.ipynb": {
+    "Agg Data using Functions.html": "483b7237"
+  },
+  "posts/pandas/Combine and Merge DF.ipynb": {
+    "Combine and Merge DF.html": "4934753d"
+  },
+  "posts/pandas/Data Cleaning.ipynb": {
+    "Data Cleaning.html": "3a603101"
+  },
+  "posts/pandas/Data Viz with panda tools.ipynb": {
+    "Data Viz with panda tools.html": "042cba3e"
+  },
+  "posts/pandas/Group By Operations.ipynb": {
+    "Group By Operations.html": "5be20773"
+  },
+  "posts/pandas/Handling Categorical Datas.ipynb": {
+    "Handling Categorical Datas.html": "0d5d2f5c"
+  },
+  "posts/pandas/Handling Temporal Datas.ipynb": {
+    "Handling Temporal Datas.html": "bf96b5e6"
+  },
+  "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.ipynb": {
+    "Pandas Advance Techniques of Conditional Filtering and Queriying.html": "95a5c3d7"
+  },
+  "posts/pandas/Pandas-Dealing with missing Datas.ipynb": {
+    "Pandas-Dealing with missing Datas.html": "7d136be9"
+  },
+  "posts/pandas/text manipulation methods.ipynb": {
+    "text manipulation methods.html": "cae23a21"
+  },
+  "posts/pandas/Time Series Visualisation.ipynb": {
+    "Time Series Visualisation.html": "2184166d"
+  },
+  "posts/pandas/Working with multi index df.ipynb": {
+    "Working with multi index df.html": "257580b0"
   }
 }

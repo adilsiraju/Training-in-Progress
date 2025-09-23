@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -70,65 +68,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description','listing-author','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -166,13 +106,15 @@ window.Quarto = {
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="mailto:mohdadilsiraju@gmail.com"> 
-<span class="menu-text">✉️ Contact</span></a>
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:mohdadilsiraju@gmail.com"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://www.adilsiraju.vercel.app"> 
-<span class="menu-text">🌐 Portfolio</span></a>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.adilsiraju.vercel.app"> <i class="bi bi-globe" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/adilsiraju"> <i class="bi bi-github" role="img">
@@ -181,6 +123,11 @@ window.Quarto = {
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/mohd3dil"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://linkedin.com/in/adilsiraju"> <i class="bi bi-linkedin" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -195,11 +142,9 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="ZGF0YSUyMG1hbmlwdWxhdGlvbg==">data manipulation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YWZyYW1l">dataframe <span class="quarto-category-count">(4)</span></div><div class="category" data-category="ZnVuZGFtZW50YWxz">fundamentals <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bW9kdWxlcw==">modules <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGFuZGFz">pandas <span class="quarto-category-count">(6)</span></div><div class="category" data-category="cHl0aG9u">python <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U2VyaWVz">Series <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -209,7 +154,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -233,10 +178,6 @@ window.Quarto = {
 <p>Practical deep learning with FastAI framework</p>
 </section>
 </div><div class="column" style="width:50%;">
-<section id="computer-vision" class="level3">
-<h3 class="anchored" data-anchor-id="computer-vision"><a href="computer-vision/index.qmd"><strong>Computer Vision</strong></a></h3>
-<p>Image processing, CNN architectures, and applications</p>
-</section>
 <section id="pandas" class="level3">
 <h3 class="anchored" data-anchor-id="pandas"><a href="../posts/pandas/index.html"><strong>Pandas</strong></a></h3>
 <p>Data manipulation and analysis with Python’s powerful data library</p>
@@ -245,244 +186,13 @@ window.Quarto = {
 </div>
 <p><br></p>
 <hr>
-<section id="browse-chapters" class="level2">
-<h2 class="anchored" data-anchor-id="browse-chapters">Browse Chapters</h2>
-<p>Use the filters below to find specific topics or browse all available content:</p>
+<!-- ## Browse Chapters
+
+Use the filters below to find specific topics or browse all available content: -->
 
 
 
-</section>
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="cHl0aG9uJTJDcGFuZGFzJTJDZGF0YSUyMG1hbmlwdWxhdGlvbg==" data-listing-date-sort="1758133800000" data-listing-file-modified-sort="1758193233339" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="194">
-<a href="../posts/pandas/data manipulation with loc and iloc.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Manipulation with loc and iloc
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGFuZGFz'); return false;">pandas</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YSUyMG1hbmlwdWxhdGlvbg=='); return false;">data manipulation</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>This notebook demonstrates how to select rows and columns in a Pandas DataFrame using <code>.loc</code> and <code>.iloc</code>. Each section explains a different selection technique.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Mohammed Adil Siraju
-</div>
-<div class="listing-date">
-Sep 18, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="cGFuZGFzJTJDZGF0YWZyYW1l" data-listing-date-sort="1757961000000" data-listing-file-modified-sort="1758193234563" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="50">
-<a href="../posts/pandas/loadsata.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Pandas: Data Loading
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGFuZGFz'); return false;">pandas</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YWZyYW1l'); return false;">dataframe</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Understanding how to use the Pandas library to load data from CSV and Excel files.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Mohammed Adil Siraju
-</div>
-<div class="listing-date">
-Sep 16, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="cGFuZGFzJTJDZGF0YWZyYW1l" data-listing-date-sort="1757961000000" data-listing-file-modified-sort="1758193240892" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../posts/pandas/learn pandas df operations.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Pandas: DataFrame Operation
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGFuZGFz'); return false;">pandas</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YWZyYW1l'); return false;">dataframe</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Understanding various DataFrame options provided by the pandas lib</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Mohammed Adil Siraju
-</div>
-<div class="listing-date">
-Sep 16, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="cGFuZGFzJTJDZGF0YWZyYW1l" data-listing-date-sort="1757961000000" data-listing-file-modified-sort="1758193240038" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="253">
-<a href="../posts/pandas/learn pandas dfmissing data.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Pandas: Dealing with missing Datas
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGFuZGFz'); return false;">pandas</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YWZyYW1l'); return false;">dataframe</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>This notebook demonstrates how to handle missing data in Pandas DataFrames. Each section below explains a different operation or concept.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Mohammed Adil Siraju
-</div>
-<div class="listing-date">
-Sep 16, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="cGFuZGFzJTJDZGF0YWZyYW1l" data-listing-date-sort="1757961000000" data-listing-file-modified-sort="1758193239200" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="31">
-<a href="../posts/pandas/learn pandas Df.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Pandas: Intro to DataFrames
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGFuZGFz'); return false;">pandas</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YWZyYW1l'); return false;">dataframe</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Understanding basics of Pandas DataFrames, a core data structure for data analysis in Python.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Mohammed Adil Siraju
-</div>
-<div class="listing-date">
-Sep 16, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="cGFuZGFzJTJDU2VyaWVz" data-listing-date-sort="1757961000000" data-listing-file-modified-sort="1758193242093" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
-<a href="../posts/pandas/learn pandas Series.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Pandas: Intro to Series
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGFuZGFz'); return false;">pandas</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2VyaWVz'); return false;">Series</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>This notebook covers the Pandas Series object, which is a one-dimensional labeled array.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Mohammed Adil Siraju
-</div>
-<div class="listing-date">
-Sep 16, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="cHl0aG9uJTJDZnVuZGFtZW50YWxzJTJDbW9kdWxlcw==" data-listing-date-sort="1758133800000" data-listing-file-modified-sort="1758178514344" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
-<a href="../posts/python/modules.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Python Modules and Packages
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZnVuZGFtZW50YWxz'); return false;">fundamentals</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bW9kdWxlcw=='); return false;">modules</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Understanding Python modules, packages, and imports</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Mohammed Adil Siraju
-</div>
-<div class="listing-date">
-Sep 18, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

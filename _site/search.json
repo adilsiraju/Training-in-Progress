@@ -56,130 +56,193 @@
     "text": "Key Takeaways\n\nModules help organize and reuse code\nPackages group related modules together\nImport statements control what code is available\nPython’s standard library provides many useful modules\nThird-party packages extend Python’s capabilities\n\n\nNext: We’ll explore Python functions and classes in detail."
   },
   {
-    "objectID": "posts/pandas/loadsata.html",
-    "href": "posts/pandas/loadsata.html",
-    "title": "Pandas: Data Loading",
+    "objectID": "posts/pandas/Working with multi index df.html",
+    "href": "posts/pandas/Working with multi index df.html",
+    "title": "Working with MultiIndex DataFrames",
     "section": "",
-    "text": "Pandas is a powerful Python library for data analysis and manipulation. It provides easy-to-use data structures and functions for working with structured data.\nIn this notebook, you will learn how to:\n\nImport the Pandas library\nLoad data from a CSV file\nLoad data from an Excel file\nView the loaded data\n\n\nimport pandas as pd\n\n\ndf_csv = pd.read_csv('example.csv')\ndf_csv\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf_xl = pd.read_excel('example.xlsx')\ndf_xl\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr"
+    "text": "This notebook covers MultiIndex DataFrames in pandas: creation, inspection, and combining with NumPy arrays. MultiIndex allows hierarchical indexing for complex data structures.\n\n\nMultiIndex in pandas allows you to have multiple levels of indexing on rows or columns. It’s useful for hierarchical data like time series with multiple categories.\n\nimport pandas as pd\n\n\n\n\nUse pd.MultiIndex.from_arrays() to create a MultiIndex from arrays. Here, we create a DataFrame with a two-level row index.\n\narrays = [['A','A','B','B',], [1,2,1,2]]\nindex = pd.MultiIndex.from_arrays(arrays, names=('First', 'Second'))\ndf = pd.DataFrame({'Data': [10,20,30,40]}, index=index)\n\ndf\n\n\n\n\n\n\n\n\n\nData\n\n\nFirst\nSecond\n\n\n\n\n\nA\n1\n10\n\n\n2\n20\n\n\nB\n1\n30\n\n\n2\n40\n\n\n\n\n\n\n\n\n\n\nAccess the index with df.index. It shows the hierarchical structure.\n\ndf.index\n\nMultiIndex([('A', 1),\n            ('A', 2),\n            ('B', 1),\n            ('B', 2)],\n           names=['First', 'Second'])\n\n\n\n\n\nPandas integrates seamlessly with NumPy. You can create DataFrames from NumPy arrays and use NumPy functions on DataFrame data.\n\n\n\nUse pd.DataFrame() with a NumPy array to create a DataFrame. Specify column names for clarity.\n\nimport numpy as np\n\n\narray_data = np.array([[1,2,3], [4,5,6], [7,8,9]])\ndf_np = pd.DataFrame(array_data, columns=['Sales A', 'Sales B', 'Sales C'])\n\ndf_np\n\n\n\n\n\n\n\n\nSales A\nSales B\nSales C\n\n\n\n\n0\n1\n2\n3\n\n\n1\n4\n5\n6\n\n\n2\n7\n8\n9\n\n\n\n\n\n\n\n\n\n\n\nUse meaningful names for MultiIndex levels (e.g., ‘Category’, ‘Subcategory’).\nWhen selecting data, use .loc[] with tuples for MultiIndex access.\nReset index with df.reset_index() if you need to flatten the hierarchy.\n\n\n\n\nThis notebook demonstrated creating and inspecting MultiIndex DataFrames and integrating pandas with NumPy arrays. MultiIndex is powerful for complex data but can be tricky—practice with real datasets!"
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html",
-    "href": "posts/pandas/learn pandas dfmissing data.html",
-    "title": "Pandas: Dealing with missing Datas",
+    "objectID": "posts/pandas/Working with multi index df.html#introduction-to-multiindex",
+    "href": "posts/pandas/Working with multi index df.html#introduction-to-multiindex",
+    "title": "Working with MultiIndex DataFrames",
     "section": "",
-    "text": "import pandas as pd\nimport numpy as np"
+    "text": "MultiIndex in pandas allows you to have multiple levels of indexing on rows or columns. It’s useful for hierarchical data like time series with multiple categories.\n\nimport pandas as pd"
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#import-libraries",
-    "href": "posts/pandas/learn pandas dfmissing data.html#import-libraries",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "Import Libraries",
-    "text": "Import Libraries\nImport Pandas and NumPy, which are essential for data manipulation and handling missing values.\n\nnp.nan\n\nnan"
+    "objectID": "posts/pandas/Working with multi index df.html#creating-a-multiindex-dataframe",
+    "href": "posts/pandas/Working with multi index df.html#creating-a-multiindex-dataframe",
+    "title": "Working with MultiIndex DataFrames",
+    "section": "",
+    "text": "Use pd.MultiIndex.from_arrays() to create a MultiIndex from arrays. Here, we create a DataFrame with a two-level row index.\n\narrays = [['A','A','B','B',], [1,2,1,2]]\nindex = pd.MultiIndex.from_arrays(arrays, names=('First', 'Second'))\ndf = pd.DataFrame({'Data': [10,20,30,40]}, index=index)\n\ndf\n\n\n\n\n\n\n\n\n\nData\n\n\nFirst\nSecond\n\n\n\n\n\nA\n1\n10\n\n\n2\n20\n\n\nB\n1\n30\n\n\n2\n40"
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#what-is-np.nan",
-    "href": "posts/pandas/learn pandas dfmissing data.html#what-is-np.nan",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "What is np.nan?",
-    "text": "What is np.nan?\nnp.nan represents a missing value (“Not a Number”) in NumPy and Pandas.\n\ndata = {'A': [1,2,np.nan,4,5],\n        'B': [6,np.nan,7,8,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n1\n2.0\nNaN\n12.0\n\n\n2\nNaN\n7.0\n13.0\n\n\n3\n4.0\n8.0\nNaN\n\n\n4\n5.0\n9.0\n15.0"
+    "objectID": "posts/pandas/Working with multi index df.html#inspecting-the-multiindex",
+    "href": "posts/pandas/Working with multi index df.html#inspecting-the-multiindex",
+    "title": "Working with MultiIndex DataFrames",
+    "section": "",
+    "text": "Access the index with df.index. It shows the hierarchical structure.\n\ndf.index\n\nMultiIndex([('A', 1),\n            ('A', 2),\n            ('B', 1),\n            ('B', 2)],\n           names=['First', 'Second'])"
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-with-missing-values",
-    "href": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-with-missing-values",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "Create DataFrame with Missing Values",
-    "text": "Create DataFrame with Missing Values\nThis section creates a DataFrame containing missing values using np.nan.\n\ndf.isnull()\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\nFalse\nFalse\nFalse\n\n\n1\nFalse\nTrue\nFalse\n\n\n2\nTrue\nFalse\nFalse\n\n\n3\nFalse\nFalse\nTrue\n\n\n4\nFalse\nFalse\nFalse"
+    "objectID": "posts/pandas/Working with multi index df.html#combining-pandas-with-numpy",
+    "href": "posts/pandas/Working with multi index df.html#combining-pandas-with-numpy",
+    "title": "Working with MultiIndex DataFrames",
+    "section": "",
+    "text": "Pandas integrates seamlessly with NumPy. You can create DataFrames from NumPy arrays and use NumPy functions on DataFrame data."
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#detect-missing-values",
-    "href": "posts/pandas/learn pandas dfmissing data.html#detect-missing-values",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "Detect Missing Values",
-    "text": "Detect Missing Values\nUse isnull() to check which values are missing in the DataFrame.\n\ndf.isnull().sum()\n\nA    1\nB    1\nC    1\ndtype: int64"
+    "objectID": "posts/pandas/Working with multi index df.html#creating-dataframes-from-numpy-arrays",
+    "href": "posts/pandas/Working with multi index df.html#creating-dataframes-from-numpy-arrays",
+    "title": "Working with MultiIndex DataFrames",
+    "section": "",
+    "text": "Use pd.DataFrame() with a NumPy array to create a DataFrame. Specify column names for clarity.\n\nimport numpy as np\n\n\narray_data = np.array([[1,2,3], [4,5,6], [7,8,9]])\ndf_np = pd.DataFrame(array_data, columns=['Sales A', 'Sales B', 'Sales C'])\n\ndf_np\n\n\n\n\n\n\n\n\nSales A\nSales B\nSales C\n\n\n\n\n0\n1\n2\n3\n\n\n1\n4\n5\n6\n\n\n2\n7\n8\n9"
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#count-missing-values",
-    "href": "posts/pandas/learn pandas dfmissing data.html#count-missing-values",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "Count Missing Values",
-    "text": "Count Missing Values\nUse isnull().sum() to count the number of missing values in each column.\n\n# Drops rows with na values\ndf.dropna(inplace=True)\n# or\ndf = df.dropna()"
+    "objectID": "posts/pandas/Working with multi index df.html#best-practices",
+    "href": "posts/pandas/Working with multi index df.html#best-practices",
+    "title": "Working with MultiIndex DataFrames",
+    "section": "",
+    "text": "Use meaningful names for MultiIndex levels (e.g., ‘Category’, ‘Subcategory’).\nWhen selecting data, use .loc[] with tuples for MultiIndex access.\nReset index with df.reset_index() if you need to flatten the hierarchy."
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#drop-rows-with-missing-values",
-    "href": "posts/pandas/learn pandas dfmissing data.html#drop-rows-with-missing-values",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "Drop Rows with Missing Values",
-    "text": "Drop Rows with Missing Values\nUse dropna() to remove rows containing missing values from the DataFrame.\n\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n4\n5.0\n9.0\n15.0"
+    "objectID": "posts/pandas/Working with multi index df.html#summary",
+    "href": "posts/pandas/Working with multi index df.html#summary",
+    "title": "Working with MultiIndex DataFrames",
+    "section": "",
+    "text": "This notebook demonstrated creating and inspecting MultiIndex DataFrames and integrating pandas with NumPy arrays. MultiIndex is powerful for complex data but can be tricky—practice with real datasets!"
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#view-dataframe-after-dropping-rows",
-    "href": "posts/pandas/learn pandas dfmissing data.html#view-dataframe-after-dropping-rows",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "View DataFrame After Dropping Rows",
-    "text": "View DataFrame After Dropping Rows\nDisplay the DataFrame after removing rows with missing values.\n\ndf.reset_index(drop=True)\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n1\n5.0\n9.0\n15.0"
+    "objectID": "posts/pandas/text manipulation methods.html",
+    "href": "posts/pandas/text manipulation methods.html",
+    "title": "Text Manipulation Methods in pandas",
+    "section": "",
+    "text": "This notebook explores pandas string methods (accessed via .str) for manipulating text data in DataFrames. Covers case changes, searching, regex, replacement, and splitting.\n\n\nPandas provides vectorized string operations through the .str accessor. These methods work on Series of strings and are efficient for text data processing.\n\nimport pandas as pd\n\n\n\n\nWe’ll use a simple DataFrame with text data to demonstrate string methods.\n\ndata = {\n    'TextData': ['Hello','World','Python', 'Pandas', 'Data Science']\n}\n\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nTextData\n\n\n\n\n0\nHello\n\n\n1\nWorld\n\n\n2\nPython\n\n\n3\nPandas\n\n\n4\nData Science\n\n\n\n\n\n\n\n\n\n\nConvert text to lowercase or uppercase using .str.lower() and .str.upper().\n\ndf['LowerCase'] = df['TextData'].str.lower()\ndf\n\n\n\n\n\n\n\n\nTextData\nLowerCase\n\n\n\n\n0\nHello\nhello\n\n\n1\nWorld\nworld\n\n\n2\nPython\npython\n\n\n3\nPandas\npandas\n\n\n4\nData Science\ndata science\n\n\n\n\n\n\n\n\ndf['UpperCase'] = df['TextData'].str.upper()\ndf\n\n\n\n\n\n\n\n\nTextData\nLowerCase\nUpperCase\n\n\n\n\n0\nHello\nhello\nHELLO\n\n\n1\nWorld\nworld\nWORLD\n\n\n2\nPython\npython\nPYTHON\n\n\n3\nPandas\npandas\nPANDAS\n\n\n4\nData Science\ndata science\nDATA SCIENCE\n\n\n\n\n\n\n\n\n\n\nCheck if strings contain substrings with .str.contains(). Use case=False for case-insensitive search.\n\ndf['Contains'] = df['TextData'].str.contains('O', case=False)\ndf\n\n\n\n\n\n\n\n\nTextData\nLowerCase\nUpperCase\nContains\n\n\n\n\n0\nHello\nhello\nHELLO\nTrue\n\n\n1\nWorld\nworld\nWORLD\nTrue\n\n\n2\nPython\npython\nPYTHON\nTrue\n\n\n3\nPandas\npandas\nPANDAS\nFalse\n\n\n4\nData Science\ndata science\nDATA SCIENCE\nFalse\n\n\n\n\n\n\n\n\n\n\nUse regex with methods like .str.findall() to find patterns. Here, finding all ‘o’ characters.\n\ndf['Matches'] = df['TextData'].str.findall('o')\ndf\n\n\n\n\n\n\n\n\nTextData\nLowerCase\nUpperCase\nContains\nMatches\n\n\n\n\n0\nHello\nhello\nHELLO\nTrue\n[o]\n\n\n1\nWorld\nworld\nWORLD\nTrue\n[o]\n\n\n2\nPython\npython\nPYTHON\nTrue\n[o]\n\n\n3\nPandas\npandas\nPANDAS\nFalse\n[]\n\n\n4\nData Science\ndata science\nDATA SCIENCE\nFalse\n[]\n\n\n\n\n\n\n\n\n\n\nReplace substrings with .str.replace() and split strings with .str.split().\n\ndf['Replaced'] = df['TextData'].str.replace('o', 'x')\ndf\n\n\n\n\n\n\n\n\nTextData\nLowerCase\nUpperCase\nContains\nMatches\nReplaced\n\n\n\n\n0\nHello\nhello\nHELLO\nTrue\n[o]\nHellx\n\n\n1\nWorld\nworld\nWORLD\nTrue\n[o]\nWxrld\n\n\n2\nPython\npython\nPYTHON\nTrue\n[o]\nPythxn\n\n\n3\nPandas\npandas\nPANDAS\nFalse\n[]\nPandas\n\n\n4\nData Science\ndata science\nDATA SCIENCE\nFalse\n[]\nData Science\n\n\n\n\n\n\n\n\ndf['Split'] = df['TextData'].str.split(' ')\ndf\n\n\n\n\n\n\n\n\nTextData\nLowerCase\nUpperCase\nContains\nMatches\nReplaced\nSplit\n\n\n\n\n0\nHello\nhello\nHELLO\nTrue\n[o]\nHellx\n[Hello]\n\n\n1\nWorld\nworld\nWORLD\nTrue\n[o]\nWxrld\n[World]\n\n\n2\nPython\npython\nPYTHON\nTrue\n[o]\nPythxn\n[Python]\n\n\n3\nPandas\npandas\nPANDAS\nFalse\n[]\nPandas\n[Pandas]\n\n\n4\nData Science\ndata science\nDATA SCIENCE\nFalse\n[]\nData Science\n[Data, Science]\n\n\n\n\n\n\n\n\n\n\n\nHandle missing values: Use .str methods which handle NaN gracefully.\nFor complex regex, test patterns separately.\nVectorized operations are faster than loops.\n\n\n\n\nThis notebook covered essential pandas string methods for text manipulation. Experiment with real datasets to master these techniques!"
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#reset-index-after-dropping-rows",
-    "href": "posts/pandas/learn pandas dfmissing data.html#reset-index-after-dropping-rows",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "Reset Index After Dropping Rows",
-    "text": "Reset Index After Dropping Rows\nUse reset_index(drop=True) to reset the DataFrame index after dropping rows.\n\ndata1 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,8,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf1 = pd.DataFrame(data1)\ndf1\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n8.0\nNaN\n\n\n4\n5\n9.0\n15.0"
+    "objectID": "posts/pandas/text manipulation methods.html#introduction",
+    "href": "posts/pandas/text manipulation methods.html#introduction",
+    "title": "Text Manipulation Methods in pandas",
+    "section": "",
+    "text": "Pandas provides vectorized string operations through the .str accessor. These methods work on Series of strings and are efficient for text data processing.\n\nimport pandas as pd"
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#create-another-dataframe-with-missing-values",
-    "href": "posts/pandas/learn pandas dfmissing data.html#create-another-dataframe-with-missing-values",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "Create Another DataFrame with Missing Values",
-    "text": "Create Another DataFrame with Missing Values\nThis section creates a new DataFrame with missing values for further operations.\n\ndf1 = df1.dropna(axis=1)\ndf1\n\n\n\n\n\n\n\n\nA\n\n\n\n\n0\n1\n\n\n1\n2\n\n\n2\n3\n\n\n3\n4\n\n\n4\n5"
+    "objectID": "posts/pandas/text manipulation methods.html#sample-data",
+    "href": "posts/pandas/text manipulation methods.html#sample-data",
+    "title": "Text Manipulation Methods in pandas",
+    "section": "",
+    "text": "We’ll use a simple DataFrame with text data to demonstrate string methods.\n\ndata = {\n    'TextData': ['Hello','World','Python', 'Pandas', 'Data Science']\n}\n\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nTextData\n\n\n\n\n0\nHello\n\n\n1\nWorld\n\n\n2\nPython\n\n\n3\nPandas\n\n\n4\nData Science"
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#drop-columns-with-missing-values",
-    "href": "posts/pandas/learn pandas dfmissing data.html#drop-columns-with-missing-values",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "Drop Columns with Missing Values",
-    "text": "Drop Columns with Missing Values\nUse dropna(axis=1) to remove columns containing missing values from the DataFrame.\n\ndata2 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,np.nan,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf2 = pd.DataFrame(data2)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\nNaN\nNaN\n\n\n4\n5\n9.0\n15.0"
+    "objectID": "posts/pandas/text manipulation methods.html#case-conversion",
+    "href": "posts/pandas/text manipulation methods.html#case-conversion",
+    "title": "Text Manipulation Methods in pandas",
+    "section": "",
+    "text": "Convert text to lowercase or uppercase using .str.lower() and .str.upper().\n\ndf['LowerCase'] = df['TextData'].str.lower()\ndf\n\n\n\n\n\n\n\n\nTextData\nLowerCase\n\n\n\n\n0\nHello\nhello\n\n\n1\nWorld\nworld\n\n\n2\nPython\npython\n\n\n3\nPandas\npandas\n\n\n4\nData Science\ndata science\n\n\n\n\n\n\n\n\ndf['UpperCase'] = df['TextData'].str.upper()\ndf\n\n\n\n\n\n\n\n\nTextData\nLowerCase\nUpperCase\n\n\n\n\n0\nHello\nhello\nHELLO\n\n\n1\nWorld\nworld\nWORLD\n\n\n2\nPython\npython\nPYTHON\n\n\n3\nPandas\npandas\nPANDAS\n\n\n4\nData Science\ndata science\nDATA SCIENCE"
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-for-threshold-example",
-    "href": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-for-threshold-example",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "Create DataFrame for Threshold Example",
-    "text": "Create DataFrame for Threshold Example\nThis section creates a DataFrame to demonstrate dropping rows based on a threshold of non-missing values.\n\ndf2 = df2.dropna(thresh=2)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n4\n5\n9.0\n15.0"
+    "objectID": "posts/pandas/text manipulation methods.html#searching-in-text",
+    "href": "posts/pandas/text manipulation methods.html#searching-in-text",
+    "title": "Text Manipulation Methods in pandas",
+    "section": "",
+    "text": "Check if strings contain substrings with .str.contains(). Use case=False for case-insensitive search.\n\ndf['Contains'] = df['TextData'].str.contains('O', case=False)\ndf\n\n\n\n\n\n\n\n\nTextData\nLowerCase\nUpperCase\nContains\n\n\n\n\n0\nHello\nhello\nHELLO\nTrue\n\n\n1\nWorld\nworld\nWORLD\nTrue\n\n\n2\nPython\npython\nPYTHON\nTrue\n\n\n3\nPandas\npandas\nPANDAS\nFalse\n\n\n4\nData Science\ndata science\nDATA SCIENCE\nFalse"
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#drop-rows-based-on-threshold",
-    "href": "posts/pandas/learn pandas dfmissing data.html#drop-rows-based-on-threshold",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "Drop Rows Based on Threshold",
-    "text": "Drop Rows Based on Threshold\nUse dropna(thresh=2) to keep only rows with at least 2 non-missing values.\n\ndf2 = df2.fillna(0)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n0.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n4\n5\n9.0\n15.0"
+    "objectID": "posts/pandas/text manipulation methods.html#regular-expressions-regex",
+    "href": "posts/pandas/text manipulation methods.html#regular-expressions-regex",
+    "title": "Text Manipulation Methods in pandas",
+    "section": "",
+    "text": "Use regex with methods like .str.findall() to find patterns. Here, finding all ‘o’ characters.\n\ndf['Matches'] = df['TextData'].str.findall('o')\ndf\n\n\n\n\n\n\n\n\nTextData\nLowerCase\nUpperCase\nContains\nMatches\n\n\n\n\n0\nHello\nhello\nHELLO\nTrue\n[o]\n\n\n1\nWorld\nworld\nWORLD\nTrue\n[o]\n\n\n2\nPython\npython\nPYTHON\nTrue\n[o]\n\n\n3\nPandas\npandas\nPANDAS\nFalse\n[]\n\n\n4\nData Science\ndata science\nDATA SCIENCE\nFalse\n[]"
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-zero",
-    "href": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-zero",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "Fill Missing Values with Zero",
-    "text": "Fill Missing Values with Zero\nUse fillna(0) to replace all missing values in the DataFrame with zero.\n\ndata3 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,np.nan,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf3 = pd.DataFrame(data2)\ndf3\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\nNaN\nNaN\n\n\n4\n5\n9.0\n15.0"
+    "objectID": "posts/pandas/text manipulation methods.html#replacement-and-splitting",
+    "href": "posts/pandas/text manipulation methods.html#replacement-and-splitting",
+    "title": "Text Manipulation Methods in pandas",
+    "section": "",
+    "text": "Replace substrings with .str.replace() and split strings with .str.split().\n\ndf['Replaced'] = df['TextData'].str.replace('o', 'x')\ndf\n\n\n\n\n\n\n\n\nTextData\nLowerCase\nUpperCase\nContains\nMatches\nReplaced\n\n\n\n\n0\nHello\nhello\nHELLO\nTrue\n[o]\nHellx\n\n\n1\nWorld\nworld\nWORLD\nTrue\n[o]\nWxrld\n\n\n2\nPython\npython\nPYTHON\nTrue\n[o]\nPythxn\n\n\n3\nPandas\npandas\nPANDAS\nFalse\n[]\nPandas\n\n\n4\nData Science\ndata science\nDATA SCIENCE\nFalse\n[]\nData Science\n\n\n\n\n\n\n\n\ndf['Split'] = df['TextData'].str.split(' ')\ndf\n\n\n\n\n\n\n\n\nTextData\nLowerCase\nUpperCase\nContains\nMatches\nReplaced\nSplit\n\n\n\n\n0\nHello\nhello\nHELLO\nTrue\n[o]\nHellx\n[Hello]\n\n\n1\nWorld\nworld\nWORLD\nTrue\n[o]\nWxrld\n[World]\n\n\n2\nPython\npython\nPYTHON\nTrue\n[o]\nPythxn\n[Python]\n\n\n3\nPandas\npandas\nPANDAS\nFalse\n[]\nPandas\n[Pandas]\n\n\n4\nData Science\ndata science\nDATA SCIENCE\nFalse\n[]\nData Science\n[Data, Science]"
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-for-fill-methods",
-    "href": "posts/pandas/learn pandas dfmissing data.html#create-dataframe-for-fill-methods",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "Create DataFrame for Fill Methods",
-    "text": "Create DataFrame for Fill Methods\nThis section creates a DataFrame to demonstrate different methods for filling missing values."
+    "objectID": "posts/pandas/text manipulation methods.html#best-practices",
+    "href": "posts/pandas/text manipulation methods.html#best-practices",
+    "title": "Text Manipulation Methods in pandas",
+    "section": "",
+    "text": "Handle missing values: Use .str methods which handle NaN gracefully.\nFor complex regex, test patterns separately.\nVectorized operations are faster than loops."
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-mean-or-median",
-    "href": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-mean-or-median",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "Fill Missing Values with Mean or Median",
-    "text": "Fill Missing Values with Mean or Median\nUse fillna(df.mean()) or fillna(df.median()) to replace missing values with the mean or median of each column.\n\ndf3.fillna(df3.mean())\ndf3.fillna(df3.median())\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n7.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n7.0\n12.5\n\n\n4\n5\n9.0\n15.0"
+    "objectID": "posts/pandas/text manipulation methods.html#summary",
+    "href": "posts/pandas/text manipulation methods.html#summary",
+    "title": "Text Manipulation Methods in pandas",
+    "section": "",
+    "text": "This notebook covered essential pandas string methods for text manipulation. Experiment with real datasets to master these techniques!"
   },
   {
-    "objectID": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-forwardbackward-fill",
-    "href": "posts/pandas/learn pandas dfmissing data.html#fill-missing-values-with-forwardbackward-fill",
-    "title": "Pandas: Dealing with missing Datas",
-    "section": "Fill Missing Values with Forward/Backward Fill",
-    "text": "Fill Missing Values with Forward/Backward Fill\nUse fillna(method='ffill') for forward fill and fillna(method='bfill') for backward fill to propagate non-missing values.\n\ndf3.fillna(method='ffill')\ndf3.fillna(method='bfill')\n\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_14088\\3709391602.py:1: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df3.fillna(method='ffill')\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_14088\\3709391602.py:2: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df3.fillna(method='bfill')\n\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n7.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n9.0\n15.0\n\n\n4\n5\n9.0\n15.0"
+    "objectID": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html",
+    "href": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html",
+    "title": "Pandas: Advanced Techniques for Conditional Filtering and Querying",
+    "section": "",
+    "text": "Conditional Filtering: Using boolean indexing to filter data based on conditions\nQuery Method: Writing SQL-like queries on pandas DataFrames\n\nSorting Techniques: Multi-column sorting and custom sort orders\nRanking Methods: Different ranking strategies for data analysis\nBest Practices: Efficient data manipulation patterns"
+  },
+  {
+    "objectID": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#what-i-learnt",
+    "href": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#what-i-learnt",
+    "title": "Pandas: Advanced Techniques for Conditional Filtering and Querying",
+    "section": "",
+    "text": "Conditional Filtering: Using boolean indexing to filter data based on conditions\nQuery Method: Writing SQL-like queries on pandas DataFrames\n\nSorting Techniques: Multi-column sorting and custom sort orders\nRanking Methods: Different ranking strategies for data analysis\nBest Practices: Efficient data manipulation patterns"
+  },
+  {
+    "objectID": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#prerequisites",
+    "href": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#prerequisites",
+    "title": "Pandas: Advanced Techniques for Conditional Filtering and Querying",
+    "section": "🎯 Prerequisites",
+    "text": "🎯 Prerequisites\n\nBasic pandas knowledge\nUnderstanding of Python data structures\nFamiliarity with DataFrame operations\n\nLet’s dive into the advanced filtering techniques!"
+  },
+  {
+    "objectID": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#setup-and-data-loading",
+    "href": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#setup-and-data-loading",
+    "title": "Pandas: Advanced Techniques for Conditional Filtering and Querying",
+    "section": "📊 Setup and Data Loading",
+    "text": "📊 Setup and Data Loading\nFirst, let’s import pandas and load our sample dataset to work with.\n\nimport pandas as pd\n\n\ndf = pd.read_csv('example.csv')\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr"
+  },
+  {
+    "objectID": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#conditional-filtering-with-boolean-indexing",
+    "href": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#conditional-filtering-with-boolean-indexing",
+    "title": "Pandas: Advanced Techniques for Conditional Filtering and Querying",
+    "section": "🔍 Conditional Filtering with Boolean Indexing",
+    "text": "🔍 Conditional Filtering with Boolean Indexing\nBoolean indexing allows you to filter DataFrames based on conditions. This is one of the most powerful features of pandas for data manipulation.\n\nBasic Boolean Filtering\nLet’s start with simple conditional filtering using comparison operators.\n\n\nSimple Condition: Filter by Age\nFilter rows where Age is less than 20:\n\ndf[df['Age'] &lt; 20]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\n\nOR Condition: Multiple Criteria (Either condition true)\nFilter rows where City is ‘Vellore’ OR Age is less than 20:\n\ndf[(df['City']=='Vellore') | (df['Age']&lt;20)]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\n\nAND Condition: Multiple Criteria (All conditions true)\nFilter rows where City is ‘Vellore’ AND Age is less than 20:\n\ndf[(df['City']=='Vellore') & (df['Age']&lt;20)]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n1\nAman\n19\nVellore"
+  },
+  {
+    "objectID": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#query-method-sql-like-filtering",
+    "href": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#query-method-sql-like-filtering",
+    "title": "Pandas: Advanced Techniques for Conditional Filtering and Querying",
+    "section": "🔎 Query Method: SQL-like Filtering",
+    "text": "🔎 Query Method: SQL-like Filtering\nThe .query() method provides a more readable way to filter DataFrames using SQL-like syntax. It’s often cleaner than boolean indexing for complex conditions.\n\nBasic Query Syntax\nQuery rows where Age is greater than 10:\n\ndf.query('Age &gt; 10')\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n\n\n\n\n\n\n\nQuery with AND Condition\nQuery rows where Age &gt; 10 AND City equals ‘Matannur’:\n\ndf.query(\"Age &gt; 10 and City == 'Matannur'\")\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n\n\n\n\n\n\n\nQuery with OR Condition\nQuery rows where Age &lt; 18 OR City equals ‘Matannur’:\n\ndf.query(\"Age &lt; 18 or City == 'Matannur'\")\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\n\nQuery with Mathematical Operations\nQuery with mathematical expressions - rows where Age * 2 &gt; 30:\n\ndf.query(\"Age * 2 &gt; 30\")\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n\n\n\n\n\n\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr"
+  },
+  {
+    "objectID": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#sorting-data",
+    "href": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#sorting-data",
+    "title": "Pandas: Advanced Techniques for Conditional Filtering and Querying",
+    "section": "🔄 Sorting Data",
+    "text": "🔄 Sorting Data\nSorting is essential for data analysis. Pandas provides flexible sorting capabilities for both single and multiple columns.\n\nBasic Sorting by Single Column\nSort by Age in descending order:\n\ndf.sort_values('Age',ascending=False)\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\n\nMulti-Column Sorting\nSort by Name first (ascending), then by Age (ascending) for ties:\n\ndf.sort_values(['Name', 'Age'],ascending=True)\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n3\nZahra\n9\nKnr\n\n\n2\nZiya\n15\nTly\n\n\n\n\n\n\n\n\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr"
+  },
+  {
+    "objectID": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#ranking-data",
+    "href": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#ranking-data",
+    "title": "Pandas: Advanced Techniques for Conditional Filtering and Querying",
+    "section": "🏆 Ranking Data",
+    "text": "🏆 Ranking Data\nRanking assigns ordinal numbers to data points. This is useful for competitions, percentiles, and comparative analysis.\n\nDefault Ranking (Average method)\nRank ages - ties get average rank:\n\ndf['Age'].rank()\n\n0    4.0\n1    3.0\n2    2.0\n3    1.0\nName: Age, dtype: float64\n\n\n\n\nRanking with ‘min’ Method\nRank ages - ties get minimum rank:\n\ndf['Age'].rank(method='min')\n\n0    4.0\n1    3.0\n2    2.0\n3    1.0\nName: Age, dtype: float64"
+  },
+  {
+    "objectID": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#summary",
+    "href": "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html#summary",
+    "title": "Pandas: Advanced Techniques for Conditional Filtering and Querying",
+    "section": "🎉 Summary",
+    "text": "🎉 Summary\nYou’ve now learned advanced pandas techniques for:\n\nConditional Filtering: Using boolean indexing with & (AND) and | (OR) operators\nQuery Method: Writing SQL-like queries with .query() for cleaner, more readable code\nSorting: Single and multi-column sorting with sort_values()\nRanking: Different ranking methods for comparative analysis\n\n\nKey Takeaways\n\nBoolean Indexing: df[condition] is powerful but can get complex with multiple conditions\nQuery Method: df.query('condition') is more readable for complex filtering\nSorting: Use sort_values() with lists for multi-column sorting\nRanking: Choose ranking method based on your analysis needs (average, min, max, etc.)\n\n\n\nNext Steps\n\nPractice with real datasets\nCombine filtering with other pandas operations\nExplore advanced query features with variables\nLearn about method chaining for efficient data pipelines\n\nHappy pandas coding! 🐼"
+  },
+  {
+    "objectID": "posts/pandas/learn pandas Series.html",
+    "href": "posts/pandas/learn pandas Series.html",
+    "title": "Pandas: Intro to Series",
+    "section": "",
+    "text": "You will learn how to: - Create a Pandas Series - Access elements and slices - Perform arithmetic operations - View Series properties and methods - Sort and describe Series data\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\nmy_series = pd.Series([10,20,30,40,50], index=['A', 'B', 'C', 'D', 'E'])\nmy_series\n\nA    10\nB    20\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\ntype(my_series)\n\npandas.core.series.Series\n\n\n\nmy_series['C':'E']\n\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series + 15\n\nA    25\nB    35\nC    45\nD    55\nE    65\ndtype: int64\n\n\n\nmy_series * 25\n\nA     250\nB     500\nC     750\nD    1000\nE    1250\ndtype: int64\n\n\n\nmy_series.dtype\n\ndtype('int64')\n\n\n\nmy_series.size\n\n5\n\n\n\nmy_series.shape\n\n(5,)\n\n\n\nmy_series.head(3)\n\nA    10\nB    20\nC    30\ndtype: int64\n\n\n\nmy_series.tail(2)\n\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series.describe()\n\ncount     5.000000\nmean     30.000000\nstd      15.811388\nmin      10.000000\n25%      20.000000\n50%      30.000000\n75%      40.000000\nmax      50.000000\ndtype: float64\n\n\n\nmy_series.sort_values(ascending=False)\n\nE    50\nD    40\nC    30\nB    20\nA    10\ndtype: int64"
   },
   {
     "objectID": "posts/pandas/learn pandas df operations.html",
@@ -187,6 +250,83 @@
     "title": "Pandas: DataFrame Operation",
     "section": "",
     "text": "import pandas as pd\n\ndf = pd.read_csv('example.csv')\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf.head(2)\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n\n\n\n\n\n\ndf.tail(2)\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf[['Name', 'City']]\n\n\n\n\n\n\n\n\nName\nCity\n\n\n\n\n0\nAdil\nMatannur\n\n\n1\nAman\nVellore\n\n\n2\nZiya\nTly\n\n\n3\nZahra\nKnr\n\n\n\n\n\n\n\n\ndf[['Name', 'City']].values\n\narray([['Adil', 'Matannur'],\n       ['Aman', 'Vellore'],\n       ['Ziya', 'Tly'],\n       ['Zahra', 'Knr']], dtype=object)\n\n\n\nagegt20 = df[df['Age']&gt;=20]\nagegt20\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n\n\n\n\n\n\nagelt20 = df[df['Age']&lt;20]\nagelt20\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf_ziya = df[df['Name']=='Ziya']\ndf_ziya\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n\n\n\n\n\n\ndf_mult_cond = df[(df['City']=='Matannur') | (df['Age']&lt;=15 )]\ndf_mult_cond\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\nselected_cities = ['Tly', 'Knr']\ndf_tlyorknr = df[df['City'].isin(selected_cities)]\n\ndf_tlyorknr\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf[df['Name'].str.startswith('Z')]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf.iloc[0:2]\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n\n\n\n\n\n\ndf.loc[df['Age']&gt;20, ['Name', 'City']]\n\n\n\n\n\n\n\n\nName\nCity\n\n\n\n\n0\nAdil\nMatannur"
+  },
+  {
+    "objectID": "posts/pandas/Handling Temporal Datas.html",
+    "href": "posts/pandas/Handling Temporal Datas.html",
+    "title": "Handling Temporal Data with Pandas",
+    "section": "",
+    "text": "This notebook covers essential techniques for working with temporal (date and time) data in Pandas. Time-based data is ubiquitous in data science, from financial analysis to IoT sensor data. You’ll learn how to:\nTemporal data handling is crucial for time series analysis, forecasting, and any analysis involving time dimensions."
+  },
+  {
+    "objectID": "posts/pandas/Handling Temporal Datas.html#working-with-dates-and-datetime-objects",
+    "href": "posts/pandas/Handling Temporal Datas.html#working-with-dates-and-datetime-objects",
+    "title": "Handling Temporal Data with Pandas",
+    "section": "1. Working with Dates and Datetime Objects",
+    "text": "1. Working with Dates and Datetime Objects\nPandas provides powerful tools for handling date and time data. Let’s start with the fundamentals of datetime conversion and manipulation.\n\nCreating Sample Data with Date Strings\nLet’s start by creating a DataFrame with date information stored as strings. This is a common scenario when loading data from CSV files or databases.\n\nimport pandas as pd\n\ndata = {\n    'Date': ['2023-01-01','2023-03-02','2023-05-03'],\n    'Sales': [100,150,200]\n}\n\ndf = pd.DataFrame(data)\n\n\ndf\n\n\n\n\n\n\n\n\nDate\nSales\n\n\n\n\n0\n2023-01-01\n100\n\n\n1\n2023-03-02\n150\n\n\n2\n2023-05-03\n200\n\n\n\n\n\n\n\n\n\nChecking Data Types\nNotice that the ‘Date’ column is currently stored as object (string) type. We need to convert it to datetime for proper date operations.\n\ndf.dtypes\n\nDate     object\nSales     int64\ndtype: object\n\n\n\n\nConverting Strings to Datetime\nUse pd.to_datetime() to convert date strings to proper datetime objects. This enables powerful date operations and calculations.\n\ndf['Date'] = pd.to_datetime(df['Date'])\ndf\n\n\n\n\n\n\n\n\nDate\nSales\n\n\n\n\n0\n2023-01-01\n100\n\n\n1\n2023-03-02\n150\n\n\n2\n2023-05-03\n200\n\n\n\n\n\n\n\n\n\nVerifying Datetime Conversion\nNow the ‘Date’ column shows as ‘datetime64[ns]’ type, confirming successful conversion.\n\ndf.dtypes\n\nDate     datetime64[ns]\nSales             int64\ndtype: object\n\n\n\n\nExtracting Date Components\nOnce you have datetime objects, you can easily extract year, month, day, and other components using the .dt accessor. This is useful for grouping and analysis.\n\ndf['Year'] = df['Date'].dt.year\ndf['Month'] = df['Date'].dt.month_name()\ndf['Day'] = df['Date'].dt.day\n\ndf\n\n\n\n\n\n\n\n\nDate\nSales\nYear\nMonth\nDay\n\n\n\n\n0\n2023-01-01\n100\n2023\nJanuary\n1\n\n\n1\n2023-03-02\n150\n2023\nMarch\n2\n\n\n2\n2023-05-03\n200\n2023\nMay\n3"
+  },
+  {
+    "objectID": "posts/pandas/Handling Temporal Datas.html#working-with-time-series-data",
+    "href": "posts/pandas/Handling Temporal Datas.html#working-with-time-series-data",
+    "title": "Handling Temporal Data with Pandas",
+    "section": "2. Working with Time Series Data",
+    "text": "2. Working with Time Series Data\nTime series data has dates/times as the index. Pandas provides powerful tools for time series analysis, including resampling, shifting, and date range generation.\n\nCreating Time Series Data\nLet’s create a time series by setting dates as the index and associating values with specific time points.\n\n\nCreating a DateTime Index\nUse pd.date_range() to create sequences of dates. The freq='D' parameter creates daily intervals.\n\ntime_index = pd.date_range('2025-01-01', periods=5, freq='D')\nts_data = pd.Series([100,120,80,110,90], index=time_index)\n\n\n\nViewing Time Series Data\nThe time series now has datetime values as the index, making it easy to perform time-based operations.\n\nts_data\n\n2025-01-01    100\n2025-01-02    120\n2025-01-03     80\n2025-01-04    110\n2025-01-05     90\nFreq: D, dtype: int64\n\n\n\n\nResampling Time Series Data\nResampling changes the frequency of your time series data. Here we resample daily data to weekly frequency using the mean aggregation.\n\nts_resampled = ts_data.resample('W').mean()\nts_resampled\n\n2025-01-05    100.0\nFreq: W-SUN, dtype: float64"
+  },
+  {
+    "objectID": "posts/pandas/Handling Temporal Datas.html#time-series-operations-shifting-and-lagging",
+    "href": "posts/pandas/Handling Temporal Datas.html#time-series-operations-shifting-and-lagging",
+    "title": "Handling Temporal Data with Pandas",
+    "section": "3. Time Series Operations: Shifting and Lagging",
+    "text": "3. Time Series Operations: Shifting and Lagging\nShifting operations are crucial for time series analysis, allowing you to compare values across different time periods.\n\nSetting Up Time Series Data for Shifting\nLet’s create a time series dataset and set the date column as the index.\n\ndata = {\n    'Date': ['2023-01-01', '2023-01-02', '2023-01-03', '2023-01-04', '2023-01-05'],\n    'Sales': [100,150,200,120,180]\n}\n\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nDate\nSales\n\n\n\n\n0\n2023-01-01\n100\n\n\n1\n2023-01-02\n150\n\n\n2\n2023-01-03\n200\n\n\n3\n2023-01-04\n120\n\n\n4\n2023-01-05\n180\n\n\n\n\n\n\n\n\n\nConverting to Datetime and Setting Index\nConvert the date strings to datetime objects and set the Date column as the DataFrame index.\n\ndf['Date'] = pd.to_datetime(df['Date'])\n\n\n\nSetting Date as Index\nNow the Date column becomes the DataFrame index, enabling time-based operations.\n\ndf.set_index('Date', inplace=True)\ndf\n\n\n\n\n\n\n\n\nSales\n\n\nDate\n\n\n\n\n\n2023-01-01\n100\n\n\n2023-01-02\n150\n\n\n2023-01-03\n200\n\n\n2023-01-04\n120\n\n\n2023-01-05\n180\n\n\n\n\n\n\n\n\n\nShifting Data for Time Series Analysis\nThe shift() method moves data points forward or backward in time. This is essential for calculating period-over-period changes, creating lag features, and time series forecasting.\n\nshift(1): Moves values forward by 1 period (creates lag)\nshift(-1): Moves values backward by 1 period (creates lead)\n\n\ndf['Shifted Sales'] = df['Sales'].shift(1)\ndf['Lagged Sales'] = df['Sales'].shift(-1)\n\n\ndf\n\n\n\n\n\n\n\n\nSales\nShifted Sales\nLagged Sales\n\n\nDate\n\n\n\n\n\n\n\n2023-01-01\n100\nNaN\n150.0\n\n\n2023-01-02\n150\n100.0\n200.0\n\n\n2023-01-03\n200\n150.0\n120.0\n\n\n2023-01-04\n120\n200.0\n180.0\n\n\n2023-01-05\n180\n120.0\nNaN"
+  },
+  {
+    "objectID": "posts/pandas/Handling Temporal Datas.html#generating-date-ranges",
+    "href": "posts/pandas/Handling Temporal Datas.html#generating-date-ranges",
+    "title": "Handling Temporal Data with Pandas",
+    "section": "4. Generating Date Ranges",
+    "text": "4. Generating Date Ranges\nPandas makes it easy to create sequences of dates for time series analysis, filling missing dates, or creating time-based indices.\n\nCreating Weekly Date Ranges\nGenerate a sequence of dates with weekly frequency.\n\ndate_range = pd.date_range(start='2023-01-01', periods=10, freq='W')\ndate_range\n\nDatetimeIndex(['2023-01-01', '2023-01-08', '2023-01-15', '2023-01-22',\n               '2023-01-29', '2023-02-05', '2023-02-12', '2023-02-19',\n               '2023-02-26', '2023-03-05'],\n              dtype='datetime64[ns]', freq='W-SUN')\n\n\n\n\nCreating Monthly Date Ranges\nGenerate a sequence of dates with monthly frequency using ‘ME’ (Month End).\n\ndate_range = pd.date_range(start='2023-01-01', periods=50, freq='ME')\ndate_range\n\nDatetimeIndex(['2023-01-31', '2023-02-28', '2023-03-31', '2023-04-30',\n               '2023-05-31', '2023-06-30', '2023-07-31', '2023-08-31',\n               '2023-09-30', '2023-10-31', '2023-11-30', '2023-12-31',\n               '2024-01-31', '2024-02-29', '2024-03-31', '2024-04-30',\n               '2024-05-31', '2024-06-30', '2024-07-31', '2024-08-31',\n               '2024-09-30', '2024-10-31', '2024-11-30', '2024-12-31',\n               '2025-01-31', '2025-02-28', '2025-03-31', '2025-04-30',\n               '2025-05-31', '2025-06-30', '2025-07-31', '2025-08-31',\n               '2025-09-30', '2025-10-31', '2025-11-30', '2025-12-31',\n               '2026-01-31', '2026-02-28', '2026-03-31', '2026-04-30',\n               '2026-05-31', '2026-06-30', '2026-07-31', '2026-08-31',\n               '2026-09-30', '2026-10-31', '2026-11-30', '2026-12-31',\n               '2027-01-31', '2027-02-28'],\n              dtype='datetime64[ns]', freq='ME')"
+  },
+  {
+    "objectID": "posts/pandas/Handling Temporal Datas.html#summary",
+    "href": "posts/pandas/Handling Temporal Datas.html#summary",
+    "title": "Handling Temporal Data with Pandas",
+    "section": "Summary",
+    "text": "Summary\nIn this notebook, you learned comprehensive techniques for handling temporal data in Pandas:\n\n🔧 Datetime Conversion & Manipulation\n\nConvert string dates to datetime objects with pd.to_datetime()\nExtract date components (year, month, day) using .dt accessor\nHandle different date formats and timezones\n\n\n\n📊 Time Series Operations\n\nCreate time series data with datetime indexing\nResample data to different frequencies (daily → weekly, etc.)\nSet datetime columns as DataFrame index for time-based operations\n\n\n\n⏱️ Time Series Analysis\n\nUse shift() for creating lag/lead features\nPerform period-over-period comparisons\nHandle time-based data transformations\n\n\n\n📅 Date Range Generation\n\nCreate sequences of dates with pd.date_range()\nSpecify different frequencies (daily, weekly, monthly)\nGenerate date ranges for filling missing data or creating time indices\n\n\n\n🚀 Key Takeaways\n\nAlways convert dates: Use pd.to_datetime() for proper date handling\nSet datetime index: For time series analysis, make dates the index\nUse .dt accessor: Extract components like year, month, day easily\nMaster shifting: shift() is essential for time series features\nResample wisely: Change data frequency based on your analysis needs\n\n\n\n📈 Next Steps\n\nPractice with real time series datasets (stock prices, weather data, etc.)\nExplore advanced topics like timezones and business day calculations\nLearn about rolling windows and expanding operations\nCombine temporal data with other Pandas operations for comprehensive analysis\n\nTemporal data is everywhere - master these techniques and you’ll be equipped to handle any time-based analysis! 🕐📊"
+  },
+  {
+    "objectID": "posts/pandas/Group By Operations.html",
+    "href": "posts/pandas/Group By Operations.html",
+    "title": "Group By Operations in Pandas",
+    "section": "",
+    "text": "GroupBy operations are one of the most powerful features in Pandas for data analysis. They allow you to:\nThis notebook covers essential groupby techniques including aggregation functions, multiple aggregations, and advanced operations."
+  },
+  {
+    "objectID": "posts/pandas/Group By Operations.html#setting-up-sample-data",
+    "href": "posts/pandas/Group By Operations.html#setting-up-sample-data",
+    "title": "Group By Operations in Pandas",
+    "section": "1. Setting Up Sample Data",
+    "text": "1. Setting Up Sample Data\nLet’s create a sample dataset to demonstrate groupby operations. We’ll work with categorical data and numerical values.\n\nimport pandas as pd\n\ndata = {\n    'Category': ['A', 'B', 'A', 'B', 'A'],\n    'Value': [10,15,20,25,30]\n}\n\ndf = pd.DataFrame(data)"
+  },
+  {
+    "objectID": "posts/pandas/Group By Operations.html#basic-aggregation-functions",
+    "href": "posts/pandas/Group By Operations.html#basic-aggregation-functions",
+    "title": "Group By Operations in Pandas",
+    "section": "2. Basic Aggregation Functions",
+    "text": "2. Basic Aggregation Functions\nGroupby operations allow you to calculate summary statistics for each group. Here are the most common aggregation functions:\n\nSum Aggregation\nCalculate the total sum of values for each category:\n\ndf.groupby('Category').sum()\n\n\n\n\n\n\n\n\nValue\n\n\nCategory\n\n\n\n\n\nA\n60\n\n\nB\n40\n\n\n\n\n\n\n\n\n\nMean Aggregation\nCalculate the average value for each category:\n\ndf.groupby('Category').mean()\n\n\n\n\n\n\n\n\nValue\n\n\nCategory\n\n\n\n\n\nA\n20.0\n\n\nB\n20.0\n\n\n\n\n\n\n\n\n\nMedian Aggregation\nCalculate the median (middle) value for each category:\n\ndf.groupby('Category').median()\n\n\n\n\n\n\n\n\nValue\n\n\nCategory\n\n\n\n\n\nA\n20.0\n\n\nB\n20.0\n\n\n\n\n\n\n\n\n\nMaximum Values\nFind the highest value in each category:\n\ndf.groupby('Category').max()\n\n\n\n\n\n\n\n\nValue\n\n\nCategory\n\n\n\n\n\nA\n30\n\n\nB\n25\n\n\n\n\n\n\n\n\n\nMinimum Values\nFind the lowest value in each category:\n\ndf.groupby('Category').min()\n\n\n\n\n\n\n\n\nValue\n\n\nCategory\n\n\n\n\n\nA\n10\n\n\nB\n15\n\n\n\n\n\n\n\n\n\nStandard Deviation\nMeasure the spread of values within each category:\n\ndf.groupby('Category').std()\n\n\n\n\n\n\n\n\nValue\n\n\nCategory\n\n\n\n\n\nA\n10.000000\n\n\nB\n7.071068\n\n\n\n\n\n\n\n\n\nVariance\nCalculate the variance (squared standard deviation) for each category:\n\ndf.groupby('Category').var()\n\n\n\n\n\n\n\n\nValue\n\n\nCategory\n\n\n\n\n\nA\n100.0\n\n\nB\n50.0"
+  },
+  {
+    "objectID": "posts/pandas/Group By Operations.html#multiple-aggregations",
+    "href": "posts/pandas/Group By Operations.html#multiple-aggregations",
+    "title": "Group By Operations in Pandas",
+    "section": "3. Multiple Aggregations",
+    "text": "3. Multiple Aggregations\nYou can apply multiple aggregation functions at once using the agg() method. This provides a comprehensive view of your grouped data.\n\nApplying Multiple Functions\nCalculate sum, mean, and maximum for each category in one operation:\n\ndf.groupby('Category').agg(['sum', 'mean', 'max'])\n\n\n\n\n\n\n\n\nValue\n\n\n\nsum\nmean\nmax\n\n\nCategory\n\n\n\n\n\n\n\nA\n60\n20.0\n30\n\n\nB\n40\n20.0\n25"
+  },
+  {
+    "objectID": "posts/pandas/Group By Operations.html#summary",
+    "href": "posts/pandas/Group By Operations.html#summary",
+    "title": "Group By Operations in Pandas",
+    "section": "Summary",
+    "text": "Summary\nGroupBy operations are essential for data analysis in Pandas. In this notebook, you learned:\n\n🔢 Basic Aggregation Functions\n\nsum(): Total values per group\nmean(): Average values per group\n\nmedian(): Middle value per group\nmax() / min(): Highest/lowest values per group\nstd() / var(): Measure spread within groups\n\n\n\n📊 Advanced Operations\n\nagg(): Apply multiple functions simultaneously\nCombine statistics for comprehensive group analysis\n\n\n\n💡 Key Concepts\n\nSplit-Apply-Combine: The three-step process of groupby operations\nAggregation: Reducing groups to single values (sum, mean, etc.)\nMultiple Functions: Use agg() for comprehensive summaries\n\n\n\n🚀 Best Practices\n\nChoose appropriate aggregation functions for your data type\nUse multiple aggregations to get complete group insights\nConsider data distribution when selecting measures (mean vs median)\n\n\n\n📈 Next Steps\n\nExplore groupby with multiple columns\nLearn filtering and transformation operations\nPractice with real datasets for business insights\n\nMastering groupby operations will significantly enhance your data analysis capabilities! 🎯"
   },
   {
     "objectID": "posts/pandas/data manipulation with loc and iloc.html",
@@ -273,6 +413,97 @@
     "text": "Select Specific Rows and Columns by Integer Position with iloc\nUse df.iloc[[0,3],[0,2]] to select rows at positions 0 and 3, and columns at positions 0 and 2.\n\ndf.iloc[[0,3],[0,2]]\n\n\n\n\n\n\n\n\nA\nC\n\n\n\n\na\n1\n11\n\n\nd\n4\n14"
   },
   {
+    "objectID": "posts/pandas/Combine and Merge DF.html",
+    "href": "posts/pandas/Combine and Merge DF.html",
+    "title": "Combining and Merging DataFrames with Pandas",
+    "section": "",
+    "text": "This notebook is a guide to combining and merging DataFrames in Pandas, two fundamental operations for data wrangling. We’ll explore: - pd.concat(): For stacking DataFrames vertically or horizontally. - pd.merge(): For performing database-style joins on DataFrames."
+  },
+  {
+    "objectID": "posts/pandas/Combine and Merge DF.html#setting-up-sample-dataframes",
+    "href": "posts/pandas/Combine and Merge DF.html#setting-up-sample-dataframes",
+    "title": "Combining and Merging DataFrames with Pandas",
+    "section": "1. Setting Up Sample DataFrames",
+    "text": "1. Setting Up Sample DataFrames\nFirst, let’s import Pandas and create a few sample DataFrames to work with.\n\nimport pandas as pd\n\ndata1 = {\n    'A': [1,2,3],\n    'B': [4,5,6]\n}\n\ndata2 = {\n    'A': [7,8,9],   \n    'B': [10,11,12]\n}\n\ndf1 = pd.DataFrame(data1)\ndf2 = pd.DataFrame(data2)\n\n\ndf1\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\n1\n4\n\n\n1\n2\n5\n\n\n2\n3\n6\n\n\n\n\n\n\n\n\ndf2\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\n7\n10\n\n\n1\n8\n11\n\n\n2\n9\n12"
+  },
+  {
+    "objectID": "posts/pandas/Combine and Merge DF.html#concatenating-dataframes-with-pd.concat",
+    "href": "posts/pandas/Combine and Merge DF.html#concatenating-dataframes-with-pd.concat",
+    "title": "Combining and Merging DataFrames with Pandas",
+    "section": "2. Concatenating DataFrames with pd.concat()",
+    "text": "2. Concatenating DataFrames with pd.concat()\nConcatenation is like stacking DataFrames on top of each other (row-wise) or side-by-side (column-wise).\n\nDefault Concatenation (Row-wise)\nBy default, pd.concat() stacks DataFrames vertically. This is useful when you have DataFrames with the same columns.\n\npd.concat([df1, df2])\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\n1\n4\n\n\n1\n2\n5\n\n\n2\n3\n6\n\n\n0\n7\n10\n\n\n1\n8\n11\n\n\n2\n9\n12\n\n\n\n\n\n\n\n\n\nColumn-wise Concatenation\nYou can also concatenate side-by-side by setting axis=1. This is useful for adding new columns.\n\npd.concat([df1, df2], axis=1)\n\n\n\n\n\n\n\n\nA\nB\nA\nB\n\n\n\n\n0\n1\n4\n7\n10\n\n\n1\n2\n5\n8\n11\n\n\n2\n3\n6\n9\n12"
+  },
+  {
+    "objectID": "posts/pandas/Combine and Merge DF.html#merging-dataframes-with-pd.merge",
+    "href": "posts/pandas/Combine and Merge DF.html#merging-dataframes-with-pd.merge",
+    "title": "Combining and Merging DataFrames with Pandas",
+    "section": "3. Merging DataFrames with pd.merge()",
+    "text": "3. Merging DataFrames with pd.merge()\nMerging is used for database-style joins. It combines DataFrames based on a common column (a “key”).\n\nDefault Merge (Inner Join)\npd.merge() performs an inner join by default, combining rows that have matching values in the specified on column.\n\ndata3 = {\n    'A': [1,2,3],   \n    'C': [13,14,15]\n}\n\ndf3 = pd.DataFrame(data3)\n\ndf3\n\n\n\n\n\n\n\n\nA\nC\n\n\n\n\n0\n1\n13\n\n\n1\n2\n14\n\n\n2\n3\n15\n\n\n\n\n\n\n\n\ndf1\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\n1\n4\n\n\n1\n2\n5\n\n\n2\n3\n6\n\n\n\n\n\n\n\n\npd.merge(df1, df3, on='A')\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n4\n13\n\n\n1\n2\n5\n14\n\n\n2\n3\n6\n15"
+  },
+  {
+    "objectID": "posts/pandas/Combine and Merge DF.html#summary",
+    "href": "posts/pandas/Combine and Merge DF.html#summary",
+    "title": "Combining and Merging DataFrames with Pandas",
+    "section": "Summary",
+    "text": "Summary\nIn this notebook, you learned the key differences between concat and merge:\n\npd.concat(): Best for stacking DataFrames.\n\naxis=0 (default): Stacks vertically (appends rows).\naxis=1: Stacks horizontally (appends columns).\n\npd.merge(): Best for database-style joins based on common columns.\n\nUse the on parameter to specify the key to join on.\nSupports inner, outer, left, and right joins (though we only covered the default inner join here).\n\n\nUnderstanding when to use each is crucial for effective data manipulation in Pandas. Happy coding! 🚀"
+  },
+  {
+    "objectID": "posts/pandas/Advanced Data Manipulation.html",
+    "href": "posts/pandas/Advanced Data Manipulation.html",
+    "title": "Advanced Data Manipulation (apply, map, applymap)",
+    "section": "",
+    "text": "This notebook demonstrates advanced element-wise and row/column-wise transformations in pandas using apply, map, and applymap."
+  },
+  {
+    "objectID": "posts/pandas/Advanced Data Manipulation.html#introduction",
+    "href": "posts/pandas/Advanced Data Manipulation.html#introduction",
+    "title": "Advanced Data Manipulation (apply, map, applymap)",
+    "section": "Introduction",
+    "text": "Introduction\nPandas provides flexible methods to transform data: - Series.map(func): elementwise mapping for a Series. - DataFrame.apply(func, axis=...): apply a function to each column or row (as Series). - DataFrame.applymap(func): elementwise operation across the entire DataFrame.\nWe’ll illustrate each with short examples and best-practice notes.\n\n# Import libraries and create sample DataFrame\nimport pandas as pd\n\ndata = {\n    'A': [1, 2, 3, 4, 5],\n    'B': [10, 20, 30, 40, 50],\n}\n\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\n1\n10\n\n\n1\n2\n20\n\n\n2\n3\n30\n\n\n3\n4\n40\n\n\n4\n5\n50"
+  },
+  {
+    "objectID": "posts/pandas/Advanced Data Manipulation.html#using-apply",
+    "href": "posts/pandas/Advanced Data Manipulation.html#using-apply",
+    "title": "Advanced Data Manipulation (apply, map, applymap)",
+    "section": "Using apply",
+    "text": "Using apply\nDataFrame.apply calls a function on each column (by default) or each row when axis=1. The function receives a Series and should return a single value or a Series (for aggregation or transformation).\nUse apply when your operation needs to work on an entire row/column at once (e.g., compute a statistic or combine multiple columns).\n\n# Example: multiply each column (Series) by 2 using apply\n# Note: apply receives a Series (column) by default, so multiplying the Series scales all values in that column\ndf_apply = df.apply(lambda col: col * 2)\ndf_apply\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\n2\n20\n\n\n1\n4\n40\n\n\n2\n6\n60\n\n\n3\n8\n80\n\n\n4\n10\n100"
+  },
+  {
+    "objectID": "posts/pandas/Advanced Data Manipulation.html#using-map-series",
+    "href": "posts/pandas/Advanced Data Manipulation.html#using-map-series",
+    "title": "Advanced Data Manipulation (apply, map, applymap)",
+    "section": "Using map (Series)",
+    "text": "Using map (Series)\nSeries.map is an elementwise operation on a Series. Use it for simple scalar transformations or to map values via a dict/Series/function. It is not available on DataFrame directly (use applymap for elementwise on DataFrame).\n\n# Series example using map\nseries_data = pd.Series([1, 2, 3, 4, 5])\nmapped_data = series_data.map(lambda x: x ** 2)\nmapped_data\n\n0     1\n1     4\n2     9\n3    16\n4    25\ndtype: int64\n\n\n\n# original series\nseries_data\n\n0    1\n1    2\n2    3\n3    4\n4    5\ndtype: int64"
+  },
+  {
+    "objectID": "posts/pandas/Advanced Data Manipulation.html#using-applymap-elementwise-on-dataframe",
+    "href": "posts/pandas/Advanced Data Manipulation.html#using-applymap-elementwise-on-dataframe",
+    "title": "Advanced Data Manipulation (apply, map, applymap)",
+    "section": "Using applymap (elementwise on DataFrame)",
+    "text": "Using applymap (elementwise on DataFrame)\nDataFrame.applymap applies a function to each element of the DataFrame. This is the correct choice for elementwise numeric transforms across all cells. For column/row-wise operations, prefer apply.\n\n# show the DataFrame\ndf\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\n1\n10\n\n\n1\n2\n20\n\n\n2\n3\n30\n\n\n3\n4\n40\n\n\n4\n5\n50\n\n\n\n\n\n\n\n\n# elementwise cube using applymap\ndf_applymap = df.applymap(lambda x: x ** 3)\ndf_applymap\n\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_5712\\4130872161.py:2: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.\n  df_applymap = df.applymap(lambda x: x ** 3)\n\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\n1\n1000\n\n\n1\n8\n8000\n\n\n2\n27\n27000\n\n\n3\n64\n64000\n\n\n4\n125\n125000"
+  },
+  {
+    "objectID": "posts/pandas/Advanced Data Manipulation.html#creating-new-columns-with-apply-row-wise",
+    "href": "posts/pandas/Advanced Data Manipulation.html#creating-new-columns-with-apply-row-wise",
+    "title": "Advanced Data Manipulation (apply, map, applymap)",
+    "section": "Creating new columns with apply (row-wise)",
+    "text": "Creating new columns with apply (row-wise)\nWhen you need to compute a value using multiple columns, use apply with axis=1. For better performance, prefer vectorized operations when possible (see Best Practices below).\n\n# create column 'C' as product of A and B using apply row-wise\ndf['C'] = df.apply(lambda row: row['A'] * row['B'], axis=1)\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n10\n10\n\n\n1\n2\n20\n40\n\n\n2\n3\n30\n90\n\n\n3\n4\n40\n160\n\n\n4\n5\n50\n250"
+  },
+  {
+    "objectID": "posts/pandas/Advanced Data Manipulation.html#best-practices",
+    "href": "posts/pandas/Advanced Data Manipulation.html#best-practices",
+    "title": "Advanced Data Manipulation (apply, map, applymap)",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nPrefer pandas vectorized operations (e.g., df['A'] * df['B']) over apply when possible — they are faster and clearer.\nUse map for Series-to-Series elementwise mappings or label replacements.\nUse applymap only when you need a uniform elementwise transform across the entire DataFrame.\nWhen using apply with axis=1, consider np.where, pd.Series.where, or vectorized arithmetic to improve performance.\nKeep functions simple and avoid expensive Python-level loops inside apply/map for large DataFrames."
+  },
+  {
+    "objectID": "posts/pandas/Advanced Data Manipulation.html#summary-further-reading",
+    "href": "posts/pandas/Advanced Data Manipulation.html#summary-further-reading",
+    "title": "Advanced Data Manipulation (apply, map, applymap)",
+    "section": "Summary & Further Reading",
+    "text": "Summary & Further Reading\nThis notebook covered the differences between map, apply, and applymap and showed practical examples. For more, see the pandas documentation: https://pandas.pydata.org/pandas-docs/stable/reference/index.html\nFurther exercises: try rewriting the df['C'] calculation using a fully vectorized expression and compare timing with %timeit."
+  },
+  {
     "objectID": "posts/fastai/index.html",
     "href": "posts/fastai/index.html",
     "title": "FastAI Course",
@@ -301,53 +532,46 @@
     "text": "Available Notebooks\nPlace your FastAI notebooks here as you progress through the course!"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Adil’s AI/ML Journey",
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing to TIP - Training in Progress",
     "section": "",
-    "text": "AI/ML Deep Learning Hero Image"
+    "text": "Thank you for your interest in contributing to my learning journey blog! While this is primarily a personal documentation project, I welcome feedback, suggestions, and discussions.\n\n\n\n\n\nIssues: Report bugs or suggest improvements via GitHub Issues\nDiscussions: Share thoughts on learning approaches or technical content\nCode Review: Suggest improvements to code examples or implementations\n\n\n\n\nIf you find any issues: 1. Check existing issues first 2. Provide clear description and steps to reproduce 3. Include browser/device information if relevant\n\n\n\n\nLearning resource recommendations\nTechnical topic suggestions\nProject ideas or improvements\n\n\n\n\n\n\n\n\nQuarto CLI\nBasic knowledge of Markdown and web development\n\n\n\n\ngit clone https://github.com/adilsiraju/Training-in-Progress.git\ncd Training-in-Progress\nquarto preview\n\n\n\n\nFork the repository\nCreate a feature branch (git checkout -b feature/improvement)\nMake your changes\nTest with quarto preview\nCommit with clear messages\nPush and create a Pull Request\n\n\n\n\n\n\n\n\nFocus on learning journey and technical insights\nInclude practical examples and code snippets\nUse clear, concise language\nAdd relevant categories and descriptions\n\n\n\n\n\nEnsure code is functional and tested\nInclude comments for clarity\nFollow Python/web development best practices\n\n\n\n\n\n\nBe respectful and constructive\nFocus on learning and knowledge sharing\nProvide specific, actionable feedback\nRespect that this is a personal learning blog\n\n\n\n\nFor questions or collaboration ideas: - Email: mohdadilsiraju@gmail.com - GitHub: @adilsiraju - Portfolio: adilsiraju.vercel.app\n\nThank you for being part of this learning journey! 🚀"
   },
   {
-    "objectID": "index.html#what-i-share",
-    "href": "index.html#what-i-share",
-    "title": "Adil’s AI/ML Journey",
-    "section": "What I Share",
-    "text": "What I Share\n\n\n📚 Learning\nFastAI course progress and ML/DL discoveries\n🔬 Projects\nComputer vision models and MLOps implementations\n\n💡 Insights\nAlgorithm deep dives and optimization strategies\n🚀 Applications\nReal-world problem solving with AI"
-  },
-  {
-    "objectID": "index.html#recent-achievements",
-    "href": "index.html#recent-achievements",
-    "title": "Adil’s AI/ML Journey",
-    "section": "Recent Achievements",
-    "text": "Recent Achievements\n\nArchitectural Style Classifier - 73% accuracy across 25 styles\nCI/CD for ML Models - 30% faster deployment cycles\n\nMLOps Expertise - Docker, Kubernetes, automation\n\n\n\n\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”"
-  },
-  {
-    "objectID": "index.html#latest-posts",
-    "href": "index.html#latest-posts",
-    "title": "Adil’s AI/ML Journey",
-    "section": "Latest Posts 📝",
-    "text": "Latest Posts 📝\n\n\nRecent Blog Posts - Follow my AI/ML learning journey, technical insights, and project updates.\n\n\nView All Posts →\n\n\n\n\n\n  \n    \n      \n        \n          FastAI Progress: Computer Vision Fundamentals\n        \n        Building my first image classifier with FastAI and exploring transfer learning concepts.\n        \n          Sep 18, 2025\n          \n            fastai\n            computer-vision\n          \n        \n      \n    \n  \n  \n  \n    \n      \n        \n          Welcome to My AI/ML Learning Journey\n        \n        Starting my documentation journey in AI and Machine Learning with goals and focus areas.\n        \n          Sep 15, 2025\n          \n            welcome\n            learning\n          \n        \n      \n    \n  \n\n\n\n\n\n\n\n\nReady to explore? Check out my learning chapters or dive into the complete blog! �"
-  },
-  {
-    "objectID": "CHANGELOG.html",
-    "href": "CHANGELOG.html",
-    "title": "Changelog",
+    "objectID": "CONTRIBUTING.html#ways-to-contribute",
+    "href": "CONTRIBUTING.html#ways-to-contribute",
+    "title": "Contributing to TIP - Training in Progress",
     "section": "",
-    "text": "All notable changes to this project will be documented in this file.\n\n\n\n\n\nBlog Launch: Complete Quarto-based blog setup\nHomepage: Clean, minimal design with hero image\nAbout Page: Professional profile and background\nBlog Posts: Welcome post and FastAI learning progress\n\n\n\n\n\nPulse Theme: Bootstrap-based theme with custom SCSS\nHero Section: Responsive hero image with proper scaling\nMinimal CSS: Streamlined styling leveraging theme defaults\nMobile-First: Responsive design across all devices\n\n\n\n\n\nWelcome Post: Introduction to learning journey\nFastAI Progress: Computer vision fundamentals and classifier project\nAbout Section: Education, skills, experience, and projects\nProject Highlights: Architectural classifier and MLOps work\n\n\n\n\n\nQuarto Setup: Complete configuration with proper metadata\nGitHub Pages: Automated deployment and hosting\nSEO Optimization: Meta descriptions and structured content\nRepository Structure: Clean organization with documentation\n\n\n\n\n\nComprehensive README with setup instructions\nEnhanced .gitignore for Quarto projects\nMIT License for open source sharing\nContributing guidelines for community engagement\nPosts documentation and structure guidelines\n\n\n\n\n\n\n\n\n\nSearch functionality\nTags system for better content organization\nRSS feed optimization\nComment system integration\nDark/light theme toggle\nReading time estimates\nRelated posts suggestions\n\n\n\n\n\nFastAI course completion posts\nComputer vision project deep dives\nMLOps tutorials and best practices\nTechnical interview preparation content\nOpen source contribution experiences\n\n\nKeep building, keep learning! 🚀"
+    "text": "Issues: Report bugs or suggest improvements via GitHub Issues\nDiscussions: Share thoughts on learning approaches or technical content\nCode Review: Suggest improvements to code examples or implementations\n\n\n\n\nIf you find any issues: 1. Check existing issues first 2. Provide clear description and steps to reproduce 3. Include browser/device information if relevant\n\n\n\n\nLearning resource recommendations\nTechnical topic suggestions\nProject ideas or improvements"
   },
   {
-    "objectID": "CHANGELOG.html#section",
-    "href": "CHANGELOG.html#section",
-    "title": "Changelog",
+    "objectID": "CONTRIBUTING.html#technical-contributions",
+    "href": "CONTRIBUTING.html#technical-contributions",
+    "title": "Contributing to TIP - Training in Progress",
     "section": "",
-    "text": "Blog Launch: Complete Quarto-based blog setup\nHomepage: Clean, minimal design with hero image\nAbout Page: Professional profile and background\nBlog Posts: Welcome post and FastAI learning progress\n\n\n\n\n\nPulse Theme: Bootstrap-based theme with custom SCSS\nHero Section: Responsive hero image with proper scaling\nMinimal CSS: Streamlined styling leveraging theme defaults\nMobile-First: Responsive design across all devices\n\n\n\n\n\nWelcome Post: Introduction to learning journey\nFastAI Progress: Computer vision fundamentals and classifier project\nAbout Section: Education, skills, experience, and projects\nProject Highlights: Architectural classifier and MLOps work\n\n\n\n\n\nQuarto Setup: Complete configuration with proper metadata\nGitHub Pages: Automated deployment and hosting\nSEO Optimization: Meta descriptions and structured content\nRepository Structure: Clean organization with documentation\n\n\n\n\n\nComprehensive README with setup instructions\nEnhanced .gitignore for Quarto projects\nMIT License for open source sharing\nContributing guidelines for community engagement\nPosts documentation and structure guidelines"
+    "text": "Quarto CLI\nBasic knowledge of Markdown and web development\n\n\n\n\ngit clone https://github.com/adilsiraju/Training-in-Progress.git\ncd Training-in-Progress\nquarto preview\n\n\n\n\nFork the repository\nCreate a feature branch (git checkout -b feature/improvement)\nMake your changes\nTest with quarto preview\nCommit with clear messages\nPush and create a Pull Request"
   },
   {
-    "objectID": "CHANGELOG.html#upcoming-features",
-    "href": "CHANGELOG.html#upcoming-features",
-    "title": "Changelog",
+    "objectID": "CONTRIBUTING.html#content-guidelines",
+    "href": "CONTRIBUTING.html#content-guidelines",
+    "title": "Contributing to TIP - Training in Progress",
     "section": "",
-    "text": "Search functionality\nTags system for better content organization\nRSS feed optimization\nComment system integration\nDark/light theme toggle\nReading time estimates\nRelated posts suggestions\n\n\n\n\n\nFastAI course completion posts\nComputer vision project deep dives\nMLOps tutorials and best practices\nTechnical interview preparation content\nOpen source contribution experiences\n\n\nKeep building, keep learning! 🚀"
+    "text": "Focus on learning journey and technical insights\nInclude practical examples and code snippets\nUse clear, concise language\nAdd relevant categories and descriptions\n\n\n\n\n\nEnsure code is functional and tested\nInclude comments for clarity\nFollow Python/web development best practices"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#community-guidelines",
+    "href": "CONTRIBUTING.html#community-guidelines",
+    "title": "Contributing to TIP - Training in Progress",
+    "section": "",
+    "text": "Be respectful and constructive\nFocus on learning and knowledge sharing\nProvide specific, actionable feedback\nRespect that this is a personal learning blog"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#contact",
+    "href": "CONTRIBUTING.html#contact",
+    "title": "Contributing to TIP - Training in Progress",
+    "section": "",
+    "text": "For questions or collaboration ideas: - Email: mohdadilsiraju@gmail.com - GitHub: @adilsiraju - Portfolio: adilsiraju.vercel.app\n\nThank you for being part of this learning journey! 🚀"
   },
   {
     "objectID": "about.html",
@@ -399,88 +623,214 @@
     "text": "Certifications\n\nCS50x - Harvard University (2025)\nPython for Data Science - IBM (2022)\nComputational Thinking - University of Michigan (2022)\n\n\n\n“Continuous learning and practical application are the keys to mastering AI.”"
   },
   {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Contributing to TIP - Training in Progress",
+    "objectID": "CHANGELOG.html",
+    "href": "CHANGELOG.html",
+    "title": "Changelog",
     "section": "",
-    "text": "Thank you for your interest in contributing to my learning journey blog! While this is primarily a personal documentation project, I welcome feedback, suggestions, and discussions.\n\n\n\n\n\nIssues: Report bugs or suggest improvements via GitHub Issues\nDiscussions: Share thoughts on learning approaches or technical content\nCode Review: Suggest improvements to code examples or implementations\n\n\n\n\nIf you find any issues: 1. Check existing issues first 2. Provide clear description and steps to reproduce 3. Include browser/device information if relevant\n\n\n\n\nLearning resource recommendations\nTechnical topic suggestions\nProject ideas or improvements\n\n\n\n\n\n\n\n\nQuarto CLI\nBasic knowledge of Markdown and web development\n\n\n\n\ngit clone https://github.com/adilsiraju/Training-in-Progress.git\ncd Training-in-Progress\nquarto preview\n\n\n\n\nFork the repository\nCreate a feature branch (git checkout -b feature/improvement)\nMake your changes\nTest with quarto preview\nCommit with clear messages\nPush and create a Pull Request\n\n\n\n\n\n\n\n\nFocus on learning journey and technical insights\nInclude practical examples and code snippets\nUse clear, concise language\nAdd relevant categories and descriptions\n\n\n\n\n\nEnsure code is functional and tested\nInclude comments for clarity\nFollow Python/web development best practices\n\n\n\n\n\n\nBe respectful and constructive\nFocus on learning and knowledge sharing\nProvide specific, actionable feedback\nRespect that this is a personal learning blog\n\n\n\n\nFor questions or collaboration ideas: - Email: mohdadilsiraju@gmail.com - GitHub: @adilsiraju - Portfolio: adilsiraju.vercel.app\n\nThank you for being part of this learning journey! 🚀"
+    "text": "All notable changes to this project will be documented in this file.\n\n\n\n\n\nBlog Launch: Complete Quarto-based blog setup\nHomepage: Clean, minimal design with hero image\nAbout Page: Professional profile and background\nBlog Posts: Welcome post and FastAI learning progress\n\n\n\n\n\nPulse Theme: Bootstrap-based theme with custom SCSS\nHero Section: Responsive hero image with proper scaling\nMinimal CSS: Streamlined styling leveraging theme defaults\nMobile-First: Responsive design across all devices\n\n\n\n\n\nWelcome Post: Introduction to learning journey\nFastAI Progress: Computer vision fundamentals and classifier project\nAbout Section: Education, skills, experience, and projects\nProject Highlights: Architectural classifier and MLOps work\n\n\n\n\n\nQuarto Setup: Complete configuration with proper metadata\nGitHub Pages: Automated deployment and hosting\nSEO Optimization: Meta descriptions and structured content\nRepository Structure: Clean organization with documentation\n\n\n\n\n\nComprehensive README with setup instructions\nEnhanced .gitignore for Quarto projects\nMIT License for open source sharing\nContributing guidelines for community engagement\nPosts documentation and structure guidelines\n\n\n\n\n\n\n\n\n\nSearch functionality\nTags system for better content organization\nRSS feed optimization\nComment system integration\nDark/light theme toggle\nReading time estimates\nRelated posts suggestions\n\n\n\n\n\nFastAI course completion posts\nComputer vision project deep dives\nMLOps tutorials and best practices\nTechnical interview preparation content\nOpen source contribution experiences\n\n\nKeep building, keep learning! 🚀"
   },
   {
-    "objectID": "CONTRIBUTING.html#ways-to-contribute",
-    "href": "CONTRIBUTING.html#ways-to-contribute",
-    "title": "Contributing to TIP - Training in Progress",
+    "objectID": "CHANGELOG.html#section",
+    "href": "CHANGELOG.html#section",
+    "title": "Changelog",
     "section": "",
-    "text": "Issues: Report bugs or suggest improvements via GitHub Issues\nDiscussions: Share thoughts on learning approaches or technical content\nCode Review: Suggest improvements to code examples or implementations\n\n\n\n\nIf you find any issues: 1. Check existing issues first 2. Provide clear description and steps to reproduce 3. Include browser/device information if relevant\n\n\n\n\nLearning resource recommendations\nTechnical topic suggestions\nProject ideas or improvements"
+    "text": "Blog Launch: Complete Quarto-based blog setup\nHomepage: Clean, minimal design with hero image\nAbout Page: Professional profile and background\nBlog Posts: Welcome post and FastAI learning progress\n\n\n\n\n\nPulse Theme: Bootstrap-based theme with custom SCSS\nHero Section: Responsive hero image with proper scaling\nMinimal CSS: Streamlined styling leveraging theme defaults\nMobile-First: Responsive design across all devices\n\n\n\n\n\nWelcome Post: Introduction to learning journey\nFastAI Progress: Computer vision fundamentals and classifier project\nAbout Section: Education, skills, experience, and projects\nProject Highlights: Architectural classifier and MLOps work\n\n\n\n\n\nQuarto Setup: Complete configuration with proper metadata\nGitHub Pages: Automated deployment and hosting\nSEO Optimization: Meta descriptions and structured content\nRepository Structure: Clean organization with documentation\n\n\n\n\n\nComprehensive README with setup instructions\nEnhanced .gitignore for Quarto projects\nMIT License for open source sharing\nContributing guidelines for community engagement\nPosts documentation and structure guidelines"
   },
   {
-    "objectID": "CONTRIBUTING.html#technical-contributions",
-    "href": "CONTRIBUTING.html#technical-contributions",
-    "title": "Contributing to TIP - Training in Progress",
+    "objectID": "CHANGELOG.html#upcoming-features",
+    "href": "CHANGELOG.html#upcoming-features",
+    "title": "Changelog",
     "section": "",
-    "text": "Quarto CLI\nBasic knowledge of Markdown and web development\n\n\n\n\ngit clone https://github.com/adilsiraju/Training-in-Progress.git\ncd Training-in-Progress\nquarto preview\n\n\n\n\nFork the repository\nCreate a feature branch (git checkout -b feature/improvement)\nMake your changes\nTest with quarto preview\nCommit with clear messages\nPush and create a Pull Request"
+    "text": "Search functionality\nTags system for better content organization\nRSS feed optimization\nComment system integration\nDark/light theme toggle\nReading time estimates\nRelated posts suggestions\n\n\n\n\n\nFastAI course completion posts\nComputer vision project deep dives\nMLOps tutorials and best practices\nTechnical interview preparation content\nOpen source contribution experiences\n\n\nKeep building, keep learning! 🚀"
   },
   {
-    "objectID": "CONTRIBUTING.html#content-guidelines",
-    "href": "CONTRIBUTING.html#content-guidelines",
-    "title": "Contributing to TIP - Training in Progress",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Adil’s AI/ML Journey",
     "section": "",
-    "text": "Focus on learning journey and technical insights\nInclude practical examples and code snippets\nUse clear, concise language\nAdd relevant categories and descriptions\n\n\n\n\n\nEnsure code is functional and tested\nInclude comments for clarity\nFollow Python/web development best practices"
+    "text": "AI/ML Deep Learning Hero Image"
   },
   {
-    "objectID": "CONTRIBUTING.html#community-guidelines",
-    "href": "CONTRIBUTING.html#community-guidelines",
-    "title": "Contributing to TIP - Training in Progress",
-    "section": "",
-    "text": "Be respectful and constructive\nFocus on learning and knowledge sharing\nProvide specific, actionable feedback\nRespect that this is a personal learning blog"
+    "objectID": "index.html#what-i-share",
+    "href": "index.html#what-i-share",
+    "title": "Adil’s AI/ML Journey",
+    "section": "What I Share",
+    "text": "What I Share\n\n\n📚 Learning\nFastAI course progress and ML/DL discoveries\n🔬 Projects\nComputer vision models and MLOps implementations\n\n💡 Insights\nAlgorithm deep dives and optimization strategies\n🚀 Applications\nReal-world problem solving with AI"
   },
   {
-    "objectID": "CONTRIBUTING.html#contact",
-    "href": "CONTRIBUTING.html#contact",
-    "title": "Contributing to TIP - Training in Progress",
-    "section": "",
-    "text": "For questions or collaboration ideas: - Email: mohdadilsiraju@gmail.com - GitHub: @adilsiraju - Portfolio: adilsiraju.vercel.app\n\nThank you for being part of this learning journey! 🚀"
+    "objectID": "index.html#recent-achievements",
+    "href": "index.html#recent-achievements",
+    "title": "Adil’s AI/ML Journey",
+    "section": "Recent Achievements",
+    "text": "Recent Achievements\n\nArchitectural Style Classifier - 73% accuracy across 25 styles\nCI/CD for ML Models - 30% faster deployment cycles\n\nMLOps Expertise - Docker, Kubernetes, automation\n\n\n\n\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”"
   },
   {
-    "objectID": "posts/computer-vision/index.html",
-    "href": "posts/computer-vision/index.html",
-    "title": "Computer Vision",
-    "section": "",
-    "text": "Image Processing - OpenCV, PIL, preprocessing\nCNN Architectures - ResNet, VGG, Inception\nObject Detection - YOLO, R-CNN, SSD\nImage Segmentation - U-Net, Mask R-CNN\nTransfer Learning - Pre-trained models and fine-tuning\nProduction - Model optimization and deployment"
-  },
-  {
-    "objectID": "posts/computer-vision/index.html#topics",
-    "href": "posts/computer-vision/index.html#topics",
-    "title": "Computer Vision",
-    "section": "",
-    "text": "Image Processing - OpenCV, PIL, preprocessing\nCNN Architectures - ResNet, VGG, Inception\nObject Detection - YOLO, R-CNN, SSD\nImage Segmentation - U-Net, Mask R-CNN\nTransfer Learning - Pre-trained models and fine-tuning\nProduction - Model optimization and deployment"
-  },
-  {
-    "objectID": "posts/computer-vision/index.html#projects",
-    "href": "posts/computer-vision/index.html#projects",
-    "title": "Computer Vision",
-    "section": "Projects",
-    "text": "Projects\n\nArchitectural style classifier\nObject detection systems\nImage segmentation tasks\nReal-time vision applications"
-  },
-  {
-    "objectID": "posts/computer-vision/index.html#available-notebooks",
-    "href": "posts/computer-vision/index.html#available-notebooks",
-    "title": "Computer Vision",
-    "section": "Available Notebooks",
-    "text": "Available Notebooks\nAdd your computer vision notebooks and experiments here!"
+    "objectID": "index.html#latest-posts",
+    "href": "index.html#latest-posts",
+    "title": "Adil’s AI/ML Journey",
+    "section": "Latest Posts 📝",
+    "text": "Latest Posts 📝\n\n\nRecent Blog Posts - Follow my AI/ML learning journey, technical insights, and project updates.\n\n\nView All Posts →\n\n\n\n\n\n  \n    \n      \n        \n          FastAI Progress: Computer Vision Fundamentals\n        \n        Building my first image classifier with FastAI and exploring transfer learning concepts.\n        \n          Sep 18, 2025\n          \n            fastai\n            computer-vision\n          \n        \n      \n    \n  \n  \n  \n    \n      \n        \n          Welcome to My AI/ML Learning Journey\n        \n        Starting my documentation journey in AI and Machine Learning with goals and focus areas.\n        \n          Sep 15, 2025\n          \n            welcome\n            learning\n          \n        \n      \n    \n  \n\n\n\n\n\n\n\n\nReady to explore? Check out my learning chapters or dive into the complete blog! �"
   },
   {
     "objectID": "posts/index.html",
     "href": "posts/index.html",
     "title": "Learning Content & Posts",
     "section": "",
-    "text": "Welcome to my learning content hub! Here you’ll find all my Jupyter notebooks, tutorials, and learning materials organized by topic areas."
+    "text": "Welcome to my learning content hub! Here you’ll find all my Jupyter notebooks, tutorials, and learning materials organized by topic areas.\n\n\n\nPython Fundamentals\nCore Python concepts, modules, and best practices\n\n\nFastAI Course\nPractical deep learning with FastAI framework\n\n\n\nPandas\nData manipulation and analysis with Python’s powerful data library"
   },
   {
-    "objectID": "posts/index.html#browse-chapters",
-    "href": "posts/index.html#browse-chapters",
-    "title": "Learning Content & Posts",
-    "section": "Browse Chapters",
-    "text": "Browse Chapters\nUse the filters below to find specific topics or browse all available content:"
+    "objectID": "posts/pandas/Agg Data using Functions.html",
+    "href": "posts/pandas/Agg Data using Functions.html",
+    "title": "Advanced Data Aggregation with Pandas Functions",
+    "section": "",
+    "text": "Data aggregation is a fundamental operation in data analysis that allows you to summarize and analyze data by groups. This notebook covers:\nMastering these techniques will give you powerful tools for data summarization and analysis."
+  },
+  {
+    "objectID": "posts/pandas/Agg Data using Functions.html#setting-up-sample-data",
+    "href": "posts/pandas/Agg Data using Functions.html#setting-up-sample-data",
+    "title": "Advanced Data Aggregation with Pandas Functions",
+    "section": "1. Setting Up Sample Data",
+    "text": "1. Setting Up Sample Data\nLet’s create a sample dataset to demonstrate various aggregation techniques. We’ll work with categorical data and numerical values.\n\nimport pandas as pd\n\ndata = {\n    'Category': ['A', 'B', 'A', 'B', 'A'],\n    'Value': [10,15,20,25,30]\n}\n\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nCategory\nValue\n\n\n\n\n0\nA\n10\n\n\n1\nB\n15\n\n\n2\nA\n20\n\n\n3\nB\n25\n\n\n4\nA\n30"
+  },
+  {
+    "objectID": "posts/pandas/Agg Data using Functions.html#built-in-aggregation-functions",
+    "href": "posts/pandas/Agg Data using Functions.html#built-in-aggregation-functions",
+    "title": "Advanced Data Aggregation with Pandas Functions",
+    "section": "2. Built-in Aggregation Functions",
+    "text": "2. Built-in Aggregation Functions\nPandas provides many built-in aggregation functions that you can use with the agg() method. These are the most common summary statistics.\n\nSum Aggregation\nCalculate the total sum of values for each category:\n\ndf.groupby('Category').agg({'Value':'sum'})\n\n\n\n\n\n\n\n\nValue\n\n\nCategory\n\n\n\n\n\nA\n60\n\n\nB\n40\n\n\n\n\n\n\n\n\n\nMean Aggregation\nCalculate the average value for each category:\n\ndf.groupby('Category').agg({'Value':'mean'})\n\n\n\n\n\n\n\n\nValue\n\n\nCategory\n\n\n\n\n\nA\n20.0\n\n\nB\n20.0\n\n\n\n\n\n\n\n\n\nMaximum Value Aggregation\nFind the highest value in each category:\n\ndf.groupby('Category').agg({'Value':'max'})\n\n\n\n\n\n\n\n\nValue\n\n\nCategory\n\n\n\n\n\nA\n30\n\n\nB\n25"
+  },
+  {
+    "objectID": "posts/pandas/Agg Data using Functions.html#custom-aggregation-functions",
+    "href": "posts/pandas/Agg Data using Functions.html#custom-aggregation-functions",
+    "title": "Advanced Data Aggregation with Pandas Functions",
+    "section": "3. Custom Aggregation Functions",
+    "text": "3. Custom Aggregation Functions\nSometimes built-in functions aren’t enough. Pandas allows you to create custom aggregation functions using lambda expressions or named functions.\n\nLambda Functions for Custom Aggregation\nCreate a lambda function to calculate the range (max - min) for each category:\n\ncustom_agg = lambda x: x.max() - x.min() \n\n\ndf\n\n\n\n\n\n\n\n\nCategory\nValue\n\n\n\n\n0\nA\n10\n\n\n1\nB\n15\n\n\n2\nA\n20\n\n\n3\nB\n25\n\n\n4\nA\n30\n\n\n\n\n\n\n\n\ndf.groupby('Category').agg(custom_agg)\n# or\ndf.groupby('Category').agg({'Value': custom_agg})\n\n\n\n\n\n\n\n\nValue\n\n\nCategory\n\n\n\n\n\nA\n20\n\n\nB\n10"
+  },
+  {
+    "objectID": "posts/pandas/Agg Data using Functions.html#multiple-aggregations",
+    "href": "posts/pandas/Agg Data using Functions.html#multiple-aggregations",
+    "title": "Advanced Data Aggregation with Pandas Functions",
+    "section": "4. Multiple Aggregations",
+    "text": "4. Multiple Aggregations\nYou can apply multiple aggregation functions at once to get comprehensive statistics for each group.\n\nApplying Multiple Built-in Functions\nCalculate count, sum, min, max, and mean for each category:\n\ndf.groupby('Category')['Value'].agg(['count', 'sum', 'min', 'max','mean'])\n\n\n\n\n\n\n\n\ncount\nsum\nmin\nmax\nmean\n\n\nCategory\n\n\n\n\n\n\n\n\n\nA\n3\n60\n10\n30\n20.0\n\n\nB\n2\n40\n15\n25\n20.0"
+  },
+  {
+    "objectID": "posts/pandas/Agg Data using Functions.html#named-custom-functions",
+    "href": "posts/pandas/Agg Data using Functions.html#named-custom-functions",
+    "title": "Advanced Data Aggregation with Pandas Functions",
+    "section": "5. Named Custom Functions",
+    "text": "5. Named Custom Functions\nFor more complex logic, you can define named functions and use them in aggregations.\n\nCreating a Custom Mean Function\nDefine a function to calculate mean (demonstrating how custom functions work):\n\ndef custom_mean(values):\n    return sum(values) / len(values)\n\ndf.groupby('Category')['Value'].agg(custom_mean)\n\nCategory\nA    20.0\nB    20.0\nName: Value, dtype: float64"
+  },
+  {
+    "objectID": "posts/pandas/Agg Data using Functions.html#summary",
+    "href": "posts/pandas/Agg Data using Functions.html#summary",
+    "title": "Advanced Data Aggregation with Pandas Functions",
+    "section": "Summary",
+    "text": "Summary\nData aggregation is a powerful tool for summarizing and analyzing grouped data. In this notebook, you learned:\n\n🔧 Built-in Functions\n\nsum, mean, max: Standard statistical aggregations\nDictionary syntax: agg({'column': 'function'})\nMultiple functions: agg(['func1', 'func2'])\n\n\n\n🎯 Custom Functions\n\nLambda functions: Quick, inline custom logic\nNamed functions: Complex logic with reusable functions\nFlexible application: Apply to specific columns or entire groups\n\n\n\n💡 Key Concepts\n\nDictionary Aggregation: Specify different functions for different columns\nList Aggregation: Apply multiple functions to the same column\nCustom Logic: Create domain-specific aggregations\n\n\n\n🚀 Best Practices\n\nUse built-in functions when possible (more efficient)\nLambda functions for simple custom logic\nNamed functions for complex, reusable operations\nChoose appropriate aggregations based on your data and analysis goals\n\n\n\n📊 Next Steps\n\nExplore groupby with multiple columns\nLearn about transformation and filtering operations\nPractice with real datasets to create meaningful aggregations\n\nMastering aggregation functions will significantly enhance your data analysis capabilities! 🎯📈"
+  },
+  {
+    "objectID": "posts/pandas/Data Cleaning.html",
+    "href": "posts/pandas/Data Cleaning.html",
+    "title": "Data Cleaning with Pandas",
+    "section": "",
+    "text": "Welcome to this tutorial on data cleaning using Pandas! Data cleaning is a crucial step in any data analysis workflow. In this notebook, we’ll cover two essential techniques: - Handling duplicates: Removing or managing repeated rows. - Detecting and removing outliers: Using statistical methods like IQR (Interquartile Range).\nBy the end, you’ll have practical skills to preprocess messy datasets effectively."
+  },
+  {
+    "objectID": "posts/pandas/Data Cleaning.html#setting-up-and-creating-sample-data",
+    "href": "posts/pandas/Data Cleaning.html#setting-up-and-creating-sample-data",
+    "title": "Data Cleaning with Pandas",
+    "section": "1. Setting Up and Creating Sample Data",
+    "text": "1. Setting Up and Creating Sample Data\nFirst, let’s import Pandas and create a sample DataFrame to work with.\n\nimport pandas as pd\n\ndata1 = {\n    'A': [1,2,2,3,3],\n    'B': [4,5,5,6,7]\n}\n\ndf1 = pd.DataFrame(data1)\ndf1\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\n1\n4\n\n\n1\n2\n5\n\n\n2\n2\n5\n\n\n3\n3\n6\n\n\n4\n3\n7"
+  },
+  {
+    "objectID": "posts/pandas/Data Cleaning.html#dealing-with-duplicates",
+    "href": "posts/pandas/Data Cleaning.html#dealing-with-duplicates",
+    "title": "Data Cleaning with Pandas",
+    "section": "2. Dealing with Duplicates",
+    "text": "2. Dealing with Duplicates\nDuplicates can skew your analysis. Pandas provides easy methods to detect and remove them.\n\nChecking for Duplicates\n\ndf1.duplicated().sum()\n\nnp.int64(1)\n\n\n\ndf1.drop_duplicates()\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\n1\n4\n\n\n1\n2\n5\n\n\n3\n3\n6\n\n\n4\n3\n7\n\n\n\n\n\n\n\n\ndf1.drop_duplicates(subset=['A'])\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\n1\n4\n\n\n1\n2\n5\n\n\n3\n3\n6"
+  },
+  {
+    "objectID": "posts/pandas/Data Cleaning.html#handling-outliers",
+    "href": "posts/pandas/Data Cleaning.html#handling-outliers",
+    "title": "Data Cleaning with Pandas",
+    "section": "3. Handling Outliers",
+    "text": "3. Handling Outliers\nOutliers are extreme values that can distort statistical analysis. We’ll use the IQR method to detect and filter them.\n\nCreating Sample Data with Outliers\n\n\ndata2 = {\n    'A': [1,2,2,3,11, 11],\n    'B': [1,5,5,6,12, 25]\n}\n\ndf2 = pd.DataFrame(data2)\ndf2\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\n1\n1\n\n\n1\n2\n5\n\n\n2\n2\n5\n\n\n3\n3\n6\n\n\n4\n11\n12\n\n\n5\n11\n25\n\n\n\n\n\n\n\n\ndf2.describe()\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\ncount\n6.000000\n6.000000\n\n\nmean\n5.000000\n9.000000\n\n\nstd\n4.690416\n8.602325\n\n\nmin\n1.000000\n1.000000\n\n\n25%\n2.000000\n5.000000\n\n\n50%\n2.500000\n5.500000\n\n\n75%\n9.000000\n10.500000\n\n\nmax\n11.000000\n25.000000\n\n\n\n\n\n\n\n\n\nCalculating IQR and Bounds\n\nq_low = df2['B'].quantile(0.25)\nq_high = df2['B'].quantile(0.75)\n\niqr = q_high - q_low\n\n\nl_bound = q_low - 1.5 * iqr\nu_bound = q_high + 1.5 * iqr  # Fixed: upper bound should be plus, not minus\n\nprint(f\"Lower bound: {l_bound}\")\nprint(f\"Upper bound: {u_bound}\")\n\n\ndf2\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\n1\n1\n\n\n1\n2\n5\n\n\n2\n2\n5\n\n\n3\n3\n6\n\n\n4\n11\n12\n\n\n5\n11\n25\n\n\n\n\n\n\n\n\n\nFiltering Out Outliers\n\ndf_filtered = df2[(df2['B']&gt;l_bound) & (df2['B']&lt;u_bound)]\ndf_filtered\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\n1\n1\n\n\n1\n2\n5\n\n\n2\n2\n5\n\n\n3\n3\n6\n\n\n4\n11\n12"
+  },
+  {
+    "objectID": "posts/pandas/Data Viz with panda tools.html",
+    "href": "posts/pandas/Data Viz with panda tools.html",
+    "title": "Data Viz with pandas tools",
+    "section": "",
+    "text": "This notebook shows simple, reusable examples of creating line, bar, and scatter charts directly from pandas using matplotlib as the backend. Each section includes a short explanation and code snippet.\n\n# Import libraries and create sample DataFrame\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\ndata = {\n    'Year': [2015,2016,2017,2018,2019],\n    'Revenue': [500,700,650,800,950]\n}\n\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nYear\nRevenue\n\n\n\n\n0\n2015\n500\n\n\n1\n2016\n700\n\n\n2\n2017\n650\n\n\n3\n2018\n800\n\n\n4\n2019\n950\n\n\n\n\n\n\n\n\ndf.plot(x='Year', y='Revenue', kind='line', marker='o', color='black', legend=False)\nplt.title('Revenue over years')\nplt.xlabel('Year')\nplt.ylabel('Revenue')\nplt.grid()\nplt.show()\n\n\n\n\n\n\n\n\n\n\nLine charts are useful for showing trends over time. Use pandas’ DataFrame.plot(kind='line') for quick exploration.\n\n# Bar chart example data\ndata = {\n    'City': ['New York', 'London', 'Tokyo', 'Sydney', 'Paris'],\n    'Population': [850000, 890000, 900000, 520000, 1100000]\n}\n\ndf_cities = pd.DataFrame(data)\ndf_cities\n\n\n\n\n\n\n\n\nCity\nPopulation\n\n\n\n\n0\nNew York\n850000\n\n\n1\nLondon\n890000\n\n\n2\nTokyo\n900000\n\n\n3\nSydney\n520000\n\n\n4\nParis\n1100000\n\n\n\n\n\n\n\n\n# Bar chart (sorted by population)\ndf_cities.sort_values(by='Population', ascending=False).plot(x='City', y='Population', kind='bar', color='tab:red', legend=False)\nplt.title('Population in Major Cities')\nplt.xlabel('City')\nplt.ylabel('Population')\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\nScatter plots are useful to visualize relationships between two numeric variables. Use plt.scatter or DataFrame.plot(kind='scatter').\n\n# Scatter data\ndf_scatter = pd.DataFrame({'X': [1, 2, 3, 4, 5], 'Y': [2, 3, 4, 8, 10]})\ndf_scatter\n\n\n\n\n\n\n\n\nX\nY\n\n\n\n\n0\n1\n2\n\n\n1\n2\n3\n\n\n2\n3\n4\n\n\n3\n4\n8\n\n\n4\n5\n10\n\n\n\n\n\n\n\n\n# Scatter plot\nplt.scatter(df_scatter['X'], df_scatter['Y'], color='g')\nplt.title('Scatter: X vs Y')\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.grid(alpha=0.3)\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n\nUse descriptive titles and axis labels.\nPrefer plt.tight_layout() after plotting to avoid overlap in labels.\nFor large datasets, consider sampling or using alpha blending (alpha) to avoid over-plotting.\nUse color palettes from matplotlib or seaborn for consistent visuals.\n\n\n\n\nThis notebook provided quick examples of line, bar, and scatter charts using pandas + matplotlib. Use these snippets as a starting point for exploratory data analysis and adapt styling as needed."
+  },
+  {
+    "objectID": "posts/pandas/Data Viz with panda tools.html#line-chart-revenue-over-years",
+    "href": "posts/pandas/Data Viz with panda tools.html#line-chart-revenue-over-years",
+    "title": "Data Viz with pandas tools",
+    "section": "",
+    "text": "Line charts are useful for showing trends over time. Use pandas’ DataFrame.plot(kind='line') for quick exploration.\n\n# Bar chart example data\ndata = {\n    'City': ['New York', 'London', 'Tokyo', 'Sydney', 'Paris'],\n    'Population': [850000, 890000, 900000, 520000, 1100000]\n}\n\ndf_cities = pd.DataFrame(data)\ndf_cities\n\n\n\n\n\n\n\n\nCity\nPopulation\n\n\n\n\n0\nNew York\n850000\n\n\n1\nLondon\n890000\n\n\n2\nTokyo\n900000\n\n\n3\nSydney\n520000\n\n\n4\nParis\n1100000\n\n\n\n\n\n\n\n\n# Bar chart (sorted by population)\ndf_cities.sort_values(by='Population', ascending=False).plot(x='City', y='Population', kind='bar', color='tab:red', legend=False)\nplt.title('Population in Major Cities')\nplt.xlabel('City')\nplt.ylabel('Population')\nplt.tight_layout()\nplt.show()"
+  },
+  {
+    "objectID": "posts/pandas/Data Viz with panda tools.html#scatter-plot-relationship-between-x-and-y",
+    "href": "posts/pandas/Data Viz with panda tools.html#scatter-plot-relationship-between-x-and-y",
+    "title": "Data Viz with pandas tools",
+    "section": "",
+    "text": "Scatter plots are useful to visualize relationships between two numeric variables. Use plt.scatter or DataFrame.plot(kind='scatter').\n\n# Scatter data\ndf_scatter = pd.DataFrame({'X': [1, 2, 3, 4, 5], 'Y': [2, 3, 4, 8, 10]})\ndf_scatter\n\n\n\n\n\n\n\n\nX\nY\n\n\n\n\n0\n1\n2\n\n\n1\n2\n3\n\n\n2\n3\n4\n\n\n3\n4\n8\n\n\n4\n5\n10\n\n\n\n\n\n\n\n\n# Scatter plot\nplt.scatter(df_scatter['X'], df_scatter['Y'], color='g')\nplt.title('Scatter: X vs Y')\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.grid(alpha=0.3)\nplt.show()"
+  },
+  {
+    "objectID": "posts/pandas/Data Viz with panda tools.html#best-practices",
+    "href": "posts/pandas/Data Viz with panda tools.html#best-practices",
+    "title": "Data Viz with pandas tools",
+    "section": "",
+    "text": "Use descriptive titles and axis labels.\nPrefer plt.tight_layout() after plotting to avoid overlap in labels.\nFor large datasets, consider sampling or using alpha blending (alpha) to avoid over-plotting.\nUse color palettes from matplotlib or seaborn for consistent visuals."
+  },
+  {
+    "objectID": "posts/pandas/Data Viz with panda tools.html#summary",
+    "href": "posts/pandas/Data Viz with panda tools.html#summary",
+    "title": "Data Viz with pandas tools",
+    "section": "",
+    "text": "This notebook provided quick examples of line, bar, and scatter charts using pandas + matplotlib. Use these snippets as a starting point for exploratory data analysis and adapt styling as needed."
+  },
+  {
+    "objectID": "posts/pandas/Handling Categorical Datas.html",
+    "href": "posts/pandas/Handling Categorical Datas.html",
+    "title": "Handling Categorical Data with Pandas",
+    "section": "",
+    "text": "This notebook covers essential techniques for working with categorical data in Pandas, including: - Encoding Methods: Converting categorical variables to numerical formats - Grouping Operations: Analyzing category distributions and aggregations - Data Transformation: Reshaping data with melt and pivot operations\nCategorical data transformation is crucial for machine learning models that require numerical inputs."
+  },
+  {
+    "objectID": "posts/pandas/Handling Categorical Datas.html#setting-up-sample-data",
+    "href": "posts/pandas/Handling Categorical Datas.html#setting-up-sample-data",
+    "title": "Handling Categorical Data with Pandas",
+    "section": "1. Setting Up Sample Data",
+    "text": "1. Setting Up Sample Data\nLet’s start by creating a sample DataFrame with categorical data to work with.\n\nimport pandas as pd\n\ndata = {\n    'Category': ['A','B','C','C','B','A']\n}\n\ndf = pd.DataFrame(data)\n\n\ndf\n\n\n\n\n\n\n\n\nCategory\n\n\n\n\n0\nA\n\n\n1\nB\n\n\n2\nC\n\n\n3\nC\n\n\n4\nB\n\n\n5\nA"
+  },
+  {
+    "objectID": "posts/pandas/Handling Categorical Datas.html#encoding-categorical-data",
+    "href": "posts/pandas/Handling Categorical Datas.html#encoding-categorical-data",
+    "title": "Handling Categorical Data with Pandas",
+    "section": "2. Encoding Categorical Data",
+    "text": "2. Encoding Categorical Data\nMachine learning algorithms typically require numerical inputs. Categorical encoding converts text categories into numbers. Here are the most common techniques:\n\nOne-Hot Encoding\nOne-hot encoding creates binary columns for each category. It’s ideal for nominal (unordered) categories.\nPros: No ordinal assumptions, works well with most algorithms Cons: Can create many columns (curse of dimensionality)\n\npd.get_dummies(df['Category'])[['A','B']]\n\n\n\n\n\n\n\n\nA\nB\n\n\n\n\n0\nTrue\nFalse\n\n\n1\nFalse\nTrue\n\n\n2\nFalse\nFalse\n\n\n3\nFalse\nFalse\n\n\n4\nFalse\nTrue\n\n\n5\nTrue\nFalse\n\n\n\n\n\n\n\n\n\nLabel Encoding\nLabel encoding assigns integer values to categories. Use this when categories have a natural order (ordinal data).\nPros: Memory efficient, preserves single column Cons: Implies ordinal relationship even when none exists\n\nfrom sklearn.preprocessing import LabelEncoder\nlabel_encoder = LabelEncoder()\n\ndf['Category_LabenEncoded'] = label_encoder.fit_transform(df['Category'])\n\ndf\n\n\n\n\n\n\n\n\nCategory\nCategory_LabenEncoded\n\n\n\n\n0\nA\n0\n\n\n1\nB\n1\n\n\n2\nC\n2\n\n\n3\nC\n2\n\n\n4\nB\n1\n\n\n5\nA\n0\n\n\n\n\n\n\n\n\nimport pandas as pd\n\ndata = {\n    'Category': ['A','B','C','C','B','A']\n}\n\ndf = pd.DataFrame(data)\n\ndf\n\n\n\n\n\n\n\n\nCategory\n\n\n\n\n0\nA\n\n\n1\nB\n\n\n2\nC\n\n\n3\nC\n\n\n4\nB\n\n\n5\nA"
+  },
+  {
+    "objectID": "posts/pandas/Handling Categorical Datas.html#analyzing-categorical-data-with-grouping",
+    "href": "posts/pandas/Handling Categorical Datas.html#analyzing-categorical-data-with-grouping",
+    "title": "Handling Categorical Data with Pandas",
+    "section": "3. Analyzing Categorical Data with Grouping",
+    "text": "3. Analyzing Categorical Data with Grouping\nGrouping operations help you understand the distribution and patterns in your categorical data. This is essential for exploratory data analysis.\n\nCounting Category Frequencies\nUse groupby().size() or groupby().count() to see how many times each category appears.\n\ndf.groupby('Category').size()\n\nCategory\nA    2\nB    2\nC    2\ndtype: int64\n\n\n\ndf.groupby('Category').agg({'Category':'count'})\n\n\n\n\n\n\n\n\nCategory\n\n\nCategory\n\n\n\n\n\nA\n2\n\n\nB\n2\n\n\nC\n2"
+  },
+  {
+    "objectID": "posts/pandas/Handling Categorical Datas.html#data-transformation-reshaping-with-melt-and-pivot",
+    "href": "posts/pandas/Handling Categorical Datas.html#data-transformation-reshaping-with-melt-and-pivot",
+    "title": "Handling Categorical Data with Pandas",
+    "section": "4. Data Transformation: Reshaping with Melt and Pivot",
+    "text": "4. Data Transformation: Reshaping with Melt and Pivot\nData reshaping is crucial for transforming your data between “wide” and “long” formats. This is particularly useful when working with categorical data across multiple variables.\n\nWide to Long Format (melt)\npd.melt() unpivots a DataFrame from wide format to long format. This is useful for: - Converting multiple categorical columns into a single column - Preparing data for visualization libraries - Making data more database-friendly\n\n# Reshaping Data\ndata = {\n    'Name': ['John', 'Emily', 'Kate'],\n    'Math': [90, 85,88],\n    'Science': [92, 80, 95]\n}\n\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nName\nMath\nScience\n\n\n\n\n0\nJohn\n90\n92\n\n\n1\nEmily\n85\n80\n\n\n2\nKate\n88\n95\n\n\n\n\n\n\n\n\ndf_melted = pd.melt(df, id_vars='Name', var_name='Subject', value_name='Score')\ndf_melted\n\n\n\n\n\n\n\n\nName\nSubject\nScore\n\n\n\n\n0\nJohn\nMath\n90\n\n\n1\nEmily\nMath\n85\n\n\n2\nKate\nMath\n88\n\n\n3\nJohn\nScience\n92\n\n\n4\nEmily\nScience\n80\n\n\n5\nKate\nScience\n95\n\n\n\n\n\n\n\n\n\nLong to Wide Format (pivot)\ndf.pivot() does the opposite of melt - it converts long format back to wide format. This is useful for: - Creating summary tables - Preparing data for certain types of analysis - Making data more human-readable\n\ndf_melted.pivot(index='Name', columns='Subject', values='Score')\n\n\n\n\n\n\n\nSubject\nMath\nScience\n\n\nName\n\n\n\n\n\n\nEmily\n85\n80\n\n\nJohn\n90\n92\n\n\nKate\n88\n95"
+  },
+  {
+    "objectID": "posts/pandas/Handling Categorical Datas.html#summary",
+    "href": "posts/pandas/Handling Categorical Datas.html#summary",
+    "title": "Handling Categorical Data with Pandas",
+    "section": "Summary",
+    "text": "Summary\nIn this notebook, you learned essential data transformation techniques for categorical data:\n\nEncoding: Convert text categories to numbers\n\nOne-hot encoding for nominal data\nLabel encoding for ordinal data\n\nGrouping: Analyze category distributions\n\nCount frequencies with groupby().size()\nAggregate data by categories\n\nReshaping: Transform data structure\n\nmelt(): Wide to long format\npivot(): Long to wide format\n\n\nThese techniques form the foundation of data preprocessing for machine learning and analysis workflows. Choose the right method based on your data characteristics and modeling requirements!\nNext Steps: Practice with real datasets and explore advanced encoding techniques like target encoding or frequency encoding."
   },
   {
     "objectID": "posts/pandas/index.html",
@@ -518,11 +868,158 @@
     "text": "You will learn how to: - Import essential libraries (Pandas, Seaborn, Matplotlib, NumPy) - Create DataFrames from dictionaries, lists, and NumPy arrays - View and manipulate DataFrames - Export DataFrames to CSV and Excel files\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\ndata = {'Name': ['Adil', 'Aman', 'Ziya', 'Zahra'],\n        'Age': [23,19,15,9],\n        'City': ['Matannur','Vellore', 'Tly', 'Knr' ]\n        }\ndata\n\n{'Name': ['Adil', 'Aman', 'Ziya', 'Zahra'],\n 'Age': [23, 19, 15, 9],\n 'City': ['Matannur', 'Vellore', 'Tly', 'Knr']}\n\n\n\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndata_list = [ \n    ['Adil', 23, 'Mattanur'],\n    ['Aman', 19, 'Vellore'],\n    ['Siraj', 55, 'Tly'],\n    ['Faritha', 40, 'Chokli']\n    ]\n\ndata_list\n\n[['Adil', 23, 'Mattanur'],\n ['Aman', 19, 'Vellore'],\n ['Siraj', 55, 'Tly'],\n ['Faritha', 40, 'Chokli']]\n\n\n\ndf_list = pd.DataFrame(data_list, columns=['Name', 'Age', 'City'])\ndf_list\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMattanur\n\n\n1\nAman\n19\nVellore\n\n\n2\nSiraj\n55\nTly\n\n\n3\nFaritha\n40\nChokli\n\n\n\n\n\n\n\n\nimport numpy as np\n\n\ndata_array = np.array([[1,2,3],\n                       [4,5,6],\n                       [7,8,9]])\n\ndata_array\n\narray([[1, 2, 3],\n       [4, 5, 6],\n       [7, 8, 9]])\n\n\n\ndf_array = pd.DataFrame(data_array, columns=['A', 'B', 'C'])\ndf_array\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n2\n3\n\n\n1\n4\n5\n6\n\n\n2\n7\n8\n9\n\n\n\n\n\n\n\n\ndf.to_csv('example.csv', index=False)\n\n\ndf.to_excel('example.xlsx', index=False)"
   },
   {
-    "objectID": "posts/pandas/learn pandas Series.html",
-    "href": "posts/pandas/learn pandas Series.html",
-    "title": "Pandas: Intro to Series",
+    "objectID": "posts/pandas/loadsata.html",
+    "href": "posts/pandas/loadsata.html",
+    "title": "Pandas: Data Loading",
     "section": "",
-    "text": "You will learn how to: - Create a Pandas Series - Access elements and slices - Perform arithmetic operations - View Series properties and methods - Sort and describe Series data\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\nmy_series = pd.Series([10,20,30,40,50], index=['A', 'B', 'C', 'D', 'E'])\nmy_series\n\nA    10\nB    20\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\ntype(my_series)\n\npandas.core.series.Series\n\n\n\nmy_series['C':'E']\n\nC    30\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series + 15\n\nA    25\nB    35\nC    45\nD    55\nE    65\ndtype: int64\n\n\n\nmy_series * 25\n\nA     250\nB     500\nC     750\nD    1000\nE    1250\ndtype: int64\n\n\n\nmy_series.dtype\n\ndtype('int64')\n\n\n\nmy_series.size\n\n5\n\n\n\nmy_series.shape\n\n(5,)\n\n\n\nmy_series.head(3)\n\nA    10\nB    20\nC    30\ndtype: int64\n\n\n\nmy_series.tail(2)\n\nD    40\nE    50\ndtype: int64\n\n\n\nmy_series.describe()\n\ncount     5.000000\nmean     30.000000\nstd      15.811388\nmin      10.000000\n25%      20.000000\n50%      30.000000\n75%      40.000000\nmax      50.000000\ndtype: float64\n\n\n\nmy_series.sort_values(ascending=False)\n\nE    50\nD    40\nC    30\nB    20\nA    10\ndtype: int64"
+    "text": "Pandas is a powerful Python library for data analysis and manipulation. It provides easy-to-use data structures and functions for working with structured data.\nIn this notebook, you will learn how to:\n\nImport the Pandas library\nLoad data from a CSV file\nLoad data from an Excel file\nView the loaded data\n\n\nimport pandas as pd\n\n\ndf_csv = pd.read_csv('example.csv')\ndf_csv\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr\n\n\n\n\n\n\n\n\ndf_xl = pd.read_excel('example.xlsx')\ndf_xl\n\n\n\n\n\n\n\n\nName\nAge\nCity\n\n\n\n\n0\nAdil\n23\nMatannur\n\n\n1\nAman\n19\nVellore\n\n\n2\nZiya\n15\nTly\n\n\n3\nZahra\n9\nKnr"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "",
+    "text": "Import Pandas and NumPy, which are essential for data manipulation and handling missing values.\n\nimport pandas as pd\nimport numpy as np"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#import-libraries",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#import-libraries",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "",
+    "text": "Import Pandas and NumPy, which are essential for data manipulation and handling missing values.\n\nimport pandas as pd\nimport numpy as np"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#what-is-np.nan",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#what-is-np.nan",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "What is np.nan?",
+    "text": "What is np.nan?\nnp.nan represents a missing value (“Not a Number”) in NumPy and Pandas.\n\nnp.nan\n\nnan"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#create-dataframe-with-missing-values",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#create-dataframe-with-missing-values",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "Create DataFrame with Missing Values",
+    "text": "Create DataFrame with Missing Values\nThis section creates a DataFrame containing missing values using np.nan.\n\ndata = {'A': [1,2,np.nan,4,5],\n        'B': [6,np.nan,7,8,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n1\n2.0\nNaN\n12.0\n\n\n2\nNaN\n7.0\n13.0\n\n\n3\n4.0\n8.0\nNaN\n\n\n4\n5.0\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#detect-missing-values",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#detect-missing-values",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "Detect Missing Values",
+    "text": "Detect Missing Values\nUse isnull() to check which values are missing in the DataFrame.\n\ndf.isnull()\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\nFalse\nFalse\nFalse\n\n\n1\nFalse\nTrue\nFalse\n\n\n2\nTrue\nFalse\nFalse\n\n\n3\nFalse\nFalse\nTrue\n\n\n4\nFalse\nFalse\nFalse"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#count-missing-values",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#count-missing-values",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "Count Missing Values",
+    "text": "Count Missing Values\nUse isnull().sum() to count the number of missing values in each column.\n\ndf.isnull().sum()\n\nA    1\nB    1\nC    1\ndtype: int64"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#drop-rows-with-missing-values",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#drop-rows-with-missing-values",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "Drop Rows with Missing Values",
+    "text": "Drop Rows with Missing Values\nUse dropna() to remove rows containing missing values from the DataFrame.\n\n# Drops rows with na values\ndf.dropna(inplace=True)\n# or\ndf = df.dropna()"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#view-dataframe-after-dropping-rows",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#view-dataframe-after-dropping-rows",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "View DataFrame After Dropping Rows",
+    "text": "View DataFrame After Dropping Rows\nDisplay the DataFrame after removing rows with missing values.\n\ndf\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n4\n5.0\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#reset-index-after-dropping-rows",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#reset-index-after-dropping-rows",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "Reset Index After Dropping Rows",
+    "text": "Reset Index After Dropping Rows\nUse reset_index(drop=True) to reset the DataFrame index after dropping rows.\n\ndf.reset_index(drop=True)\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1.0\n6.0\n11.0\n\n\n1\n5.0\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#create-another-dataframe-with-missing-values",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#create-another-dataframe-with-missing-values",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "Create Another DataFrame with Missing Values",
+    "text": "Create Another DataFrame with Missing Values\nThis section creates a new DataFrame with missing values for further operations.\n\ndata1 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,8,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf1 = pd.DataFrame(data1)\ndf1\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n8.0\nNaN\n\n\n4\n5\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#drop-columns-with-missing-values",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#drop-columns-with-missing-values",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "Drop Columns with Missing Values",
+    "text": "Drop Columns with Missing Values\nUse dropna(axis=1) to remove columns containing missing values from the DataFrame.\n\ndf1 = df1.dropna(axis=1)\ndf1\n\n\n\n\n\n\n\n\nA\n\n\n\n\n0\n1\n\n\n1\n2\n\n\n2\n3\n\n\n3\n4\n\n\n4\n5"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#create-dataframe-for-threshold-example",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#create-dataframe-for-threshold-example",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "Create DataFrame for Threshold Example",
+    "text": "Create DataFrame for Threshold Example\nThis section creates a DataFrame to demonstrate dropping rows based on a threshold of non-missing values.\n\ndata2 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,np.nan,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf2 = pd.DataFrame(data2)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\nNaN\nNaN\n\n\n4\n5\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#drop-rows-based-on-threshold",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#drop-rows-based-on-threshold",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "Drop Rows Based on Threshold",
+    "text": "Drop Rows Based on Threshold\nUse dropna(thresh=2) to keep only rows with at least 2 non-missing values.\n\ndf2 = df2.dropna(thresh=2)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n4\n5\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#fill-missing-values-with-zero",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#fill-missing-values-with-zero",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "Fill Missing Values with Zero",
+    "text": "Fill Missing Values with Zero\nUse fillna(0) to replace all missing values in the DataFrame with zero.\n\ndf2 = df2.fillna(0)\ndf2\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n0.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n4\n5\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#create-dataframe-for-fill-methods",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#create-dataframe-for-fill-methods",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "Create DataFrame for Fill Methods",
+    "text": "Create DataFrame for Fill Methods\nThis section creates a DataFrame to demonstrate different methods for filling missing values.\n\ndata3 = {'A': [1,2,3,4,5],\n        'B': [6,np.nan,7,np.nan,9],\n        'C': [11,12,13,np.nan,15]\n        }\ndf3 = pd.DataFrame(data2)\ndf3\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\nNaN\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\nNaN\nNaN\n\n\n4\n5\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#fill-missing-values-with-mean-or-median",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#fill-missing-values-with-mean-or-median",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "Fill Missing Values with Mean or Median",
+    "text": "Fill Missing Values with Mean or Median\nUse fillna(df.mean()) or fillna(df.median()) to replace missing values with the mean or median of each column.\n\ndf3.fillna(df3.mean())\ndf3.fillna(df3.median())\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n7.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n7.0\n12.5\n\n\n4\n5\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/Pandas-Dealing with missing Datas.html#fill-missing-values-with-forwardbackward-fill",
+    "href": "posts/pandas/Pandas-Dealing with missing Datas.html#fill-missing-values-with-forwardbackward-fill",
+    "title": "Pandas: Dealing with missing Datas",
+    "section": "Fill Missing Values with Forward/Backward Fill",
+    "text": "Fill Missing Values with Forward/Backward Fill\nUse fillna(method='ffill') for forward fill and fillna(method='bfill') for backward fill to propagate non-missing values.\n\ndf3.fillna(method='ffill')\ndf3.fillna(method='bfill')\n\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_7712\\3709391602.py:1: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df3.fillna(method='ffill')\nC:\\Users\\adila\\AppData\\Local\\Temp\\ipykernel_7712\\3709391602.py:2: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df3.fillna(method='bfill')\n\n\n\n\n\n\n\n\n\nA\nB\nC\n\n\n\n\n0\n1\n6.0\n11.0\n\n\n1\n2\n7.0\n12.0\n\n\n2\n3\n7.0\n13.0\n\n\n3\n4\n9.0\n15.0\n\n\n4\n5\n9.0\n15.0"
+  },
+  {
+    "objectID": "posts/pandas/Time Series Visualisation.html",
+    "href": "posts/pandas/Time Series Visualisation.html",
+    "title": "Time Series Visualization with Pandas",
+    "section": "",
+    "text": "Time series data visualization is crucial for understanding trends, patterns, and changes over time. This notebook covers:\nEffective visualization helps you communicate temporal patterns and insights from your data."
+  },
+  {
+    "objectID": "posts/pandas/Time Series Visualisation.html#creating-time-series-data",
+    "href": "posts/pandas/Time Series Visualisation.html#creating-time-series-data",
+    "title": "Time Series Visualization with Pandas",
+    "section": "1. Creating Time Series Data",
+    "text": "1. Creating Time Series Data\nLet’s start by creating time series data using Pandas’ powerful datetime capabilities.\n\nCreating a Time Series with DateTime Index\nUse pd.date_range() to create a sequence of dates, then create a Series with datetime index:\n\nimport pandas as pd\n\ntime_index = pd.date_range('2025-01-01', periods=5, freq='D')\nts_data = pd.Series([100,120,80,110,90], index=time_index)\n\nts_data\n\n2025-01-01    100\n2025-01-02    120\n2025-01-03     80\n2025-01-04    110\n2025-01-05     90\nFreq: D, dtype: int64\n\n\n\n\nConverting Series to DataFrame\nYou can easily convert a time series Series to a DataFrame for additional operations:\n\ndf = pd.DataFrame(ts_data)\ndf\n\n\n\n\n\n\n\n\n0\n\n\n\n\n2025-01-01\n100\n\n\n2025-01-02\n120\n\n\n2025-01-03\n80\n\n\n2025-01-04\n110\n\n\n2025-01-05\n90"
+  },
+  {
+    "objectID": "posts/pandas/Time Series Visualisation.html#basic-time-series-visualization",
+    "href": "posts/pandas/Time Series Visualisation.html#basic-time-series-visualization",
+    "title": "Time Series Visualization with Pandas",
+    "section": "2. Basic Time Series Visualization",
+    "text": "2. Basic Time Series Visualization\nPandas integrates seamlessly with Matplotlib for creating time series plots. The .plot() method provides an easy interface for visualization.\n\nLine Plot with Customization\nCreate a line plot with markers, custom colors, and styling:\n\nimport matplotlib.pyplot as plt\n\nts_data.plot(kind='line', marker='o', color='b', linestyle='--')\nplt.xlabel('Date')\nplt.ylabel('Value')\n\nplt.grid()\nplt.show()"
+  },
+  {
+    "objectID": "posts/pandas/Time Series Visualisation.html#summary",
+    "href": "posts/pandas/Time Series Visualisation.html#summary",
+    "title": "Time Series Visualization with Pandas",
+    "section": "Summary",
+    "text": "Summary\nTime series visualization is essential for understanding temporal patterns in your data. In this notebook, you learned:\n\n📅 Time Series Creation\n\npd.date_range(): Create sequences of dates\nDatetime indexing: Set dates as DataFrame/Series index\nSeries to DataFrame conversion\n\n\n\n📊 Visualization Techniques\n\nLine plots: Basic time series visualization with .plot()\nCustomization: Colors, markers, line styles, and labels\nMatplotlib integration: Pandas plotting with Matplotlib backend\n\n\n\n🎨 Plot Customization Options\n\nkind='line': Line plot type\nmarker='o': Data point markers\ncolor='b': Line colors\nlinestyle='--': Line styles (solid, dashed, etc.)\nplt.xlabel(), plt.ylabel(): Axis labels\nplt.grid(): Add grid lines\n\n\n\n💡 Key Concepts\n\nDatetime Index: Essential for time series operations\nPlot Method: Pandas’ built-in plotting interface\nMatplotlib Integration: Customize plots with full Matplotlib control\nClear Labeling: Always label axes and add titles\n\n\n\n🚀 Best Practices\n\nUse appropriate date ranges for your analysis period\nChoose colors and styles that enhance readability\nAdd grid lines for better value estimation\nLabel axes clearly for context\n\n\n\n📈 Next Steps\n\nExplore advanced plots (area plots, bar plots)\nLearn about subplots for multiple time series\nPractice with real time series datasets\nExperiment with different styling options\n\nMastering time series visualization will help you effectively communicate temporal trends and patterns! 📊⏰"
   },
   {
     "objectID": "posts/python/index.html",

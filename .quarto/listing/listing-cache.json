@@ -1,16 +1,7 @@
 {
   "listingMap": {
-    "posts\\computer-vision\\index.qmd": [
-      "*.ipynb"
-    ],
     "posts\\fastai\\index.qmd": [
       "*.ipynb"
-    ],
-    "posts\\index.qmd": [
-      "python/*.ipynb",
-      "fastai/*.ipynb",
-      "computer-vision/*.ipynb",
-      "pandas/*.ipynb"
     ],
     "posts\\pandas\\index.qmd": [
       "*.ipynb"

@@ -5,60 +5,104 @@
     <lastmod>2025-09-18T06:55:14.344Z</lastmod>
   </url>
   <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/loadsata.html</loc>
-    <lastmod>2025-09-18T11:00:34.563Z</lastmod>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/Working with multi index df.html</loc>
+    <lastmod>2025-09-23T12:45:38.346Z</lastmod>
   </url>
   <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/learn pandas dfmissing data.html</loc>
-    <lastmod>2025-09-18T11:00:40.038Z</lastmod>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/text manipulation methods.html</loc>
+    <lastmod>2025-09-23T12:54:46.132Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.html</loc>
+    <lastmod>2025-09-19T13:27:04.087Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/learn pandas Series.html</loc>
+    <lastmod>2025-09-18T11:00:42.093Z</lastmod>
   </url>
   <url>
     <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/learn pandas df operations.html</loc>
     <lastmod>2025-09-18T11:00:40.892Z</lastmod>
   </url>
   <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/Handling Temporal Datas.html</loc>
+    <lastmod>2025-09-21T08:07:45.706Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/Group By Operations.html</loc>
+    <lastmod>2025-09-21T08:58:08.009Z</lastmod>
+  </url>
+  <url>
     <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/data manipulation with loc and iloc.html</loc>
     <lastmod>2025-09-18T11:00:33.339Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/Combine and Merge DF.html</loc>
+    <lastmod>2025-09-20T15:12:53.272Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/Advanced Data Manipulation.html</loc>
+    <lastmod>2025-09-21T15:12:00.281Z</lastmod>
   </url>
   <url>
     <loc>https://adilsiraju.github.io/Training-in-Progress/posts/fastai/index.html</loc>
     <lastmod>2025-09-18T06:47:03.185Z</lastmod>
   </url>
   <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/index.html</loc>
-    <lastmod>2025-09-18T10:50:28.338Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/CHANGELOG.html</loc>
-    <lastmod>2025-09-18T06:20:46.625Z</lastmod>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/CONTRIBUTING.html</loc>
+    <lastmod>2025-09-18T06:20:46.624Z</lastmod>
   </url>
   <url>
     <loc>https://adilsiraju.github.io/Training-in-Progress/about.html</loc>
     <lastmod>2025-09-18T10:43:37.837Z</lastmod>
   </url>
   <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/CONTRIBUTING.html</loc>
-    <lastmod>2025-09-18T06:20:46.624Z</lastmod>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/CHANGELOG.html</loc>
+    <lastmod>2025-09-18T06:20:46.625Z</lastmod>
   </url>
   <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/computer-vision/index.html</loc>
-    <lastmod>2025-09-18T06:47:12.785Z</lastmod>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/index.html</loc>
+    <lastmod>2025-09-18T10:50:28.338Z</lastmod>
   </url>
   <url>
     <loc>https://adilsiraju.github.io/Training-in-Progress/posts/index.html</loc>
-    <lastmod>2025-09-18T11:21:07.182Z</lastmod>
+    <lastmod>2025-09-20T15:10:16.944Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/Agg Data using Functions.html</loc>
+    <lastmod>2025-09-21T09:17:05.561Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/Data Cleaning.html</loc>
+    <lastmod>2025-09-19T15:21:28.248Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/Data Viz with panda tools.html</loc>
+    <lastmod>2025-09-23T12:33:07.992Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/Handling Categorical Datas.html</loc>
+    <lastmod>2025-09-21T07:38:01.018Z</lastmod>
   </url>
   <url>
     <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/index.html</loc>
-    <lastmod>2025-09-18T06:46:56.219Z</lastmod>
+    <lastmod>2025-09-21T06:53:58.204Z</lastmod>
   </url>
   <url>
     <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/learn pandas Df.html</loc>
     <lastmod>2025-09-18T11:00:39.200Z</lastmod>
   </url>
   <url>
-    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/learn pandas Series.html</loc>
-    <lastmod>2025-09-18T11:00:42.093Z</lastmod>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/loadsata.html</loc>
+    <lastmod>2025-09-18T11:00:34.563Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/Pandas-Dealing with missing Datas.html</loc>
+    <lastmod>2025-09-23T13:37:52.427Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/Training-in-Progress/posts/pandas/Time Series Visualisation.html</loc>
+    <lastmod>2025-09-21T13:51:49.636Z</lastmod>
   </url>
   <url>
     <loc>https://adilsiraju.github.io/Training-in-Progress/posts/python/index.html</loc>
