@@ -130,5 +130,20 @@
   },
   "posts/pandas/Working with multi index df.ipynb": {
     "Working with multi index df.html": "257580b0"
+  },
+  "posts/fastai/hf.ipynb": {
+    "hf.html": "db89182e"
+  },
+  "posts/fastai/medicaldocclassifier.ipynb": {
+    "medicaldocclassifier.html": "39f0e9be"
+  },
+  "posts/fastai/NLP.ipynb": {
+    "NLP.html": "2dd9a723"
+  },
+  "posts/fastai/sientiment_analysis.ipynb": {
+    "sientiment_analysis.html": "692a66ad"
+  },
+  "posts/fastai/textclassification.ipynb": {
+    "textclassification.html": "1f98a5ee"
   }
 }

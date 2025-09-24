@@ -1,7 +1,13 @@
 [
   {
     "listing": "/posts/fastai/index.html",
-    "items": []
+    "items": [
+      "/posts/fastai/medicaldocclassifier.html",
+      "/posts/fastai/NLP.html",
+      "/posts/fastai/hf.html",
+      "/posts/fastai/sientiment_analysis.html",
+      "/posts/fastai/textclassification.html"
+    ]
   },
   {
     "listing": "/posts/pandas/index.html",
